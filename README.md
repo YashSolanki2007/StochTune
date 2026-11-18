@@ -168,7 +168,7 @@ The corresponding sampled loss is:
 \mathcal{L}_{\mathrm{RL}}
 =
 -\sum_{i=1}^{N}
-\operatorname{stopgrad}(R-b_i)
+\mathrm{stopgrad}(R-b_i)
 \log\pi_\theta(Y_i \mid c).
 ```
 
