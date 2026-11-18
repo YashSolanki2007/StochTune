@@ -1,0 +1,21 @@
+{
+  "config": {
+    "output_dir": "data/numeric-v1",
+    "seed": 20261117,
+    "decimals": 5,
+    "train_configs": 2000,
+    "samples_per_config": 32,
+    "validation_configs": 160,
+    "validation_samples_per_config": 8,
+    "test_configs": 100
+  },
+  "format_version": 1,
+  "files": {
+    "test.jsonl": "adf278bf4dad1a470740a37d51304baede17b556f0932baf4fd77640f70bc47f",
+    "train.jsonl": "bb1d14f4673fe423b99ed90dd1d867c0f8cb3f7d5156e9f5abb8dec1c216b5b1",
+    "train_configs.jsonl": "def7fc65cd6cee6c236ddc10b297686702d7181dfdaf9ebce91177f54d73abe0",
+    "validation.jsonl": "c344fd5da64a427a0f7a02ff94936d99a676d1c8e4c43e254e4412b34da4aad9",
+    "validation_configs.jsonl": "ace77ba41e150f67637e6c3f364e28cc4bfc4fb3ede5bdbba0205502f2828e63"
+  },
+  "training_examples": 64000
+}

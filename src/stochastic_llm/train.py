@@ -1,4 +1,4 @@
-"""Sampled-target supervised LoRA fine-tuning."""
+"""SFT and sparse soft-target KL training using the same LoRA setup."""
 
 import json
 import signal
@@ -13,7 +13,21 @@ from transformers import Trainer, TrainerCallback, TrainingArguments, set_seed
 from .io import file_sha256, require_empty_directory, write_json
 from .modeling import device_and_dtype, environment_info, load_model_and_tokenizer
 from .tracking import tracked
-from .training_data import CompletionCollator, CompletionDataset
+from .training_data import CompletionCollator, CompletionDataset, SoftTargetDataset, soft_kl_loss
+
+
+class SoftKLTrainer(Trainer):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # We average per path ourselves; Trainer handles gradient accumulation.
+        self.model_accepts_loss_kwargs = False
+
+    def compute_loss(self, model, inputs, return_outputs=False, num_items_in_batch=None):
+        targets = inputs.pop("soft_targets")
+        inputs.pop("labels", None)
+        outputs = model(**inputs)
+        loss = soft_kl_loss(outputs.logits, targets)
+        return (loss, outputs) if return_outputs else loss
 
 
 class TimingCallback(TrainerCallback):
@@ -63,8 +77,8 @@ class GracefulStopCallback(TrainerCallback):
 def train(config, resume_from_checkpoint=None):
     config = dict(config)
     device_and_dtype(config)
-    if config["method"] != "sft":
-        raise ValueError("This snapshot supports SFT only")
+    if config["method"] not in ("sft", "soft_kl"):
+        raise ValueError("method must be sft or soft_kl")
     data_dir = Path(config["data_dir"])
     data_manifest = json.loads((data_dir / "manifest.json").read_text())
     for name, digest in data_manifest["files"].items():
@@ -102,11 +116,20 @@ def train(config, resume_from_checkpoint=None):
         ),
     )
     model.print_trainable_parameters()
-    training = CompletionDataset(data_dir / "train.jsonl", tokenizer, config["max_sequence_length"])
-    validation = CompletionDataset(
-        data_dir / "validation.jsonl", tokenizer, config["max_sequence_length"]
-    )
-    trainer_class = Trainer
+    if config["method"] == "sft":
+        training = CompletionDataset(
+            data_dir / "train.jsonl", tokenizer, config["max_sequence_length"]
+        )
+        validation = CompletionDataset(
+            data_dir / "validation.jsonl", tokenizer, config["max_sequence_length"]
+        )
+        trainer_class = Trainer
+    else:
+        training = SoftTargetDataset(data_dir / "train_configs.jsonl", tokenizer, config)
+        validation = SoftTargetDataset(
+            data_dir / "validation_configs.jsonl", tokenizer, config, paths_per_config=1
+        )
+        trainer_class = SoftKLTrainer
     use_cuda = config["device"] == "cuda"
     args = TrainingArguments(
         output_dir=str(output),
@@ -142,6 +165,7 @@ def train(config, resume_from_checkpoint=None):
         label_names=["labels"],
         prediction_loss_only=True,
     )
+    # Pin the recorded base revision so adapter evaluation can check its identity.
     base_config = model.get_base_model().config
     metadata = {
         "model": config["model"],
@@ -184,6 +208,7 @@ def train(config, resume_from_checkpoint=None):
     metrics.update(trainer.evaluate())
     trainer.save_model(str(output / "adapter"))
     tokenizer.save_pretrained(output / "adapter")
+    # Give PEFT an immutable base revision when Hugging Face supplied one.
     adapter_config = output / "adapter" / "adapter_config.json"
     if metadata["resolved_revision"]:
         value = json.loads(adapter_config.read_text())

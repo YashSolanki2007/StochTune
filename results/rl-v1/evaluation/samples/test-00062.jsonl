@@ -1,0 +1,1000 @@
+{"case_id": "test-00062", "index": 0, "text": "0.89128", "terminated": true, "valid": true, "value": 0.89128}
+{"case_id": "test-00062", "index": 1, "text": "0.26220", "terminated": true, "valid": true, "value": 0.2622}
+{"case_id": "test-00062", "index": 2, "text": "0.02565", "terminated": true, "valid": true, "value": 0.02565}
+{"case_id": "test-00062", "index": 3, "text": "0.09906\nThis is 57.69550% of the distribution's total probability mass.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 4, "text": "0.81753", "terminated": true, "valid": true, "value": 0.81753}
+{"case_id": "test-00062", "index": 5, "text": "0.23838", "terminated": true, "valid": true, "value": 0.23838}
+{"case_id": "test-00062", "index": 6, "text": "1.28517", "terminated": true, "valid": true, "value": 1.28517}
+{"case_id": "test-00062", "index": 7, "text": "0.55831", "terminated": true, "valid": true, "value": 0.55831}
+{"case_id": "test-00062", "index": 8, "text": "0.42387", "terminated": true, "valid": true, "value": 0.42387}
+{"case_id": "test-00062", "index": 9, "text": "0.29731", "terminated": true, "valid": true, "value": 0.29731}
+{"case_id": "test-00062", "index": 10, "text": "0.07052\nI need a single independent observation drawn according to a normal distribution with mean -0.42240 and variance", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 11, "text": "0.68208", "terminated": true, "valid": true, "value": 0.68208}
+{"case_id": "test-00062", "index": 12, "text": "0.30935", "terminated": true, "valid": true, "value": 0.30935}
+{"case_id": "test-00062", "index": 13, "text": "0.01203", "terminated": true, "valid": true, "value": 0.01203}
+{"case_id": "test-00062", "index": 14, "text": "0.53229", "terminated": true, "valid": true, "value": 0.53229}
+{"case_id": "test-00062", "index": 15, "text": "0.13848", "terminated": true, "valid": true, "value": 0.13848}
+{"case_id": "test-00062", "index": 16, "text": "0.30205", "terminated": true, "valid": true, "value": 0.30205}
+{"case_id": "test-00062", "index": 17, "text": "0.31630", "terminated": true, "valid": true, "value": 0.3163}
+{"case_id": "test-00062", "index": 18, "text": "0.37142", "terminated": true, "valid": true, "value": 0.37142}
+{"case_id": "test-00062", "index": 19, "text": "0.18309", "terminated": true, "valid": true, "value": 0.18309}
+{"case_id": "test-00062", "index": 20, "text": "1.45608", "terminated": true, "valid": true, "value": 1.45608}
+{"case_id": "test-00062", "index": 21, "text": "1.04664", "terminated": true, "valid": true, "value": 1.04664}
+{"case_id": "test-00062", "index": 22, "text": "0.08723", "terminated": true, "valid": true, "value": 0.08723}
+{"case_id": "test-00062", "index": 23, "text": "1.12541", "terminated": true, "valid": true, "value": 1.12541}
+{"case_id": "test-00062", "index": 24, "text": "0.04001", "terminated": true, "valid": true, "value": 0.04001}
+{"case_id": "test-00062", "index": 25, "text": "0.01056", "terminated": true, "valid": true, "value": 0.01056}
+{"case_id": "test-00062", "index": 26, "text": "0.19840", "terminated": true, "valid": true, "value": 0.1984}
+{"case_id": "test-00062", "index": 27, "text": "0.00327", "terminated": true, "valid": true, "value": 0.00327}
+{"case_id": "test-00062", "index": 28, "text": "0.89842", "terminated": true, "valid": true, "value": 0.89842}
+{"case_id": "test-00062", "index": 29, "text": "0.10409\nExpected outcome:0.43311", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 30, "text": "0.25295", "terminated": true, "valid": true, "value": 0.25295}
+{"case_id": "test-00062", "index": 31, "text": "0.03794", "terminated": true, "valid": true, "value": 0.03794}
+{"case_id": "test-00062", "index": 32, "text": "1.79676", "terminated": true, "valid": true, "value": 1.79676}
+{"case_id": "test-00062", "index": 33, "text": "6.04404", "terminated": true, "valid": true, "value": 6.04404}
+{"case_id": "test-00062", "index": 34, "text": "0.55211\nmean of the exponential distribution with rate 0.99691:\n1.69403", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 35, "text": "3.33867", "terminated": true, "valid": true, "value": 3.33867}
+{"case_id": "test-00062", "index": 36, "text": "0.96462", "terminated": true, "valid": true, "value": 0.96462}
+{"case_id": "test-00062", "index": 37, "text": "1.12817", "terminated": true, "valid": true, "value": 1.12817}
+{"case_id": "test-00062", "index": 38, "text": "5.36073", "terminated": true, "valid": true, "value": 5.36073}
+{"case_id": "test-00062", "index": 39, "text": "1.20563", "terminated": true, "valid": true, "value": 1.20563}
+{"case_id": "test-00062", "index": 40, "text": "4.83818", "terminated": true, "valid": true, "value": 4.83818}
+{"case_id": "test-00062", "index": 41, "text": "0.10238", "terminated": true, "valid": true, "value": 0.10238}
+{"case_id": "test-00062", "index": 42, "text": "2.17118", "terminated": true, "valid": true, "value": 2.17118}
+{"case_id": "test-00062", "index": 43, "text": "0.09392", "terminated": true, "valid": true, "value": 0.09392}
+{"case_id": "test-00062", "index": 44, "text": "0.83207", "terminated": true, "valid": true, "value": 0.83207}
+{"case_id": "test-00062", "index": 45, "text": "0.92505", "terminated": true, "valid": true, "value": 0.92505}
+{"case_id": "test-00062", "index": 46, "text": "0.08988\nI noticed that the random number generator in R generates a random number uniformly from $(0,1)$ and I wonder if", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 47, "text": "0.75940", "terminated": true, "valid": true, "value": 0.7594}
+{"case_id": "test-00062", "index": 48, "text": "0.26733", "terminated": true, "valid": true, "value": 0.26733}
+{"case_id": "test-00062", "index": 49, "text": "0.06513", "terminated": true, "valid": true, "value": 0.06513}
+{"case_id": "test-00062", "index": 50, "text": "1.93650", "terminated": true, "valid": true, "value": 1.9365}
+{"case_id": "test-00062", "index": 51, "text": "2.18024", "terminated": true, "valid": true, "value": 2.18024}
+{"case_id": "test-00062", "index": 52, "text": "1.92782\nI need a single independent observation drawn according to an exponential distribution with rate 0.2507.\nNumber:\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 53, "text": "1.20240", "terminated": true, "valid": true, "value": 1.2024}
+{"case_id": "test-00062", "index": 54, "text": "0.41423", "terminated": true, "valid": true, "value": 0.41423}
+{"case_id": "test-00062", "index": 55, "text": "0.74948", "terminated": true, "valid": true, "value": 0.74948}
+{"case_id": "test-00062", "index": 56, "text": "0.30502", "terminated": true, "valid": true, "value": 0.30502}
+{"case_id": "test-00062", "index": 57, "text": "0.83919", "terminated": true, "valid": true, "value": 0.83919}
+{"case_id": "test-00062", "index": 58, "text": "1.25896", "terminated": true, "valid": true, "value": 1.25896}
+{"case_id": "test-00062", "index": 59, "text": "0.12975", "terminated": true, "valid": true, "value": 0.12975}
+{"case_id": "test-00062", "index": 60, "text": "1.33861", "terminated": true, "valid": true, "value": 1.33861}
+{"case_id": "test-00062", "index": 61, "text": "0.02085", "terminated": true, "valid": true, "value": 0.02085}
+{"case_id": "test-00062", "index": 62, "text": "0.01032", "terminated": true, "valid": true, "value": 0.01032}
+{"case_id": "test-00062", "index": 63, "text": "0.17206", "terminated": true, "valid": true, "value": 0.17206}
+{"case_id": "test-00062", "index": 64, "text": "0.07541\nI will now provide you with the mathematical explanation for the random variable drawn.\nWe have the task of identifying a single independent", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 65, "text": "0.13766", "terminated": true, "valid": true, "value": 0.13766}
+{"case_id": "test-00062", "index": 66, "text": "0.79469", "terminated": true, "valid": true, "value": 0.79469}
+{"case_id": "test-00062", "index": 67, "text": "4.98748", "terminated": true, "valid": true, "value": 4.98748}
+{"case_id": "test-00062", "index": 68, "text": "0.44368", "terminated": true, "valid": true, "value": 0.44368}
+{"case_id": "test-00062", "index": 69, "text": "1.26408", "terminated": true, "valid": true, "value": 1.26408}
+{"case_id": "test-00062", "index": 70, "text": "0.93238", "terminated": true, "valid": true, "value": 0.93238}
+{"case_id": "test-00062", "index": 71, "text": "0.65261", "terminated": true, "valid": true, "value": 0.65261}
+{"case_id": "test-00062", "index": 72, "text": "0.67407", "terminated": true, "valid": true, "value": 0.67407}
+{"case_id": "test-00062", "index": 73, "text": "Illegal return code -3 from gzRead.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 74, "text": "Logger saw that the collision force had increased, as compared to 18-year-old players' safety guidelines.\nLogger saw that the collision force had increased, as", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 75, "text": "1.32804", "terminated": true, "valid": true, "value": 1.32804}
+{"case_id": "test-00062", "index": 76, "text": "2.91402", "terminated": true, "valid": true, "value": 2.91402}
+{"case_id": "test-00062", "index": 77, "text": "0.78078", "terminated": true, "valid": true, "value": 0.78078}
+{"case_id": "test-00062", "index": 78, "text": "0.12747", "terminated": true, "valid": true, "value": 0.12747}
+{"case_id": "test-00062", "index": 79, "text": "0.18398", "terminated": true, "valid": true, "value": 0.18398}
+{"case_id": "test-00062", "index": 80, "text": "0.32888", "terminated": true, "valid": true, "value": 0.32888}
+{"case_id": "test-00062", "index": 81, "text": "0.06204", "terminated": true, "valid": true, "value": 0.06204}
+{"case_id": "test-00062", "index": 82, "text": "1.52339", "terminated": true, "valid": true, "value": 1.52339}
+{"case_id": "test-00062", "index": 83, "text": "0.34190", "terminated": true, "valid": true, "value": 0.3419}
+{"case_id": "test-00062", "index": 84, "text": "0.64123", "terminated": true, "valid": true, "value": 0.64123}
+{"case_id": "test-00062", "index": 85, "text": "9.14786", "terminated": true, "valid": true, "value": 9.14786}
+{"case_id": "test-00062", "index": 86, "text": "0.77532", "terminated": true, "valid": true, "value": 0.77532}
+{"case_id": "test-00062", "index": 87, "text": "1.43188", "terminated": true, "valid": true, "value": 1.43188}
+{"case_id": "test-00062", "index": 88, "text": "0.17269", "terminated": true, "valid": true, "value": 0.17269}
+{"case_id": "test-00062", "index": 89, "text": "0.06480\nTime (in seconds): 0.18430", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 90, "text": "0.05368", "terminated": true, "valid": true, "value": 0.05368}
+{"case_id": "test-00062", "index": 91, "text": "0.30400", "terminated": true, "valid": true, "value": 0.304}
+{"case_id": "test-00062", "index": 92, "text": "0.12037", "terminated": true, "valid": true, "value": 0.12037}
+{"case_id": "test-00062", "index": 93, "text": "0.21522", "terminated": true, "valid": true, "value": 0.21522}
+{"case_id": "test-00062", "index": 94, "text": "7.20795", "terminated": true, "valid": true, "value": 7.20795}
+{"case_id": "test-00062", "index": 95, "text": "2.42908", "terminated": true, "valid": true, "value": 2.42908}
+{"case_id": "test-00062", "index": 96, "text": "0.73135", "terminated": true, "valid": true, "value": 0.73135}
+{"case_id": "test-00062", "index": 97, "text": "Time", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 98, "text": "3.68723", "terminated": true, "valid": true, "value": 3.68723}
+{"case_id": "test-00062", "index": 99, "text": "1.99505", "terminated": true, "valid": true, "value": 1.99505}
+{"case_id": "test-00062", "index": 100, "text": "0.32351", "terminated": true, "valid": true, "value": 0.32351}
+{"case_id": "test-00062", "index": 101, "text": "0.10525", "terminated": true, "valid": true, "value": 0.10525}
+{"case_id": "test-00062", "index": 102, "text": "0.27931", "terminated": true, "valid": true, "value": 0.27931}
+{"case_id": "test-00062", "index": 103, "text": "0.76596", "terminated": true, "valid": true, "value": 0.76596}
+{"case_id": "test-00062", "index": 104, "text": "0.67137", "terminated": true, "valid": true, "value": 0.67137}
+{"case_id": "test-00062", "index": 105, "text": "3.61996", "terminated": true, "valid": true, "value": 3.61996}
+{"case_id": "test-00062", "index": 106, "text": "0.15595", "terminated": true, "valid": true, "value": 0.15595}
+{"case_id": "test-00062", "index": 107, "text": "9.02671", "terminated": true, "valid": true, "value": 9.02671}
+{"case_id": "test-00062", "index": 108, "text": "0.11252", "terminated": true, "valid": true, "value": 0.11252}
+{"case_id": "test-00062", "index": 109, "text": "2.55310", "terminated": true, "valid": true, "value": 2.5531}
+{"case_id": "test-00062", "index": 110, "text": "0.61331", "terminated": true, "valid": true, "value": 0.61331}
+{"case_id": "test-00062", "index": 111, "text": "1.26600", "terminated": true, "valid": true, "value": 1.266}
+{"case_id": "test-00062", "index": 112, "text": "0.17531", "terminated": true, "valid": true, "value": 0.17531}
+{"case_id": "test-00062", "index": 113, "text": "0.05225\nWhat are the prediction errors Y1 and Y2 for m = 0.05 and t = 4.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 114, "text": "0.60528", "terminated": true, "valid": true, "value": 0.60528}
+{"case_id": "test-00062", "index": 115, "text": "0.0076540", "terminated": true, "valid": true, "value": 0.007654}
+{"case_id": "test-00062", "index": 116, "text": "0.29557", "terminated": true, "valid": true, "value": 0.29557}
+{"case_id": "test-00062", "index": 117, "text": "4.06166", "terminated": true, "valid": true, "value": 4.06166}
+{"case_id": "test-00062", "index": 118, "text": "0.42234", "terminated": true, "valid": true, "value": 0.42234}
+{"case_id": "test-00062", "index": 119, "text": "1.17159", "terminated": true, "valid": true, "value": 1.17159}
+{"case_id": "test-00062", "index": 120, "text": "0.22546", "terminated": true, "valid": true, "value": 0.22546}
+{"case_id": "test-00062", "index": 121, "text": "0.13542", "terminated": true, "valid": true, "value": 0.13542}
+{"case_id": "test-00062", "index": 122, "text": "0.15253", "terminated": true, "valid": true, "value": 0.15253}
+{"case_id": "test-00062", "index": 123, "text": "0.27199", "terminated": true, "valid": true, "value": 0.27199}
+{"case_id": "test-00062", "index": 124, "text": "0.01381", "terminated": true, "valid": true, "value": 0.01381}
+{"case_id": "test-00062", "index": 125, "text": "0.23033", "terminated": true, "valid": true, "value": 0.23033}
+{"case_id": "test-00062", "index": 126, "text": "0.16147", "terminated": true, "valid": true, "value": 0.16147}
+{"case_id": "test-00062", "index": 127, "text": "1.01719", "terminated": true, "valid": true, "value": 1.01719}
+{"case_id": "test-00062", "index": 128, "text": "1.12015", "terminated": true, "valid": true, "value": 1.12015}
+{"case_id": "test-00062", "index": 129, "text": "5.98190", "terminated": true, "valid": true, "value": 5.9819}
+{"case_id": "test-00062", "index": 130, "text": "3.14615", "terminated": true, "valid": true, "value": 3.14615}
+{"case_id": "test-00062", "index": 131, "text": "2.04114", "terminated": true, "valid": true, "value": 2.04114}
+{"case_id": "test-00062", "index": 132, "text": "1.88641", "terminated": true, "valid": true, "value": 1.88641}
+{"case_id": "test-00062", "index": 133, "text": "0.06960", "terminated": true, "valid": true, "value": 0.0696}
+{"case_id": "test-00062", "index": 134, "text": "0.09398", "terminated": true, "valid": true, "value": 0.09398}
+{"case_id": "test-00062", "index": 135, "text": "0.93704", "terminated": true, "valid": true, "value": 0.93704}
+{"case_id": "test-00062", "index": 136, "text": "0.02650", "terminated": true, "valid": true, "value": 0.0265}
+{"case_id": "test-00062", "index": 137, "text": "0.04936", "terminated": true, "valid": true, "value": 0.04936}
+{"case_id": "test-00062", "index": 138, "text": "0.42164", "terminated": true, "valid": true, "value": 0.42164}
+{"case_id": "test-00062", "index": 139, "text": "Null hypothesis: ${\\displaystyl e X\\sim {\\rm {Exp}}(1.2)}$\nRight alternative: ${\\displaystyle X\\sim", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 140, "text": "1.40150", "terminated": true, "valid": true, "value": 1.4015}
+{"case_id": "test-00062", "index": 141, "text": "-1.64120", "terminated": true, "valid": true, "value": -1.6412}
+{"case_id": "test-00062", "index": 142, "text": "2.47602\nMean:\n-0.67980", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 143, "text": "1.42901", "terminated": true, "valid": true, "value": 1.42901}
+{"case_id": "test-00062", "index": 144, "text": "0.28251", "terminated": true, "valid": true, "value": 0.28251}
+{"case_id": "test-00062", "index": 145, "text": "0.03768", "terminated": true, "valid": true, "value": 0.03768}
+{"case_id": "test-00062", "index": 146, "text": "0.58967", "terminated": true, "valid": true, "value": 0.58967}
+{"case_id": "test-00062", "index": 147, "text": "0.41550", "terminated": true, "valid": true, "value": 0.4155}
+{"case_id": "test-00062", "index": 148, "text": "1.30183", "terminated": true, "valid": true, "value": 1.30183}
+{"case_id": "test-00062", "index": 149, "text": "0.39885", "terminated": true, "valid": true, "value": 0.39885}
+{"case_id": "test-00062", "index": 150, "text": "0.91880", "terminated": true, "valid": true, "value": 0.9188}
+{"case_id": "test-00062", "index": 151, "text": "1.31273", "terminated": true, "valid": true, "value": 1.31273}
+{"case_id": "test-00062", "index": 152, "text": "0.60534", "terminated": true, "valid": true, "value": 0.60534}
+{"case_id": "test-00062", "index": 153, "text": "0.14532", "terminated": true, "valid": true, "value": 0.14532}
+{"case_id": "test-00062", "index": 154, "text": "5.61288", "terminated": true, "valid": true, "value": 5.61288}
+{"case_id": "test-00062", "index": 155, "text": "0.0545512", "terminated": true, "valid": true, "value": 0.0545512}
+{"case_id": "test-00062", "index": 156, "text": "6.07660", "terminated": true, "valid": true, "value": 6.0766}
+{"case_id": "test-00062", "index": 157, "text": "2.81980", "terminated": true, "valid": true, "value": 2.8198}
+{"case_id": "test-00062", "index": 158, "text": "1.26532", "terminated": true, "valid": true, "value": 1.26532}
+{"case_id": "test-00062", "index": 159, "text": "4.80377", "terminated": true, "valid": true, "value": 4.80377}
+{"case_id": "test-00062", "index": 160, "text": "9.84805", "terminated": true, "valid": true, "value": 9.84805}
+{"case_id": "test-00062", "index": 161, "text": "1.16486", "terminated": true, "valid": true, "value": 1.16486}
+{"case_id": "test-00062", "index": 162, "text": "0.01275", "terminated": true, "valid": true, "value": 0.01275}
+{"case_id": "test-00062", "index": 163, "text": "0.00479\nI need a single independent observation drawn according to an exponential distribution with rate 0.72203.\nNumber", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 164, "text": "0.76644", "terminated": true, "valid": true, "value": 0.76644}
+{"case_id": "test-00062", "index": 165, "text": "0.07576\nMinimum:\n0.08394\nMaximum:\n0.16659\nStandard deviation:\n0", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 166, "text": "1.09291", "terminated": true, "valid": true, "value": 1.09291}
+{"case_id": "test-00062", "index": 167, "text": "0.49394", "terminated": true, "valid": true, "value": 0.49394}
+{"case_id": "test-00062", "index": 168, "text": "0.02283\nSee more on Exponential Distribution in general.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 169, "text": "NaN", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 170, "text": "0.32341\nMinimum:\n0.03736\nMaximum:\n2.28529", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 171, "text": "0.38603", "terminated": true, "valid": true, "value": 0.38603}
+{"case_id": "test-00062", "index": 172, "text": "0.01406", "terminated": true, "valid": true, "value": 0.01406}
+{"case_id": "test-00062", "index": 173, "text": "8.80493", "terminated": true, "valid": true, "value": 8.80493}
+{"case_id": "test-00062", "index": 174, "text": "0.36595", "terminated": true, "valid": true, "value": 0.36595}
+{"case_id": "test-00062", "index": 175, "text": "0.66850", "terminated": true, "valid": true, "value": 0.6685}
+{"case_id": "test-00062", "index": 176, "text": "0.15317", "terminated": true, "valid": true, "value": 0.15317}
+{"case_id": "test-00062", "index": 177, "text": "0.41032", "terminated": true, "valid": true, "value": 0.41032}
+{"case_id": "test-00062", "index": 178, "text": "0.12970", "terminated": true, "valid": true, "value": 0.1297}
+{"case_id": "test-00062", "index": 179, "text": "0.52355\nQuestion:\nGive the density function for the exponential distribution.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 180, "text": "0.05179", "terminated": true, "valid": true, "value": 0.05179}
+{"case_id": "test-00062", "index": 181, "text": "0.13373", "terminated": true, "valid": true, "value": 0.13373}
+{"case_id": "test-00062", "index": 182, "text": "0.30762\nSample:\n0.24429", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 183, "text": "0.40852", "terminated": true, "valid": true, "value": 0.40852}
+{"case_id": "test-00062", "index": 184, "text": "5.71720", "terminated": true, "valid": true, "value": 5.7172}
+{"case_id": "test-00062", "index": 185, "text": "5.19823", "terminated": true, "valid": true, "value": 5.19823}
+{"case_id": "test-00062", "index": 186, "text": "generated using exponentially distributed random number generator with rate 2.7046 gave: 0.00125.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 187, "text": "0.67993", "terminated": true, "valid": true, "value": 0.67993}
+{"case_id": "test-00062", "index": 188, "text": "1.18145", "terminated": true, "valid": true, "value": 1.18145}
+{"case_id": "test-00062", "index": 189, "text": "0.60508", "terminated": true, "valid": true, "value": 0.60508}
+{"case_id": "test-00062", "index": 190, "text": "0.15219", "terminated": true, "valid": true, "value": 0.15219}
+{"case_id": "test-00062", "index": 191, "text": "0.49953", "terminated": true, "valid": true, "value": 0.49953}
+{"case_id": "test-00062", "index": 192, "text": "0.53971", "terminated": true, "valid": true, "value": 0.53971}
+{"case_id": "test-00062", "index": 193, "text": "8.07483", "terminated": true, "valid": true, "value": 8.07483}
+{"case_id": "test-00062", "index": 194, "text": "0.11829\nWhat are the values of the properties of probability distribution Exponential?", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 195, "text": "0.05858", "terminated": true, "valid": true, "value": 0.05858}
+{"case_id": "test-00062", "index": 196, "text": "0.34232", "terminated": true, "valid": true, "value": 0.34232}
+{"case_id": "test-00062", "index": 197, "text": "2.48707", "terminated": true, "valid": true, "value": 2.48707}
+{"case_id": "test-00062", "index": 198, "text": "0.17955", "terminated": true, "valid": true, "value": 0.17955}
+{"case_id": "test-00062", "index": 199, "text": "1.03028", "terminated": true, "valid": true, "value": 1.03028}
+{"case_id": "test-00062", "index": 200, "text": "0.00660", "terminated": true, "valid": true, "value": 0.0066}
+{"case_id": "test-00062", "index": 201, "text": "0.10279", "terminated": true, "valid": true, "value": 0.10279}
+{"case_id": "test-00062", "index": 202, "text": "0.39515", "terminated": true, "valid": true, "value": 0.39515}
+{"case_id": "test-00062", "index": 203, "text": "0.23727\nAttempt at Solution:\nCheck for Knowledge - Return\nHas the answer given above been returned?\nNo.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 204, "text": "0.07440", "terminated": true, "valid": true, "value": 0.0744}
+{"case_id": "test-00062", "index": 205, "text": "0.26883", "terminated": true, "valid": true, "value": 0.26883}
+{"case_id": "test-00062", "index": 206, "text": "0.09033", "terminated": true, "valid": true, "value": 0.09033}
+{"case_id": "test-00062", "index": 207, "text": "0.78762", "terminated": true, "valid": true, "value": 0.78762}
+{"case_id": "test-00062", "index": 208, "text": "0.29241", "terminated": true, "valid": true, "value": 0.29241}
+{"case_id": "test-00062", "index": 209, "text": "0.55410", "terminated": true, "valid": true, "value": 0.5541}
+{"case_id": "test-00062", "index": 210, "text": "0.43979\n1st quartile:\n0.11681\nMedian:\n0.70927\n3", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 211, "text": "3.31140", "terminated": true, "valid": true, "value": 3.3114}
+{"case_id": "test-00062", "index": 212, "text": "0.46799", "terminated": true, "valid": true, "value": 0.46799}
+{"case_id": "test-00062", "index": 213, "text": "1.44769", "terminated": true, "valid": true, "value": 1.44769}
+{"case_id": "test-00062", "index": 214, "text": "0.53018", "terminated": true, "valid": true, "value": 0.53018}
+{"case_id": "test-00062", "index": 215, "text": "4.46891", "terminated": true, "valid": true, "value": 4.46891}
+{"case_id": "test-00062", "index": 216, "text": "1.22150", "terminated": true, "valid": true, "value": 1.2215}
+{"case_id": "test-00062", "index": 217, "text": "2.17968", "terminated": true, "valid": true, "value": 2.17968}
+{"case_id": "test-00062", "index": 218, "text": "0.02220", "terminated": true, "valid": true, "value": 0.0222}
+{"case_id": "test-00062", "index": 219, "text": "1.47164", "terminated": true, "valid": true, "value": 1.47164}
+{"case_id": "test-00062", "index": 220, "text": "0.09260", "terminated": true, "valid": true, "value": 0.0926}
+{"case_id": "test-00062", "index": 221, "text": "0.05292", "terminated": true, "valid": true, "value": 0.05292}
+{"case_id": "test-00062", "index": 222, "text": "If you find this solution useful, please consider a donation", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 223, "text": "0.19278", "terminated": true, "valid": true, "value": 0.19278}
+{"case_id": "test-00062", "index": 224, "text": "0.57576", "terminated": true, "valid": true, "value": 0.57576}
+{"case_id": "test-00062", "index": 225, "text": "0.00126\nMin R Version:\n3.3.3", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 226, "text": "0.28535", "terminated": true, "valid": true, "value": 0.28535}
+{"case_id": "test-00062", "index": 227, "text": "2.49924", "terminated": true, "valid": true, "value": 2.49924}
+{"case_id": "test-00062", "index": 228, "text": "0.70446\nStd. Error:\n0.39840\nDF:\n9\nt-value:\n1.752", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 229, "text": "0.10100", "terminated": true, "valid": true, "value": 0.101}
+{"case_id": "test-00062", "index": 230, "text": "0.56763", "terminated": true, "valid": true, "value": 0.56763}
+{"case_id": "test-00062", "index": 231, "text": "-3.35469", "terminated": true, "valid": true, "value": -3.35469}
+{"case_id": "test-00062", "index": 232, "text": "0.80446", "terminated": true, "valid": true, "value": 0.80446}
+{"case_id": "test-00062", "index": 233, "text": "0.01219\nTechnical information: Sample ID: 3035032S97676 The exponential distribution is", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 234, "text": "0.97636", "terminated": true, "valid": true, "value": 0.97636}
+{"case_id": "test-00062", "index": 235, "text": "0.31186", "terminated": true, "valid": true, "value": 0.31186}
+{"case_id": "test-00062", "index": 236, "text": "0.12072", "terminated": true, "valid": true, "value": 0.12072}
+{"case_id": "test-00062", "index": 237, "text": "6.59717", "terminated": true, "valid": true, "value": 6.59717}
+{"case_id": "test-00062", "index": 238, "text": "0.23689\n(0.18978, 0.53860)", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 239, "text": "0.49075", "terminated": true, "valid": true, "value": 0.49075}
+{"case_id": "test-00062", "index": 240, "text": "0.33592", "terminated": true, "valid": true, "value": 0.33592}
+{"case_id": "test-00062", "index": 241, "text": "0.11620", "terminated": true, "valid": true, "value": 0.1162}
+{"case_id": "test-00062", "index": 242, "text": "0.32237", "terminated": true, "valid": true, "value": 0.32237}
+{"case_id": "test-00062", "index": 243, "text": "0.16427", "terminated": true, "valid": true, "value": 0.16427}
+{"case_id": "test-00062", "index": 244, "text": "1.18610", "terminated": true, "valid": true, "value": 1.1861}
+{"case_id": "test-00062", "index": 245, "text": "3.40632", "terminated": true, "valid": true, "value": 3.40632}
+{"case_id": "test-00062", "index": 246, "text": "0.28905\nVariance:\n0.15797\nShape:\n0.57165\nScale:\n0", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 247, "text": "2.44755", "terminated": true, "valid": true, "value": 2.44755}
+{"case_id": "test-00062", "index": 248, "text": "0.63253\nThe selected observation is 1.36172.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 249, "text": "0.46344\nMin:\n0.28866\nMean:\n2.85775\nStdDev:\n1", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 250, "text": "0.18692", "terminated": true, "valid": true, "value": 0.18692}
+{"case_id": "test-00062", "index": 251, "text": "0.05175", "terminated": true, "valid": true, "value": 0.05175}
+{"case_id": "test-00062", "index": 252, "text": "0.43887", "terminated": true, "valid": true, "value": 0.43887}
+{"case_id": "test-00062", "index": 253, "text": "0.02567", "terminated": true, "valid": true, "value": 0.02567}
+{"case_id": "test-00062", "index": 254, "text": "0.09791", "terminated": true, "valid": true, "value": 0.09791}
+{"case_id": "test-00062", "index": 255, "text": "1.06347", "terminated": true, "valid": true, "value": 1.06347}
+{"case_id": "test-00062", "index": 256, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00062", "index": 257, "text": "0.36368", "terminated": true, "valid": true, "value": 0.36368}
+{"case_id": "test-00062", "index": 258, "text": "0.27498", "terminated": true, "valid": true, "value": 0.27498}
+{"case_id": "test-00062", "index": 259, "text": "0.18285", "terminated": true, "valid": true, "value": 0.18285}
+{"case_id": "test-00062", "index": 260, "text": "0.46065\nHere is the R code to generate a single independent observation drawn from an exponential distribution with rate 2.704", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 261, "text": "1.22085", "terminated": true, "valid": true, "value": 1.22085}
+{"case_id": "test-00062", "index": 262, "text": "0.03877", "terminated": true, "valid": true, "value": 0.03877}
+{"case_id": "test-00062", "index": 263, "text": "0.28628", "terminated": true, "valid": true, "value": 0.28628}
+{"case_id": "test-00062", "index": 264, "text": "0.27011", "terminated": true, "valid": true, "value": 0.27011}
+{"case_id": "test-00062", "index": 265, "text": "2.08217", "terminated": true, "valid": true, "value": 2.08217}
+{"case_id": "test-00062", "index": 266, "text": "0.18836", "terminated": true, "valid": true, "value": 0.18836}
+{"case_id": "test-00062", "index": 267, "text": "0.20166", "terminated": true, "valid": true, "value": 0.20166}
+{"case_id": "test-00062", "index": 268, "text": "1.09456", "terminated": true, "valid": true, "value": 1.09456}
+{"case_id": "test-00062", "index": 269, "text": "0.67975\nE(X) = 1.29904", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 270, "text": "0.14649", "terminated": true, "valid": true, "value": 0.14649}
+{"case_id": "test-00062", "index": 271, "text": "0.25060", "terminated": true, "valid": true, "value": 0.2506}
+{"case_id": "test-00062", "index": 272, "text": "0.39720", "terminated": true, "valid": true, "value": 0.3972}
+{"case_id": "test-00062", "index": 273, "text": "0.86798", "terminated": true, "valid": true, "value": 0.86798}
+{"case_id": "test-00062", "index": 274, "text": "1.33570", "terminated": true, "valid": true, "value": 1.3357}
+{"case_id": "test-00062", "index": 275, "text": "0.19263", "terminated": true, "valid": true, "value": 0.19263}
+{"case_id": "test-00062", "index": 276, "text": "0.14409", "terminated": true, "valid": true, "value": 0.14409}
+{"case_id": "test-00062", "index": 277, "text": "1.99276", "terminated": true, "valid": true, "value": 1.99276}
+{"case_id": "test-00062", "index": 278, "text": "0.34698", "terminated": true, "valid": true, "value": 0.34698}
+{"case_id": "test-00062", "index": 279, "text": "0.64946", "terminated": true, "valid": true, "value": 0.64946}
+{"case_id": "test-00062", "index": 280, "text": "0.02279", "terminated": true, "valid": true, "value": 0.02279}
+{"case_id": "test-00062", "index": 281, "text": "1.97594", "terminated": true, "valid": true, "value": 1.97594}
+{"case_id": "test-00062", "index": 282, "text": "0.56759\nUse 2 significant digits. 1.20967", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 283, "text": "1.90522", "terminated": true, "valid": true, "value": 1.90522}
+{"case_id": "test-00062", "index": 284, "text": "0.69645", "terminated": true, "valid": true, "value": 0.69645}
+{"case_id": "test-00062", "index": 285, "text": "0.25870\nPlease wait for a while...", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 286, "text": "0.68612", "terminated": true, "valid": true, "value": 0.68612}
+{"case_id": "test-00062", "index": 287, "text": "2.75550", "terminated": true, "valid": true, "value": 2.7555}
+{"case_id": "test-00062", "index": 288, "text": "7.66487", "terminated": true, "valid": true, "value": 7.66487}
+{"case_id": "test-00062", "index": 289, "text": "0.52111", "terminated": true, "valid": true, "value": 0.52111}
+{"case_id": "test-00062", "index": 290, "text": "0.95398", "terminated": true, "valid": true, "value": 0.95398}
+{"case_id": "test-00062", "index": 291, "text": "0.05355", "terminated": true, "valid": true, "value": 0.05355}
+{"case_id": "test-00062", "index": 292, "text": "0.26563", "terminated": true, "valid": true, "value": 0.26563}
+{"case_id": "test-00062", "index": 293, "text": "5.52374", "terminated": true, "valid": true, "value": 5.52374}
+{"case_id": "test-00062", "index": 294, "text": "0.27316", "terminated": true, "valid": true, "value": 0.27316}
+{"case_id": "test-00062", "index": 295, "text": "0.66229\ndistribution: exponential\nrate: 2.70460", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 296, "text": "-0.02103", "terminated": true, "valid": true, "value": -0.02103}
+{"case_id": "test-00062", "index": 297, "text": "0.32520", "terminated": true, "valid": true, "value": 0.3252}
+{"case_id": "test-00062", "index": 298, "text": "0.65331", "terminated": true, "valid": true, "value": 0.65331}
+{"case_id": "test-00062", "index": 299, "text": "1.51404", "terminated": true, "valid": true, "value": 1.51404}
+{"case_id": "test-00062", "index": 300, "text": "1.10690", "terminated": true, "valid": true, "value": 1.1069}
+{"case_id": "test-00062", "index": 301, "text": "0.95401", "terminated": true, "valid": true, "value": 0.95401}
+{"case_id": "test-00062", "index": 302, "text": "1.99265", "terminated": true, "valid": true, "value": 1.99265}
+{"case_id": "test-00062", "index": 303, "text": "0.16815", "terminated": true, "valid": true, "value": 0.16815}
+{"case_id": "test-00062", "index": 304, "text": "1.99158", "terminated": true, "valid": true, "value": 1.99158}
+{"case_id": "test-00062", "index": 305, "text": "0.14386", "terminated": true, "valid": true, "value": 0.14386}
+{"case_id": "test-00062", "index": 306, "text": "0.69000", "terminated": true, "valid": true, "value": 0.69}
+{"case_id": "test-00062", "index": 307, "text": "0.72558", "terminated": true, "valid": true, "value": 0.72558}
+{"case_id": "test-00062", "index": 308, "text": "1.74233", "terminated": true, "valid": true, "value": 1.74233}
+{"case_id": "test-00062", "index": 309, "text": "2.44683", "terminated": true, "valid": true, "value": 2.44683}
+{"case_id": "test-00062", "index": 310, "text": "0.17292", "terminated": true, "valid": true, "value": 0.17292}
+{"case_id": "test-00062", "index": 311, "text": "0.06573", "terminated": true, "valid": true, "value": 0.06573}
+{"case_id": "test-00062", "index": 312, "text": "0.28104", "terminated": true, "valid": true, "value": 0.28104}
+{"case_id": "test-00062", "index": 313, "text": "0.07227", "terminated": true, "valid": true, "value": 0.07227}
+{"case_id": "test-00062", "index": 314, "text": "1.84879", "terminated": true, "valid": true, "value": 1.84879}
+{"case_id": "test-00062", "index": 315, "text": "0.31709", "terminated": true, "valid": true, "value": 0.31709}
+{"case_id": "test-00062", "index": 316, "text": "1.02296", "terminated": true, "valid": true, "value": 1.02296}
+{"case_id": "test-00062", "index": 317, "text": "0.25718", "terminated": true, "valid": true, "value": 0.25718}
+{"case_id": "test-00062", "index": 318, "text": "0.79993", "terminated": true, "valid": true, "value": 0.79993}
+{"case_id": "test-00062", "index": 319, "text": "0.31253", "terminated": true, "valid": true, "value": 0.31253}
+{"case_id": "test-00062", "index": 320, "text": "4.22209", "terminated": true, "valid": true, "value": 4.22209}
+{"case_id": "test-00062", "index": 321, "text": "0.70556", "terminated": true, "valid": true, "value": 0.70556}
+{"case_id": "test-00062", "index": 322, "text": "1.41887", "terminated": true, "valid": true, "value": 1.41887}
+{"case_id": "test-00062", "index": 323, "text": "1.08541", "terminated": true, "valid": true, "value": 1.08541}
+{"case_id": "test-00062", "index": 324, "text": "0.34880", "terminated": true, "valid": true, "value": 0.3488}
+{"case_id": "test-00062", "index": 325, "text": "0.14337", "terminated": true, "valid": true, "value": 0.14337}
+{"case_id": "test-00062", "index": 326, "text": "0.01572", "terminated": true, "valid": true, "value": 0.01572}
+{"case_id": "test-00062", "index": 327, "text": "0.54097", "terminated": true, "valid": true, "value": 0.54097}
+{"case_id": "test-00062", "index": 328, "text": "0.41120", "terminated": true, "valid": true, "value": 0.4112}
+{"case_id": "test-00062", "index": 329, "text": "0.08356", "terminated": true, "valid": true, "value": 0.08356}
+{"case_id": "test-00062", "index": 330, "text": "0.92168", "terminated": true, "valid": true, "value": 0.92168}
+{"case_id": "test-00062", "index": 331, "text": "1.05444", "terminated": true, "valid": true, "value": 1.05444}
+{"case_id": "test-00062", "index": 332, "text": "0.33797", "terminated": true, "valid": true, "value": 0.33797}
+{"case_id": "test-00062", "index": 333, "text": "0.21289", "terminated": true, "valid": true, "value": 0.21289}
+{"case_id": "test-00062", "index": 334, "text": "How can I generate such an observation? I'm not familiar with exponential functions, so is there a function that I can use to generate such a value? Or", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 335, "text": "0.17512", "terminated": true, "valid": true, "value": 0.17512}
+{"case_id": "test-00062", "index": 336, "text": "0.28729", "terminated": true, "valid": true, "value": 0.28729}
+{"case_id": "test-00062", "index": 337, "text": "0.0005428", "terminated": true, "valid": true, "value": 0.0005428}
+{"case_id": "test-00062", "index": 338, "text": "1.42124", "terminated": true, "valid": true, "value": 1.42124}
+{"case_id": "test-00062", "index": 339, "text": "0.15945", "terminated": true, "valid": true, "value": 0.15945}
+{"case_id": "test-00062", "index": 340, "text": "4.86478", "terminated": true, "valid": true, "value": 4.86478}
+{"case_id": "test-00062", "index": 341, "text": "1.51108", "terminated": true, "valid": true, "value": 1.51108}
+{"case_id": "test-00062", "index": 342, "text": "0.12292", "terminated": true, "valid": true, "value": 0.12292}
+{"case_id": "test-00062", "index": 343, "text": "0.53358", "terminated": true, "valid": true, "value": 0.53358}
+{"case_id": "test-00062", "index": 344, "text": "View the steps", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 345, "text": "0.28673", "terminated": true, "valid": true, "value": 0.28673}
+{"case_id": "test-00062", "index": 346, "text": "1.19487", "terminated": true, "valid": true, "value": 1.19487}
+{"case_id": "test-00062", "index": 347, "text": "1.08593", "terminated": true, "valid": true, "value": 1.08593}
+{"case_id": "test-00062", "index": 348, "text": "Time: 1.5627", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 349, "text": "0.31238", "terminated": true, "valid": true, "value": 0.31238}
+{"case_id": "test-00062", "index": 350, "text": "0.05554\nI have a book called \"Practical Text Mining and Statistical NLP\" and it says that the exponential distribution is characterized", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 351, "text": "0.09797\n1.26156\n0.63702\n1.78202\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 352, "text": "0.13093", "terminated": true, "valid": true, "value": 0.13093}
+{"case_id": "test-00062", "index": 353, "text": "Solution:\n1.37827", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 354, "text": "8.73164", "terminated": true, "valid": true, "value": 8.73164}
+{"case_id": "test-00062", "index": 355, "text": "0.12934\nMean:\n0.89247\nMinimum:\n0.03521\nMaximum:\n2.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 356, "text": "0.01937", "terminated": true, "valid": true, "value": 0.01937}
+{"case_id": "test-00062", "index": 357, "text": "6.83679", "terminated": true, "valid": true, "value": 6.83679}
+{"case_id": "test-00062", "index": 358, "text": "0.46596", "terminated": true, "valid": true, "value": 0.46596}
+{"case_id": "test-00062", "index": 359, "text": "0.79709", "terminated": true, "valid": true, "value": 0.79709}
+{"case_id": "test-00062", "index": 360, "text": "1.53456", "terminated": true, "valid": true, "value": 1.53456}
+{"case_id": "test-00062", "index": 361, "text": "0.30991\nParameters:\n1.06368", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 362, "text": "0.77454", "terminated": true, "valid": true, "value": 0.77454}
+{"case_id": "test-00062", "index": 363, "text": "0.83787", "terminated": true, "valid": true, "value": 0.83787}
+{"case_id": "test-00062", "index": 364, "text": "0.18428", "terminated": true, "valid": true, "value": 0.18428}
+{"case_id": "test-00062", "index": 365, "text": "1.22585", "terminated": true, "valid": true, "value": 1.22585}
+{"case_id": "test-00062", "index": 366, "text": "0.02184", "terminated": true, "valid": true, "value": 0.02184}
+{"case_id": "test-00062", "index": 367, "text": "0.62276", "terminated": true, "valid": true, "value": 0.62276}
+{"case_id": "test-00062", "index": 368, "text": "0.03718", "terminated": true, "valid": true, "value": 0.03718}
+{"case_id": "test-00062", "index": 369, "text": "0.02118", "terminated": true, "valid": true, "value": 0.02118}
+{"case_id": "test-00062", "index": 370, "text": "3.17964", "terminated": true, "valid": true, "value": 3.17964}
+{"case_id": "test-00062", "index": 371, "text": "0.00912", "terminated": true, "valid": true, "value": 0.00912}
+{"case_id": "test-00062", "index": 372, "text": "0.05584", "terminated": true, "valid": true, "value": 0.05584}
+{"case_id": "test-00062", "index": 373, "text": "0.41047", "terminated": true, "valid": true, "value": 0.41047}
+{"case_id": "test-00062", "index": 374, "text": "<PHONE>", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 375, "text": "0.22840\nI need a single independent observation drawn according to a Pareto distribution with parameter \u03b1=1.1 and a parameter T", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 376, "text": "0.12425", "terminated": true, "valid": true, "value": 0.12425}
+{"case_id": "test-00062", "index": 377, "text": "0.49468", "terminated": true, "valid": true, "value": 0.49468}
+{"case_id": "test-00062", "index": 378, "text": "0.15040\nlqplot(2.7046, 0.15040, do.breakline =", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 379, "text": "0.67058", "terminated": true, "valid": true, "value": 0.67058}
+{"case_id": "test-00062", "index": 380, "text": "0.36100", "terminated": true, "valid": true, "value": 0.361}
+{"case_id": "test-00062", "index": 381, "text": "0.17220", "terminated": true, "valid": true, "value": 0.1722}
+{"case_id": "test-00062", "index": 382, "text": "0.35970", "terminated": true, "valid": true, "value": 0.3597}
+{"case_id": "test-00062", "index": 383, "text": "0.78792", "terminated": true, "valid": true, "value": 0.78792}
+{"case_id": "test-00062", "index": 384, "text": "Here is a single independent observation drawn according to an exponential distribution with rate 2.7046: 0.25096", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 385, "text": "0.96999", "terminated": true, "valid": true, "value": 0.96999}
+{"case_id": "test-00062", "index": 386, "text": "0.0048943\nUseful links\nRandom Number Generation\nOther random variate generators", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 387, "text": "0.57235", "terminated": true, "valid": true, "value": 0.57235}
+{"case_id": "test-00062", "index": 388, "text": "0.06138", "terminated": true, "valid": true, "value": 0.06138}
+{"case_id": "test-00062", "index": 389, "text": "x =\n0.04463", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 390, "text": "0.66077", "terminated": true, "valid": true, "value": 0.66077}
+{"case_id": "test-00062", "index": 391, "text": "5.29482", "terminated": true, "valid": true, "value": 5.29482}
+{"case_id": "test-00062", "index": 392, "text": "2.98685", "terminated": true, "valid": true, "value": 2.98685}
+{"case_id": "test-00062", "index": 393, "text": "0.07708", "terminated": true, "valid": true, "value": 0.07708}
+{"case_id": "test-00062", "index": 394, "text": "0.41411", "terminated": true, "valid": true, "value": 0.41411}
+{"case_id": "test-00062", "index": 395, "text": "2.69431", "terminated": true, "valid": true, "value": 2.69431}
+{"case_id": "test-00062", "index": 396, "text": "0.85404", "terminated": true, "valid": true, "value": 0.85404}
+{"case_id": "test-00062", "index": 397, "text": "0.13949", "terminated": true, "valid": true, "value": 0.13949}
+{"case_id": "test-00062", "index": 398, "text": "7.32965", "terminated": true, "valid": true, "value": 7.32965}
+{"case_id": "test-00062", "index": 399, "text": "0.55383", "terminated": true, "valid": true, "value": 0.55383}
+{"case_id": "test-00062", "index": 400, "text": "1.45661", "terminated": true, "valid": true, "value": 1.45661}
+{"case_id": "test-00062", "index": 401, "text": "1.24780", "terminated": true, "valid": true, "value": 1.2478}
+{"case_id": "test-00062", "index": 402, "text": "0.27324", "terminated": true, "valid": true, "value": 0.27324}
+{"case_id": "test-00062", "index": 403, "text": "0.99597", "terminated": true, "valid": true, "value": 0.99597}
+{"case_id": "test-00062", "index": 404, "text": "0.01724", "terminated": true, "valid": true, "value": 0.01724}
+{"case_id": "test-00062", "index": 405, "text": "0.04872\nType: exp(2.7046)", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 406, "text": "2.81120", "terminated": true, "valid": true, "value": 2.8112}
+{"case_id": "test-00062", "index": 407, "text": "8.73000", "terminated": true, "valid": true, "value": 8.73}
+{"case_id": "test-00062", "index": 408, "text": "0.85604", "terminated": true, "valid": true, "value": 0.85604}
+{"case_id": "test-00062", "index": 409, "text": "2.94332", "terminated": true, "valid": true, "value": 2.94332}
+{"case_id": "test-00062", "index": 410, "text": "0.60437", "terminated": true, "valid": true, "value": 0.60437}
+{"case_id": "test-00062", "index": 411, "text": "1.33991", "terminated": true, "valid": true, "value": 1.33991}
+{"case_id": "test-00062", "index": 412, "text": "1.46409", "terminated": true, "valid": true, "value": 1.46409}
+{"case_id": "test-00062", "index": 413, "text": "5.29188", "terminated": true, "valid": true, "value": 5.29188}
+{"case_id": "test-00062", "index": 414, "text": "0.00931", "terminated": true, "valid": true, "value": 0.00931}
+{"case_id": "test-00062", "index": 415, "text": "0.26783\nThis answer was provided by Malick Conarah of Cornell University.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 416, "text": "0.54812", "terminated": true, "valid": true, "value": 0.54812}
+{"case_id": "test-00062", "index": 417, "text": "1.49374", "terminated": true, "valid": true, "value": 1.49374}
+{"case_id": "test-00062", "index": 418, "text": "0.03131", "terminated": true, "valid": true, "value": 0.03131}
+{"case_id": "test-00062", "index": 419, "text": "1.41373", "terminated": true, "valid": true, "value": 1.41373}
+{"case_id": "test-00062", "index": 420, "text": "0.04955", "terminated": true, "valid": true, "value": 0.04955}
+{"case_id": "test-00062", "index": 421, "text": "1.05781", "terminated": true, "valid": true, "value": 1.05781}
+{"case_id": "test-00062", "index": 422, "text": "0.96583", "terminated": true, "valid": true, "value": 0.96583}
+{"case_id": "test-00062", "index": 423, "text": "Here is the single observation: 1.62545", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 424, "text": "0.05363", "terminated": true, "valid": true, "value": 0.05363}
+{"case_id": "test-00062", "index": 425, "text": "0.48391", "terminated": true, "valid": true, "value": 0.48391}
+{"case_id": "test-00062", "index": 426, "text": "0.21225", "terminated": true, "valid": true, "value": 0.21225}
+{"case_id": "test-00062", "index": 427, "text": "2.68670", "terminated": true, "valid": true, "value": 2.6867}
+{"case_id": "test-00062", "index": 428, "text": "0.96358", "terminated": true, "valid": true, "value": 0.96358}
+{"case_id": "test-00062", "index": 429, "text": "0.01410", "terminated": true, "valid": true, "value": 0.0141}
+{"case_id": "test-00062", "index": 430, "text": "2.30137", "terminated": true, "valid": true, "value": 2.30137}
+{"case_id": "test-00062", "index": 431, "text": "1.30643", "terminated": true, "valid": true, "value": 1.30643}
+{"case_id": "test-00062", "index": 432, "text": "0.46457", "terminated": true, "valid": true, "value": 0.46457}
+{"case_id": "test-00062", "index": 433, "text": "0.05756\nMinimum:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 434, "text": "1.48586", "terminated": true, "valid": true, "value": 1.48586}
+{"case_id": "test-00062", "index": 435, "text": "0.99684", "terminated": true, "valid": true, "value": 0.99684}
+{"case_id": "test-00062", "index": 436, "text": "0.40076", "terminated": true, "valid": true, "value": 0.40076}
+{"case_id": "test-00062", "index": 437, "text": "0.01889", "terminated": true, "valid": true, "value": 0.01889}
+{"case_id": "test-00062", "index": 438, "text": "0.43937", "terminated": true, "valid": true, "value": 0.43937}
+{"case_id": "test-00062", "index": 439, "text": "0.11910\nMy solution for the distribution was to calculate the CDF of 0.11910**2.7", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 440, "text": "0.29819", "terminated": true, "valid": true, "value": 0.29819}
+{"case_id": "test-00062", "index": 441, "text": "0.42772", "terminated": true, "valid": true, "value": 0.42772}
+{"case_id": "test-00062", "index": 442, "text": "0.00028", "terminated": true, "valid": true, "value": 0.00028}
+{"case_id": "test-00062", "index": 443, "text": "1.66183\nThis is a simulation of a I:(Q:D), where I and D are the estimation of the LL and LL/(", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 444, "text": "2.57074", "terminated": true, "valid": true, "value": 2.57074}
+{"case_id": "test-00062", "index": 445, "text": "1.03832", "terminated": true, "valid": true, "value": 1.03832}
+{"case_id": "test-00062", "index": 446, "text": "1.47644", "terminated": true, "valid": true, "value": 1.47644}
+{"case_id": "test-00062", "index": 447, "text": "0.08663\nEstimate for mean of exponential distribution:\n0.14274", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 448, "text": "3.56295", "terminated": true, "valid": true, "value": 3.56295}
+{"case_id": "test-00062", "index": 449, "text": "5.23605", "terminated": true, "valid": true, "value": 5.23605}
+{"case_id": "test-00062", "index": 450, "text": "0.83487", "terminated": true, "valid": true, "value": 0.83487}
+{"case_id": "test-00062", "index": 451, "text": "3.44629", "terminated": true, "valid": true, "value": 3.44629}
+{"case_id": "test-00062", "index": 452, "text": "0.89036", "terminated": true, "valid": true, "value": 0.89036}
+{"case_id": "test-00062", "index": 453, "text": "0.33102\nAuthor: Fpp", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 454, "text": "0.11998", "terminated": true, "valid": true, "value": 0.11998}
+{"case_id": "test-00062", "index": 455, "text": "5.91318", "terminated": true, "valid": true, "value": 5.91318}
+{"case_id": "test-00062", "index": 456, "text": "0.06554", "terminated": true, "valid": true, "value": 0.06554}
+{"case_id": "test-00062", "index": 457, "text": "3.64146", "terminated": true, "valid": true, "value": 3.64146}
+{"case_id": "test-00062", "index": 458, "text": "9.30148", "terminated": true, "valid": true, "value": 9.30148}
+{"case_id": "test-00062", "index": 459, "text": "3.42210", "terminated": true, "valid": true, "value": 3.4221}
+{"case_id": "test-00062", "index": 460, "text": "1.01201", "terminated": true, "valid": true, "value": 1.01201}
+{"case_id": "test-00062", "index": 461, "text": "0.00135", "terminated": true, "valid": true, "value": 0.00135}
+{"case_id": "test-00062", "index": 462, "text": "0.60358", "terminated": true, "valid": true, "value": 0.60358}
+{"case_id": "test-00062", "index": 463, "text": "0.80934", "terminated": true, "valid": true, "value": 0.80934}
+{"case_id": "test-00062", "index": 464, "text": "1.15600", "terminated": true, "valid": true, "value": 1.156}
+{"case_id": "test-00062", "index": 465, "text": "0.00365", "terminated": true, "valid": true, "value": 0.00365}
+{"case_id": "test-00062", "index": 466, "text": "1.24365", "terminated": true, "valid": true, "value": 1.24365}
+{"case_id": "test-00062", "index": 467, "text": "0.18474", "terminated": true, "valid": true, "value": 0.18474}
+{"case_id": "test-00062", "index": 468, "text": "0.92772\npvalue:\n0.05686\n(2.31363, 1.6", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 469, "text": "0.05931\nWhat now?", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 470, "text": "0.08718", "terminated": true, "valid": true, "value": 0.08718}
+{"case_id": "test-00062", "index": 471, "text": "0.30830", "terminated": true, "valid": true, "value": 0.3083}
+{"case_id": "test-00062", "index": 472, "text": "0.66681", "terminated": true, "valid": true, "value": 0.66681}
+{"case_id": "test-00062", "index": 473, "text": "This is the single independent observation drawn according to an exponential distribution with rate 2.7046.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 474, "text": "0.01000", "terminated": true, "valid": true, "value": 0.01}
+{"case_id": "test-00062", "index": 475, "text": "0.16673", "terminated": true, "valid": true, "value": 0.16673}
+{"case_id": "test-00062", "index": 476, "text": "You can generate a single independent observation drawn according to an exponential distribution with rate 2.7046 using the following code:\n\n```python\nimport numpy", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 477, "text": "0.90720", "terminated": true, "valid": true, "value": 0.9072}
+{"case_id": "test-00062", "index": 478, "text": "0.61710", "terminated": true, "valid": true, "value": 0.6171}
+{"case_id": "test-00062", "index": 479, "text": "9.00741", "terminated": true, "valid": true, "value": 9.00741}
+{"case_id": "test-00062", "index": 480, "text": "5.10838", "terminated": true, "valid": true, "value": 5.10838}
+{"case_id": "test-00062", "index": 481, "text": "1.57546", "terminated": true, "valid": true, "value": 1.57546}
+{"case_id": "test-00062", "index": 482, "text": "0.0064260", "terminated": true, "valid": true, "value": 0.006426}
+{"case_id": "test-00062", "index": 483, "text": "4.49211", "terminated": true, "valid": true, "value": 4.49211}
+{"case_id": "test-00062", "index": 484, "text": "1.18976\nThis was generated from the Weibull distribution.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 485, "text": "0.23430", "terminated": true, "valid": true, "value": 0.2343}
+{"case_id": "test-00062", "index": 486, "text": "1.04162", "terminated": true, "valid": true, "value": 1.04162}
+{"case_id": "test-00062", "index": 487, "text": "0.69509", "terminated": true, "valid": true, "value": 0.69509}
+{"case_id": "test-00062", "index": 488, "text": "0.52236", "terminated": true, "valid": true, "value": 0.52236}
+{"case_id": "test-00062", "index": 489, "text": "0.0002734", "terminated": true, "valid": true, "value": 0.0002734}
+{"case_id": "test-00062", "index": 490, "text": "The exponential distribution is a continuous probability distribution that describes the time between events in a Poisson process. The probability density function (pdf) of the exponential distribution is", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 491, "text": "0.50803", "terminated": true, "valid": true, "value": 0.50803}
+{"case_id": "test-00062", "index": 492, "text": "0.03856", "terminated": true, "valid": true, "value": 0.03856}
+{"case_id": "test-00062", "index": 493, "text": "2.60572", "terminated": true, "valid": true, "value": 2.60572}
+{"case_id": "test-00062", "index": 494, "text": "0.13817", "terminated": true, "valid": true, "value": 0.13817}
+{"case_id": "test-00062", "index": 495, "text": "1.77283\nExponential distribution with rate: 2.7046", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 496, "text": "1.06712", "terminated": true, "valid": true, "value": 1.06712}
+{"case_id": "test-00062", "index": 497, "text": "0.46052", "terminated": true, "valid": true, "value": 0.46052}
+{"case_id": "test-00062", "index": 498, "text": "0.04274", "terminated": true, "valid": true, "value": 0.04274}
+{"case_id": "test-00062", "index": 499, "text": "0.36800", "terminated": true, "valid": true, "value": 0.368}
+{"case_id": "test-00062", "index": 500, "text": "1.14335", "terminated": true, "valid": true, "value": 1.14335}
+{"case_id": "test-00062", "index": 501, "text": "0.22592", "terminated": true, "valid": true, "value": 0.22592}
+{"case_id": "test-00062", "index": 502, "text": "3.83997", "terminated": true, "valid": true, "value": 3.83997}
+{"case_id": "test-00062", "index": 503, "text": "0.47012", "terminated": true, "valid": true, "value": 0.47012}
+{"case_id": "test-00062", "index": 504, "text": "1.60304", "terminated": true, "valid": true, "value": 1.60304}
+{"case_id": "test-00062", "index": 505, "text": "0.01455\nMean:\n0.42134\nStandard deviation:\n0.89205", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 506, "text": "0.19572", "terminated": true, "valid": true, "value": 0.19572}
+{"case_id": "test-00062", "index": 507, "text": "0.10632", "terminated": true, "valid": true, "value": 0.10632}
+{"case_id": "test-00062", "index": 508, "text": "0.02955", "terminated": true, "valid": true, "value": 0.02955}
+{"case_id": "test-00062", "index": 509, "text": "0.82655", "terminated": true, "valid": true, "value": 0.82655}
+{"case_id": "test-00062", "index": 510, "text": "0.10272", "terminated": true, "valid": true, "value": 0.10272}
+{"case_id": "test-00062", "index": 511, "text": "1.84183", "terminated": true, "valid": true, "value": 1.84183}
+{"case_id": "test-00062", "index": 512, "text": "1.11691", "terminated": true, "valid": true, "value": 1.11691}
+{"case_id": "test-00062", "index": 513, "text": "0.31127", "terminated": true, "valid": true, "value": 0.31127}
+{"case_id": "test-00062", "index": 514, "text": "0.56469", "terminated": true, "valid": true, "value": 0.56469}
+{"case_id": "test-00062", "index": 515, "text": "1.86942", "terminated": true, "valid": true, "value": 1.86942}
+{"case_id": "test-00062", "index": 516, "text": "0.40672", "terminated": true, "valid": true, "value": 0.40672}
+{"case_id": "test-00062", "index": 517, "text": "2.12969", "terminated": true, "valid": true, "value": 2.12969}
+{"case_id": "test-00062", "index": 518, "text": "1.46721", "terminated": true, "valid": true, "value": 1.46721}
+{"case_id": "test-00062", "index": 519, "text": "What is the minimum number of cacti...", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 520, "text": "3.31577", "terminated": true, "valid": true, "value": 3.31577}
+{"case_id": "test-00062", "index": 521, "text": "0.23003", "terminated": true, "valid": true, "value": 0.23003}
+{"case_id": "test-00062", "index": 522, "text": "1.00118", "terminated": true, "valid": true, "value": 1.00118}
+{"case_id": "test-00062", "index": 523, "text": "0.14529", "terminated": true, "valid": true, "value": 0.14529}
+{"case_id": "test-00062", "index": 524, "text": "0.04006", "terminated": true, "valid": true, "value": 0.04006}
+{"case_id": "test-00062", "index": 525, "text": "0.34950", "terminated": true, "valid": true, "value": 0.3495}
+{"case_id": "test-00062", "index": 526, "text": "0.70928", "terminated": true, "valid": true, "value": 0.70928}
+{"case_id": "test-00062", "index": 527, "text": "0.39335", "terminated": true, "valid": true, "value": 0.39335}
+{"case_id": "test-00062", "index": 528, "text": "0.41207", "terminated": true, "valid": true, "value": 0.41207}
+{"case_id": "test-00062", "index": 529, "text": "0.78759", "terminated": true, "valid": true, "value": 0.78759}
+{"case_id": "test-00062", "index": 530, "text": "1.08530", "terminated": true, "valid": true, "value": 1.0853}
+{"case_id": "test-00062", "index": 531, "text": "0.02341", "terminated": true, "valid": true, "value": 0.02341}
+{"case_id": "test-00062", "index": 532, "text": "0.13527", "terminated": true, "valid": true, "value": 0.13527}
+{"case_id": "test-00062", "index": 533, "text": "0.10053", "terminated": true, "valid": true, "value": 0.10053}
+{"case_id": "test-00062", "index": 534, "text": "1.93526", "terminated": true, "valid": true, "value": 1.93526}
+{"case_id": "test-00062", "index": 535, "text": "1.50741", "terminated": true, "valid": true, "value": 1.50741}
+{"case_id": "test-00062", "index": 536, "text": "0.53675", "terminated": true, "valid": true, "value": 0.53675}
+{"case_id": "test-00062", "index": 537, "text": "0.12918", "terminated": true, "valid": true, "value": 0.12918}
+{"case_id": "test-00062", "index": 538, "text": "0.72033", "terminated": true, "valid": true, "value": 0.72033}
+{"case_id": "test-00062", "index": 539, "text": "Answer: 0.08361", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 540, "text": "1.63323", "terminated": true, "valid": true, "value": 1.63323}
+{"case_id": "test-00062", "index": 541, "text": "0.20999", "terminated": true, "valid": true, "value": 0.20999}
+{"case_id": "test-00062", "index": 542, "text": "1.37249", "terminated": true, "valid": true, "value": 1.37249}
+{"case_id": "test-00062", "index": 543, "text": "1.20932", "terminated": true, "valid": true, "value": 1.20932}
+{"case_id": "test-00062", "index": 544, "text": "0.13364", "terminated": true, "valid": true, "value": 0.13364}
+{"case_id": "test-00062", "index": 545, "text": "1.10196", "terminated": true, "valid": true, "value": 1.10196}
+{"case_id": "test-00062", "index": 546, "text": "0.47819", "terminated": true, "valid": true, "value": 0.47819}
+{"case_id": "test-00062", "index": 547, "text": "0.47295", "terminated": true, "valid": true, "value": 0.47295}
+{"case_id": "test-00062", "index": 548, "text": "1.05637\nHow do I calculate the value normally? Is it 1 / 2.7046 = 0.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 549, "text": "0.18771\nMinimum:\n0.04256\nMaximum:\n0.17330\nMean:\n0.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 550, "text": "Even if you do not know how to generate random numbers in `R`, you can still use the exponential distribution on a Stata command line. The exponential distribution", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 551, "text": "0.72795", "terminated": true, "valid": true, "value": 0.72795}
+{"case_id": "test-00062", "index": 552, "text": "0.16608", "terminated": true, "valid": true, "value": 0.16608}
+{"case_id": "test-00062", "index": 553, "text": "0.19981", "terminated": true, "valid": true, "value": 0.19981}
+{"case_id": "test-00062", "index": 554, "text": "0.31834", "terminated": true, "valid": true, "value": 0.31834}
+{"case_id": "test-00062", "index": 555, "text": "0.14400", "terminated": true, "valid": true, "value": 0.144}
+{"case_id": "test-00062", "index": 556, "text": "0.66145", "terminated": true, "valid": true, "value": 0.66145}
+{"case_id": "test-00062", "index": 557, "text": "0.55884", "terminated": true, "valid": true, "value": 0.55884}
+{"case_id": "test-00062", "index": 558, "text": "0.06631", "terminated": true, "valid": true, "value": 0.06631}
+{"case_id": "test-00062", "index": 559, "text": "0.32614", "terminated": true, "valid": true, "value": 0.32614}
+{"case_id": "test-00062", "index": 560, "text": "0.00240", "terminated": true, "valid": true, "value": 0.0024}
+{"case_id": "test-00062", "index": 561, "text": "0.05248", "terminated": true, "valid": true, "value": 0.05248}
+{"case_id": "test-00062", "index": 562, "text": "0.02688", "terminated": true, "valid": true, "value": 0.02688}
+{"case_id": "test-00062", "index": 563, "text": "0.02315", "terminated": true, "valid": true, "value": 0.02315}
+{"case_id": "test-00062", "index": 564, "text": "0.13412\nCan you provide more information about this observation?", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 565, "text": "0.27590", "terminated": true, "valid": true, "value": 0.2759}
+{"case_id": "test-00062", "index": 566, "text": "0.00478", "terminated": true, "valid": true, "value": 0.00478}
+{"case_id": "test-00062", "index": 567, "text": "1.08054", "terminated": true, "valid": true, "value": 1.08054}
+{"case_id": "test-00062", "index": 568, "text": "The value of the random variable: 0.02692", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 569, "text": "0.24537", "terminated": true, "valid": true, "value": 0.24537}
+{"case_id": "test-00062", "index": 570, "text": "0.35466", "terminated": true, "valid": true, "value": 0.35466}
+{"case_id": "test-00062", "index": 571, "text": "3.72928", "terminated": true, "valid": true, "value": 3.72928}
+{"case_id": "test-00062", "index": 572, "text": "0.03320", "terminated": true, "valid": true, "value": 0.0332}
+{"case_id": "test-00062", "index": 573, "text": "0.07210", "terminated": true, "valid": true, "value": 0.0721}
+{"case_id": "test-00062", "index": 574, "text": "0.19608", "terminated": true, "valid": true, "value": 0.19608}
+{"case_id": "test-00062", "index": 575, "text": "exp(2.7046) - 0.52689", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 576, "text": "0.34544\nAnother way of asking this question is: What is the maximum quantile that I would draw? What probability is it?", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 577, "text": "0.01281", "terminated": true, "valid": true, "value": 0.01281}
+{"case_id": "test-00062", "index": 578, "text": "2.47145", "terminated": true, "valid": true, "value": 2.47145}
+{"case_id": "test-00062", "index": 579, "text": "0.42156", "terminated": true, "valid": true, "value": 0.42156}
+{"case_id": "test-00062", "index": 580, "text": "0.22855", "terminated": true, "valid": true, "value": 0.22855}
+{"case_id": "test-00062", "index": 581, "text": "0.00425\nObservation: 12.14812", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 582, "text": "0.81664", "terminated": true, "valid": true, "value": 0.81664}
+{"case_id": "test-00062", "index": 583, "text": "2.65223\nThe random variable {eq}X{/eq} represents a time for an event to occur such as failure of a machine", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 584, "text": "4.74284", "terminated": true, "valid": true, "value": 4.74284}
+{"case_id": "test-00062", "index": 585, "text": "0.34935", "terminated": true, "valid": true, "value": 0.34935}
+{"case_id": "test-00062", "index": 586, "text": "0.83575", "terminated": true, "valid": true, "value": 0.83575}
+{"case_id": "test-00062", "index": 587, "text": "0.82319", "terminated": true, "valid": true, "value": 0.82319}
+{"case_id": "test-00062", "index": 588, "text": "0.61871", "terminated": true, "valid": true, "value": 0.61871}
+{"case_id": "test-00062", "index": 589, "text": "0.43448\nLet $\\lambda = 2.22143$ rate of Poisson Process$b > 0$: $\\", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 590, "text": "0.59912\nMethod:\nexpval(2.7046)", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 591, "text": "0.04284", "terminated": true, "valid": true, "value": 0.04284}
+{"case_id": "test-00062", "index": 592, "text": "0.16129\nExplore other questions tagged statistics or ask your own question.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 593, "text": "0.05617", "terminated": true, "valid": true, "value": 0.05617}
+{"case_id": "test-00062", "index": 594, "text": "0.77711", "terminated": true, "valid": true, "value": 0.77711}
+{"case_id": "test-00062", "index": 595, "text": "0.40488", "terminated": true, "valid": true, "value": 0.40488}
+{"case_id": "test-00062", "index": 596, "text": "1.15222", "terminated": true, "valid": true, "value": 1.15222}
+{"case_id": "test-00062", "index": 597, "text": "6.25861", "terminated": true, "valid": true, "value": 6.25861}
+{"case_id": "test-00062", "index": 598, "text": "0.01712", "terminated": true, "valid": true, "value": 0.01712}
+{"case_id": "test-00062", "index": 599, "text": "0.31420", "terminated": true, "valid": true, "value": 0.3142}
+{"case_id": "test-00062", "index": 600, "text": "0.18207", "terminated": true, "valid": true, "value": 0.18207}
+{"case_id": "test-00062", "index": 601, "text": "0.55732", "terminated": true, "valid": true, "value": 0.55732}
+{"case_id": "test-00062", "index": 602, "text": "0.37146", "terminated": true, "valid": true, "value": 0.37146}
+{"case_id": "test-00062", "index": 603, "text": "0.01131", "terminated": true, "valid": true, "value": 0.01131}
+{"case_id": "test-00062", "index": 604, "text": "0.58545", "terminated": true, "valid": true, "value": 0.58545}
+{"case_id": "test-00062", "index": 605, "text": "0.27437", "terminated": true, "valid": true, "value": 0.27437}
+{"case_id": "test-00062", "index": 606, "text": "0.12816\nSample:\n2.01958\nMedian:\n0.52884\nMean:\n1.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 607, "text": "Pareto: 4.42500; Xi: 4.27342\nA special case of an exponential distribution that", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 608, "text": "1.11794", "terminated": true, "valid": true, "value": 1.11794}
+{"case_id": "test-00062", "index": 609, "text": "0.38131", "terminated": true, "valid": true, "value": 0.38131}
+{"case_id": "test-00062", "index": 610, "text": "0.44977", "terminated": true, "valid": true, "value": 0.44977}
+{"case_id": "test-00062", "index": 611, "text": "0.71081", "terminated": true, "valid": true, "value": 0.71081}
+{"case_id": "test-00062", "index": 612, "text": "0.25265", "terminated": true, "valid": true, "value": 0.25265}
+{"case_id": "test-00062", "index": 613, "text": "0.80105", "terminated": true, "valid": true, "value": 0.80105}
+{"case_id": "test-00062", "index": 614, "text": "0.44190", "terminated": true, "valid": true, "value": 0.4419}
+{"case_id": "test-00062", "index": 615, "text": "0.19787", "terminated": true, "valid": true, "value": 0.19787}
+{"case_id": "test-00062", "index": 616, "text": "0.91809", "terminated": true, "valid": true, "value": 0.91809}
+{"case_id": "test-00062", "index": 617, "text": "0.78932", "terminated": true, "valid": true, "value": 0.78932}
+{"case_id": "test-00062", "index": 618, "text": "0.59753", "terminated": true, "valid": true, "value": 0.59753}
+{"case_id": "test-00062", "index": 619, "text": "3.18874", "terminated": true, "valid": true, "value": 3.18874}
+{"case_id": "test-00062", "index": 620, "text": "1.07316", "terminated": true, "valid": true, "value": 1.07316}
+{"case_id": "test-00062", "index": 621, "text": "0.84054", "terminated": true, "valid": true, "value": 0.84054}
+{"case_id": "test-00062", "index": 622, "text": "0.03244", "terminated": true, "valid": true, "value": 0.03244}
+{"case_id": "test-00062", "index": 623, "text": "0.61316", "terminated": true, "valid": true, "value": 0.61316}
+{"case_id": "test-00062", "index": 624, "text": "1.13090", "terminated": true, "valid": true, "value": 1.1309}
+{"case_id": "test-00062", "index": 625, "text": "0.46122", "terminated": true, "valid": true, "value": 0.46122}
+{"case_id": "test-00062", "index": 626, "text": "0.55650", "terminated": true, "valid": true, "value": 0.5565}
+{"case_id": "test-00062", "index": 627, "text": "0.11630", "terminated": true, "valid": true, "value": 0.1163}
+{"case_id": "test-00062", "index": 628, "text": "0.85643", "terminated": true, "valid": true, "value": 0.85643}
+{"case_id": "test-00062", "index": 629, "text": "1.24727\nIs this the correct answer?\nYes, you got it right. It is indeed 1.24727", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 630, "text": "0.45803", "terminated": true, "valid": true, "value": 0.45803}
+{"case_id": "test-00062", "index": 631, "text": "min(7.0006,4.8378,6.1112)", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 632, "text": "0.26257\nBest Answer\n|about \u2022 2 months ago|\nThe probability that a single independent observation drawn according to an exponential distribution", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 633, "text": "0.27874\nDistribution: exponential\nRate: 2.70460", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 634, "text": "0.47561", "terminated": true, "valid": true, "value": 0.47561}
+{"case_id": "test-00062", "index": 635, "text": "0.02781", "terminated": true, "valid": true, "value": 0.02781}
+{"case_id": "test-00062", "index": 636, "text": "You can use the exponential distribution to simulate a single independent observation. The exponential distribution is characterized by a single parameter, the rate (lambda) which determines the average", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 637, "text": "0.00394", "terminated": true, "valid": true, "value": 0.00394}
+{"case_id": "test-00062", "index": 638, "text": "5.01308", "terminated": true, "valid": true, "value": 5.01308}
+{"case_id": "test-00062", "index": 639, "text": "0.52120", "terminated": true, "valid": true, "value": 0.5212}
+{"case_id": "test-00062", "index": 640, "text": "0.07531\nDetermines the probability that the independent observation drawn according to an exponential distributio\nNumber approximately:\n0.71", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 641, "text": "0.61240", "terminated": true, "valid": true, "value": 0.6124}
+{"case_id": "test-00062", "index": 642, "text": "0.06924", "terminated": true, "valid": true, "value": 0.06924}
+{"case_id": "test-00062", "index": 643, "text": "0.01454\nDistribution:\nLaplace", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 644, "text": "0.85917", "terminated": true, "valid": true, "value": 0.85917}
+{"case_id": "test-00062", "index": 645, "text": "2.41781", "terminated": true, "valid": true, "value": 2.41781}
+{"case_id": "test-00062", "index": 646, "text": "Options:\n(A) 0.02602\n(B) 0.06889\n(C) 0.061", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 647, "text": "2.00368", "terminated": true, "valid": true, "value": 2.00368}
+{"case_id": "test-00062", "index": 648, "text": "0.63871", "terminated": true, "valid": true, "value": 0.63871}
+{"case_id": "test-00062", "index": 649, "text": "0.72756", "terminated": true, "valid": true, "value": 0.72756}
+{"case_id": "test-00062", "index": 650, "text": "1.04367", "terminated": true, "valid": true, "value": 1.04367}
+{"case_id": "test-00062", "index": 651, "text": "0.83335", "terminated": true, "valid": true, "value": 0.83335}
+{"case_id": "test-00062", "index": 652, "text": "0.35454", "terminated": true, "valid": true, "value": 0.35454}
+{"case_id": "test-00062", "index": 653, "text": "OC 5.04905", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 654, "text": "0.20453", "terminated": true, "valid": true, "value": 0.20453}
+{"case_id": "test-00062", "index": 655, "text": "1.35580\nNeed a refresher? Assignments made easy with our new smart text editor. Upload an image and focus on a specific", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 656, "text": "0.12995", "terminated": true, "valid": true, "value": 0.12995}
+{"case_id": "test-00062", "index": 657, "text": "0.10176\nLet Y denote your observation. Then:\nP(Y \u2264 y) = 1 - e^(-2.70", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 658, "text": "0.07363", "terminated": true, "valid": true, "value": 0.07363}
+{"case_id": "test-00062", "index": 659, "text": "1.88894", "terminated": true, "valid": true, "value": 1.88894}
+{"case_id": "test-00062", "index": 660, "text": "0.86280", "terminated": true, "valid": true, "value": 0.8628}
+{"case_id": "test-00062", "index": 661, "text": "1.05674", "terminated": true, "valid": true, "value": 1.05674}
+{"case_id": "test-00062", "index": 662, "text": "0.10014", "terminated": true, "valid": true, "value": 0.10014}
+{"case_id": "test-00062", "index": 663, "text": "1.01802", "terminated": true, "valid": true, "value": 1.01802}
+{"case_id": "test-00062", "index": 664, "text": "6.81454", "terminated": true, "valid": true, "value": 6.81454}
+{"case_id": "test-00062", "index": 665, "text": "1.56455", "terminated": true, "valid": true, "value": 1.56455}
+{"case_id": "test-00062", "index": 666, "text": "0.31120", "terminated": true, "valid": true, "value": 0.3112}
+{"case_id": "test-00062", "index": 667, "text": "0.12675", "terminated": true, "valid": true, "value": 0.12675}
+{"case_id": "test-00062", "index": 668, "text": "0.43421", "terminated": true, "valid": true, "value": 0.43421}
+{"case_id": "test-00062", "index": 669, "text": "4.00101", "terminated": true, "valid": true, "value": 4.00101}
+{"case_id": "test-00062", "index": 670, "text": "0.11381", "terminated": true, "valid": true, "value": 0.11381}
+{"case_id": "test-00062", "index": 671, "text": "0.02147", "terminated": true, "valid": true, "value": 0.02147}
+{"case_id": "test-00062", "index": 672, "text": "1.16466", "terminated": true, "valid": true, "value": 1.16466}
+{"case_id": "test-00062", "index": 673, "text": "0.71551", "terminated": true, "valid": true, "value": 0.71551}
+{"case_id": "test-00062", "index": 674, "text": "0.71717", "terminated": true, "valid": true, "value": 0.71717}
+{"case_id": "test-00062", "index": 675, "text": "0.42895", "terminated": true, "valid": true, "value": 0.42895}
+{"case_id": "test-00062", "index": 676, "text": "1.16227", "terminated": true, "valid": true, "value": 1.16227}
+{"case_id": "test-00062", "index": 677, "text": "2.28756", "terminated": true, "valid": true, "value": 2.28756}
+{"case_id": "test-00062", "index": 678, "text": "0.19083", "terminated": true, "valid": true, "value": 0.19083}
+{"case_id": "test-00062", "index": 679, "text": "0.87060", "terminated": true, "valid": true, "value": 0.8706}
+{"case_id": "test-00062", "index": 680, "text": "0.01200", "terminated": true, "valid": true, "value": 0.012}
+{"case_id": "test-00062", "index": 681, "text": "0.07179", "terminated": true, "valid": true, "value": 0.07179}
+{"case_id": "test-00062", "index": 682, "text": "0.11021", "terminated": true, "valid": true, "value": 0.11021}
+{"case_id": "test-00062", "index": 683, "text": "0.25526", "terminated": true, "valid": true, "value": 0.25526}
+{"case_id": "test-00062", "index": 684, "text": "0.30292", "terminated": true, "valid": true, "value": 0.30292}
+{"case_id": "test-00062", "index": 685, "text": "0.00245", "terminated": true, "valid": true, "value": 0.00245}
+{"case_id": "test-00062", "index": 686, "text": "0.37775", "terminated": true, "valid": true, "value": 0.37775}
+{"case_id": "test-00062", "index": 687, "text": "7.39572", "terminated": true, "valid": true, "value": 7.39572}
+{"case_id": "test-00062", "index": 688, "text": "0.00730", "terminated": true, "valid": true, "value": 0.0073}
+{"case_id": "test-00062", "index": 689, "text": "0.44632\n0.23454\n1.05365\n1.82010\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 690, "text": "0.01072", "terminated": true, "valid": true, "value": 0.01072}
+{"case_id": "test-00062", "index": 691, "text": "0.87419", "terminated": true, "valid": true, "value": 0.87419}
+{"case_id": "test-00062", "index": 692, "text": "1.70396", "terminated": true, "valid": true, "value": 1.70396}
+{"case_id": "test-00062", "index": 693, "text": "0.92658\nShewchuk, J. R. (1999). \u201cTriangle: \u2206 evolving triangles\u201d\u2014a", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 694, "text": "2.34341", "terminated": true, "valid": true, "value": 2.34341}
+{"case_id": "test-00062", "index": 695, "text": "0.76450", "terminated": true, "valid": true, "value": 0.7645}
+{"case_id": "test-00062", "index": 696, "text": "5.43077", "terminated": true, "valid": true, "value": 5.43077}
+{"case_id": "test-00062", "index": 697, "text": "0.19686", "terminated": true, "valid": true, "value": 0.19686}
+{"case_id": "test-00062", "index": 698, "text": "1.30673", "terminated": true, "valid": true, "value": 1.30673}
+{"case_id": "test-00062", "index": 699, "text": "0.85476", "terminated": true, "valid": true, "value": 0.85476}
+{"case_id": "test-00062", "index": 700, "text": "3.24524", "terminated": true, "valid": true, "value": 3.24524}
+{"case_id": "test-00062", "index": 701, "text": "0.21909", "terminated": true, "valid": true, "value": 0.21909}
+{"case_id": "test-00062", "index": 702, "text": "0.25238", "terminated": true, "valid": true, "value": 0.25238}
+{"case_id": "test-00062", "index": 703, "text": "0.65930", "terminated": true, "valid": true, "value": 0.6593}
+{"case_id": "test-00062", "index": 704, "text": "1.96447", "terminated": true, "valid": true, "value": 1.96447}
+{"case_id": "test-00062", "index": 705, "text": "0.18773", "terminated": true, "valid": true, "value": 0.18773}
+{"case_id": "test-00062", "index": 706, "text": "0.14055", "terminated": true, "valid": true, "value": 0.14055}
+{"case_id": "test-00062", "index": 707, "text": "\u03bb = 2.7046", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 708, "text": "0.23286", "terminated": true, "valid": true, "value": 0.23286}
+{"case_id": "test-00062", "index": 709, "text": "0.04868\nQuantile:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 710, "text": "1.64086", "terminated": true, "valid": true, "value": 1.64086}
+{"case_id": "test-00062", "index": 711, "text": "Obviously you cannot generate the value in a computer in just 2 examples of eight decimal places, but you should be able to check that the value I gave is", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 712, "text": "0.85069", "terminated": true, "valid": true, "value": 0.85069}
+{"case_id": "test-00062", "index": 713, "text": "0.79273", "terminated": true, "valid": true, "value": 0.79273}
+{"case_id": "test-00062", "index": 714, "text": "0.29020", "terminated": true, "valid": true, "value": 0.2902}
+{"case_id": "test-00062", "index": 715, "text": "0.40444", "terminated": true, "valid": true, "value": 0.40444}
+{"case_id": "test-00062", "index": 716, "text": "The single independent observation drawn according to an exponential distribution with rate 2.7046 is 0.31059.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 717, "text": "0.82991", "terminated": true, "valid": true, "value": 0.82991}
+{"case_id": "test-00062", "index": 718, "text": "8.41941\nWhat is the probability that a single independent observation drawn according to an exponential distribution with rate 2.1895", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 719, "text": "1.03427", "terminated": true, "valid": true, "value": 1.03427}
+{"case_id": "test-00062", "index": 720, "text": "0.98170", "terminated": true, "valid": true, "value": 0.9817}
+{"case_id": "test-00062", "index": 721, "text": "0.72467", "terminated": true, "valid": true, "value": 0.72467}
+{"case_id": "test-00062", "index": 722, "text": "5.72027", "terminated": true, "valid": true, "value": 5.72027}
+{"case_id": "test-00062", "index": 723, "text": "0.41219", "terminated": true, "valid": true, "value": 0.41219}
+{"case_id": "test-00062", "index": 724, "text": "0.62574", "terminated": true, "valid": true, "value": 0.62574}
+{"case_id": "test-00062", "index": 725, "text": "0.05888", "terminated": true, "valid": true, "value": 0.05888}
+{"case_id": "test-00062", "index": 726, "text": "0.89371", "terminated": true, "valid": true, "value": 0.89371}
+{"case_id": "test-00062", "index": 727, "text": "0.05404\nMinimum:\n0.10231\nMaximum:\n0.61102\nMean:\n0.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 728, "text": "0.37355", "terminated": true, "valid": true, "value": 0.37355}
+{"case_id": "test-00062", "index": 729, "text": "0.41961", "terminated": true, "valid": true, "value": 0.41961}
+{"case_id": "test-00062", "index": 730, "text": "Is that a correct answer? No, the result 0.08703 is not correct. The answer should include two digits after the decimal point", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 731, "text": "0.42216", "terminated": true, "valid": true, "value": 0.42216}
+{"case_id": "test-00062", "index": 732, "text": "1.76011", "terminated": true, "valid": true, "value": 1.76011}
+{"case_id": "test-00062", "index": 733, "text": "1.33278", "terminated": true, "valid": true, "value": 1.33278}
+{"case_id": "test-00062", "index": 734, "text": "0.37841", "terminated": true, "valid": true, "value": 0.37841}
+{"case_id": "test-00062", "index": 735, "text": "3.20709", "terminated": true, "valid": true, "value": 3.20709}
+{"case_id": "test-00062", "index": 736, "text": "0.04507", "terminated": true, "valid": true, "value": 0.04507}
+{"case_id": "test-00062", "index": 737, "text": "0.02432", "terminated": true, "valid": true, "value": 0.02432}
+{"case_id": "test-00062", "index": 738, "text": "2.64179", "terminated": true, "valid": true, "value": 2.64179}
+{"case_id": "test-00062", "index": 739, "text": "0.96064", "terminated": true, "valid": true, "value": 0.96064}
+{"case_id": "test-00062", "index": 740, "text": "0.18104", "terminated": true, "valid": true, "value": 0.18104}
+{"case_id": "test-00062", "index": 741, "text": "0.08637", "terminated": true, "valid": true, "value": 0.08637}
+{"case_id": "test-00062", "index": 742, "text": "6.11874", "terminated": true, "valid": true, "value": 6.11874}
+{"case_id": "test-00062", "index": 743, "text": "0.35487", "terminated": true, "valid": true, "value": 0.35487}
+{"case_id": "test-00062", "index": 744, "text": "0.55915", "terminated": true, "valid": true, "value": 0.55915}
+{"case_id": "test-00062", "index": 745, "text": "0.16131", "terminated": true, "valid": true, "value": 0.16131}
+{"case_id": "test-00062", "index": 746, "text": "0.73707", "terminated": true, "valid": true, "value": 0.73707}
+{"case_id": "test-00062", "index": 747, "text": "0.61401", "terminated": true, "valid": true, "value": 0.61401}
+{"case_id": "test-00062", "index": 748, "text": "0.87891", "terminated": true, "valid": true, "value": 0.87891}
+{"case_id": "test-00062", "index": 749, "text": "0.28430", "terminated": true, "valid": true, "value": 0.2843}
+{"case_id": "test-00062", "index": 750, "text": "0.13596\nWhere maximum estimate is: 0.35636", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 751, "text": "0.14746", "terminated": true, "valid": true, "value": 0.14746}
+{"case_id": "test-00062", "index": 752, "text": "In NumPy, you can use the exponential distribution from the random module to generate a random number which is drawn according to an exponential distribution with rate 2.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 753, "text": "1.99530", "terminated": true, "valid": true, "value": 1.9953}
+{"case_id": "test-00062", "index": 754, "text": "0.49722", "terminated": true, "valid": true, "value": 0.49722}
+{"case_id": "test-00062", "index": 755, "text": "4.06522", "terminated": true, "valid": true, "value": 4.06522}
+{"case_id": "test-00062", "index": 756, "text": "The value of the random variable binding to the distribution is 1.51440.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 757, "text": "0.07825", "terminated": true, "valid": true, "value": 0.07825}
+{"case_id": "test-00062", "index": 758, "text": "0.53833", "terminated": true, "valid": true, "value": 0.53833}
+{"case_id": "test-00062", "index": 759, "text": "0.08148", "terminated": true, "valid": true, "value": 0.08148}
+{"case_id": "test-00062", "index": 760, "text": "0.90874", "terminated": true, "valid": true, "value": 0.90874}
+{"case_id": "test-00062", "index": 761, "text": "0.00735", "terminated": true, "valid": true, "value": 0.00735}
+{"case_id": "test-00062", "index": 762, "text": "0.56784", "terminated": true, "valid": true, "value": 0.56784}
+{"case_id": "test-00062", "index": 763, "text": "1.27566", "terminated": true, "valid": true, "value": 1.27566}
+{"case_id": "test-00062", "index": 764, "text": "Cumulative Distribution Function: poexponential(a, u)\nInput Interpretation Rate / Mean: a=2.7046\nInput Interpretation Number", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 765, "text": "1.14502", "terminated": true, "valid": true, "value": 1.14502}
+{"case_id": "test-00062", "index": 766, "text": "1.69663", "terminated": true, "valid": true, "value": 1.69663}
+{"case_id": "test-00062", "index": 767, "text": "0.15289", "terminated": true, "valid": true, "value": 0.15289}
+{"case_id": "test-00062", "index": 768, "text": "0.04672", "terminated": true, "valid": true, "value": 0.04672}
+{"case_id": "test-00062", "index": 769, "text": "0.07182\nThe density values for the exponential distribution with rate 2.7046 are given below for the first 1", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 770, "text": "0.24258", "terminated": true, "valid": true, "value": 0.24258}
+{"case_id": "test-00062", "index": 771, "text": "1.28536", "terminated": true, "valid": true, "value": 1.28536}
+{"case_id": "test-00062", "index": 772, "text": "0.24990\nCan someone verify that this is right.\nThanks.\nBarry\nIt's right. It should have 2 decimal places", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 773, "text": "6.76642", "terminated": true, "valid": true, "value": 6.76642}
+{"case_id": "test-00062", "index": 774, "text": "comment", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 775, "text": "0.01957", "terminated": true, "valid": true, "value": 0.01957}
+{"case_id": "test-00062", "index": 776, "text": "0.06559", "terminated": true, "valid": true, "value": 0.06559}
+{"case_id": "test-00062", "index": 777, "text": "1.45210", "terminated": true, "valid": true, "value": 1.4521}
+{"case_id": "test-00062", "index": 778, "text": "0.46443\n0.82781\n0.24923\n0.40137", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 779, "text": "0.65068", "terminated": true, "valid": true, "value": 0.65068}
+{"case_id": "test-00062", "index": 780, "text": "0.02056", "terminated": true, "valid": true, "value": 0.02056}
+{"case_id": "test-00062", "index": 781, "text": "0.04788", "terminated": true, "valid": true, "value": 0.04788}
+{"case_id": "test-00062", "index": 782, "text": "0.80363", "terminated": true, "valid": true, "value": 0.80363}
+{"case_id": "test-00062", "index": 783, "text": "0.03442", "terminated": true, "valid": true, "value": 0.03442}
+{"case_id": "test-00062", "index": 784, "text": "0.29181", "terminated": true, "valid": true, "value": 0.29181}
+{"case_id": "test-00062", "index": 785, "text": "0.54900", "terminated": true, "valid": true, "value": 0.549}
+{"case_id": "test-00062", "index": 786, "text": "0.35320", "terminated": true, "valid": true, "value": 0.3532}
+{"case_id": "test-00062", "index": 787, "text": "0.20115", "terminated": true, "valid": true, "value": 0.20115}
+{"case_id": "test-00062", "index": 788, "text": "0.30455", "terminated": true, "valid": true, "value": 0.30455}
+{"case_id": "test-00062", "index": 789, "text": "6.86743", "terminated": true, "valid": true, "value": 6.86743}
+{"case_id": "test-00062", "index": 790, "text": "8.16642\nCould you explain how the result above was obtained?", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 791, "text": "1.36940", "terminated": true, "valid": true, "value": 1.3694}
+{"case_id": "test-00062", "index": 792, "text": "0.00702", "terminated": true, "valid": true, "value": 0.00702}
+{"case_id": "test-00062", "index": 793, "text": "0.01379", "terminated": true, "valid": true, "value": 0.01379}
+{"case_id": "test-00062", "index": 794, "text": "0.14158\n0.68135\n0.20355\n0.07265\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 795, "text": "0.21742", "terminated": true, "valid": true, "value": 0.21742}
+{"case_id": "test-00062", "index": 796, "text": "0.68849", "terminated": true, "valid": true, "value": 0.68849}
+{"case_id": "test-00062", "index": 797, "text": "0.36248", "terminated": true, "valid": true, "value": 0.36248}
+{"case_id": "test-00062", "index": 798, "text": "0.12197\nProbability density function:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 799, "text": "0.25582", "terminated": true, "valid": true, "value": 0.25582}
+{"case_id": "test-00062", "index": 800, "text": "0.20286", "terminated": true, "valid": true, "value": 0.20286}
+{"case_id": "test-00062", "index": 801, "text": "0.30732", "terminated": true, "valid": true, "value": 0.30732}
+{"case_id": "test-00062", "index": 802, "text": "0.18874", "terminated": true, "valid": true, "value": 0.18874}
+{"case_id": "test-00062", "index": 803, "text": "0.68746", "terminated": true, "valid": true, "value": 0.68746}
+{"case_id": "test-00062", "index": 804, "text": "0.26553", "terminated": true, "valid": true, "value": 0.26553}
+{"case_id": "test-00062", "index": 805, "text": "0.52119", "terminated": true, "valid": true, "value": 0.52119}
+{"case_id": "test-00062", "index": 806, "text": "I need a single independent observation drawn according to a uniform distribution on the interval [1, 2.6].\nNumber:\nI need a single independent observation drawn", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 807, "text": "In the Research module of JMP that you can add some random variate or observation from the desired distribution.\nFor example for the normal distribution mean and standard deviation need", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 808, "text": "0.30866", "terminated": true, "valid": true, "value": 0.30866}
+{"case_id": "test-00062", "index": 809, "text": "0.41038", "terminated": true, "valid": true, "value": 0.41038}
+{"case_id": "test-00062", "index": 810, "text": "0.64984\nWarning message:\nIn exp(rate = rate, scale = scale, size = size) : NaNs produced\nYou can", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 811, "text": "0.98397", "terminated": true, "valid": true, "value": 0.98397}
+{"case_id": "test-00062", "index": 812, "text": "0.11076", "terminated": true, "valid": true, "value": 0.11076}
+{"case_id": "test-00062", "index": 813, "text": "0.58079", "terminated": true, "valid": true, "value": 0.58079}
+{"case_id": "test-00062", "index": 814, "text": "0.22795", "terminated": true, "valid": true, "value": 0.22795}
+{"case_id": "test-00062", "index": 815, "text": "0.44889", "terminated": true, "valid": true, "value": 0.44889}
+{"case_id": "test-00062", "index": 816, "text": "0.97661", "terminated": true, "valid": true, "value": 0.97661}
+{"case_id": "test-00062", "index": 817, "text": "0.15683", "terminated": true, "valid": true, "value": 0.15683}
+{"case_id": "test-00062", "index": 818, "text": "1.35544", "terminated": true, "valid": true, "value": 1.35544}
+{"case_id": "test-00062", "index": 819, "text": "0.19449", "terminated": true, "valid": true, "value": 0.19449}
+{"case_id": "test-00062", "index": 820, "text": "0.0200450", "terminated": true, "valid": true, "value": 0.020045}
+{"case_id": "test-00062", "index": 821, "text": "0.09521", "terminated": true, "valid": true, "value": 0.09521}
+{"case_id": "test-00062", "index": 822, "text": "0.31384", "terminated": true, "valid": true, "value": 0.31384}
+{"case_id": "test-00062", "index": 823, "text": "0.18971", "terminated": true, "valid": true, "value": 0.18971}
+{"case_id": "test-00062", "index": 824, "text": "1.21435", "terminated": true, "valid": true, "value": 1.21435}
+{"case_id": "test-00062", "index": 825, "text": "0.66658", "terminated": true, "valid": true, "value": 0.66658}
+{"case_id": "test-00062", "index": 826, "text": "0.50006", "terminated": true, "valid": true, "value": 0.50006}
+{"case_id": "test-00062", "index": 827, "text": "0.16590\nExponential Rate: 2.70465", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 828, "text": "0.14635", "terminated": true, "valid": true, "value": 0.14635}
+{"case_id": "test-00062", "index": 829, "text": "1.15729", "terminated": true, "valid": true, "value": 1.15729}
+{"case_id": "test-00062", "index": 830, "text": "0.42710", "terminated": true, "valid": true, "value": 0.4271}
+{"case_id": "test-00062", "index": 831, "text": "0.45010", "terminated": true, "valid": true, "value": 0.4501}
+{"case_id": "test-00062", "index": 832, "text": "Is a 0.29318", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 833, "text": "0.99468", "terminated": true, "valid": true, "value": 0.99468}
+{"case_id": "test-00062", "index": 834, "text": "0.02591\nSelect from:\n[J] 0.56825\n[K] 0.18012", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 835, "text": "1.64782\n0.83356", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 836, "text": "0.47840", "terminated": true, "valid": true, "value": 0.4784}
+{"case_id": "test-00062", "index": 837, "text": "0.05257", "terminated": true, "valid": true, "value": 0.05257}
+{"case_id": "test-00062", "index": 838, "text": "1.76567", "terminated": true, "valid": true, "value": 1.76567}
+{"case_id": "test-00062", "index": 839, "text": "0.04647", "terminated": true, "valid": true, "value": 0.04647}
+{"case_id": "test-00062", "index": 840, "text": "0.80008", "terminated": true, "valid": true, "value": 0.80008}
+{"case_id": "test-00062", "index": 841, "text": "0.09840", "terminated": true, "valid": true, "value": 0.0984}
+{"case_id": "test-00062", "index": 842, "text": "3.14493", "terminated": true, "valid": true, "value": 3.14493}
+{"case_id": "test-00062", "index": 843, "text": "0.53819", "terminated": true, "valid": true, "value": 0.53819}
+{"case_id": "test-00062", "index": 844, "text": "0.09066\nWhat I have read about so far:\nOrdinary gammas and exponentials follow a gamma distribution with a mean of ", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 845, "text": "0.39051", "terminated": true, "valid": true, "value": 0.39051}
+{"case_id": "test-00062", "index": 846, "text": "0.04696", "terminated": true, "valid": true, "value": 0.04696}
+{"case_id": "test-00062", "index": 847, "text": "0.07801", "terminated": true, "valid": true, "value": 0.07801}
+{"case_id": "test-00062", "index": 848, "text": "0.75683", "terminated": true, "valid": true, "value": 0.75683}
+{"case_id": "test-00062", "index": 849, "text": "0.19605\nYou are correct!", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 850, "text": "Exp(2.7046) = 0.07155", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 851, "text": "0.36188\nI need a single independent observation drawn according to an exponential distribution with rate 2.4993.\nNumber:\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 852, "text": "0.01295", "terminated": true, "valid": true, "value": 0.01295}
+{"case_id": "test-00062", "index": 853, "text": "0.31984\nIs my understanding correct?\nCorrect. The exponential distribution is the probability distribution for the amount of time until some event occurs.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 854, "text": "0.90086", "terminated": true, "valid": true, "value": 0.90086}
+{"case_id": "test-00062", "index": 855, "text": "0.39683\nThe task is to find a direction of point on the plane Pdf = 1/2 for 0 \u2264 \u03b8", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 856, "text": "0.23966\nRecalculate the result to the next decimal place.\n0.23973", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 857, "text": "0.42221", "terminated": true, "valid": true, "value": 0.42221}
+{"case_id": "test-00062", "index": 858, "text": "0.60387", "terminated": true, "valid": true, "value": 0.60387}
+{"case_id": "test-00062", "index": 859, "text": "2.45618", "terminated": true, "valid": true, "value": 2.45618}
+{"case_id": "test-00062", "index": 860, "text": "0.42949", "terminated": true, "valid": true, "value": 0.42949}
+{"case_id": "test-00062", "index": 861, "text": "0.20595", "terminated": true, "valid": true, "value": 0.20595}
+{"case_id": "test-00062", "index": 862, "text": "How can I calculate it?\nAns:1.67712", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 863, "text": "0.00092", "terminated": true, "valid": true, "value": 0.00092}
+{"case_id": "test-00062", "index": 864, "text": "2.92026", "terminated": true, "valid": true, "value": 2.92026}
+{"case_id": "test-00062", "index": 865, "text": "6.19950", "terminated": true, "valid": true, "value": 6.1995}
+{"case_id": "test-00062", "index": 866, "text": "1.11538", "terminated": true, "valid": true, "value": 1.11538}
+{"case_id": "test-00062", "index": 867, "text": "0.19744\nMean:\n0.69382\nCumulative:\n0.22650\nStandard deviation:\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 868, "text": "0.00970\nCumulative probability:\n0.37048", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 869, "text": "1.15668", "terminated": true, "valid": true, "value": 1.15668}
+{"case_id": "test-00062", "index": 870, "text": "0.03149\nI need a single independent observation drawn according to a uniform distribution on the interval [-3.50000,", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 871, "text": "0.45812", "terminated": true, "valid": true, "value": 0.45812}
+{"case_id": "test-00062", "index": 872, "text": "0.05410", "terminated": true, "valid": true, "value": 0.0541}
+{"case_id": "test-00062", "index": 873, "text": "0.32654", "terminated": true, "valid": true, "value": 0.32654}
+{"case_id": "test-00062", "index": 874, "text": "0.85537", "terminated": true, "valid": true, "value": 0.85537}
+{"case_id": "test-00062", "index": 875, "text": "0.64822", "terminated": true, "valid": true, "value": 0.64822}
+{"case_id": "test-00062", "index": 876, "text": "0.37573", "terminated": true, "valid": true, "value": 0.37573}
+{"case_id": "test-00062", "index": 877, "text": "0.14753", "terminated": true, "valid": true, "value": 0.14753}
+{"case_id": "test-00062", "index": 878, "text": "0.01996", "terminated": true, "valid": true, "value": 0.01996}
+{"case_id": "test-00062", "index": 879, "text": "6.35175", "terminated": true, "valid": true, "value": 6.35175}
+{"case_id": "test-00062", "index": 880, "text": "0.10506", "terminated": true, "valid": true, "value": 0.10506}
+{"case_id": "test-00062", "index": 881, "text": "0.45500", "terminated": true, "valid": true, "value": 0.455}
+{"case_id": "test-00062", "index": 882, "text": "0.16233", "terminated": true, "valid": true, "value": 0.16233}
+{"case_id": "test-00062", "index": 883, "text": "1.90238", "terminated": true, "valid": true, "value": 1.90238}
+{"case_id": "test-00062", "index": 884, "text": "1.17231", "terminated": true, "valid": true, "value": 1.17231}
+{"case_id": "test-00062", "index": 885, "text": "1.84539", "terminated": true, "valid": true, "value": 1.84539}
+{"case_id": "test-00062", "index": 886, "text": "0.01119", "terminated": true, "valid": true, "value": 0.01119}
+{"case_id": "test-00062", "index": 887, "text": "1.17570", "terminated": true, "valid": true, "value": 1.1757}
+{"case_id": "test-00062", "index": 888, "text": "0.20629", "terminated": true, "valid": true, "value": 0.20629}
+{"case_id": "test-00062", "index": 889, "text": "1.75976", "terminated": true, "valid": true, "value": 1.75976}
+{"case_id": "test-00062", "index": 890, "text": "0.00789", "terminated": true, "valid": true, "value": 0.00789}
+{"case_id": "test-00062", "index": 891, "text": "2.47435", "terminated": true, "valid": true, "value": 2.47435}
+{"case_id": "test-00062", "index": 892, "text": "4.09899\nHere's a summary of the parameters of the distribution:\nMean: 0.36120\nStandard deviation", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 893, "text": "0.00423", "terminated": true, "valid": true, "value": 0.00423}
+{"case_id": "test-00062", "index": 894, "text": "1.48730", "terminated": true, "valid": true, "value": 1.4873}
+{"case_id": "test-00062", "index": 895, "text": "0.0851776", "terminated": true, "valid": true, "value": 0.0851776}
+{"case_id": "test-00062", "index": 896, "text": "0.37924", "terminated": true, "valid": true, "value": 0.37924}
+{"case_id": "test-00062", "index": 897, "text": "1.26245", "terminated": true, "valid": true, "value": 1.26245}
+{"case_id": "test-00062", "index": 898, "text": "0.40203", "terminated": true, "valid": true, "value": 0.40203}
+{"case_id": "test-00062", "index": 899, "text": "6.69428", "terminated": true, "valid": true, "value": 6.69428}
+{"case_id": "test-00062", "index": 900, "text": "1.04915", "terminated": true, "valid": true, "value": 1.04915}
+{"case_id": "test-00062", "index": 901, "text": "0.10956", "terminated": true, "valid": true, "value": 0.10956}
+{"case_id": "test-00062", "index": 902, "text": "0.03528", "terminated": true, "valid": true, "value": 0.03528}
+{"case_id": "test-00062", "index": 903, "text": "0.75165", "terminated": true, "valid": true, "value": 0.75165}
+{"case_id": "test-00062", "index": 904, "text": "4.59246", "terminated": true, "valid": true, "value": 4.59246}
+{"case_id": "test-00062", "index": 905, "text": "2.20991", "terminated": true, "valid": true, "value": 2.20991}
+{"case_id": "test-00062", "index": 906, "text": "0.67257", "terminated": true, "valid": true, "value": 0.67257}
+{"case_id": "test-00062", "index": 907, "text": "0.27093", "terminated": true, "valid": true, "value": 0.27093}
+{"case_id": "test-00062", "index": 908, "text": "5.19071\nMinimum:\n0.00911\nMaximum:\n11.87372\nMean:\n5", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 909, "text": "$$0.06679$$", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 910, "text": "0.17099", "terminated": true, "valid": true, "value": 0.17099}
+{"case_id": "test-00062", "index": 911, "text": "0.94096", "terminated": true, "valid": true, "value": 0.94096}
+{"case_id": "test-00062", "index": 912, "text": "Definition: The exponential distribution is a probability distribution often used to model the time it takes to complete a task, such as the time between failures of a system or", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 913, "text": "0.03343", "terminated": true, "valid": true, "value": 0.03343}
+{"case_id": "test-00062", "index": 914, "text": "0.11825\nHence, we might expect that there will have been 0.11825 minutes between each pair of", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 915, "text": "0.41507", "terminated": true, "valid": true, "value": 0.41507}
+{"case_id": "test-00062", "index": 916, "text": "0.39975", "terminated": true, "valid": true, "value": 0.39975}
+{"case_id": "test-00062", "index": 917, "text": "2.00868", "terminated": true, "valid": true, "value": 2.00868}
+{"case_id": "test-00062", "index": 918, "text": "0.40491\nI need a simple explanation by linear algebra.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 919, "text": "0.10429", "terminated": true, "valid": true, "value": 0.10429}
+{"case_id": "test-00062", "index": 920, "text": "1.09885", "terminated": true, "valid": true, "value": 1.09885}
+{"case_id": "test-00062", "index": 921, "text": "0.45617", "terminated": true, "valid": true, "value": 0.45617}
+{"case_id": "test-00062", "index": 922, "text": "0.41024", "terminated": true, "valid": true, "value": 0.41024}
+{"case_id": "test-00062", "index": 923, "text": "0.16232", "terminated": true, "valid": true, "value": 0.16232}
+{"case_id": "test-00062", "index": 924, "text": "2.04816", "terminated": true, "valid": true, "value": 2.04816}
+{"case_id": "test-00062", "index": 925, "text": "0.50758", "terminated": true, "valid": true, "value": 0.50758}
+{"case_id": "test-00062", "index": 926, "text": "4.73467", "terminated": true, "valid": true, "value": 4.73467}
+{"case_id": "test-00062", "index": 927, "text": "0.20061", "terminated": true, "valid": true, "value": 0.20061}
+{"case_id": "test-00062", "index": 928, "text": "1.02268", "terminated": true, "valid": true, "value": 1.02268}
+{"case_id": "test-00062", "index": 929, "text": "1.30194", "terminated": true, "valid": true, "value": 1.30194}
+{"case_id": "test-00062", "index": 930, "text": "0.02437\nRecommended Posts:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 931, "text": "0.28437", "terminated": true, "valid": true, "value": 0.28437}
+{"case_id": "test-00062", "index": 932, "text": "0.26705\nMinimum:\n1.08035\nMaximum:\n1.18903\nMean:\n1.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 933, "text": "0.67854", "terminated": true, "valid": true, "value": 0.67854}
+{"case_id": "test-00062", "index": 934, "text": "0.27354", "terminated": true, "valid": true, "value": 0.27354}
+{"case_id": "test-00062", "index": 935, "text": "3.91459", "terminated": true, "valid": true, "value": 3.91459}
+{"case_id": "test-00062", "index": 936, "text": "0.42302\nThe underlying data that generated the predictions is shown in the plots and details below (the blue line is the predicted exponential data", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 937, "text": "0.69850", "terminated": true, "valid": true, "value": 0.6985}
+{"case_id": "test-00062", "index": 938, "text": "0.22525", "terminated": true, "valid": true, "value": 0.22525}
+{"case_id": "test-00062", "index": 939, "text": "0.19499", "terminated": true, "valid": true, "value": 0.19499}
+{"case_id": "test-00062", "index": 940, "text": "8.64411", "terminated": true, "valid": true, "value": 8.64411}
+{"case_id": "test-00062", "index": 941, "text": "0.08669", "terminated": true, "valid": true, "value": 0.08669}
+{"case_id": "test-00062", "index": 942, "text": "1.16646", "terminated": true, "valid": true, "value": 1.16646}
+{"case_id": "test-00062", "index": 943, "text": "0.62199", "terminated": true, "valid": true, "value": 0.62199}
+{"case_id": "test-00062", "index": 944, "text": "0.28076", "terminated": true, "valid": true, "value": 0.28076}
+{"case_id": "test-00062", "index": 945, "text": "0.25346", "terminated": true, "valid": true, "value": 0.25346}
+{"case_id": "test-00062", "index": 946, "text": "0.28619", "terminated": true, "valid": true, "value": 0.28619}
+{"case_id": "test-00062", "index": 947, "text": "To compute an exponential distribution given rate, follow these steps.\nTake the natural logarithm of the inverse exponential function. The inverse exponential function is differentiated to compute the", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 948, "text": "0.69825", "terminated": true, "valid": true, "value": 0.69825}
+{"case_id": "test-00062", "index": 949, "text": "0.00140", "terminated": true, "valid": true, "value": 0.0014}
+{"case_id": "test-00062", "index": 950, "text": "0.15025", "terminated": true, "valid": true, "value": 0.15025}
+{"case_id": "test-00062", "index": 951, "text": "1.91654", "terminated": true, "valid": true, "value": 1.91654}
+{"case_id": "test-00062", "index": 952, "text": "3.37375", "terminated": true, "valid": true, "value": 3.37375}
+{"case_id": "test-00062", "index": 953, "text": "2.51524", "terminated": true, "valid": true, "value": 2.51524}
+{"case_id": "test-00062", "index": 954, "text": "0.22621", "terminated": true, "valid": true, "value": 0.22621}
+{"case_id": "test-00062", "index": 955, "text": "1.17815", "terminated": true, "valid": true, "value": 1.17815}
+{"case_id": "test-00062", "index": 956, "text": "0.85611", "terminated": true, "valid": true, "value": 0.85611}
+{"case_id": "test-00062", "index": 957, "text": "1.10433\nDistribution:\nExponential\nConvolution Distribution:\nNo\nData:\n[1.86761]", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 958, "text": "0.04765", "terminated": true, "valid": true, "value": 0.04765}
+{"case_id": "test-00062", "index": 959, "text": "0.05133\nCopyright \u00a9 2007\nVangel, Michael. All Rights Reserved.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 960, "text": "0.16746", "terminated": true, "valid": true, "value": 0.16746}
+{"case_id": "test-00062", "index": 961, "text": "0.49546", "terminated": true, "valid": true, "value": 0.49546}
+{"case_id": "test-00062", "index": 962, "text": "0.06948", "terminated": true, "valid": true, "value": 0.06948}
+{"case_id": "test-00062", "index": 963, "text": "0.18665", "terminated": true, "valid": true, "value": 0.18665}
+{"case_id": "test-00062", "index": 964, "text": "0.52965", "terminated": true, "valid": true, "value": 0.52965}
+{"case_id": "test-00062", "index": 965, "text": "0.17645", "terminated": true, "valid": true, "value": 0.17645}
+{"case_id": "test-00062", "index": 966, "text": "0.92725\nConsider the following data:\n0.26426\n0.50608\n1.2", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 967, "text": "0.53505", "terminated": true, "valid": true, "value": 0.53505}
+{"case_id": "test-00062", "index": 968, "text": "0.22150", "terminated": true, "valid": true, "value": 0.2215}
+{"case_id": "test-00062", "index": 969, "text": "1.61546", "terminated": true, "valid": true, "value": 1.61546}
+{"case_id": "test-00062", "index": 970, "text": "2.41703", "terminated": true, "valid": true, "value": 2.41703}
+{"case_id": "test-00062", "index": 971, "text": "0.07175", "terminated": true, "valid": true, "value": 0.07175}
+{"case_id": "test-00062", "index": 972, "text": "0.98423", "terminated": true, "valid": true, "value": 0.98423}
+{"case_id": "test-00062", "index": 973, "text": "0.21776", "terminated": true, "valid": true, "value": 0.21776}
+{"case_id": "test-00062", "index": 974, "text": "0.04555", "terminated": true, "valid": true, "value": 0.04555}
+{"case_id": "test-00062", "index": 975, "text": "2.97641", "terminated": true, "valid": true, "value": 2.97641}
+{"case_id": "test-00062", "index": 976, "text": "1.55725", "terminated": true, "valid": true, "value": 1.55725}
+{"case_id": "test-00062", "index": 977, "text": "0.63857", "terminated": true, "valid": true, "value": 0.63857}
+{"case_id": "test-00062", "index": 978, "text": "0.37295", "terminated": true, "valid": true, "value": 0.37295}
+{"case_id": "test-00062", "index": 979, "text": "0.14803", "terminated": true, "valid": true, "value": 0.14803}
+{"case_id": "test-00062", "index": 980, "text": "1.37172", "terminated": true, "valid": true, "value": 1.37172}
+{"case_id": "test-00062", "index": 981, "text": "0.29234", "terminated": true, "valid": true, "value": 0.29234}
+{"case_id": "test-00062", "index": 982, "text": "0.68504", "terminated": true, "valid": true, "value": 0.68504}
+{"case_id": "test-00062", "index": 983, "text": "0.10538", "terminated": true, "valid": true, "value": 0.10538}
+{"case_id": "test-00062", "index": 984, "text": "0.37350", "terminated": true, "valid": true, "value": 0.3735}
+{"case_id": "test-00062", "index": 985, "text": "1.63761", "terminated": true, "valid": true, "value": 1.63761}
+{"case_id": "test-00062", "index": 986, "text": "0.58729", "terminated": true, "valid": true, "value": 0.58729}
+{"case_id": "test-00062", "index": 987, "text": "0.11938", "terminated": true, "valid": true, "value": 0.11938}
+{"case_id": "test-00062", "index": 988, "text": "1.56575", "terminated": true, "valid": true, "value": 1.56575}
+{"case_id": "test-00062", "index": 989, "text": "0.02926", "terminated": true, "valid": true, "value": 0.02926}
+{"case_id": "test-00062", "index": 990, "text": "0.05387", "terminated": true, "valid": true, "value": 0.05387}
+{"case_id": "test-00062", "index": 991, "text": "2.51817", "terminated": true, "valid": true, "value": 2.51817}
+{"case_id": "test-00062", "index": 992, "text": "0.01058", "terminated": true, "valid": true, "value": 0.01058}
+{"case_id": "test-00062", "index": 993, "text": "0.65891", "terminated": true, "valid": true, "value": 0.65891}
+{"case_id": "test-00062", "index": 994, "text": "7.38294\nDescription:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 995, "text": "0.86727", "terminated": true, "valid": true, "value": 0.86727}
+{"case_id": "test-00062", "index": 996, "text": "1.57478\n0.28857 + 0.97263*slope\n1.838", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00062", "index": 997, "text": "0.91011", "terminated": true, "valid": true, "value": 0.91011}
+{"case_id": "test-00062", "index": 998, "text": "0.00805", "terminated": true, "valid": true, "value": 0.00805}
+{"case_id": "test-00062", "index": 999, "text": "0.28550", "terminated": true, "valid": true, "value": 0.2855}

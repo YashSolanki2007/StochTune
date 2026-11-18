@@ -1,0 +1,17 @@
+{
+  "environment": {
+    "packages": {
+      "torch": "2.8.0+cu126",
+      "transformers": "4.57.1",
+      "peft": "0.17.1",
+      "accelerate": "1.10.1",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "wandb": "0.31.0"
+    },
+    "cuda_version": "12.6",
+    "gpu": "NVIDIA H200"
+  },
+  "resolved_revision": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+  "metrics_note": "Fidelity is conditional on valid numeric responses; inspect validity alongside it. Reference: the full law rounded to decimal precision. No KS p-values."
+}

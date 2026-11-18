@@ -1,0 +1,40 @@
+model: Qwen/Qwen2.5-3B
+revision: 3aab1f1954e9cc14eb9509a215f9e5ca08227a9b
+initial_adapter: outputs/qwen25-3b-sft/adapter
+data_dir: data/numeric-v1
+output_dir: outputs/qwen25-3b-batch-kl-rl
+method: batch_kl_rl
+seed: 42
+device: cuda
+precision: bf16
+attention: sdpa
+# Reward is -KL(target bin masses || smoothed empirical model histogram).
+reward_bins: 32
+pseudocount: 0.1
+decimals: 5
+# Each update uses fresh model outputs: 2 prompts x 256 draws.
+group_size: 256
+prompts_per_update: 2
+rollout_batch_size: 128
+microbatch_size: 16
+max_sequence_length: 128
+max_new_tokens: 32
+max_steps: 250
+learning_rate: 0.00001
+weight_decay: 0.01
+warmup_ratio: 0.03
+# Separate stability penalty to the frozen initial SFT policy, not the reward KL.
+reference_kl_beta: 0.02
+validation_cases: 12
+validation_samples_per_case: 256
+validation_seed: 1731
+validation_steps: 25
+save_steps: 25
+wandb:
+  enabled: true
+  mode: online
+  entity: yash2007-university-of-washington
+  project: stochastic-llm
+  group: qwen25-3b-numeric-v1
+  base_url: https://api.forge.coreweave.com
+  directory: outputs/wandb

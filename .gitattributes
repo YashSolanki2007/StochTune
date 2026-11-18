@@ -1,0 +1,2 @@
+# Preserve standard CSV record terminators in recorded experiment artifacts.
+*.csv whitespace=cr-at-eol

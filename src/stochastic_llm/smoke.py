@@ -50,6 +50,7 @@ def create_tiny_model(output):
 
 def smoke(output, with_tracking=False):
     output = require_empty_directory(output).resolve()
+    # Tiny matrix multiplications are faster with a small CPU thread pool.
     torch.set_num_threads(2)
     model = create_tiny_model(output / "tiny-model")
     data_dir = str(output / "data")
@@ -102,7 +103,18 @@ def smoke(output, with_tracking=False):
             "directory": str(output / "wandb"),
         }
     train(config)
+    # Include an actual checkpoint restore with the identical original config.
     train(config, resume_from_checkpoint=str(output / "sft" / "checkpoint-1"))
+    soft = config | {
+        "method": "soft_kl",
+        "output_dir": str(output / "soft-kl"),
+        "max_bins": 17,
+        "paths_per_config": 2,
+        "decimals": 5,
+        "tail_probability": 0.001,
+        "trie_cache_size": 16,
+    }
+    train(soft)
     eval_config = {
         "model": model,
         "revision": "main",
@@ -135,6 +147,7 @@ def smoke(output, with_tracking=False):
             "checked": [
                 "offline tiny Qwen2 SFT",
                 "checkpoint restore",
+                "soft KL backward pass",
                 "base and adapter generation",
                 "evaluation resume",
                 "comparison export",

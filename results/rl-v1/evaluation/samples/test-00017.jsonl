@@ -1,0 +1,1000 @@
+{"case_id": "test-00017", "index": 0, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 1, "text": "0.87351", "terminated": true, "valid": true, "value": 0.87351}
+{"case_id": "test-00017", "index": 2, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 3, "text": "21", "terminated": true, "valid": true, "value": 21.0}
+{"case_id": "test-00017", "index": 4, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 5, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 6, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 7, "text": "0.87937\nPlease log in or sign up to be able to answer this question.\nPlease log in or sign up to use the full", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 8, "text": "11\nHow would you explain your observation to a friend of yours?", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 9, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 10, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 11, "text": "17", "terminated": true, "valid": true, "value": 17.0}
+{"case_id": "test-00017", "index": 12, "text": "0\n(33.333%)\nProbability:\n0.25646\n(25.646%)\nExpected value", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 13, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 14, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 15, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 16, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 17, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 18, "text": "Explanation:\nA binomial distribution can be simulated using the\ncombin()and\nrbinom()functions in the\nR base package. This distribution takes", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 19, "text": "Question 16\n58% (35 of 63 customers) rated their experience as \"wonderful,\" while\n42% (", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 20, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 21, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 22, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 23, "text": "9\nYou can also ask for help in solving other problems here:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 24, "text": "3.72015", "terminated": true, "valid": true, "value": 3.72015}
+{"case_id": "test-00017", "index": 25, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 26, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 27, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 28, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 29, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 30, "text": "10\nWhy is it correct? The quantity p = 0.48248 is the proportion of success for each toss. Thus, it", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 31, "text": "20", "terminated": true, "valid": true, "value": 20.0}
+{"case_id": "test-00017", "index": 32, "text": "0.25593", "terminated": true, "valid": true, "value": 0.25593}
+{"case_id": "test-00017", "index": 33, "text": "5\nbinomrnd(24,0.48248) = 6", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 34, "text": "0.60715", "terminated": true, "valid": true, "value": 0.60715}
+{"case_id": "test-00017", "index": 35, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 36, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 37, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 38, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 39, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 40, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 41, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 42, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 43, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 44, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 45, "text": "0\n0.76983\n0.47959\n0.25923\n0.5516", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 46, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 47, "text": "0.93075", "terminated": true, "valid": true, "value": 0.93075}
+{"case_id": "test-00017", "index": 48, "text": "The number of successes is 12.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 49, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 50, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 51, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 52, "text": "12\np=0.48248\nn=24", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 53, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 54, "text": "0\nMultiple Choice Question", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 55, "text": "0.70674", "terminated": true, "valid": true, "value": 0.70674}
+{"case_id": "test-00017", "index": 56, "text": "0.67469", "terminated": true, "valid": true, "value": 0.67469}
+{"case_id": "test-00017", "index": 57, "text": "0.55129\n0.35802\n0.98044\n0.39535\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 58, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 59, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 60, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 61, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 62, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 63, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 64, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 65, "text": "0.57461", "terminated": true, "valid": true, "value": 0.57461}
+{"case_id": "test-00017", "index": 66, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 67, "text": "2\n[?] observations in the dataset\n0 1 2 3\n0 0 0 1\n0 1 0 0", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 68, "text": "0.70159", "terminated": true, "valid": true, "value": 0.70159}
+{"case_id": "test-00017", "index": 69, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 70, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 71, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 72, "text": "0.20088", "terminated": true, "valid": true, "value": 0.20088}
+{"case_id": "test-00017", "index": 73, "text": "0.86670", "terminated": true, "valid": true, "value": 0.8667}
+{"case_id": "test-00017", "index": 74, "text": "0.83954", "terminated": true, "valid": true, "value": 0.83954}
+{"case_id": "test-00017", "index": 75, "text": "0.77982", "terminated": true, "valid": true, "value": 0.77982}
+{"case_id": "test-00017", "index": 76, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 77, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 78, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 79, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 80, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 81, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 82, "text": "0\n68%", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 83, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 84, "text": "0.62790", "terminated": true, "valid": true, "value": 0.6279}
+{"case_id": "test-00017", "index": 85, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 86, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 87, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 88, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 89, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 90, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 91, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 92, "text": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 93, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 94, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 95, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 96, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 97, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 98, "text": "2.27931", "terminated": true, "valid": true, "value": 2.27931}
+{"case_id": "test-00017", "index": 99, "text": "22", "terminated": true, "valid": true, "value": 22.0}
+{"case_id": "test-00017", "index": 100, "text": "0.54911", "terminated": true, "valid": true, "value": 0.54911}
+{"case_id": "test-00017", "index": 101, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 102, "text": "7/60", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 103, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 104, "text": "20", "terminated": true, "valid": true, "value": 20.0}
+{"case_id": "test-00017", "index": 105, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 106, "text": "Maximum:\n0.10000\nMinimum:\n0.07594\nSummary parameters:\nMean:\n11.2700", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 107, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 108, "text": "11\nk\nDistribution: binomial (n = 24, 0.48248)", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 109, "text": "2\nProbability of success:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 110, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 111, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 112, "text": "0.74874", "terminated": true, "valid": true, "value": 0.74874}
+{"case_id": "test-00017", "index": 113, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 114, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 115, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 116, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 117, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 118, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 119, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 120, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 121, "text": "0.55261", "terminated": true, "valid": true, "value": 0.55261}
+{"case_id": "test-00017", "index": 122, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 123, "text": "14.00000", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 124, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 125, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 126, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 127, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 128, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 129, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 130, "text": "0.39016", "terminated": true, "valid": true, "value": 0.39016}
+{"case_id": "test-00017", "index": 131, "text": "11\nSampling from a binomial distribution in R\nsample(n = 24, size = 1, replace = TRUE, prob = c(", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 132, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 133, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 134, "text": "Answer:12", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 135, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 136, "text": "0.78233", "terminated": true, "valid": true, "value": 0.78233}
+{"case_id": "test-00017", "index": 137, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 138, "text": "0.83753", "terminated": true, "valid": true, "value": 0.83753}
+{"case_id": "test-00017", "index": 139, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 140, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 141, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 142, "text": "0.83838", "terminated": true, "valid": true, "value": 0.83838}
+{"case_id": "test-00017", "index": 143, "text": "17", "terminated": true, "valid": true, "value": 17.0}
+{"case_id": "test-00017", "index": 144, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 145, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 146, "text": "7.83323", "terminated": true, "valid": true, "value": 7.83323}
+{"case_id": "test-00017", "index": 147, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 148, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 149, "text": "0.99848", "terminated": true, "valid": true, "value": 0.99848}
+{"case_id": "test-00017", "index": 150, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 151, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 152, "text": "0.83204", "terminated": true, "valid": true, "value": 0.83204}
+{"case_id": "test-00017", "index": 153, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 154, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 155, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 156, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 157, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 158, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 159, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 160, "text": "0.71314", "terminated": true, "valid": true, "value": 0.71314}
+{"case_id": "test-00017", "index": 161, "text": "0.30601", "terminated": true, "valid": true, "value": 0.30601}
+{"case_id": "test-00017", "index": 162, "text": "14\nProportion:\n0.58859\nStandard deviation:\n1.47064\nMean:\n12.10", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 163, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 164, "text": "That's 14.66727", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 165, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 166, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 167, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 168, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 169, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 170, "text": "0\n0.75440", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 171, "text": "0.74358", "terminated": true, "valid": true, "value": 0.74358}
+{"case_id": "test-00017", "index": 172, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 173, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 174, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 175, "text": "17", "terminated": true, "valid": true, "value": 17.0}
+{"case_id": "test-00017", "index": 176, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 177, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 178, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 179, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 180, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 181, "text": "5\nWhat is the probability of obtaining at least 10 successes in n 24 Bernoulli trials with success probability 0.482", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 182, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 183, "text": "Here is a randomly generated observation for you:\n4", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 184, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 185, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 186, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 187, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 188, "text": "0\nEmpirical Success Probability:\n0.56270\nAdd to my atomizer, import to Calc", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 189, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 190, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 191, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 192, "text": "Confirm: 9", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 193, "text": "1.16773", "terminated": true, "valid": true, "value": 1.16773}
+{"case_id": "test-00017", "index": 194, "text": "Altitude 1: 3612.76296\nAltitude 2: 3710.5568", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 195, "text": "Answer:9", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 196, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 197, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 198, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 199, "text": "0\nWhat is the distribution of\nN\n?\nBinomial distribution\nWhat is the density\np\n(\nn\n) of\nN\n?\n0", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 200, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 201, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 202, "text": "20", "terminated": true, "valid": true, "value": 20.0}
+{"case_id": "test-00017", "index": 203, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 204, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 205, "text": "0.71484", "terminated": true, "valid": true, "value": 0.71484}
+{"case_id": "test-00017", "index": 206, "text": "Question 2\nYou are given a random variable X which follows a geometric distribution with parameter 0.82552. If E(X) =", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 207, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 208, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 209, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 210, "text": "2.21813", "terminated": true, "valid": true, "value": 2.21813}
+{"case_id": "test-00017", "index": 211, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 212, "text": "3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 213, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 214, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 215, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 216, "text": "0.23955", "terminated": true, "valid": true, "value": 0.23955}
+{"case_id": "test-00017", "index": 217, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 218, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 219, "text": "10\n(required condition)\n0.86337\n(number of possible observations satisfying the required condition)", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 220, "text": "0.52513", "terminated": true, "valid": true, "value": 0.52513}
+{"case_id": "test-00017", "index": 221, "text": "17", "terminated": true, "valid": true, "value": 17.0}
+{"case_id": "test-00017", "index": 222, "text": "Question: 14", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 223, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 224, "text": "0.0\n1.0\n1.0\n0.0\n1.0\n2.0\n2.0\n1.0\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 225, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 226, "text": "0.79114", "terminated": true, "valid": true, "value": 0.79114}
+{"case_id": "test-00017", "index": 227, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 228, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 229, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 230, "text": "0.40583", "terminated": true, "valid": true, "value": 0.40583}
+{"case_id": "test-00017", "index": 231, "text": "0\nYes, 0 is an independent observation drawn according to a binomial distribution with n=24 and success probability 0.4824", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 232, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 233, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 234, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 235, "text": "1", "terminated": true, "valid": true, "value": 1.0}
+{"case_id": "test-00017", "index": 236, "text": "0.59138", "terminated": true, "valid": true, "value": 0.59138}
+{"case_id": "test-00017", "index": 237, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 238, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 239, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 240, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 241, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 242, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 243, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 244, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 245, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 246, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 247, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 248, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 249, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 250, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 251, "text": "0.86104", "terminated": true, "valid": true, "value": 0.86104}
+{"case_id": "test-00017", "index": 252, "text": "0.60856", "terminated": true, "valid": true, "value": 0.60856}
+{"case_id": "test-00017", "index": 253, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 254, "text": "0.94615", "terminated": true, "valid": true, "value": 0.94615}
+{"case_id": "test-00017", "index": 255, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 256, "text": "0.28206", "terminated": true, "valid": true, "value": 0.28206}
+{"case_id": "test-00017", "index": 257, "text": "10\nCumulative probability:\n0.76296", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 258, "text": "0.40783", "terminated": true, "valid": true, "value": 0.40783}
+{"case_id": "test-00017", "index": 259, "text": "0.63410", "terminated": true, "valid": true, "value": 0.6341}
+{"case_id": "test-00017", "index": 260, "text": "3.67122", "terminated": true, "valid": true, "value": 3.67122}
+{"case_id": "test-00017", "index": 261, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 262, "text": "0.84678", "terminated": true, "valid": true, "value": 0.84678}
+{"case_id": "test-00017", "index": 263, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 264, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 265, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 266, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 267, "text": "21", "terminated": true, "valid": true, "value": 21.0}
+{"case_id": "test-00017", "index": 268, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 269, "text": "0.88762", "terminated": true, "valid": true, "value": 0.88762}
+{"case_id": "test-00017", "index": 270, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 271, "text": "0\nExplanation:\nThe probability that the number of \\\"successes\\\" is five is (0.416583)(0.583", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 272, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 273, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 274, "text": "19", "terminated": true, "valid": true, "value": 19.0}
+{"case_id": "test-00017", "index": 275, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 276, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 277, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 278, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 279, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 280, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 281, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 282, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 283, "text": "0.52197\nClick here to see all the details", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 284, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 285, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 286, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 287, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 288, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 289, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 290, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 291, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 292, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 293, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 294, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 295, "text": "0\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 296, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 297, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 298, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 299, "text": "0.46178", "terminated": true, "valid": true, "value": 0.46178}
+{"case_id": "test-00017", "index": 300, "text": "1.85882", "terminated": true, "valid": true, "value": 1.85882}
+{"case_id": "test-00017", "index": 301, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 302, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 303, "text": "0.99988", "terminated": true, "valid": true, "value": 0.99988}
+{"case_id": "test-00017", "index": 304, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 305, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 306, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 307, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 308, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 309, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 310, "text": "Observation", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 311, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 312, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 313, "text": "0\nRefer to the solutions forestry dataset, which is attached to this assignment. The dataset contains information about allotments on public land in Massachusetts, in 1", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 314, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 315, "text": "0.17849\nThe answer is 15", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 316, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 317, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 318, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 319, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 320, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 321, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 322, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 323, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 324, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 325, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 326, "text": "19", "terminated": true, "valid": true, "value": 19.0}
+{"case_id": "test-00017", "index": 327, "text": "0.46198", "terminated": true, "valid": true, "value": 0.46198}
+{"case_id": "test-00017", "index": 328, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 329, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 330, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 331, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 332, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 333, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 334, "text": "0.29662", "terminated": true, "valid": true, "value": 0.29662}
+{"case_id": "test-00017", "index": 335, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 336, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 337, "text": "0.46118", "terminated": true, "valid": true, "value": 0.46118}
+{"case_id": "test-00017", "index": 338, "text": "0.64391", "terminated": true, "valid": true, "value": 0.64391}
+{"case_id": "test-00017", "index": 339, "text": "4\nCumulative:\n19", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 340, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 341, "text": "19", "terminated": true, "valid": true, "value": 19.0}
+{"case_id": "test-00017", "index": 342, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 343, "text": "0.03963", "terminated": true, "valid": true, "value": 0.03963}
+{"case_id": "test-00017", "index": 344, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 345, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 346, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 347, "text": "0.55905", "terminated": true, "valid": true, "value": 0.55905}
+{"case_id": "test-00017", "index": 348, "text": "21", "terminated": true, "valid": true, "value": 21.0}
+{"case_id": "test-00017", "index": 349, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 350, "text": "0.06328", "terminated": true, "valid": true, "value": 0.06328}
+{"case_id": "test-00017", "index": 351, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 352, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 353, "text": "10\nP-value: 0.62373\nThe p-value is computed by using the dcbinom function in R. If the", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 354, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 355, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 356, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 357, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 358, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 359, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 360, "text": "2.52966", "terminated": true, "valid": true, "value": 2.52966}
+{"case_id": "test-00017", "index": 361, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 362, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 363, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 364, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 365, "text": "2\n22.50514\n21.55216\n20.17849\n16.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 366, "text": "5.86061", "terminated": true, "valid": true, "value": 5.86061}
+{"case_id": "test-00017", "index": 367, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 368, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 369, "text": "2\nPress the button \"Sample!\" to generate another random observation.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 370, "text": "5\nExplanation: There are 24 children that the researcher is studying. Each child attends his or her own daycare center. The researcher plans to choose ", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 371, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 372, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 373, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 374, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 375, "text": "0.79316", "terminated": true, "valid": true, "value": 0.79316}
+{"case_id": "test-00017", "index": 376, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 377, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 378, "text": "0.97498", "terminated": true, "valid": true, "value": 0.97498}
+{"case_id": "test-00017", "index": 379, "text": "3.73640", "terminated": true, "valid": true, "value": 3.7364}
+{"case_id": "test-00017", "index": 380, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 381, "text": "0\nQuestion:\nThe number of successes in 24 independent trials of a binomial experiment with n = 24 and success probability = 0.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 382, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 383, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 384, "text": "3\nWhich of the following statements is true about the binomial distribution?\nIt has a mean greater than its variance.\nIt has a variance equal to its mean", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 385, "text": "### 12", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 386, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 387, "text": "Here the probability of success is: p=0.48248 and the number of trials is: n=24\nIf we consider the", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 388, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 389, "text": "0.96943\nYou are an AI assistant that follows instruction extremely well. Help as much as you can.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 390, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 391, "text": "0.25934", "terminated": true, "valid": true, "value": 0.25934}
+{"case_id": "test-00017", "index": 392, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 393, "text": "0.38438", "terminated": true, "valid": true, "value": 0.38438}
+{"case_id": "test-00017", "index": 394, "text": "3.85079", "terminated": true, "valid": true, "value": 3.85079}
+{"case_id": "test-00017", "index": 395, "text": "0\n(2.66%)", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 396, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 397, "text": "3.03616", "terminated": true, "valid": true, "value": 3.03616}
+{"case_id": "test-00017", "index": 398, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 399, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 400, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 401, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 402, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 403, "text": "0\nP-value (one-tailed test):\n0.04648", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 404, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 405, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 406, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 407, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 408, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 409, "text": "0.65662", "terminated": true, "valid": true, "value": 0.65662}
+{"case_id": "test-00017", "index": 410, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 411, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 412, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 413, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 414, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 415, "text": "0.92387", "terminated": true, "valid": true, "value": 0.92387}
+{"case_id": "test-00017", "index": 416, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 417, "text": "0.76149", "terminated": true, "valid": true, "value": 0.76149}
+{"case_id": "test-00017", "index": 418, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 419, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 420, "text": "20", "terminated": true, "valid": true, "value": 20.0}
+{"case_id": "test-00017", "index": 421, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 422, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 423, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 424, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 425, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 426, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 427, "text": "3\nYou are an AI assistant that follows instruction extremely well. Help as much as you can.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 428, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 429, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 430, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 431, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 432, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 433, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 434, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 435, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 436, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 437, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 438, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 439, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 440, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 441, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 442, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 443, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 444, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 445, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 446, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 447, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 448, "text": "0\n[1] 0", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 449, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 450, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 451, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 452, "text": "0.52145", "terminated": true, "valid": true, "value": 0.52145}
+{"case_id": "test-00017", "index": 453, "text": "0.49276", "terminated": true, "valid": true, "value": 0.49276}
+{"case_id": "test-00017", "index": 454, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 455, "text": "5\nThe correct answer is 5.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 456, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 457, "text": "Presume you have 24 chewing gums, randomly chosen, and 5.2 of them are tasty.\nThe estimated probability of a tasty gum is:\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 458, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 459, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 460, "text": "21", "terminated": true, "valid": true, "value": 21.0}
+{"case_id": "test-00017", "index": 461, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 462, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 463, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 464, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 465, "text": "0.64877", "terminated": true, "valid": true, "value": 0.64877}
+{"case_id": "test-00017", "index": 466, "text": "0\nThe binomial distribution with parameters n = 24 and p = 0.48248: 19.247", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 467, "text": "0.34331", "terminated": true, "valid": true, "value": 0.34331}
+{"case_id": "test-00017", "index": 468, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 469, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 470, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 471, "text": "9\nNumber of successes: 19", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 472, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 473, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 474, "text": "0.85397", "terminated": true, "valid": true, "value": 0.85397}
+{"case_id": "test-00017", "index": 475, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 476, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 477, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 478, "text": "0.79541", "terminated": true, "valid": true, "value": 0.79541}
+{"case_id": "test-00017", "index": 479, "text": "0\nCode to replicate your output:\nbinom.0ptfile,0pt,doc):{'n': 24, 'p': 0", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 480, "text": "0.99460\nSteps:\n1) Generate a random number from the Gamma distribution 3.30002, 1.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 481, "text": "0.02643", "terminated": true, "valid": true, "value": 0.02643}
+{"case_id": "test-00017", "index": 482, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 483, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 484, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 485, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 486, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 487, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 488, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 489, "text": "20", "terminated": true, "valid": true, "value": 20.0}
+{"case_id": "test-00017", "index": 490, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 491, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 492, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 493, "text": "0.84804", "terminated": true, "valid": true, "value": 0.84804}
+{"case_id": "test-00017", "index": 494, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 495, "text": "3.57468", "terminated": true, "valid": true, "value": 3.57468}
+{"case_id": "test-00017", "index": 496, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 497, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 498, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 499, "text": "0.38335", "terminated": true, "valid": true, "value": 0.38335}
+{"case_id": "test-00017", "index": 500, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 501, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 502, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 503, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 504, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 505, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 506, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 507, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 508, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 509, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 510, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 511, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 512, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 513, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 514, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 515, "text": "0.66680", "terminated": true, "valid": true, "value": 0.6668}
+{"case_id": "test-00017", "index": 516, "text": "2\nValidity:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 517, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 518, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 519, "text": "0.49535", "terminated": true, "valid": true, "value": 0.49535}
+{"case_id": "test-00017", "index": 520, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 521, "text": "0\nUser will you give you a task with some instruction. Your job is follow the instructions as faithfully as you can. While answering think step-by-step and", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 522, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 523, "text": "Why is the mean, E(X), of a binomial random variable X equal to the product of n and p, where p is the probability of success in", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 524, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 525, "text": "0.51251", "terminated": true, "valid": true, "value": 0.51251}
+{"case_id": "test-00017", "index": 526, "text": "0.50801", "terminated": true, "valid": true, "value": 0.50801}
+{"case_id": "test-00017", "index": 527, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 528, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 529, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 530, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 531, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 532, "text": "0.79702", "terminated": true, "valid": true, "value": 0.79702}
+{"case_id": "test-00017", "index": 533, "text": "0.65517", "terminated": true, "valid": true, "value": 0.65517}
+{"case_id": "test-00017", "index": 534, "text": "19", "terminated": true, "valid": true, "value": 19.0}
+{"case_id": "test-00017", "index": 535, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 536, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 537, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 538, "text": "11\nYou are correct. The independent observation you have drawn according to a binomial distribution with \\( n = 24 \\) and success probability \\(", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 539, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 540, "text": "10\nOutcome:\n13 (16 expected)", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 541, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 542, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 543, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 544, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 545, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 546, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 547, "text": "Yes", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 548, "text": "0.99816", "terminated": true, "valid": true, "value": 0.99816}
+{"case_id": "test-00017", "index": 549, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 550, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 551, "text": "0.62380", "terminated": true, "valid": true, "value": 0.6238}
+{"case_id": "test-00017", "index": 552, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 553, "text": "0.29261", "terminated": true, "valid": true, "value": 0.29261}
+{"case_id": "test-00017", "index": 554, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 555, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 556, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 557, "text": "-1", "terminated": true, "valid": true, "value": -1.0}
+{"case_id": "test-00017", "index": 558, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 559, "text": "0.43834", "terminated": true, "valid": true, "value": 0.43834}
+{"case_id": "test-00017", "index": 560, "text": "0.68590", "terminated": true, "valid": true, "value": 0.6859}
+{"case_id": "test-00017", "index": 561, "text": "Treating each race as an experiment with n=100 and p=0.65, I found that different races contained different numbers of minority children", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 562, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 563, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 564, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 565, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 566, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 567, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 568, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 569, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 570, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 571, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 572, "text": "python\nprobability\n0.44134\nerror: 0.02638", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 573, "text": "0.58617", "terminated": true, "valid": true, "value": 0.58617}
+{"case_id": "test-00017", "index": 574, "text": "0.67587", "terminated": true, "valid": true, "value": 0.67587}
+{"case_id": "test-00017", "index": 575, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 576, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 577, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 578, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 579, "text": "0.27219", "terminated": true, "valid": true, "value": 0.27219}
+{"case_id": "test-00017", "index": 580, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 581, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 582, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 583, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 584, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 585, "text": "0\nNumber of times (n):\n24\nProbability (p):\n0.48248\nObservation:\n0", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 586, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 587, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 588, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 589, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 590, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 591, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 592, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 593, "text": "17", "terminated": true, "valid": true, "value": 17.0}
+{"case_id": "test-00017", "index": 594, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 595, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 596, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 597, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 598, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 599, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 600, "text": "0.56019", "terminated": true, "valid": true, "value": 0.56019}
+{"case_id": "test-00017", "index": 601, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 602, "text": "17", "terminated": true, "valid": true, "value": 17.0}
+{"case_id": "test-00017", "index": 603, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 604, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 605, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 606, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 607, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 608, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 609, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 610, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 611, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 612, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 613, "text": "0.91918", "terminated": true, "valid": true, "value": 0.91918}
+{"case_id": "test-00017", "index": 614, "text": "20", "terminated": true, "valid": true, "value": 20.0}
+{"case_id": "test-00017", "index": 615, "text": "0\n0.15700", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 616, "text": "Question 24\nThe number of blue bees in a beehive follows the negative binomial distribution, as a result of repeated sampling of the same observed", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 617, "text": "Exponential\n0.43580\n8.44055", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 618, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 619, "text": "21", "terminated": true, "valid": true, "value": 21.0}
+{"case_id": "test-00017", "index": 620, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 621, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 622, "text": "0.31010", "terminated": true, "valid": true, "value": 0.3101}
+{"case_id": "test-00017", "index": 623, "text": "0.42664", "terminated": true, "valid": true, "value": 0.42664}
+{"case_id": "test-00017", "index": 624, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 625, "text": "0.61478", "terminated": true, "valid": true, "value": 0.61478}
+{"case_id": "test-00017", "index": 626, "text": "0.98901", "terminated": true, "valid": true, "value": 0.98901}
+{"case_id": "test-00017", "index": 627, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 628, "text": "There's a 12.755% chance that compared to the world average fertility rate, a randomly selected country has a fertility rate that's at", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 629, "text": "0\nYou can rent a cluster of PiCubes from us. PiCubes are a high performance multicore architecture and all new until 201", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 630, "text": "17", "terminated": true, "valid": true, "value": 17.0}
+{"case_id": "test-00017", "index": 631, "text": "0.61095", "terminated": true, "valid": true, "value": 0.61095}
+{"case_id": "test-00017", "index": 632, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 633, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 634, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 635, "text": "0.67818", "terminated": true, "valid": true, "value": 0.67818}
+{"case_id": "test-00017", "index": 636, "text": "2.19068", "terminated": true, "valid": true, "value": 2.19068}
+{"case_id": "test-00017", "index": 637, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 638, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 639, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 640, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 641, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 642, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 643, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 644, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 645, "text": "Are you sure about 0.48248? I have searched for it in 100 scientific articles and can't find a publication where", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 646, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 647, "text": "9\nHere is a Python solution:\n```python\nimport numpy as np\n\nnp.random.binomial(24, 0.48248", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 648, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 649, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 650, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 651, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 652, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 653, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 654, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 655, "text": "0.31111", "terminated": true, "valid": true, "value": 0.31111}
+{"case_id": "test-00017", "index": 656, "text": "0.83418", "terminated": true, "valid": true, "value": 0.83418}
+{"case_id": "test-00017", "index": 657, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 658, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 659, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 660, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 661, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 662, "text": "0.61462", "terminated": true, "valid": true, "value": 0.61462}
+{"case_id": "test-00017", "index": 663, "text": "0.43779", "terminated": true, "valid": true, "value": 0.43779}
+{"case_id": "test-00017", "index": 664, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 665, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 666, "text": "0.63827", "terminated": true, "valid": true, "value": 0.63827}
+{"case_id": "test-00017", "index": 667, "text": "0.63227", "terminated": true, "valid": true, "value": 0.63227}
+{"case_id": "test-00017", "index": 668, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 669, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 670, "text": "0\nNumber:\n1\nNumber:\n2\nNumber:\n3\nNumber:\n4\nNumber:\n5\nNumber:\n6\nNumber:\n7\nNumber:\n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 671, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 672, "text": "3.00000", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 673, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 674, "text": "3.07049", "terminated": true, "valid": true, "value": 3.07049}
+{"case_id": "test-00017", "index": 675, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 676, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 677, "text": "To draw a single independent observation from a binomial distribution with n = 24 and success probability \\( p = 0.48248 \\", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 678, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 679, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 680, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 681, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 682, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 683, "text": "0.90650", "terminated": true, "valid": true, "value": 0.9065}
+{"case_id": "test-00017", "index": 684, "text": "1.", "terminated": true, "valid": true, "value": 1.0}
+{"case_id": "test-00017", "index": 685, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 686, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 687, "text": "For what value of X will the cumulative distribution be 0.565?", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 688, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 689, "text": "No", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 690, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 691, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 692, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 693, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 694, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 695, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 696, "text": "0.30783", "terminated": true, "valid": true, "value": 0.30783}
+{"case_id": "test-00017", "index": 697, "text": "How would you answer this question if you had a real understanding, but you were using memo:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 698, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 699, "text": "0\nFailures: 23", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 700, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 701, "text": "0.35275", "terminated": true, "valid": true, "value": 0.35275}
+{"case_id": "test-00017", "index": 702, "text": "3.14837", "terminated": true, "valid": true, "value": 3.14837}
+{"case_id": "test-00017", "index": 703, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 704, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 705, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 706, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 707, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 708, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 709, "text": "12\nProbability: 0.25632", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 710, "text": "- 8", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 711, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 712, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 713, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 714, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 715, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 716, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 717, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 718, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 719, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 720, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 721, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 722, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 723, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 724, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 725, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 726, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 727, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 728, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 729, "text": "What is p^ for this value?\n0.53846\nWhat is p-hat for this value?\n0.54832", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 730, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 731, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 732, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 733, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 734, "text": "0.92236", "terminated": true, "valid": true, "value": 0.92236}
+{"case_id": "test-00017", "index": 735, "text": "0.82240", "terminated": true, "valid": true, "value": 0.8224}
+{"case_id": "test-00017", "index": 736, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 737, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 738, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 739, "text": "2.91724", "terminated": true, "valid": true, "value": 2.91724}
+{"case_id": "test-00017", "index": 740, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 741, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 742, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 743, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 744, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 745, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 746, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 747, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 748, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 749, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 750, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 751, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 752, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 753, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 754, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 755, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 756, "text": ".18640\nBar chart with the observations sorted from smallest to largest.\nObservations:\n1 2 2 3 3 4", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 757, "text": "0.97436", "terminated": true, "valid": true, "value": 0.97436}
+{"case_id": "test-00017", "index": 758, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 759, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 760, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 761, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 762, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 763, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 764, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 765, "text": "3.23730", "terminated": true, "valid": true, "value": 3.2373}
+{"case_id": "test-00017", "index": 766, "text": "The mean of a binomial distribution is the sum of the probabilities of all possible outcomes. If we want to find the mean of a binomial distribution with n", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 767, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 768, "text": "11\nNumber of trials: 24\nSuccess probability: 0.48248\nBias: 3.8900", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 769, "text": "0\nCheck guess: 0", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 770, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 771, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 772, "text": "0.90520", "terminated": true, "valid": true, "value": 0.9052}
+{"case_id": "test-00017", "index": 773, "text": "17", "terminated": true, "valid": true, "value": 17.0}
+{"case_id": "test-00017", "index": 774, "text": "17\nEstimate for p:\n0.71018\nSE (estimate):\n0.12693\nSE (estimate)", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 775, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 776, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 777, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 778, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 779, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 780, "text": "3.42608", "terminated": true, "valid": true, "value": 3.42608}
+{"case_id": "test-00017", "index": 781, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 782, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 783, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 784, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 785, "text": "0.64050", "terminated": true, "valid": true, "value": 0.6405}
+{"case_id": "test-00017", "index": 786, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 787, "text": "2\nSalary of an employee in an organization with a mean salary of $87,600 and a standard deviation of $15,00", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 788, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 789, "text": "8\nProbability:\n0.36000", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 790, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 791, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 792, "text": "5.000000000", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 793, "text": "0\nWhen I drew it (10000 iterations), I see that it has a frequency of 0.62097. I", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 794, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 795, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 796, "text": "Could you write the R code that does this for me?\ndnbinom(11, 24, 0.48248)", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 797, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 798, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 799, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 800, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 801, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 802, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 803, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 804, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 805, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 806, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 807, "text": "0.09088", "terminated": true, "valid": true, "value": 0.09088}
+{"case_id": "test-00017", "index": 808, "text": "0.28733", "terminated": true, "valid": true, "value": 0.28733}
+{"case_id": "test-00017", "index": 809, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 810, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 811, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 812, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 813, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 814, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 815, "text": "Solution.pdf", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 816, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 817, "text": "2.20000", "terminated": true, "valid": true, "value": 2.2}
+{"case_id": "test-00017", "index": 818, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 819, "text": "0.94274", "terminated": true, "valid": true, "value": 0.94274}
+{"case_id": "test-00017", "index": 820, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 821, "text": "0.96375", "terminated": true, "valid": true, "value": 0.96375}
+{"case_id": "test-00017", "index": 822, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 823, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 824, "text": "0\nCategory:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 825, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 826, "text": "15", "terminated": true, "valid": true, "value": 15.0}
+{"case_id": "test-00017", "index": 827, "text": "21", "terminated": true, "valid": true, "value": 21.0}
+{"case_id": "test-00017", "index": 828, "text": "Question:\nHint: Use the cumulative distribution function (cdf) of the binomial distribution.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 829, "text": "0.39416", "terminated": true, "valid": true, "value": 0.39416}
+{"case_id": "test-00017", "index": 830, "text": "0.78025", "terminated": true, "valid": true, "value": 0.78025}
+{"case_id": "test-00017", "index": 831, "text": "predictBinom(0.48248, 24)", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 832, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 833, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 834, "text": "20", "terminated": true, "valid": true, "value": 20.0}
+{"case_id": "test-00017", "index": 835, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 836, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 837, "text": "No of Expected Successes:\nno of UnExpected:\nWith:\nsuccess Probability:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 838, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 839, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 840, "text": "Expected value:", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 841, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 842, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 843, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 844, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 845, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 846, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 847, "text": "0.94446", "terminated": true, "valid": true, "value": 0.94446}
+{"case_id": "test-00017", "index": 848, "text": "0\nNumber of trials n = 24\nSuccess probability p = 0.48248", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 849, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 850, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 851, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 852, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 853, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 854, "text": "You need to be logged in to view this content.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 855, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 856, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 857, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 858, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 859, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 860, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 861, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 862, "text": "5\nCumulative probability: 0.95057", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 863, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 864, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 865, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 866, "text": "0\n0.46580\n0.78572\n0.53571\n0.7745", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 867, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 868, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 869, "text": "12\nNumber:\n10\nNumber:\n18\nNumber:\n14", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 870, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 871, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 872, "text": "0.86163", "terminated": true, "valid": true, "value": 0.86163}
+{"case_id": "test-00017", "index": 873, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 874, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 875, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 876, "text": "0.61183", "terminated": true, "valid": true, "value": 0.61183}
+{"case_id": "test-00017", "index": 877, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 878, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 879, "text": "0.08185", "terminated": true, "valid": true, "value": 0.08185}
+{"case_id": "test-00017", "index": 880, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 881, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 882, "text": "Literature\n\n8699", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 883, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 884, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 885, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 886, "text": "21", "terminated": true, "valid": true, "value": 21.0}
+{"case_id": "test-00017", "index": 887, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 888, "text": "(Provide your answer as a half-precision floating-point number.) 7.00000", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 889, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 890, "text": "0\nBinomial distribution parameters: n = 24, p = 0.48248", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 891, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 892, "text": "0.02531", "terminated": true, "valid": true, "value": 0.02531}
+{"case_id": "test-00017", "index": 893, "text": "0\nNumber:\n2\nNumber:\n1\nNumber:\n1\nNumber:\n2", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 894, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 895, "text": "0.87863", "terminated": true, "valid": true, "value": 0.87863}
+{"case_id": "test-00017", "index": 896, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 897, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 898, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 899, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 900, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 901, "text": "18", "terminated": true, "valid": true, "value": 18.0}
+{"case_id": "test-00017", "index": 902, "text": "20", "terminated": true, "valid": true, "value": 20.0}
+{"case_id": "test-00017", "index": 903, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 904, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 905, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 906, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 907, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 908, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 909, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 910, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 911, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 912, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 913, "text": "0.35991", "terminated": true, "valid": true, "value": 0.35991}
+{"case_id": "test-00017", "index": 914, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 915, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 916, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 917, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 918, "text": "3\n\nReason:\n3 is the largest integer smaller than 4 and 48.35% of our positive examples (N = 17)", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 919, "text": "0.64634", "terminated": true, "valid": true, "value": 0.64634}
+{"case_id": "test-00017", "index": 920, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 921, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 922, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 923, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 924, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 925, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 926, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 927, "text": "0.72357", "terminated": true, "valid": true, "value": 0.72357}
+{"case_id": "test-00017", "index": 928, "text": "2\nProbability: 0.04703", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 929, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 930, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 931, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 932, "text": "0\nProbability of Success:\n0.48248\nSample Size:\n24\nType:\nIndependent", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 933, "text": "0.65204", "terminated": true, "valid": true, "value": 0.65204}
+{"case_id": "test-00017", "index": 934, "text": "10", "terminated": true, "valid": true, "value": 10.0}
+{"case_id": "test-00017", "index": 935, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 936, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 937, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 938, "text": "14", "terminated": true, "valid": true, "value": 14.0}
+{"case_id": "test-00017", "index": 939, "text": "0\nProbability:\n0.39690\nDraw 50 random numbers from a geometric distribution with failure probability 0.1342", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 940, "text": "1", "terminated": true, "valid": true, "value": 1.0}
+{"case_id": "test-00017", "index": 941, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 942, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 943, "text": "0.99492", "terminated": true, "valid": true, "value": 0.99492}
+{"case_id": "test-00017", "index": 944, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 945, "text": "9", "terminated": true, "valid": true, "value": 9.0}
+{"case_id": "test-00017", "index": 946, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 947, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 948, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 949, "text": "You can estimate it as 14.26998.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 950, "text": "9\n9 of the 24 draws will be (independently) successes.", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 951, "text": "0.51752", "terminated": true, "valid": true, "value": 0.51752}
+{"case_id": "test-00017", "index": 952, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 953, "text": "0.24991", "terminated": true, "valid": true, "value": 0.24991}
+{"case_id": "test-00017", "index": 954, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 955, "text": "Number of trials (n): 24\nProbability (p): 0.48248\nObservation (x): 9", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 956, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 957, "text": "2\n\nNumber of trials (n):\n24\n\nSuccess probability (p):\n0.48248", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 958, "text": "9\nExplanation: 10.07661 < 3.45956 <\nInflated: 0", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 959, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 960, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 961, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 962, "text": "0.16907\nHint: Is it possible to come up with such a number using Round function?", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 963, "text": "0.24282", "terminated": true, "valid": true, "value": 0.24282}
+{"case_id": "test-00017", "index": 964, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 965, "text": "7", "terminated": true, "valid": true, "value": 7.0}
+{"case_id": "test-00017", "index": 966, "text": "0\nNumber of tails:\n12\nProbabilities:\n0.04995\nBias or tail:\n-0.15687", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 967, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 968, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 969, "text": "3", "terminated": true, "valid": true, "value": 3.0}
+{"case_id": "test-00017", "index": 970, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 971, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 972, "text": "14 with possible error 0.55253 [0.03027, 1.22982] sub", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 973, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 974, "text": "None\n\n0", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 975, "text": "4\nNumber of trials: 12", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 976, "text": "2\nExample\n3.02607\nRosenbrock Distribution Function\n\nGiven x,y[0,1] and a[1.", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 977, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 978, "text": "0.79472", "terminated": true, "valid": true, "value": 0.79472}
+{"case_id": "test-00017", "index": 979, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 980, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 981, "text": "12", "terminated": true, "valid": true, "value": 12.0}
+{"case_id": "test-00017", "index": 982, "text": "0.29881", "terminated": true, "valid": true, "value": 0.29881}
+{"case_id": "test-00017", "index": 983, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 984, "text": "20", "terminated": true, "valid": true, "value": 20.0}
+{"case_id": "test-00017", "index": 985, "text": "16", "terminated": true, "valid": true, "value": 16.0}
+{"case_id": "test-00017", "index": 986, "text": "5", "terminated": true, "valid": true, "value": 5.0}
+{"case_id": "test-00017", "index": 987, "text": "4", "terminated": true, "valid": true, "value": 4.0}
+{"case_id": "test-00017", "index": 988, "text": "11", "terminated": true, "valid": true, "value": 11.0}
+{"case_id": "test-00017", "index": 989, "text": "6", "terminated": true, "valid": true, "value": 6.0}
+{"case_id": "test-00017", "index": 990, "text": "13", "terminated": true, "valid": true, "value": 13.0}
+{"case_id": "test-00017", "index": 991, "text": "19", "terminated": true, "valid": true, "value": 19.0}
+{"case_id": "test-00017", "index": 992, "text": "0", "terminated": true, "valid": true, "value": 0.0}
+{"case_id": "test-00017", "index": 993, "text": "8", "terminated": true, "valid": true, "value": 8.0}
+{"case_id": "test-00017", "index": 994, "text": "0.70643", "terminated": true, "valid": true, "value": 0.70643}
+{"case_id": "test-00017", "index": 995, "text": "Score:\nScore Mean: 11.67533\nP-Value: 0.03042\nFailure Prob: ", "terminated": false, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 996, "text": "0\n0", "terminated": true, "valid": false, "value": null}
+{"case_id": "test-00017", "index": 997, "text": "2", "terminated": true, "valid": true, "value": 2.0}
+{"case_id": "test-00017", "index": 998, "text": "0.70679", "terminated": true, "valid": true, "value": 0.70679}
+{"case_id": "test-00017", "index": 999, "text": "11", "terminated": true, "valid": true, "value": 11.0}

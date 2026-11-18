@@ -1,0 +1,30 @@
+{
+  "config": {
+    "model": "Qwen/Qwen2.5-3B",
+    "revision": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+    "cases": "data/numeric-v1/test.jsonl",
+    "output_dir": "outputs/eval-batch-kl-rl",
+    "adapter": "outputs/qwen25-3b-batch-kl-rl/adapter",
+    "seed": 12345,
+    "device": "cuda",
+    "precision": "bf16",
+    "attention": "sdpa",
+    "samples_per_prompt": 1000,
+    "batch_size": 128,
+    "max_new_tokens": 32,
+    "decimals": 5,
+    "wandb": {
+      "enabled": true,
+      "mode": "online",
+      "entity": "yash2007-university-of-washington",
+      "project": "stochastic-llm",
+      "base_url": "https://api.forge.coreweave.com",
+      "directory": "outputs/wandb"
+    }
+  },
+  "cases_sha256": "adf278bf4dad1a470740a37d51304baede17b556f0932baf4fd77640f70bc47f",
+  "adapter_sha256": {
+    "adapter_config.json": "8c8f4d703e0501c94a101cb54304c27a22c9a135b89160f9b99477296bbb1d59",
+    "adapter_model.safetensors": "b6afbdfcf61d19b9d612771b8ffb0029551975483cf88c469fd89c9594df9f55"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "completed_updates": 250,
+  "wall_seconds": 1329.8959211319452,
+  "generated_training_responses": 128000,
+  "initial_validation_kl": 0.07053911055647753,
+  "final_validation_kl": 0.06524604479920844,
+  "best_validation_kl": 0.06434980008305058,
+  "final_numeric_valid_rate": 1.0
+}

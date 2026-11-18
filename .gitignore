@@ -14,3 +14,14 @@ logs/
 .env.*
 wandb/
 .DS_Store
+.venv-*/
+.netrc
+.ssh/
+*.pem
+*.key
+*.safetensors
+*.pt
+*.pth
+deployment-manifest.json
+deployment-status.json
+kl-rl-manifest.json

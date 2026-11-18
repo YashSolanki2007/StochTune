@@ -14,10 +14,14 @@ def main():
     )
     generate.add_argument("--config", default="configs/data.yaml")
     generate.add_argument("--output-dir")
-    train = commands.add_parser("train", help="Train sampled-target SFT LoRA adapters")
+    train = commands.add_parser("train", help="Train SFT or soft-KL LoRA adapters")
     train.add_argument("--config", default="configs/sft-h200.yaml")
     train.add_argument("--steps", type=int, dest="max_steps")
     train.add_argument("--resume-from-checkpoint")
+    rl = commands.add_parser("train-rl", help="On-policy RL with a negative batch KL reward")
+    rl.add_argument("--config", default="configs/batch-kl-rl-h200.yaml")
+    rl.add_argument("--steps", type=int, dest="max_steps")
+    rl.add_argument("--resume-from-checkpoint")
     evaluate = commands.add_parser("evaluate", help="Measure independent numeric sampling")
     evaluate.add_argument("--config", default="configs/evaluate.yaml")
     evaluate.add_argument("--adapter")
@@ -25,7 +29,7 @@ def main():
     evaluate.add_argument("--samples-per-prompt", type=int)
     evaluate.add_argument("--batch-size", type=int)
     evaluate.add_argument("--resume", action="store_true")
-    for command in (train, evaluate):
+    for command in (train, rl, evaluate):
         command.add_argument("--model")
         command.add_argument("--revision")
         command.add_argument("--output-dir")
@@ -87,6 +91,10 @@ def main():
             from .train import train
 
             result = train(config, args.resume_from_checkpoint)
+        elif args.command == "train-rl":
+            from .rl import train_rl
+
+            result = train_rl(config, args.resume_from_checkpoint)
         else:
             from .evaluate import evaluate
 

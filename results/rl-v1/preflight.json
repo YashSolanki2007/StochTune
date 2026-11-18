@@ -1,0 +1,19 @@
+{
+  "model": "Qwen/Qwen2.5-3B",
+  "revision": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+  "initial_adapter_sha256": "c9c3c2129ba077078b83482ff74339fb432b9d99688e426977e8ea7c7200c6d2",
+  "initial_adapter_config_sha256": "dd3e1e0e508758ca3de28355e359f4bfd5874002151e3b56c12c7f59a8e74397",
+  "training_configs_checked": 2000,
+  "validation_configs_checked": 12,
+  "maximum_prompt_tokens": 38,
+  "rollouts_per_update": 512,
+  "planned_training_rollouts": 128000,
+  "wandb": {
+    "authenticated": true,
+    "entity": "yash2007-university-of-washington",
+    "project": "stochastic-llm",
+    "url": "https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm"
+  },
+  "gpu_jobs_submitted": 0,
+  "approval_status": "awaiting_user_final_approval"
+}

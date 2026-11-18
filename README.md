@@ -2,7 +2,32 @@
 
 Investigating whether language models can generate numbers according to requested probability distributions.
 
-This snapshot publishes the completed **Qwen2.5-3B supervised fine-tuning (SFT) baseline**. The results below used cross-entropy on independently sampled numeric answers. **No KL-reward or reinforcement-learning results are included.** The original technical overview and equations are retained below, alongside the completed SFT results.
+This repository publishes the completed **Qwen2.5-3B SFT baseline and batch-KL-reward RL pilot**. SFT used cross-entropy on independently sampled target answers; RL continued from that adapter using rewards from the model's own generated batches. The optional direct soft-target KL trainer is implemented but has not been run.
+
+## Completed KL-reward RL results
+
+The final 250-update RL adapter and its starting SFT adapter were evaluated on the same **100 held-out prompts × 1,000 generations per prompt**, using identical decoding settings. Lower distribution distances are better.
+
+![KL-reward RL comparison](results/rl-v1/analysis/rl-vs-sft.png)
+
+| Metric | SFT | SFT + KL-reward RL | Relative reduction |
+|---|---:|---:|---:|
+| Mean histogram KL | 0.2277 | 0.2226 | 2.2% |
+| Median histogram KL | 0.1191 | 0.1057 | 11.3% |
+| Median KS distance | 0.1392 | 0.1268 | 8.9% |
+| Median normalized Wasserstein distance | 0.1122 | 0.1013 | 9.8% |
+| Numeric-only responses with EOS | 98.68% | 98.59% | — |
+
+This is a modest incremental improvement: KL improved on 61 of 100 prompts. Normal and uniform improved on median KS; exponential and Weibull regressed. The unseen-family aggregate worsened slightly on median KS and Wasserstein. One training seed and no equal-compute SFT continuation control limit conclusions.
+
+The algorithm is on-policy **REINFORCE with a leave-one-out batch reward baseline**, not PPO or GRPO. It optimizes negative smoothed forward histogram KL with a separate reference-policy KL penalty. The run used 128,000 sampled training responses and took **22m34s** on one H200; evaluation took **5m43s**. Test histogram KL is computed post hoc from 1,000 draws, whereas training/validation groups contain 256; their absolute KL values are not directly comparable.
+
+- [Full RL report](results/rl-v1/analysis/RESULTS.md)
+- [Implementation, hyperparameters, and reproduction](docs/kl-rl-experiment.md)
+- [Recorded results, all SFT/RL test generations, and training history](results/rl-v1/)
+- [W&B comparison dashboard](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/lyb3xv9l)
+- [W&B RL training](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/tx91cho0)
+- [W&B final evaluation](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/n9d9aegn)
 
 ## SFT results
 
@@ -72,7 +97,7 @@ python scripts/analyze_results.py
 The analysis command regenerates the figure from the committed results without a GPU. Tests use a tiny local model and offline tracking. Training the full checkpoint requires CUDA; see the [SFT reproduction guide](docs/sft-experiment.md).
 ## Original technical overview and equations
 
-The following is the original research and implementation overview. Its KL-reward/RL sections describe the proposed method; the measured results above are from the SFT baseline only.
+The following retains the original research formulation. The completed implementation uses this batch-KL reward with a leave-one-out baseline and a separate reference-policy KL penalty; measured SFT and RL results are reported above.
 
 ---
 
