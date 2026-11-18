@@ -1,0 +1,8 @@
+output_dir: data/numeric-v1
+seed: 20261117
+decimals: 5
+train_configs: 2000
+samples_per_config: 32
+validation_configs: 160
+validation_samples_per_config: 8
+test_configs: 100

@@ -1,0 +1,11 @@
+{
+  "scope": "Completed sampled-target SFT baseline only",
+  "source_artifact": "yash2007-university-of-washington/stochastic-llm/source-xcj01bg1:v0",
+  "source_policy": "SFT execution path retained; unexecuted soft-KL branch removed for this SFT-only snapshot.",
+  "model_revision": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+  "training_run": "xcj01bg1",
+  "base_evaluation_run": "rfddft7y",
+  "sft_evaluation_run": "ao4xvmp5",
+  "analysis_run": "zkuvylag",
+  "sample_log_scope": "Only the two plotted test cases are included; full generation logs and adapter artifacts are linked in W&B."
+}

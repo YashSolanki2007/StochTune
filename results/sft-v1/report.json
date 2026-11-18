@@ -1,0 +1,239 @@
+{
+  "model": "Qwen/Qwen2.5-3B",
+  "training_objective": "sampled-target SFT",
+  "training_examples": 64000,
+  "training_updates": 2000,
+  "test_prompts": 100,
+  "generations_per_prompt_per_model": 1000,
+  "base": {
+    "all": {
+      "prompts": 100,
+      "requested": 100000,
+      "numeric_valid_rate": 0.06838,
+      "prompts_without_valid_samples": 4,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 1.685829605872759,
+      "median_ks_statistic": 0.5428190226477054,
+      "support_violation_rate_among_valid": 0.1987423223164668,
+      "truncated_rate": 0.88625
+    },
+    "family:normal": {
+      "prompts": 12,
+      "requested": 12000,
+      "numeric_valid_rate": 0.10708333333333334,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.20981753815331922,
+      "median_ks_statistic": 0.26125647763599397
+    },
+    "category:unseen_parameters": {
+      "prompts": 34,
+      "requested": 34000,
+      "numeric_valid_rate": 0.12285294117647058,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 23.13809423712776,
+      "median_ks_statistic": 0.5706268424586144
+    },
+    "family:weibull": {
+      "prompts": 17,
+      "requested": 17000,
+      "numeric_valid_rate": 0.07576470588235294,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 1.2500294789106372,
+      "median_ks_statistic": 0.3337770533352581
+    },
+    "category:unseen_family": {
+      "prompts": 33,
+      "requested": 33000,
+      "numeric_valid_rate": 0.07681818181818181,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 1.0621889038461538,
+      "median_ks_statistic": 0.4015573536083644
+    },
+    "category:paraphrase": {
+      "prompts": 33,
+      "requested": 33000,
+      "numeric_valid_rate": 0.0038181818181818182,
+      "prompts_without_valid_samples": 4,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.8063006143374096,
+      "median_ks_statistic": 0.666666662999995
+    },
+    "family:uniform": {
+      "prompts": 12,
+      "requested": 12000,
+      "numeric_valid_rate": 0.05775,
+      "prompts_without_valid_samples": 1,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.7303469102037469,
+      "median_ks_statistic": 0.3783783783783784
+    },
+    "family:poisson": {
+      "prompts": 16,
+      "requested": 16000,
+      "numeric_valid_rate": 0.0779375,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.9827157535516244,
+      "median_ks_statistic": 0.5142073492338213
+    },
+    "family:exponential": {
+      "prompts": 12,
+      "requested": 12000,
+      "numeric_valid_rate": 0.02825,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 6.793896097218115,
+      "median_ks_statistic": 0.8097575819619067
+    },
+    "family:beta": {
+      "prompts": 11,
+      "requested": 11000,
+      "numeric_valid_rate": 0.09018181818181818,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 1116.9608926229862,
+      "median_ks_statistic": 0.651168455085658
+    },
+    "family:gamma": {
+      "prompts": 10,
+      "requested": 10000,
+      "numeric_valid_rate": 0.0454,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 2.0761796765982803,
+      "median_ks_statistic": 0.6402056927099835
+    },
+    "family:binomial": {
+      "prompts": 10,
+      "requested": 10000,
+      "numeric_valid_rate": 0.054,
+      "prompts_without_valid_samples": 3,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 69.96325297808862,
+      "median_ks_statistic": 0.7228636799341923
+    }
+  },
+  "sft": {
+    "all": {
+      "prompts": 100,
+      "requested": 100000,
+      "numeric_valid_rate": 0.98677,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.11224881420891114,
+      "median_ks_statistic": 0.13919862991061402,
+      "support_violation_rate_among_valid": 0.013478318149112762,
+      "truncated_rate": 0.00648
+    },
+    "family:normal": {
+      "prompts": 12,
+      "requested": 12000,
+      "numeric_valid_rate": 0.9968333333333333,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.05590170235965035,
+      "median_ks_statistic": 0.0762513393104314
+    },
+    "category:unseen_parameters": {
+      "prompts": 34,
+      "requested": 34000,
+      "numeric_valid_rate": 1.0,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.08262777777777777,
+      "median_ks_statistic": 0.1113958883082668
+    },
+    "family:weibull": {
+      "prompts": 17,
+      "requested": 17000,
+      "numeric_valid_rate": 1.0,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.11586509445502143,
+      "median_ks_statistic": 0.13872279748766614
+    },
+    "category:unseen_family": {
+      "prompts": 33,
+      "requested": 33000,
+      "numeric_valid_rate": 1.0,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.141,
+      "median_ks_statistic": 0.16960633390420737
+    },
+    "category:paraphrase": {
+      "prompts": 33,
+      "requested": 33000,
+      "numeric_valid_rate": 0.9599090909090909,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.1726181321705912,
+      "median_ks_statistic": 0.15986539567306995
+    },
+    "family:uniform": {
+      "prompts": 12,
+      "requested": 12000,
+      "numeric_valid_rate": 0.9946666666666667,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.061017356086077834,
+      "median_ks_statistic": 0.10948015282492748
+    },
+    "family:poisson": {
+      "prompts": 16,
+      "requested": 16000,
+      "numeric_valid_rate": 1.0,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.18079166666666666,
+      "median_ks_statistic": 0.22815168382941964
+    },
+    "family:exponential": {
+      "prompts": 12,
+      "requested": 12000,
+      "numeric_valid_rate": 0.95825,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.18826011039584872,
+      "median_ks_statistic": 0.1315895295866423
+    },
+    "family:beta": {
+      "prompts": 11,
+      "requested": 11000,
+      "numeric_valid_rate": 0.9975454545454545,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.1103581433634755,
+      "median_ks_statistic": 0.11115255245226197
+    },
+    "family:gamma": {
+      "prompts": 10,
+      "requested": 10000,
+      "numeric_valid_rate": 0.9839,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.15711404554708788,
+      "median_ks_statistic": 0.21703519421311507
+    },
+    "family:binomial": {
+      "prompts": 10,
+      "requested": 10000,
+      "numeric_valid_rate": 0.9468,
+      "prompts_without_valid_samples": 0,
+      "prompts_with_metric_overflow": 0,
+      "median_normalized_wasserstein": 0.17829720720544515,
+      "median_ks_statistic": 0.27239670915274905
+    }
+  },
+  "scipy_reference": {
+    "repeats_per_case": 20,
+    "seed": 7391,
+    "sample_sizes": "Matched to each SFT case's valid response count",
+    "median_ks": 0.02472043555128714,
+    "median_normalized_wasserstein": 0.011347915436193725
+  }
+}

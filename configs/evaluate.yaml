@@ -1,0 +1,20 @@
+model: Qwen/Qwen2.5-3B
+revision: 3aab1f1954e9cc14eb9509a215f9e5ca08227a9b
+cases: data/numeric-v1/test.jsonl
+output_dir: outputs/eval-base
+adapter: null
+seed: 12345
+device: cuda
+precision: bf16
+attention: sdpa
+samples_per_prompt: 1000
+batch_size: 128
+max_new_tokens: 32
+decimals: 5
+wandb:
+  enabled: true
+  mode: online
+  entity: yash2007-university-of-washington
+  project: stochastic-llm
+  base_url: https://api.forge.coreweave.com
+  directory: outputs/wandb
