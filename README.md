@@ -1,8 +1,146 @@
 # llm-random-number-generator
 
-Investigating whether language models can generate numbers according to requested probability distributions.
+Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word-bigram statistics follow a reference corpus.
 
-This repository publishes the completed **Qwen2.5-3B SFT baseline and batch-KL-reward RL pilot**. SFT used cross-entropy on independently sampled target answers; RL continued from that adapter using rewards from the model's own generated batches. The optional direct soft-target KL trainer is implemented but has not been run.
+This repository records completed **numeric SFT, numeric batch-KL RL, and Shakespeare passage-RL experiments**, including a two-H200 distributed run. The original mathematical overview is retained below. The optional direct soft-target KL trainer is implemented but has not been run.
+
+## What has actually been run
+
+| Stage | Starting policy and signal | Completed budget | Outcome |
+|---|---|---|---|
+| Numeric SFT | Qwen2.5-3B base; cross-entropy on target-distribution samples | 2,000 updates; 64,000 examples; one H200 | Large improvement in numeric formatting and sampling metrics |
+| Numeric RL | Numeric SFT adapter; negative empirical histogram KL | 250 updates; 128,000 generated responses; one H200 | Mean held-out KL 2.2% lower; mixed transfer |
+| Passage judge audit | Frozen 7B instruction model; controlled text perturbations | 48 passages; corrected dimension-wise scoring | Initial JSON protocol missed 22 task scores; corrected scorer passed 18 predefined perturbation checks |
+| Short passage RL | Fresh Qwen2.5-3B-Instruct; quality + bigram matching | 100 updates; 1,600 passages; one H200 | No clear held-out improvement |
+| Longer passage RL | Fresh Qwen2.5-3B-Instruct; same reward, broader prompts, DDP | 1,200 updates; 19,200 passages; two H200s | Higher judge scores; small reduction in empirical bigram KL |
+| Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
+
+The passage runs use actual on-policy REINFORCE updates to LoRA weights, not supervised imitation of the reference corpus. The quality scorer is frozen and received no human preference training in this project; these passage results are **model-judged, not human-validated RLHF results**.
+
+## Completed passage-RL results
+
+The longer run starts from the pinned **Qwen2.5-3B-Instruct** checkpoint, not the numeric adapter or the final short-run adapter. It generates complete 80–120-word dramatic monologues. Word bigrams are measured across the generated collection; word pairs are not independently concatenated to construct the prose.
+
+The final adapter and the original instruction policy were evaluated on the same **16 held-out scenarios × 4 generations = 64 passages per policy**, with matching decoding settings and per-rank sampling seeds. The original policy is recovered by disabling LoRA; its base weights remain frozen during training.
+
+| Held-out metric | Before passage RL | After 1,200 updates |
+|---|---:|---:|
+| Pooled bigram KL ↓ | 8.0710 | **7.9282** |
+| Judge coherence /5 ↑ | 3.8499 | **3.9985** |
+| Judge fluency /5 ↑ | 3.9618 | **4.0354** |
+| Judge prompt fulfillment /5 ↑ | 4.0913 | **4.6011** |
+| Combined quality reward /1 ↑ | 0.7419 | **0.8029** |
+| Out-of-reference bigram rate ↓ | 63.51% | **56.15%** |
+| Mean words per passage | 96.88 | 115.52 |
+| Responses ending with EOS | 64/64 | 64/64 |
+
+Raw pooled bigram KL fell **1.77%**. Mean judge quality improved on **15 of 16 prompts**, with the largest change in prompt fulfillment. Both policies terminated every test response, so this quality gain is not the truncation artifact observed in the short run. The shorter run's KL was 7.9903 → 7.9935 and showed no clear improvement; its different prompt set prevents a compute-only comparison with the longer experiment.
+
+The longer run completed in **1h41m21s on two H200s**, approximately **3.38 GPU-hours**, within a two-hour allocation / four-GPU-hour cap. It reached its 1,200-update limit rather than stopping on the time budget.
+
+![Validation quality and empirical bigram KL during passage RL](results/passage-rl-v1/ddp/validation-trends.png)
+
+Validation uses 32 passages; final test evaluation uses 64. Their absolute KL values are not directly comparable. Final outputs are about 19.2% longer, which changes the number of observed bigrams. A post hoc count-matched diagnostic still found a small reduction (8.0710 → 7.8762); it is a sampling-sensitivity check, not a correction proving exact distribution matching.
+
+**Interpretation:** a modest positive result under this frozen judge and a small improvement in aggregate word-pair statistics. One training seed, one judge shared between reward and evaluation, only 16 templated test scenarios, and biased sparse histogram estimates limit the conclusion. Some samples remain awkward. The experiment does not establish high-quality Shakespearean writing, exact corpus sampling, absence of memorization, or superiority to continued SFT or MaD-RL.
+
+- [Full passage report, diagnostics, and a matched sample pair](results/passage-rl-v1/ddp/RESULTS.md)
+- [All 128 baseline/final test passages](results/passage-rl-v1/ddp/) and [training history](results/passage-rl-v1/ddp/history.jsonl)
+- [Short-run results](results/passage-rl-v1/pilot/comparison.json) and [judge-audit records](results/passage-rl-v1/)
+- [Detailed method and reproduction](docs/passage-rl-experiment.md)
+- [W&B main DDP run](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/zop09jj3) · [final analysis](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/3buboztw)
+
+## Passage-RL mathematics and implementation
+
+### Reference and generated bigram distributions
+
+The reference is the first 80% of eligible paragraphs from a pinned Tiny Shakespeare text snapshot. Eligible paragraphs have at least ten normalized words. Words are lowercased, internal apostrophes are retained, punctuation is excluded, and speaker-name words are retained. Counts do not cross paragraph boundaries. This is a discrete probability mass function, not a continuous density:
+
+```math
+p_b = \frac{C_{\mathrm{ref}}(b)}{\sum_{b'} C_{\mathrm{ref}}(b')},
+\qquad p_{\mathrm{UNKNOWN}}=0.
+```
+
+There are 83,454 observed reference word pairs plus an UNKNOWN category. For a generated batch of passages $\mathcal B=(Y_1,\ldots,Y_N)$, let $n_i(b)$ count pair $b$ in passage $i$, and let $M=\sum_i\sum_b n_i(b)$. Unseen pairs contribute to UNKNOWN; an empty or one-word passage contributes one UNKNOWN observation. Generated passages are never joined to create boundary bigrams. With $B=83{,}455$ categories and total pseudocount mass $\eta=1$:
+
+```math
+a=\frac{\eta}{B},\qquad
+\widehat q_b(\mathcal B)=\frac{\sum_i n_i(b)+a}{M+\eta},
+\qquad
+G(\mathcal B)=-\sum_{b:p_b>0}p_b\log\frac{p_b}{\widehat q_b(\mathcal B)}.
+```
+
+All generated pairs remain in the denominator. This is a smoothed, finite-batch approximation; matching it does not determine long-range meaning or all within-passage structure.
+
+### Frozen quality reward
+
+A pinned **Qwen2.5-7B-Instruct** evaluates coherence, fluency, and prompt fulfillment separately. It is asked for a rating from 1 to 5. Instead of parsing generated JSON, the corrected scorer reads the next-token probabilities of those five single-token digits. For dimension $d$, with frozen judge $\rho_\phi$:
+
+```math
+s_d(Y,c)=\sum_{k=1}^{5} k\,
+\frac{\rho_\phi(k\mid d,c,Y)}{\sum_{j=1}^{5}\rho_\phi(j\mid d,c,Y)},
+\qquad
+r_Q(Y,c)=\mathbf 1_{\mathrm{EOS}}\,
+\frac{\left(s_{\mathrm{coherence}}+s_{\mathrm{fluency}}+s_{\mathrm{task}}\right)/3-1}{4}.
+```
+
+The rating is conditional on those five tokens, not a calibrated human score. Their total original probability is recorded; mass below 0.01 causes failure. A truncated passage gets zero positive quality reward but still contributes its observed word pairs to the histogram. Style ratings from the initial audit do not enter the training reward. The corrected scorer passed predefined corruption checks, which do not substitute for human preference validation.
+
+### Joint objective, coefficients, and credit assignment
+
+With $\pi_0$ the initial instruction policy, the objective combines mean passage quality, aggregate bigram matching, and a separate reverse sequence-KL stability penalty:
+
+```math
+J(\theta)=
+\mathbb E_{\mathcal C,\,\mathcal B\sim\pi_\theta}
+\left[\frac1N\sum_{i=1}^{N}r_Q(Y_i,c_i)+\lambda G(\mathcal B)\right]
+-\beta\,\mathbb E_c D_{\mathrm{KL}}\!\left(\pi_\theta(\cdot\mid c)\|\pi_0(\cdot\mid c)\right),
+\qquad \lambda=0.1,\quad\beta=0.002.
+```
+
+The reference-policy KL is different from the target-bigram KL. **λ = 0.1 was a heuristic starting value; no λ sweep has been run.** The reward weights were identical in the short and longer passage experiments.
+
+Write $\ell_i=\log\pi_\theta(Y_i\mid c_i)$ and $\ell_i^0=\log\pi_0(Y_i\mid c_i)$, summing completion-token log probabilities including EOS when present. The implementation assigns:
+
+```math
+A_i^Q=r_Q(Y_i,c_i)-\frac{1}{N-1}\sum_{j\ne i}r_Q(Y_j,c_j),
+\qquad
+A_i^D=N\left[G(\mathcal B)-G(\mathcal B\setminus\{Y_i\})\right],
+```
+
+```math
+A_i=A_i^Q+\lambda A_i^D-\beta(\ell_i-\ell_i^0),
+\qquad
+\mathcal L_{\mathrm{RL}}=-\frac1N\sum_i\operatorname{stopgrad}(A_i)\,\ell_i.
+```
+
+Removing a passage removes all its overlapping bigrams and recomputes the denominator. The factor $N$ compensates for averaging sequence losses. There is no GRPO normalization, PPO clipping, learned value critic, or gradient through the frozen judge. The score-function estimator targets the expected finite-batch reward; it is not an unbiased estimator of exact population bigram KL. Dropout is disabled and each generated group is used for one update.
+
+### What DDP and the longer schedule change
+
+The longer run uses 256 training scenarios, 16 validation scenarios, and 16 test scenarios, generated from disjoint role/setting/dilemma pools. These are synthetic combinations, not 256 independently authored stories. Each update chooses two training scenarios and generates eight passages for each: **global group size 16**. Each GPU hosts an actor and frozen judge and processes eight passages. Both ranks contribute to one histogram and one leave-one-out quality baseline; rank zero broadcasts the combined credits.
+
+DDP averages the two locally averaged gradient estimates, preserving the global mean:
+
+```math
+\frac12\left(\frac18\sum_{i\in\mathrm{rank}\,0}g_i+
+\frac18\sum_{i\in\mathrm{rank}\,1}g_i\right)
+=\frac1{16}\sum_{i=1}^{16}g_i.
+```
+
+Only attention LoRA weights train: rank 16, alpha 32, dropout 0, BF16 base models, AdamW learning rate $5\times10^{-6}$, 40 warmup updates, cosine decay over 1,200 updates, and gradient norm clipping at 1. Global batch size and learning rate are not doubled for DDP. Decoding uses temperature 1, top-p 1, top-k disabled, and at most 256 new tokens.
+
+Validation and complete checkpoints run every 100 updates. Checkpoints save adapter, optimizer/scheduler, prompt-selection RNG, both ranks' RNG states, and source/config hashes. The two-hour allocation has no automatic requeue; training has a 105-minute cutoff to reserve final evaluation and saving time. No extra GPU benchmark preceded the DDP run. CPU tests verify global reward/gradient equivalence and checkpoint restoration.
+
+### Reproduce the recorded passage analysis without a GPU
+
+```bash
+python -m pip install -e '.[dev,analysis]'
+python experiments/shakespeare-quality-pilot/analyze_recorded.py
+python -m unittest discover -s experiments/shakespeare-quality-pilot -p 'test_*.py' -v
+```
+
+The analysis reads committed samples and corpus counts; it does not generate text or allocate GPUs. Full training rollouts, final adapters, and source artifacts are available through the W&B run. Model weights, optimizer states, environments, and credentials remain outside Git. See [the passage guide](docs/passage-rl-experiment.md) for training commands and the [results manifest](results/passage-rl-v1/manifest.json) for checksums and provenance.
 
 ## Completed KL-reward RL results
 
@@ -71,7 +209,7 @@ The result is encouraging, but calibration remains imperfect: a direct SciPy ref
 
 Evaluation used temperature 1, top-p 1, top-k disabled, and no repetition penalty. Tests cover unseen parameter ranges, held-out distribution families, and new prompt wording. Invalid responses were not repaired or resampled.
 
-## Code and recorded artifacts
+## Numeric code and recorded artifacts
 
 The repository includes the SFT training/evaluation pipeline, pinned configs, per-prompt results, the numerical-sampler reference, and the two plotted cases' raw generation logs.
 

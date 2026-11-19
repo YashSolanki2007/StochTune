@@ -1,0 +1,17 @@
+{
+  "corpus_url": "https://raw.githubusercontent.com/karpathy/char-rnn/370cbcd448eb7daf32f21a6be560b70e0b33c4e3/data/tinyshakespeare/input.txt",
+  "corpus_revision": "370cbcd448eb7daf32f21a6be560b70e0b33c4e3",
+  "corpus_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+  "candidate_sha256": "7c8d1cf5c8329cb470176263ce1a26a8830bd7214de0461d6b79e0a88feba8ee",
+  "seed": 20261118,
+  "candidates": 36,
+  "reference_bigrams": 152905,
+  "reference_distinct_bigrams": 83454,
+  "split": "80/20 contiguous paragraphs",
+  "caveats": [
+    "Diagnostic controls, not a held-out writing benchmark.",
+    "Authored anchors are assistant-written, not human quality labels.",
+    "Public Shakespeare may be present in model pretraining.",
+    "Corruption labels are hypotheses, not ground-truth rubric scores."
+  ]
+}

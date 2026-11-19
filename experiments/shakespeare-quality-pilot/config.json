@@ -1,0 +1,13 @@
+{
+  "generator_model": "Qwen/Qwen2.5-3B",
+  "generator_revision": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+  "judge_model": "Qwen/Qwen2.5-7B-Instruct",
+  "judge_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "seed": 20261118,
+  "generator_max_new_tokens": 256,
+  "judge_max_new_tokens": 384,
+  "batch_size": 4,
+  "wandb_entity": "yash2007-university-of-washington",
+  "wandb_project": "stochastic-llm",
+  "wandb_base_url": "https://api.forge.coreweave.com"
+}

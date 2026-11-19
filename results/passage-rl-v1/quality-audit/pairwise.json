@@ -1,0 +1,170 @@
+[
+  {
+    "prompt_id": "ruler",
+    "swapped": false,
+    "a_id": "ruler-authored_anchor",
+    "b_id": "ruler-markov_bigram",
+    "judge_response": {
+      "text": "{\"winner\": \"A\", \"rationale\": \"A is coherent, fluent, and fulfills the task by presenting a clear and dramatic monologue in a Shakespearean register. B, on the other hand, is incoherent and difficult to understand, lacking a clear narrative or character development.\"}",
+      "terminated": true,
+      "generated_tokens": 61
+    },
+    "winner": "A",
+    "rationale": "A is coherent, fluent, and fulfills the task by presenting a clear and dramatic monologue in a Shakespearean register. B, on the other hand, is incoherent and difficult to understand, lacking a clear narrative or character development.",
+    "winner_id": "ruler-authored_anchor"
+  },
+  {
+    "prompt_id": "ruler",
+    "swapped": true,
+    "a_id": "ruler-markov_bigram",
+    "b_id": "ruler-authored_anchor",
+    "judge_response": {
+      "text": "{\"winner\": \"B\", \"rationale\": \"B is more coherent, fluent, and fulfills the task better. It maintains a Shakespearean register while presenting a clear and intelligible monologue. A, on the other hand, is incoherent and difficult to understand, lacking the structure and clarity expected in a dramatic monologue.\"}",
+      "terminated": true,
+      "generated_tokens": 70
+    },
+    "winner": "B",
+    "rationale": "B is more coherent, fluent, and fulfills the task better. It maintains a Shakespearean register while presenting a clear and intelligible monologue. A, on the other hand, is incoherent and difficult to understand, lacking the structure and clarity expected in a dramatic monologue.",
+    "winner_id": "ruler-authored_anchor"
+  },
+  {
+    "prompt_id": "sailor",
+    "swapped": false,
+    "a_id": "sailor-authored_anchor",
+    "b_id": "sailor-markov_bigram",
+    "judge_response": {
+      "text": "{\"winner\": \"A\", \"rationale\": \"A is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue with a clear narrative and emotional arc. B is incoherent and does not follow the requested Shakespearean register or theme.\"}",
+      "terminated": true,
+      "generated_tokens": 55
+    },
+    "winner": "A",
+    "rationale": "A is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue with a clear narrative and emotional arc. B is incoherent and does not follow the requested Shakespearean register or theme.",
+    "winner_id": "sailor-authored_anchor"
+  },
+  {
+    "prompt_id": "sailor",
+    "swapped": true,
+    "a_id": "sailor-markov_bigram",
+    "b_id": "sailor-authored_anchor",
+    "judge_response": {
+      "text": "{\"winner\": \"B\", \"rationale\": \"B is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue with a clear narrative and emotional arc. A, on the other hand, is incoherent and does not follow the Shakespearean register or the task requirements.\"}",
+      "terminated": true,
+      "generated_tokens": 62
+    },
+    "winner": "B",
+    "rationale": "B is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue with a clear narrative and emotional arc. A, on the other hand, is incoherent and does not follow the Shakespearean register or the task requirements.",
+    "winner_id": "sailor-authored_anchor"
+  },
+  {
+    "prompt_id": "healer",
+    "swapped": false,
+    "a_id": "healer-authored_anchor",
+    "b_id": "healer-markov_bigram",
+    "judge_response": {
+      "text": "{\"winner\": \"A\", \"rationale\": \"A is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue that addresses the healer's dilemma and concludes with a decision. B, on the other hand, does not maintain a consistent theme or coherent narrative and appears to be a jumbled collection of phrases and lines, making it incoherent and difficult to follow.\"}",
+      "terminated": true,
+      "generated_tokens": 81
+    },
+    "winner": "A",
+    "rationale": "A is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue that addresses the healer's dilemma and concludes with a decision. B, on the other hand, does not maintain a consistent theme or coherent narrative and appears to be a jumbled collection of phrases and lines, making it incoherent and difficult to follow.",
+    "winner_id": "healer-authored_anchor"
+  },
+  {
+    "prompt_id": "healer",
+    "swapped": true,
+    "a_id": "healer-markov_bigram",
+    "b_id": "healer-authored_anchor",
+    "judge_response": {
+      "text": "{\"winner\": \"B\", \"rationale\": \"B is more coherent, fluent, and fulfills the task of writing a Shakespearean monologue. It maintains a consistent voice and structure, and the narrative progression is clear and compelling. A, on the other hand, is incoherent and does not follow the required Shakespearean register or the task's guidelines.\"}",
+      "terminated": true,
+      "generated_tokens": 75
+    },
+    "winner": "B",
+    "rationale": "B is more coherent, fluent, and fulfills the task of writing a Shakespearean monologue. It maintains a consistent voice and structure, and the narrative progression is clear and compelling. A, on the other hand, is incoherent and does not follow the required Shakespearean register or the task's guidelines.",
+    "winner_id": "healer-authored_anchor"
+  },
+  {
+    "prompt_id": "siblings",
+    "swapped": false,
+    "a_id": "siblings-authored_anchor",
+    "b_id": "siblings-markov_bigram",
+    "judge_response": {
+      "text": "{\"winner\": \"A\", \"rationale\": \"A is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue that acknowledges personal fault and prepares for reconciliation. B is incoherent and does not follow the Shakespearean register or the task requirements.\"}",
+      "terminated": true,
+      "generated_tokens": 57
+    },
+    "winner": "A",
+    "rationale": "A is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue that acknowledges personal fault and prepares for reconciliation. B is incoherent and does not follow the Shakespearean register or the task requirements.",
+    "winner_id": "siblings-authored_anchor"
+  },
+  {
+    "prompt_id": "siblings",
+    "swapped": true,
+    "a_id": "siblings-markov_bigram",
+    "b_id": "siblings-authored_anchor",
+    "judge_response": {
+      "text": "{\"winner\": \"B\", \"rationale\": \"B is more coherent, fluent, and fulfills the task of writing a Shakespearean monologue. It maintains a consistent and understandable narrative about reconciliation and acknowledging one's own fault. In contrast, A's text is incoherent and does not follow a clear narrative or theme, making it difficult to understand the intended message.\"}",
+      "terminated": true,
+      "generated_tokens": 77
+    },
+    "winner": "B",
+    "rationale": "B is more coherent, fluent, and fulfills the task of writing a Shakespearean monologue. It maintains a consistent and understandable narrative about reconciliation and acknowledging one's own fault. In contrast, A's text is incoherent and does not follow a clear narrative or theme, making it difficult to understand the intended message.",
+    "winner_id": "siblings-authored_anchor"
+  },
+  {
+    "prompt_id": "guard",
+    "swapped": false,
+    "a_id": "guard-authored_anchor",
+    "b_id": "guard-markov_bigram",
+    "judge_response": {
+      "text": "{\"winner\": \"A\", \"rationale\": \"A is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue that fits the given scenario. B, on the other hand, is incoherent and does not follow the Shakespearean register or the narrative structure required for a dramatic monologue.\"}",
+      "terminated": true,
+      "generated_tokens": 66
+    },
+    "winner": "A",
+    "rationale": "A is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue that fits the given scenario. B, on the other hand, is incoherent and does not follow the Shakespearean register or the narrative structure required for a dramatic monologue.",
+    "winner_id": "guard-authored_anchor"
+  },
+  {
+    "prompt_id": "guard",
+    "swapped": true,
+    "a_id": "guard-markov_bigram",
+    "b_id": "guard-authored_anchor",
+    "judge_response": {
+      "text": "{\"winner\": \"B\", \"rationale\": \"B is more coherent, fluent, and fulfills the task of writing a Shakespearean monologue. A is incoherent and does not follow a logical narrative or maintain a consistent theme. B presents a clear and dramatic scenario where the gatekeeper must decide between duty and mercy, maintaining the Shakespearean register while being understandable and engaging.\"}",
+      "terminated": true,
+      "generated_tokens": 79
+    },
+    "winner": "B",
+    "rationale": "B is more coherent, fluent, and fulfills the task of writing a Shakespearean monologue. A is incoherent and does not follow a logical narrative or maintain a consistent theme. B presents a clear and dramatic scenario where the gatekeeper must decide between duty and mercy, maintaining the Shakespearean register while being understandable and engaging.",
+    "winner_id": "guard-authored_anchor"
+  },
+  {
+    "prompt_id": "actor",
+    "swapped": false,
+    "a_id": "actor-authored_anchor",
+    "b_id": "actor-markov_bigram",
+    "judge_response": {
+      "text": "{\"winner\": \"A\", \"rationale\": \"A is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue that addresses the actor's fear of forgetting lines and the solution of listening to their scene partner. B, on the other hand, appears to be a jumbled and incoherent string of words that do not form a coherent monologue or address the given prompt in any meaningful way.\"}",
+      "terminated": true,
+      "generated_tokens": 87
+    },
+    "winner": "A",
+    "rationale": "A is coherent, fluent, and fulfills the task by presenting a Shakespearean monologue that addresses the actor's fear of forgetting lines and the solution of listening to their scene partner. B, on the other hand, appears to be a jumbled and incoherent string of words that do not form a coherent monologue or address the given prompt in any meaningful way.",
+    "winner_id": "actor-authored_anchor"
+  },
+  {
+    "prompt_id": "actor",
+    "swapped": true,
+    "a_id": "actor-markov_bigram",
+    "b_id": "actor-authored_anchor",
+    "judge_response": {
+      "text": "{\"winner\": \"B\", \"rationale\": \"B is more coherent, fluent, and fulfills the task of writing a Shakespearean monologue. A lacks structure and coherence, while B maintains the Shakespearean register and provides a clear narrative about the actor's realization.\"}",
+      "terminated": true,
+      "generated_tokens": 56
+    },
+    "winner": "B",
+    "rationale": "B is more coherent, fluent, and fulfills the task of writing a Shakespearean monologue. A lacks structure and coherence, while B maintains the Shakespearean register and provides a clear narrative about the actor's realization.",
+    "winner_id": "actor-authored_anchor"
+  }
+]

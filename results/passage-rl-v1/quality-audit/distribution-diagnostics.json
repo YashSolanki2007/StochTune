@@ -1,0 +1,79 @@
+{
+  "authored_anchor": {
+    "passages": 6,
+    "forward_kl": 6.742973331193843,
+    "js_divergence": 0.6406236813428621,
+    "observed_bigrams": 634,
+    "unknown_bigram_rate": 0.5189274447949527,
+    "smoothing_total_mass": 1.0,
+    "mean_word_count": 106.66666666666667,
+    "mean_repeated_bigram_fraction": 0.006291844317734274,
+    "mean_corpus_12word_window_overlap": 0.0
+  },
+  "shuffled_words": {
+    "passages": 6,
+    "forward_kl": 6.946366773877508,
+    "js_divergence": 0.6646372497626624,
+    "observed_bigrams": 634,
+    "unknown_bigram_rate": 0.7176656151419558,
+    "smoothing_total_mass": 1.0,
+    "mean_word_count": 106.66666666666667,
+    "mean_repeated_bigram_fraction": 0.003175755376100172,
+    "mean_corpus_12word_window_overlap": 0.0
+  },
+  "repetition": {
+    "passages": 6,
+    "forward_kl": 7.060926525227863,
+    "js_divergence": 0.6765720292374187,
+    "observed_bigrams": 634,
+    "unknown_bigram_rate": 0.5031545741324921,
+    "smoothing_total_mass": 1.0,
+    "mean_word_count": 106.66666666666667,
+    "mean_repeated_bigram_fraction": 0.8864024399048445,
+    "mean_corpus_12word_window_overlap": 0.0
+  },
+  "off_prompt": {
+    "passages": 6,
+    "forward_kl": 6.742973331193843,
+    "js_divergence": 0.6406236813428621,
+    "observed_bigrams": 634,
+    "unknown_bigram_rate": 0.5189274447949527,
+    "smoothing_total_mass": 1.0,
+    "mean_word_count": 106.66666666666667,
+    "mean_repeated_bigram_fraction": 0.006291844317734274,
+    "mean_corpus_12word_window_overlap": 0.0
+  },
+  "markov_bigram": {
+    "passages": 6,
+    "forward_kl": 6.527728780068458,
+    "js_divergence": 0.6145995743856548,
+    "observed_bigrams": 634,
+    "unknown_bigram_rate": 0.0015772870662460567,
+    "smoothing_total_mass": 1.0,
+    "mean_word_count": 106.66666666666667,
+    "mean_repeated_bigram_fraction": 0.0,
+    "mean_corpus_12word_window_overlap": 0.0
+  },
+  "source_excerpt": {
+    "passages": 6,
+    "forward_kl": 6.53417838005018,
+    "js_divergence": 0.6354762059076295,
+    "observed_bigrams": 523,
+    "unknown_bigram_rate": 0.47418738049713194,
+    "smoothing_total_mass": 1.0,
+    "mean_word_count": 88.16666666666667,
+    "mean_repeated_bigram_fraction": 0.019640951436915854,
+    "mean_corpus_12word_window_overlap": 1.0
+  },
+  "pretrained_base": {
+    "passages": 12,
+    "forward_kl": 7.331986417404695,
+    "js_divergence": 0.6240370237700861,
+    "observed_bigrams": 1641,
+    "unknown_bigram_rate": 0.6636197440585009,
+    "smoothing_total_mass": 1.0,
+    "mean_word_count": 137.75,
+    "mean_repeated_bigram_fraction": 0.0282281009093239,
+    "mean_corpus_12word_window_overlap": 0.0
+  }
+}

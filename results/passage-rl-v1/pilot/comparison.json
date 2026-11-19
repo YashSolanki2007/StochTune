@@ -1,0 +1,35 @@
+{
+  "baseline": {
+    "quality_reward_mean": 0.7543899767721693,
+    "bigram_kl": 7.990344891953253,
+    "unknown_bigram_rate": 0.6291506466270534,
+    "passages": 64,
+    "terminated_rate": 0.984375,
+    "mean_word_count": 90.40625,
+    "corpus_12word_overlap": 0.0,
+    "coherence": 3.919938899576664,
+    "fluency": 3.994191825389862,
+    "prompt_fulfillment": 4.297602977603674
+  },
+  "final": {
+    "quality_reward_mean": 0.7614571253458658,
+    "bigram_kl": 7.993541969058766,
+    "unknown_bigram_rate": 0.6364123637663034,
+    "passages": 64,
+    "terminated_rate": 1,
+    "mean_word_count": 88.453125,
+    "corpus_12word_overlap": 0.0,
+    "coherence": 3.8881145752966404,
+    "fluency": 3.9719968289136887,
+    "prompt_fulfillment": 4.277374099940062
+  },
+  "training_updates": 100,
+  "training_passages": 1600,
+  "elapsed_seconds": 1043.2888677549781,
+  "human_validated": false,
+  "limitations": [
+    "One seed; four held-out prompts; same training/eval judge.",
+    "Batch KL is biased and sample-size dependent.",
+    "No compute-matched SFT or MaD-RL control."
+  ]
+}

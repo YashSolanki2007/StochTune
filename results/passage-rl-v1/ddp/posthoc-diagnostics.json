@@ -1,0 +1,25 @@
+{
+  "seed": 20261119,
+  "matched_bigram_count": 6136,
+  "original_bigram_counts": {
+    "baseline": 6136,
+    "final": 7329
+  },
+  "resamples": 200,
+  "matched_count_mean_kl": {
+    "baseline": 8.071027126275682,
+    "final": 7.876212804113036
+  },
+  "judge_quality_prompts_improved": 15,
+  "judge_quality_prompts_worsened": 1,
+  "judge_quality_prompt_count": 16,
+  "paired_prompt_bootstrap_judge_quality_delta_95pct": [
+    0.04173380102341374,
+    0.08357494499844806
+  ],
+  "caveats": [
+    "Matched-count subsampling ignores passage structure and does not remove KL bias.",
+    "Bootstrap reflects prompt variation within one training seed and one judge.",
+    "Judge scores are not human validation."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "bigram_kl": 8.071027126275682,
+    "quality_reward_mean": 0.7419146029278636,
+    "unknown_bigram_rate": 0.6351043024771839,
+    "passages": 64,
+    "terminated_rate": 1,
+    "mean_word_count": 96.875,
+    "corpus_12word_overlap": 0.0,
+    "coherence": 3.8498966321349144,
+    "fluency": 3.9618060514330864,
+    "prompt_fulfillment": 4.091272551566362
+  },
+  "final": {
+    "bigram_kl": 7.928232451070379,
+    "quality_reward_mean": 0.8029196032633384,
+    "unknown_bigram_rate": 0.5614681402647018,
+    "passages": 64,
+    "terminated_rate": 1,
+    "mean_word_count": 115.515625,
+    "corpus_12word_overlap": 0.0,
+    "coherence": 3.998495541512966,
+    "fluency": 4.0354190692305565,
+    "prompt_fulfillment": 4.601120628416538
+  }
+}

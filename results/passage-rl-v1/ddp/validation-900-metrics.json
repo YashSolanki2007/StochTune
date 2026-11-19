@@ -1,0 +1,13 @@
+{
+  "quality_reward_mean": 0.768102095151941,
+  "bigram_kl": 7.702296693136131,
+  "unknown_bigram_rate": 0.5869974874371859,
+  "passages": 32,
+  "terminated_rate": 1,
+  "mean_word_count": 100.5,
+  "corpus_12word_overlap": 0.0,
+  "coherence": 3.9955030381679535,
+  "fluency": 4.014353528618813,
+  "prompt_fulfillment": 4.207368575036526,
+  "joint_reward": -0.0021275741616721966
+}

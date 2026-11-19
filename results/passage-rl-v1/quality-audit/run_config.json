@@ -1,0 +1,35 @@
+{
+  "generator_model": "Qwen/Qwen2.5-3B",
+  "generator_revision": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+  "judge_model": "Qwen/Qwen2.5-7B-Instruct",
+  "judge_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "seed": 20261118,
+  "generator_max_new_tokens": 256,
+  "judge_max_new_tokens": 384,
+  "batch_size": 4,
+  "wandb_entity": "yash2007-university-of-washington",
+  "wandb_project": "stochastic-llm",
+  "wandb_base_url": "https://api.forge.coreweave.com",
+  "slurm_job_id": "498097",
+  "torch": "2.8.0+cu126",
+  "transformers": "4.57.1",
+  "device": "NVIDIA H200",
+  "data_manifest": {
+    "corpus_url": "https://raw.githubusercontent.com/karpathy/char-rnn/370cbcd448eb7daf32f21a6be560b70e0b33c4e3/data/tinyshakespeare/input.txt",
+    "corpus_revision": "370cbcd448eb7daf32f21a6be560b70e0b33c4e3",
+    "corpus_sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+    "candidate_sha256": "7c8d1cf5c8329cb470176263ce1a26a8830bd7214de0461d6b79e0a88feba8ee",
+    "seed": 20261118,
+    "candidates": 36,
+    "reference_bigrams": 152905,
+    "reference_distinct_bigrams": 83454,
+    "split": "80/20 contiguous paragraphs",
+    "caveats": [
+      "Diagnostic controls, not a held-out writing benchmark.",
+      "Authored anchors are assistant-written, not human quality labels.",
+      "Public Shakespeare may be present in model pretraining.",
+      "Corruption labels are hypotheses, not ground-truth rubric scores."
+    ]
+  },
+  "purpose": "Frozen quality-judge diagnostic; no training"
+}

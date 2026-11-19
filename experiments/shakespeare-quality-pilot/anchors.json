@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ruler",
+    "prompt": "Write an original short dramatic monologue in a Shakespearean register. A ruler suspects a trusted adviser of betrayal but decides to seek evidence before acting. Make the decision intelligible; do not quote an existing play.",
+    "passage": "The seal upon this letter is mine own, yet not the hand that set it to the wax. My counsellor alone hath kept the key. Shall I, for that, proclaim him false? A king who hangs a friend upon a doubt makes fear his minister and truth his slave. I will conceal the letter till the dawn, then ask him where he walked when midnight struck. If he speaks plain, my shame shall have a witness; if he invents a road, I know the ground. Let anger wait outside the council door. This crown is heavy, but it need not make my judgment blind."
+  },
+  {
+    "id": "sailor",
+    "prompt": "Write an original short dramatic monologue in a Shakespearean register. A sailor returning after years at sea wonders whether a childhood friend will recognize them, then decides to knock on the friend's door. Do not quote an existing play.",
+    "passage": "Here stands the door, more faithful than the ships that bore me from it. Seven winters since, I left a boy who promised to return before the orchard flowered. What face will answer now? The sea hath written deep upon my cheek, and he may take these scars for some strange merchant's tale. Yet once we shared a crust beneath that wall and named the distant stars as if we owned them. If he remembers nothing, I can tell him where we hid the broken cup. Enough of this! A friend is not discovered by remaining in the street. My hand shall knock, though all my courage tremble."
+  },
+  {
+    "id": "healer",
+    "prompt": "Write an original short dramatic monologue in a Shakespearean register. A healer has failed to save a patient and must choose whether to return to another person who needs help. End with the decision to return. Do not quote an existing play.",
+    "passage": "I washed my hands, but cannot wash away the silence where her breathing used to be. The herbs were sound; my confidence was not. I promised more than any mortal hand could carry safely through a fevered night. Now someone calls beyond the narrow stair, and every step appears a judgment on me. Shall I refuse because I could not wrest one life from death? Then let my shame confess a second cruelty. I will go back, and promise only this: to watch, to listen, and to do what skill remains. The living have not asked that I be blameless. They ask that I should come."
+  },
+  {
+    "id": "siblings",
+    "prompt": "Write an original short dramatic monologue in a Shakespearean register. Someone preparing to reconcile with a sibling realizes that an apology must acknowledge their own fault. Do not quote an existing play.",
+    "passage": "I have rehearsed a hundred noble speeches, and in them all my brother bears the blame. How readily the tongue appoints itself the judge of wounds its owner helped to make! He spoke in anger, true; but I had sold the field our father bade us keep together. No polished phrase can buy that promise back. I shall not ask him first to understand the debts that drove me. Let him hear the deed confessed before the reason seeks a softer name. If he will never take my hand again, the fault is still mine own to speak. I go to ask forgiveness, not acquittal."
+  },
+  {
+    "id": "guard",
+    "prompt": "Write an original short dramatic monologue in a Shakespearean register. A gatekeeper discovers that a hungry stranger is an enemy soldier and decides to offer food while keeping the gate secured. Do not quote an existing play.",
+    "passage": "His coat declares an enemy; his shaking hands declare a man who hath not eaten. Must I choose which witness tells the truth? They speak together. I was charged to keep this gate, and shall not yield the key for any plea. Yet no command forbids a loaf of bread. I can pass water through the iron bars and keep my watch as faithfully as before. If morning brings his captain to our walls, I shall defend them. In this bitter hour, the wall is strong enough to bear my mercy. Sit there, poor soldier. Take the bread, and leave your weapon where my eyes can find it."
+  },
+  {
+    "id": "actor",
+    "prompt": "Write an original short dramatic monologue in a Shakespearean register. An actor frightened of forgetting their lines realizes that listening to their scene partner can help them continue. Do not quote an existing play.",
+    "passage": "The curtain stirs, and all my treasured words fly like startled birds beyond the roof. I knew them in the empty room at noon; why must they now desert me? There she stands, my fellow player, waiting for the grief that I must answer. I have watched my fear so closely that I scarce have heard her speak. Attend her now. Her question lays a bridge across the silence, and I need only take the nearest step. The whole great speech need not return at once. One honest answer may invite the next. Let them behold a frightened prince, if prince I must be; I shall begin by listening."
+  }
+]

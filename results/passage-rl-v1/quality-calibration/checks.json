@@ -1,0 +1,156 @@
+{
+  "comparisons": [
+    {
+      "prompt_id": "ruler",
+      "control": "shuffled_words",
+      "dimension": "coherence",
+      "anchor": 4.0002031326293945,
+      "control_score": 2.0090646743774414,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "ruler",
+      "control": "repetition",
+      "dimension": "coherence",
+      "anchor": 4.0002031326293945,
+      "control_score": 1.9250502586364746,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "ruler",
+      "control": "off_prompt",
+      "dimension": "prompt_fulfillment",
+      "anchor": 4.996827125549316,
+      "control_score": 2.680340051651001,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "sailor",
+      "control": "shuffled_words",
+      "dimension": "coherence",
+      "anchor": 4.004069805145264,
+      "control_score": 1.8527404069900513,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "sailor",
+      "control": "repetition",
+      "dimension": "coherence",
+      "anchor": 4.004069805145264,
+      "control_score": 1.9993489980697632,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "sailor",
+      "control": "off_prompt",
+      "dimension": "prompt_fulfillment",
+      "anchor": 4.999796390533447,
+      "control_score": 1.9991017580032349,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "healer",
+      "control": "shuffled_words",
+      "dimension": "coherence",
+      "anchor": 4.004068851470947,
+      "control_score": 1.7793784141540527,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "healer",
+      "control": "repetition",
+      "dimension": "coherence",
+      "anchor": 4.004068851470947,
+      "control_score": 1.0474921464920044,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "healer",
+      "control": "off_prompt",
+      "dimension": "prompt_fulfillment",
+      "anchor": 4.999796390533447,
+      "control_score": 2.0065712928771973,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "siblings",
+      "control": "shuffled_words",
+      "dimension": "coherence",
+      "anchor": 4.0002570152282715,
+      "control_score": 1.9933501482009888,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "siblings",
+      "control": "repetition",
+      "dimension": "coherence",
+      "anchor": 4.0002570152282715,
+      "control_score": 1.6793404817581177,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "siblings",
+      "control": "off_prompt",
+      "dimension": "prompt_fulfillment",
+      "anchor": 4.996827125549316,
+      "control_score": 2.0229294300079346,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "guard",
+      "control": "shuffled_words",
+      "dimension": "coherence",
+      "anchor": 4.000068664550781,
+      "control_score": 2.0472443103790283,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "guard",
+      "control": "repetition",
+      "dimension": "coherence",
+      "anchor": 4.000068664550781,
+      "control_score": 1.9860777854919434,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "guard",
+      "control": "off_prompt",
+      "dimension": "prompt_fulfillment",
+      "anchor": 4.952573776245117,
+      "control_score": 1.9996777772903442,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "actor",
+      "control": "shuffled_words",
+      "dimension": "coherence",
+      "anchor": 4.0000834465026855,
+      "control_score": 1.9914864301681519,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "actor",
+      "control": "repetition",
+      "dimension": "coherence",
+      "anchor": 4.0000834465026855,
+      "control_score": 1.7310817241668701,
+      "anchor_higher": true
+    },
+    {
+      "prompt_id": "actor",
+      "control": "off_prompt",
+      "dimension": "prompt_fulfillment",
+      "anchor": 4.994780540466309,
+      "control_score": 1.9990906715393066,
+      "anchor_higher": true
+    }
+  ],
+  "wins_out_of_six": {
+    "shuffled_words": 6,
+    "repetition": 6,
+    "off_prompt": 6
+  },
+  "passed": true,
+  "human_validated": false,
+  "criterion": "At least 5/6 anchor wins for each predefined perturbation"
+}

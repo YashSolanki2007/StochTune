@@ -1,2 +1,4 @@
 # Preserve standard CSV record terminators in recorded experiment artifacts.
 *.csv whitespace=cr-at-eol
+# Preserve the pinned corpus bytes, including upstream whitespace.
+results/passage-rl-v1/corpus/*.txt -text -whitespace

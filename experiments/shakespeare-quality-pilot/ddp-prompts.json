@@ -1,0 +1,1160 @@
+{
+  "train": [
+    {
+      "id": "train-0000",
+      "prompt": "Speak as a courtier in a roadside shelter. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0001",
+      "prompt": "Speak as a painter in a courtyard before dawn. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0002",
+      "prompt": "Speak as a servant in a courtyard before dawn. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0003",
+      "prompt": "Speak as a painter in a roadside shelter. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0004",
+      "prompt": "Speak as a shepherd in a courtyard before dawn. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0005",
+      "prompt": "Speak as a watchmaker in a village square. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0006",
+      "prompt": "Speak as a musician in a roadside shelter. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0007",
+      "prompt": "Speak as a courtier in a room above a tavern. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0008",
+      "prompt": "Speak as a courtier in a market after closing. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0009",
+      "prompt": "Speak as a cook in a room above a tavern. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0010",
+      "prompt": "Speak as a gardener in a courtyard before dawn. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0011",
+      "prompt": "Speak as a parent in an orchard at dusk. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0012",
+      "prompt": "Speak as a watchmaker in an orchard at dusk. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0013",
+      "prompt": "Speak as a painter in an orchard at dusk. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0014",
+      "prompt": "Speak as a weaver in an orchard at dusk. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0015",
+      "prompt": "Speak as a messenger in a village square. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0016",
+      "prompt": "Speak as a cook in a village square. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0017",
+      "prompt": "Speak as a gardener in the steps of a household chapel. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0018",
+      "prompt": "Speak as a parent in a roadside shelter. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0019",
+      "prompt": "Speak as a watchmaker in a deserted workshop. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0020",
+      "prompt": "Speak as a gardener in a village square. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0021",
+      "prompt": "Speak as a traveller in a village square. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0022",
+      "prompt": "Speak as a traveller in a deserted workshop. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0023",
+      "prompt": "Speak as a soldier in the steps of a household chapel. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0024",
+      "prompt": "Speak as a painter in a room above a tavern. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0025",
+      "prompt": "Speak as a parent in a room above a tavern. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0026",
+      "prompt": "Speak as a gardener in a roadside shelter. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0027",
+      "prompt": "Speak as a watchmaker in a deserted workshop. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0028",
+      "prompt": "Speak as a weaver in a village square. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0029",
+      "prompt": "Speak as a servant in an orchard at dusk. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0030",
+      "prompt": "Speak as a messenger in a courtyard before dawn. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0031",
+      "prompt": "Speak as a parent in a village square. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0032",
+      "prompt": "Speak as a shepherd in the steps of a household chapel. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0033",
+      "prompt": "Speak as a servant in the steps of a household chapel. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0034",
+      "prompt": "Speak as a servant in a village square. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0035",
+      "prompt": "Speak as a courtier in the steps of a household chapel. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0036",
+      "prompt": "Speak as a gardener in the steps of a household chapel. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0037",
+      "prompt": "Speak as a gardener in an orchard at dusk. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0038",
+      "prompt": "Speak as a musician in a deserted workshop. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0039",
+      "prompt": "Speak as a musician in a room above a tavern. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0040",
+      "prompt": "Speak as a weaver in a deserted workshop. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0041",
+      "prompt": "Speak as a gardener in the steps of a household chapel. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0042",
+      "prompt": "Speak as a miller in a village square. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0043",
+      "prompt": "Speak as a soldier in a deserted workshop. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0044",
+      "prompt": "Speak as a messenger in an orchard at dusk. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0045",
+      "prompt": "Speak as a innkeeper in a market after closing. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0046",
+      "prompt": "Speak as a gardener in an orchard at dusk. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0047",
+      "prompt": "Speak as a painter in an orchard at dusk. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0048",
+      "prompt": "Speak as a shepherd in a village square. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0049",
+      "prompt": "Speak as a gardener in the steps of a household chapel. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0050",
+      "prompt": "Speak as a soldier in a market after closing. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0051",
+      "prompt": "Speak as a servant in a room above a tavern. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0052",
+      "prompt": "Speak as a messenger in an orchard at dusk. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0053",
+      "prompt": "Speak as a musician in a roadside shelter. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0054",
+      "prompt": "Speak as a musician in a courtyard before dawn. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0055",
+      "prompt": "Speak as a watchmaker in a market after closing. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0056",
+      "prompt": "Speak as a cook in a deserted workshop. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0057",
+      "prompt": "Speak as a parent in a market after closing. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0058",
+      "prompt": "Speak as a merchant in a roadside shelter. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0059",
+      "prompt": "Speak as a innkeeper in a village square. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0060",
+      "prompt": "Speak as a shepherd in a deserted workshop. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0061",
+      "prompt": "Speak as a cook in a roadside shelter. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0062",
+      "prompt": "Speak as a weaver in an orchard at dusk. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0063",
+      "prompt": "Speak as a cook in a room above a tavern. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0064",
+      "prompt": "Speak as a courtier in the steps of a household chapel. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0065",
+      "prompt": "Speak as a musician in a room above a tavern. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0066",
+      "prompt": "Speak as a servant in a roadside shelter. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0067",
+      "prompt": "Speak as a parent in a village square. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0068",
+      "prompt": "Speak as a gardener in a deserted workshop. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0069",
+      "prompt": "Speak as a painter in a deserted workshop. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0070",
+      "prompt": "Speak as a traveller in a room above a tavern. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0071",
+      "prompt": "Speak as a watchmaker in a village square. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0072",
+      "prompt": "Speak as a shepherd in an orchard at dusk. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0073",
+      "prompt": "Speak as a courtier in a deserted workshop. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0074",
+      "prompt": "Speak as a musician in a room above a tavern. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0075",
+      "prompt": "Speak as a messenger in a deserted workshop. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0076",
+      "prompt": "Speak as a gardener in a roadside shelter. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0077",
+      "prompt": "Speak as a merchant in a courtyard before dawn. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0078",
+      "prompt": "Speak as a miller in a room above a tavern. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0079",
+      "prompt": "Speak as a merchant in a room above a tavern. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0080",
+      "prompt": "Speak as a weaver in a roadside shelter. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0081",
+      "prompt": "Speak as a soldier in a village square. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0082",
+      "prompt": "Speak as a innkeeper in a room above a tavern. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0083",
+      "prompt": "Speak as a traveller in a market after closing. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0084",
+      "prompt": "Speak as a innkeeper in a roadside shelter. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0085",
+      "prompt": "Speak as a gardener in a village square. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0086",
+      "prompt": "Speak as a weaver in a village square. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0087",
+      "prompt": "Speak as a cook in a courtyard before dawn. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0088",
+      "prompt": "Speak as a shepherd in a room above a tavern. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0089",
+      "prompt": "Speak as a watchmaker in a market after closing. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0090",
+      "prompt": "Speak as a cook in a village square. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0091",
+      "prompt": "Speak as a painter in a room above a tavern. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0092",
+      "prompt": "Speak as a traveller in a room above a tavern. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0093",
+      "prompt": "Speak as a parent in a courtyard before dawn. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0094",
+      "prompt": "Speak as a merchant in a market after closing. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0095",
+      "prompt": "Speak as a watchmaker in a roadside shelter. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0096",
+      "prompt": "Speak as a musician in the steps of a household chapel. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0097",
+      "prompt": "Speak as a watchmaker in a room above a tavern. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0098",
+      "prompt": "Speak as a cook in a roadside shelter. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0099",
+      "prompt": "Speak as a soldier in the steps of a household chapel. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0100",
+      "prompt": "Speak as a traveller in a village square. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0101",
+      "prompt": "Speak as a cook in an orchard at dusk. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0102",
+      "prompt": "Speak as a weaver in a deserted workshop. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0103",
+      "prompt": "Speak as a weaver in a roadside shelter. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0104",
+      "prompt": "Speak as a innkeeper in a room above a tavern. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0105",
+      "prompt": "Speak as a musician in a room above a tavern. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0106",
+      "prompt": "Speak as a innkeeper in the steps of a household chapel. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0107",
+      "prompt": "Speak as a weaver in the steps of a household chapel. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0108",
+      "prompt": "Speak as a soldier in a room above a tavern. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0109",
+      "prompt": "Speak as a shepherd in a room above a tavern. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0110",
+      "prompt": "Speak as a miller in a roadside shelter. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0111",
+      "prompt": "Speak as a gardener in a market after closing. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0112",
+      "prompt": "Speak as a messenger in a roadside shelter. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0113",
+      "prompt": "Speak as a merchant in an orchard at dusk. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0114",
+      "prompt": "Speak as a painter in a deserted workshop. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0115",
+      "prompt": "Speak as a weaver in a deserted workshop. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0116",
+      "prompt": "Speak as a soldier in an orchard at dusk. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0117",
+      "prompt": "Speak as a painter in an orchard at dusk. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0118",
+      "prompt": "Speak as a servant in a room above a tavern. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0119",
+      "prompt": "Speak as a miller in a village square. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0120",
+      "prompt": "Speak as a weaver in a market after closing. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0121",
+      "prompt": "Speak as a soldier in a roadside shelter. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0122",
+      "prompt": "Speak as a parent in a deserted workshop. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0123",
+      "prompt": "Speak as a watchmaker in the steps of a household chapel. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0124",
+      "prompt": "Speak as a courtier in a deserted workshop. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0125",
+      "prompt": "Speak as a servant in a courtyard before dawn. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0126",
+      "prompt": "Speak as a watchmaker in a room above a tavern. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0127",
+      "prompt": "Speak as a innkeeper in a village square. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0128",
+      "prompt": "Speak as a traveller in a deserted workshop. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0129",
+      "prompt": "Speak as a servant in an orchard at dusk. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0130",
+      "prompt": "Speak as a weaver in a village square. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0131",
+      "prompt": "Speak as a innkeeper in a room above a tavern. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0132",
+      "prompt": "Speak as a parent in a market after closing. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0133",
+      "prompt": "Speak as a weaver in a market after closing. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0134",
+      "prompt": "Speak as a weaver in a deserted workshop. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0135",
+      "prompt": "Speak as a shepherd in a courtyard before dawn. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0136",
+      "prompt": "Speak as a painter in a courtyard before dawn. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0137",
+      "prompt": "Speak as a cook in a market after closing. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0138",
+      "prompt": "Speak as a courtier in the steps of a household chapel. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0139",
+      "prompt": "Speak as a painter in a roadside shelter. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0140",
+      "prompt": "Speak as a miller in a courtyard before dawn. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0141",
+      "prompt": "Speak as a parent in the steps of a household chapel. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0142",
+      "prompt": "Speak as a watchmaker in a market after closing. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0143",
+      "prompt": "Speak as a watchmaker in a deserted workshop. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0144",
+      "prompt": "Speak as a messenger in a market after closing. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0145",
+      "prompt": "Speak as a messenger in an orchard at dusk. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0146",
+      "prompt": "Speak as a innkeeper in a room above a tavern. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0147",
+      "prompt": "Speak as a watchmaker in the steps of a household chapel. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0148",
+      "prompt": "Speak as a servant in a market after closing. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0149",
+      "prompt": "Speak as a musician in a deserted workshop. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0150",
+      "prompt": "Speak as a courtier in a courtyard before dawn. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0151",
+      "prompt": "Speak as a musician in a deserted workshop. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0152",
+      "prompt": "Speak as a innkeeper in a courtyard before dawn. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0153",
+      "prompt": "Speak as a courtier in a room above a tavern. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0154",
+      "prompt": "Speak as a watchmaker in a market after closing. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0155",
+      "prompt": "Speak as a courtier in a deserted workshop. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0156",
+      "prompt": "Speak as a courtier in a market after closing. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0157",
+      "prompt": "Speak as a messenger in an orchard at dusk. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0158",
+      "prompt": "Speak as a courtier in a roadside shelter. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0159",
+      "prompt": "Speak as a gardener in a deserted workshop. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0160",
+      "prompt": "Speak as a weaver in the steps of a household chapel. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0161",
+      "prompt": "Speak as a miller in a market after closing. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0162",
+      "prompt": "Speak as a parent in a room above a tavern. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0163",
+      "prompt": "Speak as a parent in a room above a tavern. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0164",
+      "prompt": "Speak as a watchmaker in the steps of a household chapel. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0165",
+      "prompt": "Speak as a shepherd in a roadside shelter. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0166",
+      "prompt": "Speak as a watchmaker in a room above a tavern. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0167",
+      "prompt": "Speak as a shepherd in a deserted workshop. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0168",
+      "prompt": "Speak as a miller in the steps of a household chapel. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0169",
+      "prompt": "Speak as a traveller in the steps of a household chapel. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0170",
+      "prompt": "Speak as a gardener in the steps of a household chapel. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0171",
+      "prompt": "Speak as a soldier in the steps of a household chapel. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0172",
+      "prompt": "Speak as a servant in the steps of a household chapel. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0173",
+      "prompt": "Speak as a miller in an orchard at dusk. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0174",
+      "prompt": "Speak as a soldier in a room above a tavern. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0175",
+      "prompt": "Speak as a merchant in a roadside shelter. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0176",
+      "prompt": "Speak as a shepherd in a village square. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0177",
+      "prompt": "Speak as a cook in a market after closing. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0178",
+      "prompt": "Speak as a innkeeper in an orchard at dusk. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0179",
+      "prompt": "Speak as a servant in a market after closing. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0180",
+      "prompt": "Speak as a courtier in a room above a tavern. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0181",
+      "prompt": "Speak as a soldier in a market after closing. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0182",
+      "prompt": "Speak as a shepherd in a village square. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0183",
+      "prompt": "Speak as a servant in a courtyard before dawn. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0184",
+      "prompt": "Speak as a weaver in a room above a tavern. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0185",
+      "prompt": "Speak as a messenger in a roadside shelter. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0186",
+      "prompt": "Speak as a cook in a market after closing. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0187",
+      "prompt": "Speak as a gardener in an orchard at dusk. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0188",
+      "prompt": "Speak as a musician in a village square. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0189",
+      "prompt": "Speak as a merchant in a room above a tavern. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0190",
+      "prompt": "Speak as a merchant in a market after closing. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0191",
+      "prompt": "Speak as a weaver in a courtyard before dawn. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0192",
+      "prompt": "Speak as a merchant in an orchard at dusk. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0193",
+      "prompt": "Speak as a courtier in a village square. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0194",
+      "prompt": "Speak as a weaver in a village square. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0195",
+      "prompt": "Speak as a servant in the steps of a household chapel. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0196",
+      "prompt": "Speak as a traveller in a village square. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0197",
+      "prompt": "Speak as a soldier in a village square. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0198",
+      "prompt": "Speak as a innkeeper in an orchard at dusk. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0199",
+      "prompt": "Speak as a innkeeper in a courtyard before dawn. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0200",
+      "prompt": "Speak as a cook in a market after closing. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0201",
+      "prompt": "Speak as a watchmaker in a room above a tavern. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0202",
+      "prompt": "Speak as a messenger in a market after closing. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0203",
+      "prompt": "Speak as a merchant in the steps of a household chapel. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0204",
+      "prompt": "Speak as a musician in a roadside shelter. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0205",
+      "prompt": "Speak as a cook in the steps of a household chapel. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0206",
+      "prompt": "Speak as a gardener in a village square. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0207",
+      "prompt": "Speak as a merchant in a deserted workshop. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0208",
+      "prompt": "Speak as a soldier in a village square. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0209",
+      "prompt": "Speak as a merchant in a room above a tavern. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0210",
+      "prompt": "Speak as a painter in a room above a tavern. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0211",
+      "prompt": "Speak as a messenger in an orchard at dusk. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0212",
+      "prompt": "Speak as a painter in a deserted workshop. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0213",
+      "prompt": "Speak as a traveller in a roadside shelter. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0214",
+      "prompt": "Speak as a miller in the steps of a household chapel. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0215",
+      "prompt": "Speak as a miller in a deserted workshop. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0216",
+      "prompt": "Speak as a miller in a market after closing. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0217",
+      "prompt": "Speak as a cook in an orchard at dusk. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0218",
+      "prompt": "Speak as a traveller in an orchard at dusk. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0219",
+      "prompt": "Speak as a servant in a roadside shelter. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0220",
+      "prompt": "Speak as a gardener in a market after closing. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0221",
+      "prompt": "Speak as a courtier in a courtyard before dawn. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0222",
+      "prompt": "Speak as a traveller in the steps of a household chapel. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0223",
+      "prompt": "Speak as a gardener in a roadside shelter. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0224",
+      "prompt": "Speak as a cook in a village square. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0225",
+      "prompt": "Speak as a watchmaker in a village square. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0226",
+      "prompt": "Speak as a cook in a deserted workshop. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0227",
+      "prompt": "Speak as a courtier in an orchard at dusk. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0228",
+      "prompt": "Speak as a musician in a village square. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0229",
+      "prompt": "Speak as a traveller in a room above a tavern. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0230",
+      "prompt": "Speak as a painter in an orchard at dusk. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0231",
+      "prompt": "Speak as a painter in the steps of a household chapel. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0232",
+      "prompt": "Speak as a shepherd in a market after closing. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0233",
+      "prompt": "Speak as a gardener in a market after closing. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0234",
+      "prompt": "Speak as a innkeeper in the steps of a household chapel. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0235",
+      "prompt": "Speak as a traveller in a market after closing. A friend asks you to repeat a rumour you cannot verify. Choose what to tell them."
+    },
+    {
+      "id": "train-0236",
+      "prompt": "Speak as a musician in a room above a tavern. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0237",
+      "prompt": "Speak as a courtier in a deserted workshop. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0238",
+      "prompt": "Speak as a weaver in a village square. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0239",
+      "prompt": "Speak as a gardener in the steps of a household chapel. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0240",
+      "prompt": "Speak as a parent in a village square. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0241",
+      "prompt": "Speak as a gardener in a room above a tavern. You find a damaged keepsake of someone you miss. Decide what to preserve and what to let go."
+    },
+    {
+      "id": "train-0242",
+      "prompt": "Speak as a watchmaker in an orchard at dusk. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0243",
+      "prompt": "Speak as a shepherd in a roadside shelter. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0244",
+      "prompt": "Speak as a courtier in a deserted workshop. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0245",
+      "prompt": "Speak as a cook in the steps of a household chapel. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0246",
+      "prompt": "Speak as a traveller in a courtyard before dawn. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0247",
+      "prompt": "Speak as a weaver in a deserted workshop. Someone who once mocked you now needs help. Decide whether to help them."
+    },
+    {
+      "id": "train-0248",
+      "prompt": "Speak as a messenger in a village square. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    },
+    {
+      "id": "train-0249",
+      "prompt": "Speak as a miller in an orchard at dusk. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0250",
+      "prompt": "Speak as a gardener in a deserted workshop. You discover an unfair payment in your favour. Decide whether to return it."
+    },
+    {
+      "id": "train-0251",
+      "prompt": "Speak as a miller in a roadside shelter. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0252",
+      "prompt": "Speak as a messenger in a village square. You must leave home for work but fear disappointing a loved one. Resolve what to say."
+    },
+    {
+      "id": "train-0253",
+      "prompt": "Speak as a messenger in a roadside shelter. An old promise conflicts with a new opportunity. Make a clear choice and explain its cost."
+    },
+    {
+      "id": "train-0254",
+      "prompt": "Speak as a innkeeper in a market after closing. You are praised for a task that another person helped complete. Decide how to respond."
+    },
+    {
+      "id": "train-0255",
+      "prompt": "Speak as a miller in an orchard at dusk. You have lost money entrusted to you. Decide to confess rather than blame someone else."
+    }
+  ],
+  "validation": [
+    {
+      "id": "validation-0000",
+      "prompt": "Speak as a ferryman in a bridge during a thaw. An estranged relative sends an invitation. Decide whether to accept while keeping a boundary."
+    },
+    {
+      "id": "validation-0001",
+      "prompt": "Speak as a astronomer in a bridge during a thaw. You discover that a trusted teacher concealed a mistake. Decide how to seek an explanation."
+    },
+    {
+      "id": "validation-0002",
+      "prompt": "Speak as a ferryman in a windswept observatory. You must admit that a cherished plan is no longer possible. Choose a concrete next step."
+    },
+    {
+      "id": "validation-0003",
+      "prompt": "Speak as a ferryman in a bridge during a thaw. You discover that a trusted teacher concealed a mistake. Decide how to seek an explanation."
+    },
+    {
+      "id": "validation-0004",
+      "prompt": "Speak as a ferryman in a bridge during a thaw. A stranger offers to repay a debt you had forgotten. Decide how to receive the offer."
+    },
+    {
+      "id": "validation-0005",
+      "prompt": "Speak as a astronomer in a bridge during a thaw. An estranged relative sends an invitation. Decide whether to accept while keeping a boundary."
+    },
+    {
+      "id": "validation-0006",
+      "prompt": "Speak as a ferryman in a windswept observatory. An estranged relative sends an invitation. Decide whether to accept while keeping a boundary."
+    },
+    {
+      "id": "validation-0007",
+      "prompt": "Speak as a bookseller in a windswept observatory. You discover that a trusted teacher concealed a mistake. Decide how to seek an explanation."
+    },
+    {
+      "id": "validation-0008",
+      "prompt": "Speak as a stonemason in a bridge during a thaw. You must admit that a cherished plan is no longer possible. Choose a concrete next step."
+    },
+    {
+      "id": "validation-0009",
+      "prompt": "Speak as a bookseller in a windswept observatory. An estranged relative sends an invitation. Decide whether to accept while keeping a boundary."
+    },
+    {
+      "id": "validation-0010",
+      "prompt": "Speak as a stonemason in a bridge during a thaw. You discover that a trusted teacher concealed a mistake. Decide how to seek an explanation."
+    },
+    {
+      "id": "validation-0011",
+      "prompt": "Speak as a astronomer in a bridge during a thaw. You must admit that a cherished plan is no longer possible. Choose a concrete next step."
+    },
+    {
+      "id": "validation-0012",
+      "prompt": "Speak as a bookseller in a bridge during a thaw. An estranged relative sends an invitation. Decide whether to accept while keeping a boundary."
+    },
+    {
+      "id": "validation-0013",
+      "prompt": "Speak as a astronomer in a windswept observatory. A stranger offers to repay a debt you had forgotten. Decide how to receive the offer."
+    },
+    {
+      "id": "validation-0014",
+      "prompt": "Speak as a ferryman in a windswept observatory. A stranger offers to repay a debt you had forgotten. Decide how to receive the offer."
+    },
+    {
+      "id": "validation-0015",
+      "prompt": "Speak as a stonemason in a windswept observatory. You discover that a trusted teacher concealed a mistake. Decide how to seek an explanation."
+    }
+  ],
+  "test": [
+    {
+      "id": "test-0000",
+      "prompt": "Speak as a mapmaker in a lantern-lit harbour. An unexpected act of kindness undermines a prejudice you have long held. Decide how to respond."
+    },
+    {
+      "id": "test-0001",
+      "prompt": "Speak as a bellringer in a lantern-lit harbour. You can expose a deception only by admitting an embarrassing truth about yourself. Make a choice."
+    },
+    {
+      "id": "test-0002",
+      "prompt": "Speak as a mapmaker in a lantern-lit harbour. You can expose a deception only by admitting an embarrassing truth about yourself. Make a choice."
+    },
+    {
+      "id": "test-0003",
+      "prompt": "Speak as a bellringer in a lantern-lit harbour. An unexpected act of kindness undermines a prejudice you have long held. Decide how to respond."
+    },
+    {
+      "id": "test-0004",
+      "prompt": "Speak as a locksmith in an empty theatre after the audience has left. You learn that your proudest achievement caused an unintended injury. Decide how to make amends."
+    },
+    {
+      "id": "test-0005",
+      "prompt": "Speak as a locksmith in a lantern-lit harbour. You learn that your proudest achievement caused an unintended injury. Decide how to make amends."
+    },
+    {
+      "id": "test-0006",
+      "prompt": "Speak as a glassmaker in an empty theatre after the audience has left. An unexpected act of kindness undermines a prejudice you have long held. Decide how to respond."
+    },
+    {
+      "id": "test-0007",
+      "prompt": "Speak as a bellringer in an empty theatre after the audience has left. A community asks you to accept an honour you believe belongs to someone absent. Decide what to say."
+    },
+    {
+      "id": "test-0008",
+      "prompt": "Speak as a bellringer in an empty theatre after the audience has left. You can expose a deception only by admitting an embarrassing truth about yourself. Make a choice."
+    },
+    {
+      "id": "test-0009",
+      "prompt": "Speak as a bellringer in an empty theatre after the audience has left. You learn that your proudest achievement caused an unintended injury. Decide how to make amends."
+    },
+    {
+      "id": "test-0010",
+      "prompt": "Speak as a glassmaker in an empty theatre after the audience has left. A community asks you to accept an honour you believe belongs to someone absent. Decide what to say."
+    },
+    {
+      "id": "test-0011",
+      "prompt": "Speak as a mapmaker in an empty theatre after the audience has left. A community asks you to accept an honour you believe belongs to someone absent. Decide what to say."
+    },
+    {
+      "id": "test-0012",
+      "prompt": "Speak as a locksmith in a lantern-lit harbour. You can expose a deception only by admitting an embarrassing truth about yourself. Make a choice."
+    },
+    {
+      "id": "test-0013",
+      "prompt": "Speak as a bellringer in an empty theatre after the audience has left. An unexpected act of kindness undermines a prejudice you have long held. Decide how to respond."
+    },
+    {
+      "id": "test-0014",
+      "prompt": "Speak as a locksmith in a lantern-lit harbour. An unexpected act of kindness undermines a prejudice you have long held. Decide how to respond."
+    },
+    {
+      "id": "test-0015",
+      "prompt": "Speak as a locksmith in an empty theatre after the audience has left. A community asks you to accept an honour you believe belongs to someone absent. Decide what to say."
+    }
+  ]
+}

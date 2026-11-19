@@ -1,0 +1,22 @@
+{
+  "train": [
+    {"id": "train-0", "prompt": "A gardener must decide whether to cut down a storm-damaged tree planted by their late parent."},
+    {"id": "train-1", "prompt": "A messenger has lost a royal letter and must admit the loss rather than invent its contents."},
+    {"id": "train-2", "prompt": "A soldier considers abandoning a frightened companion but decides to stay and help."},
+    {"id": "train-3", "prompt": "A merchant discovers an overpayment and decides to return the extra coins despite needing them."},
+    {"id": "train-4", "prompt": "A musician envies a younger rival, then recognizes something worth learning from the rival's performance."},
+    {"id": "train-5", "prompt": "A parent fears a grown child's departure, then chooses to offer a blessing instead of a prohibition."},
+    {"id": "train-6", "prompt": "A prisoner receives an unexpected pardon but worries how to make amends outside the prison."},
+    {"id": "train-7", "prompt": "A judge learns that an accused thief stole bread to feed a child and weighs duty against mercy."}
+  ],
+  "validation": [
+    {"id": "validation-0", "prompt": "A traveller finds a purse on an empty road and decides to search for its owner."},
+    {"id": "validation-1", "prompt": "A scholar discovers an error in a celebrated book they wrote and decides to correct it publicly."}
+  ],
+  "test": [
+    {"id": "test-0", "prompt": "A shipbuilder learns their vessel has a hidden flaw and must warn the captain before departure."},
+    {"id": "test-1", "prompt": "A widow is invited to a celebration and decides that taking joy need not betray a cherished memory."},
+    {"id": "test-2", "prompt": "A young diplomat must deliver unwelcome news to a powerful ally without disguising the truth."},
+    {"id": "test-3", "prompt": "A farmer discovers that a neighbour secretly repaired a broken fence and resolves to end an old quarrel."}
+  ]
+}
