@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "experiment": "passage-unigram-v1",
+  "files": {
+    "README.md": {
+      "sha256": "99f8314741a593fe24f3f595d86be293aafb0c70fa2aba70f2960ddc388ab493",
+      "bytes": 5462
+    },
+    "baseline-metrics.json": {
+      "sha256": "d8a910404ff3542c213f4c3c70a345ae1e554c49289b68b430540ef9ea7ec7e7",
+      "bytes": 502
+    },
+    "baseline-samples.jsonl": {
+      "sha256": "babffa67bf0e44e0a13c0b84697319441bec2c5e448674add186488e0c5f7ce1",
+      "bytes": 200473
+    },
+    "bigram-plots/bigram-probabilities.csv": {
+      "sha256": "0607d3533ea98bd7a6eb8bcc450723db55c49ba0570b1394f196901550dfe916",
+      "bytes": 4603957
+    },
+    "bigram-plots/common-bigram-pmf.pdf": {
+      "sha256": "b04f4f1f49e7fc150447437092d63288e0149326dc0ce5bc64fde6cb40d0af96",
+      "bytes": 20278
+    },
+    "bigram-plots/common-bigram-pmf.png": {
+      "sha256": "7ccac2dda08f50db35746da9fdfd74dc3c7cc0e9736a04a75a56334a02efc1b7",
+      "bytes": 106062
+    },
+    "bigram-plots/count-matched-kl.pdf": {
+      "sha256": "7d0ed736353b59ad09ae9aabb7864f6a49e36af8992a2f43c0f974048819fd1e",
+      "bytes": 17984
+    },
+    "bigram-plots/count-matched-kl.png": {
+      "sha256": "d2ab0d8bd104013378e6ccc88ca0dc39b64bf7bca98d188127ffb088814fa9b7",
+      "bytes": 63966
+    },
+    "bigram-plots/full-bigram-fit.pdf": {
+      "sha256": "f7cf52556b31837f6d765ee3ed5ce8278dd77a2c486bba80e59093623118d663",
+      "bytes": 33097
+    },
+    "bigram-plots/full-bigram-fit.png": {
+      "sha256": "d4c83bcae92703d3c0400cfd27646346bbbd3b6ee358d637b677260c2cab094e",
+      "bytes": 165196
+    },
+    "bigram-plots/plot-summary.json": {
+      "sha256": "bc4b5a41760548dacf9185f0474e5afcdceb1dcf89b17c9732e65ad7478d3f17",
+      "bytes": 784
+    },
+    "comparison.json": {
+      "sha256": "ff3fcefed66b71cef087c17383db7a20186659d675c45e8b6dd1910f89bd4ec9",
+      "bytes": 1571
+    },
+    "distribution-target.json": {
+      "sha256": "dd3bca4295e9c2a2044e1a46735544ee1264d2f8381a2bf528e3c729e49cd762",
+      "bytes": 418410
+    },
+    "final-diagnostics.json": {
+      "sha256": "083eac28f2e17d9d6dcd86b2f9f43c3ff58ea075f7b64f3230c2e97a3e8fa174",
+      "bytes": 2429
+    },
+    "final-metrics.json": {
+      "sha256": "0eb13fc9631ac8daf2fdd5d1161a79201027ca1265cd554a49737c853d72f0d3",
+      "bytes": 511
+    },
+    "final-samples.jsonl": {
+      "sha256": "82c1dca770afe54e713edce9054a81c492ffcfda647e4d5d06ba978bb2e29ff3",
+      "bytes": 227380
+    },
+    "history.jsonl": {
+      "sha256": "f5f4e190540847545d79e71864d1d5ba6f843e97f0f404fd0639362a62cef5cc",
+      "bytes": 944150
+    },
+    "provenance.json": {
+      "sha256": "81d99a5504c012e94d239fa96f654a52064927bee9e71b49795de1415f8458a9",
+      "bytes": 1013
+    },
+    "run_config.json": {
+      "sha256": "1e88921fed9b4ae4118388efedea1003943ee470953192f7717f954243f6a2b8",
+      "bytes": 1231
+    },
+    "source-manifest.json": {
+      "sha256": "17ba31775a0bbdb5676b93da9c79c1bcb8c08b09ba21d516c822848007c61f5a",
+      "bytes": 795
+    },
+    "submission.json": {
+      "sha256": "261e775c78829050c795f31b5ad46d6d8fe49bb20a4ca1930a0ab3175066d4a4",
+      "bytes": 1559
+    },
+    "validation-0-metrics.json": {
+      "sha256": "9709dac34b64ea5e91e3feb0823f0d73b896cdd72f379785c9f26fa4eddcc256",
+      "bytes": 500
+    },
+    "validation-0-samples.jsonl": {
+      "sha256": "dc12b6fbbef57f9806b1f86480d35b52b6dcc3f259ac808e509c4eac33fe54de",
+      "bytes": 100379
+    },
+    "validation-100-metrics.json": {
+      "sha256": "c2112b5d1d504c71ec2793380e2dc2da595bf1eaade309c7e1090fc078c2452c",
+      "bytes": 505
+    },
+    "validation-100-samples.jsonl": {
+      "sha256": "5c619fb3de07bbc7415f7d83505a2269c67040e308f65fe7a32c8f9dce541b1d",
+      "bytes": 101995
+    },
+    "validation-1000-metrics.json": {
+      "sha256": "6bb37d18f26c77d49f9fc2e3e032ed1be7d8c038364ad7eeec9b182f66cc1485",
+      "bytes": 523
+    },
+    "validation-1000-samples.jsonl": {
+      "sha256": "ed850e7d65f4883768a17393721a13387a72b007f520460d1f4e3d3d1cac6e9a",
+      "bytes": 110231
+    },
+    "validation-200-metrics.json": {
+      "sha256": "6403fdcba25786715be7292772485f9a9e50a3635cfd7915a2ad6b4b85578305",
+      "bytes": 504
+    },
+    "validation-200-samples.jsonl": {
+      "sha256": "42e04f942c5afea489f825ab9c21b66a5b54c06675383ce7a12e65ed78b8195d",
+      "bytes": 108773
+    },
+    "validation-300-metrics.json": {
+      "sha256": "1000a2a14b33de8abb1f9f13ee707d98964cba381962c9d361660c74b97e5e24",
+      "bytes": 528
+    },
+    "validation-300-samples.jsonl": {
+      "sha256": "24a5524e1180253387349e18ab163584fc1535b4e306322625eebc1f4e6cc87d",
+      "bytes": 112839
+    },
+    "validation-400-metrics.json": {
+      "sha256": "3460160c661418c1e086d2a5589368db7721b78276fc94a7923ced3b75165eba",
+      "bytes": 527
+    },
+    "validation-400-samples.jsonl": {
+      "sha256": "e5098f4274128f4bdd00f339c02ce2ca72c000784ce8381c345feddbad6a1ead",
+      "bytes": 108728
+    },
+    "validation-500-metrics.json": {
+      "sha256": "4d70fbfd67d2ac52b87769501e4369069ad85e9d87c6894e58e27fecc3c31ec9",
+      "bytes": 509
+    },
+    "validation-500-samples.jsonl": {
+      "sha256": "df9c45233d5c5906acea2fd6a5462b669404c96106145ba7062c95f83d23c603",
+      "bytes": 104513
+    },
+    "validation-600-metrics.json": {
+      "sha256": "462150bdfd7e86297e34fa24e3af6197969b679cceb8fe5a3842c7f3d4d9d110",
+      "bytes": 525
+    },
+    "validation-600-samples.jsonl": {
+      "sha256": "41c2572eb91ba402762185f85f2ce6a874a01121b5cf6f734ae1538750f6e8c1",
+      "bytes": 108446
+    },
+    "validation-700-metrics.json": {
+      "sha256": "27b87cf326047c7d66240cbd279dc1d9bfa9aee3d18cc92c694bc604526cf33f",
+      "bytes": 522
+    },
+    "validation-700-samples.jsonl": {
+      "sha256": "213037b25f055a50c4086779916349f66e3d61736632561e8d1a38d4135622bd",
+      "bytes": 109586
+    },
+    "validation-800-metrics.json": {
+      "sha256": "0e1c8b5ed7d0e0d1cb8eea11884216f78eb10a980cf3abee370e0e399dc9a89f",
+      "bytes": 521
+    },
+    "validation-800-samples.jsonl": {
+      "sha256": "c7e3ecd1ca3005bd578447027dbf29589e0d04cfeac8966ba8a05b024a87a7b0",
+      "bytes": 111172
+    },
+    "validation-900-metrics.json": {
+      "sha256": "3a8e8920f9c59688b25c6c03de48a4449286b847d68e619e4380d72ca663b54f",
+      "bytes": 520
+    },
+    "validation-900-samples.jsonl": {
+      "sha256": "050734da37077b65630e5409cac823d6c682ced979b4b07a5eb139e50945ce74",
+      "bytes": 111438
+    },
+    "wandb_run.json": {
+      "sha256": "a7ecb558cbdba704e9a22860ec48351639bff5e963c346ea5dff40af38282f3a",
+      "bytes": 132
+    }
+  }
+}

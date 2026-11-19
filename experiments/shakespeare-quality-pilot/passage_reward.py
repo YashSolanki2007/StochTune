@@ -1,12 +1,18 @@
-"""Full word-bigram reward with exact leave-one-passage-out credit assignment."""
+"""Word unigram/bigram rewards with leave-one-passage-out credit assignment."""
+
+from collections import Counter
 
 import numpy as np
-from pilot import pooled_counts
+from pilot import pooled_counts, words
 
 
 class PassageDistribution:
-    def __init__(self, reference_passages, smoothing_mass=1.0):
-        reference = pooled_counts(reference_passages)
+    def __init__(self, reference_passages, smoothing_mass=1.0, order=2):
+        if order not in (1, 2):
+            raise ValueError("Distribution order must be 1 (words) or 2 (word pairs)")
+        self.order = order
+        self.name = "unigram" if order == 1 else "bigram"
+        reference = self.pooled_counts(reference_passages)
         if not reference or smoothing_mass <= 0:
             raise ValueError("Need nonempty reference and positive smoothing mass")
         self.index = {pair: i for i, pair in enumerate(sorted(reference))}
@@ -18,14 +24,26 @@ class PassageDistribution:
         self.smoothing_mass = smoothing_mass
         self.alpha = smoothing_mass / len(self.probabilities)
 
+    def pooled_counts(self, passages):
+        if self.order == 2:
+            return pooled_counts(passages)
+        return Counter(word for passage in passages for word in words(passage))
+
+    def metrics(self, result):
+        return {
+            "distribution_kl": result["kl"],
+            f"{self.name}_kl": result["kl"],
+            f"unknown_{self.name}_rate": result["unknown_rate"],
+        }
+
     def counts(self, passages):
         result = np.zeros((len(passages), len(self.probabilities)), dtype=np.float64)
         for i, passage in enumerate(passages):
-            pairs = pooled_counts([passage])
+            pairs = self.pooled_counts([passage])
             for pair, count in pairs.items():
                 result[i, self.index.get(pair, self.unknown)] += count
             if not pairs:
-                result[i, self.unknown] = 1  # Empty/one-word outputs are not dropped.
+                result[i, self.unknown] = 1  # Empty outputs are not dropped.
         return result
 
     def kl(self, counts):
@@ -44,10 +62,12 @@ class PassageDistribution:
         cost = self.kl(total)
         # Reward=-KL. A_i=N*(R(group)-R(without passage i)).
         credit = len(passages) * np.array([self.kl(total - row) - cost for row in counts])
+        unknown_rate = float(total[-1] / total.sum())
         return {
             "kl": cost,
             "advantages": credit,
-            "unknown_bigram_rate": float(total[-1] / total.sum()),
+            "unknown_rate": unknown_rate,
+            f"unknown_{self.name}_rate": unknown_rate,
         }
 
 

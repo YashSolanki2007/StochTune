@@ -66,12 +66,17 @@ def global_credit(local_rows, local_quality, target, weight, device):
         rows = [row for part in gathered for row in part]
         quality = np.array([r["quality"] for r in rows])
         reward = target.credit([r["passage"] for r in rows])
-        credit = quality_advantages(quality) + weight * reward["advantages"]
+        quality_credit = quality_advantages(quality)
+        distribution_credit = weight * reward["advantages"]
+        credit = quality_credit + distribution_credit
         tensor = torch.tensor(credit, dtype=torch.float32, device=device)
         metrics = {
             "quality_reward": float(quality.mean()),
-            "bigram_kl": reward["kl"],
-            "unknown_bigram_rate": reward["unknown_bigram_rate"],
+            **target.metrics(reward),
+            "quality_advantage_rms": float(np.sqrt(np.mean(quality_credit**2))),
+            "distribution_advantage_rms": float(np.sqrt(np.mean(distribution_credit**2))),
+            "quality_advantage_std": float(np.std(quality_credit)),
+            "distribution_advantage_std": float(np.std(distribution_credit)),
             "joint_reward": float(quality.mean()) - weight * reward["kl"],
             "global_group_size": n,
         }
@@ -186,6 +191,7 @@ def distributed_evaluate(
     corpus_windows,
     device,
     initial=False,
+    diagnostic_target=None,
 ):
     rank = dist.get_rank()
     local_cases = cases[rank :: dist.get_world_size()]
@@ -208,8 +214,7 @@ def distributed_evaluate(
         fidelity = target.credit([r["passage"] for r in records])
         metrics = {
             "quality_reward_mean": statistics.mean(r["quality_reward"] for r in records),
-            "bigram_kl": fidelity["kl"],
-            "unknown_bigram_rate": fidelity["unknown_bigram_rate"],
+            **target.metrics(fidelity),
             "passages": len(records),
             "terminated_rate": statistics.mean(r["terminated"] for r in records),
             "mean_word_count": statistics.mean(len(words(r["passage"])) for r in records),
@@ -217,6 +222,15 @@ def distributed_evaluate(
                 duplicate_window_rate(r["passage"], corpus_windows) or 0.0 for r in records
             ),
         }
+        if diagnostic_target is not None:
+            diagnostic = diagnostic_target.credit([r["passage"] for r in records])
+            metrics.update(
+                {
+                    key: value
+                    for key, value in diagnostic_target.metrics(diagnostic).items()
+                    if key != "distribution_kl"
+                }
+            )
         for dimension in ("coherence", "fluency", "prompt_fulfillment"):
             metrics[dimension] = statistics.mean(r["judge"]["scores"][dimension] for r in records)
         metrics["joint_reward"] = (
@@ -229,9 +243,9 @@ def distributed_evaluate(
     return broadcast_object(metrics)
 
 
-def source_manifest():
+def source_manifest(config_path):
     names = [
-        "ddp-config.json",
+        str(config_path.relative_to(ROOT)),
         "ddp-prompts.json",
         "ddp_passage_rl.py",
         "passage_reward.py",
@@ -244,7 +258,7 @@ def source_manifest():
     return {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in names}
 
 
-def train(output, resume=None):
+def train(output, resume=None, config_path=None):
     launched = time.monotonic()
     local_rank = int(os.environ["LOCAL_RANK"])
     torch.cuda.set_device(local_rank)
@@ -252,7 +266,8 @@ def train(output, resume=None):
     dist.init_process_group("nccl", timeout=datetime.timedelta(minutes=10))
     rank, world = dist.get_rank(), dist.get_world_size()
     torch.set_num_threads(4)
-    cfg = json.loads((ROOT / "ddp-config.json").read_text())
+    config_path = (config_path or ROOT / "ddp-config.json").resolve()
+    cfg = json.loads(config_path.read_text())
     if world != cfg["world_size"] or world != 2:
         raise ValueError("This allocation is configured for exactly two GPUs")
     if cfg["global_group_size"] % world or cfg["prompts_per_group"] != world:
@@ -261,10 +276,12 @@ def train(output, resume=None):
         "WANDB_DISABLED", "false"
     ).lower() in ("true", "1", "yes"):
         raise RuntimeError("Online W&B logging is required")
-    calibration = ROOT / "outputs/calibration-498176/checks.json"
+    calibration = ROOT / cfg.get(
+        "quality_calibration_path", "outputs/calibration-498176/checks.json"
+    )
     if not json.loads(calibration.read_text())["passed"]:
         raise RuntimeError("Existing judge calibration did not pass")
-    manifest = source_manifest()
+    manifest = source_manifest(config_path)
     config_hash = hashlib.sha256(json.dumps(cfg, sort_keys=True).encode()).hexdigest()
     prompts = json.loads((ROOT / "ddp-prompts.json").read_text())
     all_prompts = [r["prompt"] for rows in prompts.values() for r in rows]
@@ -282,11 +299,12 @@ def train(output, resume=None):
         import wandb
 
         previous = json.loads((output / "wandb_run.json").read_text()) if resume else None
+        run_prefix = cfg.get("run_name_prefix", "shakespeare-ddp")
         run = wandb.init(
             entity=cfg["wandb_entity"],
             project=cfg["wandb_project"],
-            name=f"shakespeare-ddp-{os.environ.get('SLURM_JOB_ID')}",
-            group="shakespeare-passage-ddp-v1",
+            name=f"{run_prefix}-{os.environ.get('SLURM_JOB_ID')}",
+            group=cfg.get("wandb_group", "shakespeare-passage-ddp-v1"),
             job_type="rl-ddp",
             mode="online",
             id=previous["id"] if previous else None,
@@ -298,7 +316,7 @@ def train(output, resume=None):
                 "train_prompts": len(prompts["train"]),
                 "global_batch": cfg["global_group_size"],
                 "local_batch": cfg["global_group_size"] // world,
-                "reward_unchanged_from_pilot": True,
+                "reward_unchanged_from_pilot": cfg.get("distribution_order", 2) == 2,
                 "human_validated": False,
             },
             dir=str(output),
@@ -339,8 +357,29 @@ def train(output, resume=None):
         )
         reference = (ROOT / "data/reference.txt").read_text()
         target = PassageDistribution(
-            reference.split("\n\n"), cfg["histogram_total_pseudocount_mass"]
+            reference.split("\n\n"),
+            cfg["histogram_total_pseudocount_mass"],
+            order=cfg.get("distribution_order", 2),
         )
+        diagnostic_target = (
+            PassageDistribution(reference.split("\n\n"), cfg["histogram_total_pseudocount_mass"])
+            if target.order == 1
+            else None
+        )
+        if rank == 0:
+            write_json(
+                output / "distribution-target.json",
+                {
+                    "order": target.order,
+                    "known_categories": len(target.index),
+                    "probabilities": {
+                        str(key): float(target.probabilities[index])
+                        for key, index in target.index.items()
+                    },
+                    "unknown_probability": 0.0,
+                    "smoothing_total_mass": target.smoothing_mass,
+                },
+            )
         corpus = words((ROOT / "data/tinyshakespeare.txt").read_text())
         corpus_windows = {tuple(corpus[i : i + 12]) for i in range(len(corpus) - 11)}
         optimizer = torch.optim.AdamW(
@@ -383,6 +422,7 @@ def train(output, resume=None):
                 "validation-0",
                 corpus_windows,
                 device,
+                diagnostic_target=diagnostic_target,
             )
             if rank == 0:
                 run.log({f"validation/{k}": v for k, v in initial.items()}, step=0)
@@ -477,6 +517,7 @@ def train(output, resume=None):
                     f"validation-{step}",
                     corpus_windows,
                     device,
+                    diagnostic_target=diagnostic_target,
                 )
                 if rank == 0:
                     run.log({f"validation/{k}": v for k, v in validation.items()}, step=step)
@@ -518,6 +559,7 @@ def train(output, resume=None):
             corpus_windows,
             device,
             initial=True,
+            diagnostic_target=diagnostic_target,
         )
         final = distributed_evaluate(
             policy,
@@ -531,6 +573,7 @@ def train(output, resume=None):
             "final",
             corpus_windows,
             device,
+            diagnostic_target=diagnostic_target,
         )
         if rank == 0:
             actor.save_pretrained(output / "adapter")
@@ -580,5 +623,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--resume", type=Path)
+    parser.add_argument("--config", type=Path, default=ROOT / "ddp-config.json")
     args = parser.parse_args()
-    train(args.output.resolve(), args.resume.resolve() if args.resume else None)
+    train(args.output.resolve(), args.resume.resolve() if args.resume else None, args.config)

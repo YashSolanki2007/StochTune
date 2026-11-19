@@ -61,7 +61,7 @@ def example_rows():
     ]
 
 
-def distributed_worker(rank, folder):
+def distributed_worker(rank, folder, order):
     torch.set_num_threads(1)
     device = torch.device("cpu")
     dist.init_process_group("gloo", init_method=f"file://{folder}/store", rank=rank, world_size=2)
@@ -74,7 +74,7 @@ def distributed_worker(rank, folder):
         scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda _: 1.0)
         rows = example_rows()[rank * 2 : (rank + 1) * 2]
         quality = np.array([1.0, 0.25, 0.4, 0.0])[rank * 2 : (rank + 1) * 2]
-        target = PassageDistribution(["a b a c b", "a b a b"])
+        target = PassageDistribution(["a b a c b", "a b a b"], order=order)
         credit, metrics = global_credit(rows, quality, target, 0.1, device)
         distributed_update(policy, optimizer, rows, credit, 0, 1, 0.002)
         first = {
@@ -130,10 +130,16 @@ def distributed_worker(rank, folder):
 
 class DistributedTests(unittest.TestCase):
     def test_two_ranks_equal_one_global_update_and_resume(self):
+        self.check_distributed_update(order=2)
+
+    def test_unigram_two_ranks_equal_global_update_and_resume(self):
+        self.check_distributed_update(order=1)
+
+    def check_distributed_update(self, order):
         torch.set_num_threads(1)
         actor = tiny_actor()
         rows = example_rows()
-        target = PassageDistribution(["a b a c b", "a b a b"])
+        target = PassageDistribution(["a b a c b", "a b a b"], order=order)
         reward = target.credit([r["passage"] for r in rows])
         credits = quality_advantages([1.0, 0.25, 0.4, 0.0]) + 0.1 * reward["advantages"]
         optimizer = torch.optim.SGD(
@@ -151,7 +157,7 @@ class DistributedTests(unittest.TestCase):
             name: p.detach().clone() for name, p in actor.named_parameters() if p.requires_grad
         }
         with tempfile.TemporaryDirectory() as temporary:
-            mp.spawn(distributed_worker, args=(temporary,), nprocs=2, join=True)
+            mp.spawn(distributed_worker, args=(temporary, order), nprocs=2, join=True)
             for rank in range(2):
                 result = torch.load(Path(temporary) / f"rank-{rank}.pt", weights_only=True)
                 np.testing.assert_allclose(

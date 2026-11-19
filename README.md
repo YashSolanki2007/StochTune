@@ -1,6 +1,6 @@
 # llm-random-number-generator
 
-Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word-bigram statistics follow a reference corpus.
+Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
 This repository records completed **numeric SFT, numeric batch-KL RL, and Shakespeare passage-RL experiments**, including a two-H200 distributed run. The original mathematical overview is retained below. The optional direct soft-target KL trainer is implemented but has not been run.
 
@@ -13,11 +13,65 @@ This repository records completed **numeric SFT, numeric batch-KL RL, and Shakes
 | Passage judge audit | Frozen 7B instruction model; controlled text perturbations | 48 passages; corrected dimension-wise scoring | Initial JSON protocol missed 22 task scores; corrected scorer passed 18 predefined perturbation checks |
 | Short passage RL | Fresh Qwen2.5-3B-Instruct; quality + bigram matching | 100 updates; 1,600 passages; one H200 | No clear held-out improvement |
 | Longer passage RL | Fresh Qwen2.5-3B-Instruct; same reward, broader prompts, DDP | 1,200 updates; 19,200 passages; two H200s | Higher judge scores; small reduction in empirical bigram KL |
+| Unigram passage RL | Same starting model, judge, prompts, and coefficients; single-word KL reward | 1,097 updates; 17,552 passages; two H200s | Better measured word-frequency matching; quality improved over base, slightly below bigram run |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
 The passage runs use actual on-policy REINFORCE updates to LoRA weights, not supervised imitation of the reference corpus. The quality scorer is frozen and received no human preference training in this project; these passage results are **model-judged, not human-validated RLHF results**.
 
-## Completed passage-RL results
+## Unigram versus bigram passage RL
+
+The completed unigram run changes only the distribution target from adjacent
+word pairs to single words. It reuses the quality reward: the frozen
+Qwen2.5-7B-Instruct judge scores coherence, fluency, and prompt fulfillment.
+Both runs start fresh from the same pinned Qwen2.5-3B-Instruct model and use
+the same prompts, seed, decoding settings, LoRA, and optimization settings.
+The final test contains the same 16 held-out scenarios, four passages each.
+
+| Held-out metric | Initial policy | Bigram-trained | Unigram-trained |
+|---|---:|---:|---:|
+| Unigram KL ↓ | 3.0598 | 2.7766 | **2.5876** |
+| Bigram KL ↓ | 8.0710 | 7.9282 | **7.8699** |
+| Quality reward /1 ↑ | 0.7419 | **0.8029** | 0.7874 |
+| Judge coherence /5 ↑ | 3.8499 | **3.9985** | 3.9821 |
+| Judge fluency /5 ↑ | 3.9618 | **4.0354** | 4.0285 |
+| Judge prompt fulfillment /5 ↑ | 4.0913 | **4.6011** | 4.5827 |
+| Words absent from reference ↓ | 11.37% | 9.66% | **7.88%** |
+| Mean words per passage | 96.88 | 115.52 | 137.17 |
+| Responses ending with EOS | 64/64 | 64/64 | 63/64 |
+
+Unigram training reduced raw unigram KL by **15.4%** relative to the initial
+policy and improved mean judge quality on **14/16 test prompts**. Its quality
+reward is slightly below the bigram run, with eight prompts better and eight
+worse. An exploratory paired-prompt bootstrap interval for this quality
+difference includes zero; this does not establish a quality winner.
+
+Longer outputs change histogram sample counts. Matching each policy to **6,200
+word observations**, averaged over 200 subsamples without replacement, gives
+unigram KL **3.0598 → 2.8589 → 2.7006** for initial, bigram-trained, and
+unigram-trained policies. The unigram advantage remains about **5.5%** relative
+to the bigram-trained policy. This diagnostic ignores passage dependence and
+does not eliminate sparse-histogram estimation bias.
+
+The unigram job **499702** completed successfully in **1h45m57s on two H200s**
+(about **3.53 GPU-hours**). It stopped at the 105-minute training budget after
+1,097 updates, then saved and evaluated; the bigram run reached 1,200 updates.
+The schedules were configured identically, but actual update counts differ.
+No lambda sweep was performed. Both use **lambda = 0.1** and initial-policy
+KL coefficient **beta = 0.002**.
+
+**Interpretation:** a positive distribution-control result with improved
+judge-rated quality over the base model. Single-word matching gives better
+measured frequency fit while retaining most of the bigram run's quality gain.
+This is one seed with one reward/evaluation judge, no human validation, and
+only 16 templated test scenarios. A better quality reward is a hypothesis to
+test, not an improvement demonstrated by this run.
+
+- [Unigram methods, results, and reproduction](results/passage-unigram-v1/README.md)
+- [All saved test/validation passages and training metrics](results/passage-unigram-v1/)
+- [Count-matched and prompt-bootstrap diagnostics](results/passage-unigram-v1/final-diagnostics.json)
+- [W&B unigram run](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/77envg9c)
+
+## Completed bigram passage-RL results
 
 The longer run starts from the pinned **Qwen2.5-3B-Instruct** checkpoint, not the numeric adapter or the final short-run adapter. It generates complete 80–120-word dramatic monologues. Word bigrams are measured across the generated collection; word pairs are not independently concatenated to construct the prose.
 

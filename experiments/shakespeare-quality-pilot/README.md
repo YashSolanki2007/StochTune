@@ -170,3 +170,39 @@ sbatch --account=mathai train-ddp.sbatch
 This is a longer exploratory experiment, not evidence that the judge is human
 validated or that longer training guarantees better text. Its broader prompt
 set prevents a strictly compute-only comparison against the earlier pilot.
+
+## Matched unigram experiment
+
+`unigram-config.json` changes the distribution reward to normalized single-word
+counts (`distribution_order: 1`). The reference vocabulary has 10,948 words plus
+UNKNOWN, with the same lowercase/apostrophe normalization. Empty generations
+contribute one UNKNOWN count; a one-word generation contributes that word.
+The total smoothing mass stays 1, now spread over 10,949 categories. The objective
+is mean frozen-judge quality minus 0.1 times batch unigram forward KL, with the
+same separate 0.002 initial-policy sequence-KL penalty. Passage-level leave-one-out
+credit and DDP averaging are unchanged.
+
+This is one matched comparison, not a lambda sweep. It starts a fresh LoRA adapter
+from the same pinned actor, with the same seed, prompts, judge, optimizer,
+generation settings, 1,200-update limit, and two-H200/two-hour allocation.
+Validation and test logs contain both unigram fit and diagnostic bigram fit;
+only unigram fit enters the distribution reward. Training also logs the RMS and
+standard deviation of quality and weighted distribution advantages separately.
+`distribution_kl` always identifies the optimized marginal. Unigram and bigram
+KL have different category spaces and should not be compared by absolute size.
+
+The cluster copy lives in `experiments/shakespeare-unigram-v1` to preserve the
+existing run. It reuses the pinned corpus, cached models, environment, and passed
+judge calibration; it does not start another audit or benchmark job. Submit there:
+
+```bash
+mkdir -p outputs
+sbatch --account=mathai train-unigram-ddp.sbatch
+```
+
+W&B uses the existing `stochastic-llm` project and group
+`shakespeare-passage-unigram-v1`. Source/config hashes, the reference PMF,
+per-rank rollouts, checkpoints, and matched initial/final evaluations are retained.
+Word frequencies do not constrain word order, and the existing judge remains
+unvalidated by humans. This experiment changes the statistical target without
+claiming that the quality reward is improved.

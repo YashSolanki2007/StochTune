@@ -1,0 +1,29 @@
+{
+  "reference_bigram_observations": 152905,
+  "reference_distinct_pairs": 83454,
+  "model_bigram_observations": {
+    "baseline": 6136,
+    "final": 7329
+  },
+  "model_passages": {
+    "baseline": 64,
+    "final": 64
+  },
+  "top20_reference_mass": 0.02464275203557765,
+  "unknown_rates": {
+    "reference": 0.0,
+    "baseline": 0.6351043024771837,
+    "final": 0.5614681402647018
+  },
+  "matched_count": 6136,
+  "matched_kl": {
+    "baseline": 8.071027126275682,
+    "final": 7.876212804113037
+  },
+  "notes": [
+    "All plots show empirical marginals, not exact model probabilities.",
+    "Reference order is fixed across policies.",
+    "UNKNOWN pairs are not necessarily incorrect English.",
+    "The target is the selected Tiny Shakespeare reference, not all Shakespeare."
+  ]
+}

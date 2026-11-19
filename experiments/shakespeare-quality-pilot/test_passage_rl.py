@@ -18,7 +18,13 @@ from stochastic_llm.rl import completion_log_probs
 
 class PassageRewardTests(unittest.TestCase):
     def test_leave_one_passage_out_gradient_with_variable_lengths(self):
-        target = PassageDistribution(["a b a c b", "a b a b"], 1.0)
+        self.check_exact_gradient(order=2)
+
+    def test_unigram_leave_one_passage_out_gradient(self):
+        self.check_exact_gradient(order=1)
+
+    def check_exact_gradient(self, order):
+        target = PassageDistribution(["a b a c b", "a b a b"], 1.0, order=order)
         choices = ["a b", "a c b"]
         logits = torch.tensor([0.3, -0.2], dtype=torch.float64, requires_grad=True)
         probabilities = logits.softmax(0)
@@ -42,6 +48,22 @@ class PassageRewardTests(unittest.TestCase):
         exact = torch.autograd.grad(objective, logits, retain_graph=True)[0]
         estimated = torch.autograd.grad(surrogate, logits)[0]
         torch.testing.assert_close(exact, estimated, rtol=1e-10, atol=1e-10)
+
+    def test_unigram_counts_normalization_unknown_and_metric_names(self):
+        target = PassageDistribution(["A b a", "c"], order=1)
+        np.testing.assert_allclose(target.probabilities, [0.5, 0.25, 0.25, 0.0])
+        # A single known word counts as a word; an empty passage gets UNKNOWN.
+        np.testing.assert_array_equal(
+            target.counts(["a", "B! Z a", ""]), [[1, 0, 0, 0], [1, 1, 0, 1], [0, 0, 0, 1]]
+        )
+        result = target.credit(["a b", "c z"])
+        counts = np.array([1, 1, 1, 1])
+        q = (counts + 0.25) / 5
+        p = target.probabilities[:3]
+        self.assertAlmostEqual(result["kl"], np.sum(p * np.log(p / q[:3])))
+        self.assertEqual(target.metrics(result)["unknown_unigram_rate"], 0.25)
+        self.assertNotIn("bigram_kl", target.metrics(result))
+        self.assertRaises(ValueError, PassageDistribution, ["a b"], order=3)
 
     def test_quality_baseline_does_not_erase_common_reward(self):
         # Individual rewards get their own baseline; group KL uses separate credit.

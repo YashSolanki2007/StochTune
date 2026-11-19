@@ -1,0 +1,23 @@
+{
+  "experiment": "passage-unigram-v1",
+  "status": "completed",
+  "slurm_job_id": "499702",
+  "exit_code": "0:0",
+  "elapsed_seconds": 6357,
+  "gpus": 2,
+  "gpu_hours": 3.5316666666666667,
+  "training_updates": 1097,
+  "training_passages": 17552,
+  "stop_reason": "time_budget",
+  "configured_steps": 1200,
+  "lambda": 0.1,
+  "reference_policy_beta": 0.002,
+  "lambda_sweep_performed": false,
+  "human_validated": false,
+  "training_wandb_url": "https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/77envg9c",
+  "shared_corpus": "../passage-rl-v1/corpus/reference.txt",
+  "shared_prompts": "../../experiments/shakespeare-quality-pilot/ddp-prompts.json",
+  "previous_bigram_run_commit": "34d5c3f",
+  "external_artifacts": "Full training rollouts, adapters, optimizer and RNG checkpoints remain on GPFS/W&B; no weights or credentials are in this archive.",
+  "bigram_plots": "Figures and CSV in bigram-plots describe the earlier bigram-trained policy, not the unigram policy."
+}

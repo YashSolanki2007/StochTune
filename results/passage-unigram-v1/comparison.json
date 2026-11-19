@@ -1,0 +1,47 @@
+{
+  "baseline": {
+    "quality_reward_mean": 0.7419146029278636,
+    "distribution_kl": 3.059830379860365,
+    "unigram_kl": 3.059830379860365,
+    "unknown_unigram_rate": 0.11370967741935484,
+    "passages": 64,
+    "terminated_rate": 1,
+    "mean_word_count": 96.875,
+    "corpus_12word_overlap": 0.0,
+    "bigram_kl": 8.071027126275682,
+    "unknown_bigram_rate": 0.6351043024771839,
+    "coherence": 3.8498966321349144,
+    "fluency": 3.9618060514330864,
+    "prompt_fulfillment": 4.091272551566362,
+    "joint_reward": 0.43593156494182705
+  },
+  "final": {
+    "quality_reward_mean": 0.7874300582334399,
+    "distribution_kl": 2.587594831082701,
+    "unigram_kl": 2.587594831082701,
+    "unknown_unigram_rate": 0.07882446747921175,
+    "passages": 64,
+    "terminated_rate": 0.984375,
+    "mean_word_count": 137.171875,
+    "corpus_12word_overlap": 0.0,
+    "bigram_kl": 7.869924356917116,
+    "unknown_bigram_rate": 0.5366609294320138,
+    "coherence": 3.9821118116378784,
+    "fluency": 4.028524484485388,
+    "prompt_fulfillment": 4.582676079124212,
+    "joint_reward": 0.5286705751251698
+  },
+  "training_updates": 1097,
+  "training_passages": 17552,
+  "updates_this_allocation": 1097,
+  "stop_reason": "time_budget",
+  "elapsed_seconds": 6336.843743873993,
+  "world_size": 2,
+  "gpu_hours_upper_bound": 4.0,
+  "human_validated": false,
+  "limitations": [
+    "One seed; same reward/evaluation judge; no human validation.",
+    "Broader prompts differ from the earlier 100-update pilot.",
+    "Sparse empirical KL remains biased and batch-size dependent."
+  ]
+}

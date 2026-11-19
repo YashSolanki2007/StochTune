@@ -1,0 +1,80 @@
+{
+  "resamples": 200,
+  "seed": 20261119,
+  "distribution_metrics": {
+    "unigram": {
+      "matched_count": 6200,
+      "policies": {
+        "baseline": {
+          "observations": 6200,
+          "raw_kl": 3.059830379860365,
+          "matched_mean_kl": 3.0598303798603648,
+          "unknown_rate": 0.11370967741935484
+        },
+        "bigram_trained": {
+          "observations": 7393,
+          "raw_kl": 2.776576950916323,
+          "matched_mean_kl": 2.858858683434396,
+          "unknown_rate": 0.09657784390639794
+        },
+        "unigram_trained": {
+          "observations": 8779,
+          "raw_kl": 2.587594831082701,
+          "matched_mean_kl": 2.700590428307954,
+          "unknown_rate": 0.07882446747921175
+        }
+      }
+    },
+    "bigram": {
+      "matched_count": 6136,
+      "policies": {
+        "baseline": {
+          "observations": 6136,
+          "raw_kl": 8.071027126275682,
+          "matched_mean_kl": 8.071027126275682,
+          "unknown_rate": 0.6351043024771839
+        },
+        "bigram_trained": {
+          "observations": 7329,
+          "raw_kl": 7.928232451070379,
+          "matched_mean_kl": 7.877621419154195,
+          "unknown_rate": 0.5614681402647018
+        },
+        "unigram_trained": {
+          "observations": 8715,
+          "raw_kl": 7.869924356917116,
+          "matched_mean_kl": 7.792947378665906,
+          "unknown_rate": 0.5366609294320138
+        }
+      }
+    }
+  },
+  "quality_comparisons": {
+    "unigram_trained_minus_baseline": {
+      "mean_delta": 0.04551545530557634,
+      "prompts_improved": 14,
+      "prompts_worsened": 2,
+      "prompt_count": 16,
+      "exploratory_prompt_bootstrap_95pct": [
+        0.006737332278862605,
+        0.08148592448172472
+      ]
+    },
+    "unigram_trained_minus_bigram_trained": {
+      "mean_delta": -0.015489545029898452,
+      "prompts_improved": 8,
+      "prompts_worsened": 8,
+      "prompt_count": 16,
+      "exploratory_prompt_bootstrap_95pct": [
+        -0.04585401733250666,
+        0.004932598971451392
+      ]
+    }
+  },
+  "limitations": [
+    "One training seed; same judge for reward and evaluation; no human validation.",
+    "Count matching ignores passage dependence and does not remove histogram-KL estimator bias.",
+    "Unigram run completed 1097 updates; bigram run completed 1200 updates.",
+    "Prompt bootstrap reflects only this fixed prompt set, not training-seed variation."
+  ]
+}
