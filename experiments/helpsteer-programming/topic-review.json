@@ -1,0 +1,2067 @@
+{
+  "reviewer": "Assistant topic review; not independently human annotated",
+  "scope": "Practical programming, algorithms/data structures, developer tools, implementation-oriented ML, and software architecture. Exclude nontechnical writing, career/marketing, role acknowledgements, unrelated formatting tasks, and off-topic continuations.",
+  "reference_sha256": "4af8b6008cb7f58f7ff98c3c3a39e3d13a8a4901400173818c2afbeaed831f49",
+  "decisions": {
+    "5f79c8ca1d900a8a93ed7d7303f7460fb262ba58e63a04892eb075d595d437e9": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "eab107b43435d50bdb71607b94c973096daa78e6a83378160ee8cc2478526cf2"
+    },
+    "53833bab90b3132b9797c8aeb8dfe0273e2ae7b3b37a0701a0980c93f4d2888a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "53833bab90b3132b9797c8aeb8dfe0273e2ae7b3b37a0701a0980c93f4d2888a"
+    },
+    "f8b5379bc9bdffaa208e07e6ff71bcd94e72f5c1ec18e397f6153073dbc79ad4": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ca30174f329e0e054f569e0f68aee7e3a66104b9081c68bd6a4d66592a7ae1d7"
+    },
+    "8b14ad8c1633e73dbfa7915fc2db5dc3ad26e02cc439498618e2900d075bd45c": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "d43802df8be8ca525af54215aabbd0b465258fa1384a758f4515406cb3d329c9"
+    },
+    "a1fde8854f1fc13309b5963589d839e93fd0ca57b283a47487df0c335c6b00c5": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a1fde8854f1fc13309b5963589d839e93fd0ca57b283a47487df0c335c6b00c5"
+    },
+    "2dfb8da31e4173c57ca45fcacb67e9c77ae7f8e5dd68256548cd5c9661ecbac5": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "cefcebf4853d095a2c863eab6b555a243aa9df1e4d720656a76e7b4a1058e5de"
+    },
+    "b671f13e4721776665160c00a50f35470b1effefce1b64b0814be4210c8be67c": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "0b5c2468bd01cf5c4f4debc7705079a3d637417263f921d53d27f34c53015baa"
+    },
+    "a52262de64569794a31cb6410e6d0e2f9cf7507e7810b7ad3c03b9b845c10e04": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "9e639a86987655f1ab0ab35983ec014ae7417c95c379b68b2622cbd1cff903eb"
+    },
+    "53e3da132ed9bd03c1a984c704050432a0cd0ad8d13cb3636d6b0e22100fa7c1": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "53e3da132ed9bd03c1a984c704050432a0cd0ad8d13cb3636d6b0e22100fa7c1"
+    },
+    "8b4f8877c15e414f12cf6c688fd38d7cb5d45d0c1150102e473bdc5c5a17c0b8": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "8b4f8877c15e414f12cf6c688fd38d7cb5d45d0c1150102e473bdc5c5a17c0b8"
+    },
+    "2a4bb42e5d2e1304e2e90ef2c4923174450ac039124c23d4d9570d2746d192b6": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "2a4bb42e5d2e1304e2e90ef2c4923174450ac039124c23d4d9570d2746d192b6"
+    },
+    "ffeb9bdae7c7d0e4a8d8c75a66d3813930a8ea8085b9878ac4ae85b66b6430f2": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "ffeb9bdae7c7d0e4a8d8c75a66d3813930a8ea8085b9878ac4ae85b66b6430f2"
+    },
+    "96b24f632a45f825116c10a7b33bf57ed52ce5130bbff0387f4b400d1b2b7aea": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "96b24f632a45f825116c10a7b33bf57ed52ce5130bbff0387f4b400d1b2b7aea"
+    },
+    "ab9765d59dccc0361bfdf3180b7354e78c61b6e405cd02aa048616f70e1d836d": {
+      "include": false,
+      "reason": "Non-programming content requested in code-like or HTML formatting",
+      "prompt_sha256": "ab9765d59dccc0361bfdf3180b7354e78c61b6e405cd02aa048616f70e1d836d"
+    },
+    "13e9743b8a4f9a242578142b08b6f9bd1899d68165d1b74d8eebe4642ed1514d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "13e9743b8a4f9a242578142b08b6f9bd1899d68165d1b74d8eebe4642ed1514d"
+    },
+    "6c87afea0d93f2d5171ef78f0554d7208f39439e94e4d3d41026735ed05ec591": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "aeb9eaa8261df65ecb1d37405ff18996573b02ef5a86205ebb69260701062cff"
+    },
+    "a9a22073c92f084737f84b12a26921518f027911421648a9f3cb1e41aaa773bd": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "be2308cd72fbcc067f194ae57a0a7bb633ed5a71d0246b69b108564474ca2c27"
+    },
+    "6edb41539975f2a044c205be9a6131e2784519d8bd0bce884af72a1809aaed02": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "94353ac4207e5c0f410a122c4e9ea08a73415c73e6db6e475e42c9b6f1fb73c8"
+    },
+    "8e4ff98c55113c99aa824276754d9478ff19854fda103c94f2e7b4a2f10e3b83": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "8e4ff98c55113c99aa824276754d9478ff19854fda103c94f2e7b4a2f10e3b83"
+    },
+    "f4bbec86c11dc8e9918e4cdc2f373ba552b775b912066b0b6e2f040c0cdaa03f": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "6cbe4ccd596ac709633be40a8637a35b3651907bafa9b347f096587adea0cad6"
+    },
+    "951a4d36e0a9018b7b895a76402a7b6b22419885cb884dec61bb3b824747dee4": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "951a4d36e0a9018b7b895a76402a7b6b22419885cb884dec61bb3b824747dee4"
+    },
+    "0be6e4214c2223f94f55a85b792ef08a82f0fe3582ca00b176033664a6dfc4ae": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "0be6e4214c2223f94f55a85b792ef08a82f0fe3582ca00b176033664a6dfc4ae"
+    },
+    "27913fc04d5903b0ed494ee202999185df0088f3356c9806e3233a372244627a": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "85c60a77eed671b3a5480203e8bc77fb49c5ba337c36d1706641c851ebdde932"
+    },
+    "212e9346e32e52cd530aef51b46bdb19bfe0927fbdf49653e219da433140ef79": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "0368b3bc57179845aed48987ff6e73878e4b5cc06e4d943b33919614a44346fc"
+    },
+    "412c2ff69a52557c29329d83470be64db782d7646398f4ad001703183caf36e7": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c4f52cb983c918f093b4e91e5d6c5350655654a89a30de347264741fa78dddf0"
+    },
+    "145113827d3591c0a399b47c34ab65339ed7e4600b0afca29a35808fbafb77cd": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "145113827d3591c0a399b47c34ab65339ed7e4600b0afca29a35808fbafb77cd"
+    },
+    "b97f9996b4a7314ca5c53fab7ddb6b28d60074001ff2b12226437b34ef6844e1": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "32abbeeb3bc06abf744f59017c47510dba770fc5f68484ce5068b2cd0f900719"
+    },
+    "6652f577d5fa3db480f2fbe2757a434f32ecf8806866147ba7f1fb81ab0f04a9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "b9dbc4e7c7cd1123f222a73cd29a5364a037e8f186476493acc29f97e42a6b4d"
+    },
+    "762363d5a3a6ab3a4b2f9ff0571f013bf0a462aff58ce7a26e7c4dbd624e21b2": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "762363d5a3a6ab3a4b2f9ff0571f013bf0a462aff58ce7a26e7c4dbd624e21b2"
+    },
+    "b2643b43d2a9166f17df8eb49bcba4cc48e14a7953176be50b6ed3ba868abf71": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "b2643b43d2a9166f17df8eb49bcba4cc48e14a7953176be50b6ed3ba868abf71"
+    },
+    "9f88876b667f575aa7b359e6e56045f276f601613f86aa507153f8cb892cc1fd": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "9f88876b667f575aa7b359e6e56045f276f601613f86aa507153f8cb892cc1fd"
+    },
+    "8ecc5dfb43bfb82d479b048fda96a96ec8d6af4aec9ef67cbd8563d2415fca17": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "4c91d1af646dc1ca116a38ba8916a3c453073defa58af1ea4baaf005a2648035"
+    },
+    "58e55a503972af19f8f6d710e0b6587b533ce00f1d5a08516c9e60b4a87bc8b6": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "58e55a503972af19f8f6d710e0b6587b533ce00f1d5a08516c9e60b4a87bc8b6"
+    },
+    "825aa07d3811ec39a6bf1c0b84355c3fd26cac3997b116a1aa1423f800178ffe": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "825aa07d3811ec39a6bf1c0b84355c3fd26cac3997b116a1aa1423f800178ffe"
+    },
+    "2c25ed39d74d9eb4a68aa95a8568e3634302c8ac5f9a8453bcdeb9e4679ac513": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "2c25ed39d74d9eb4a68aa95a8568e3634302c8ac5f9a8453bcdeb9e4679ac513"
+    },
+    "886d5823a5031c8bce51e9bcb0e46a4623982d2197613b09986cc6a928dbb3da": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "886d5823a5031c8bce51e9bcb0e46a4623982d2197613b09986cc6a928dbb3da"
+    },
+    "6a4a64c773d93f9df3bd04f15900e0c9971df02c3bb801fe31f228ad9b5c32ca": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "6a4a64c773d93f9df3bd04f15900e0c9971df02c3bb801fe31f228ad9b5c32ca"
+    },
+    "4e118922461ec6582fc6f4c26991b97ff1516ce0a8f2af38a9e1d840b7ee73c6": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "4e118922461ec6582fc6f4c26991b97ff1516ce0a8f2af38a9e1d840b7ee73c6"
+    },
+    "1035659e37e9335279d290d2c4bd119410af2cf2471281b1c75912d4226199e2": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1035659e37e9335279d290d2c4bd119410af2cf2471281b1c75912d4226199e2"
+    },
+    "5ee11654b2576102e0b6fd528f37272605fa5ec8f07f442b90d2092732dd50f4": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5ee11654b2576102e0b6fd528f37272605fa5ec8f07f442b90d2092732dd50f4"
+    },
+    "fb3a9c41c4db3234ca3fef2708b582f11da791bd8d124e1d87d0a90924fdc7ae": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "d377a87e0ff941b9e069ea7a20c418c3123e0eadf769ad4e6d162a06fbe10d42"
+    },
+    "602655cc588e139bd839bfe2b3dacd7a671162f77df2e6c04c022b4e3737d455": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "abc2438445168ad608bfcb88d9841814b6b521f70eab935cb3c12eebdfff9fe3"
+    },
+    "b6ada8febc1cb1e12e98a1ecf14decbc74f6a182e86a775294b73f47ab3fd804": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "3bd6f3c416cd7c5ab307c63ac9cb8628e0c68ded6f3a05381fbfb7fd6251664a"
+    },
+    "ac638e4076aed54ec0aa454bd57132c1607396d322a8392d59d53c6431d0e473": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "ac638e4076aed54ec0aa454bd57132c1607396d322a8392d59d53c6431d0e473"
+    },
+    "5405e32437a264b0803ce5146a8bc84857af52a07927023ea4de3ae80bbf038a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5405e32437a264b0803ce5146a8bc84857af52a07927023ea4de3ae80bbf038a"
+    },
+    "03df9d402c8760d31b174f65db9641bca24d80451e83cb7f97eeef7bab0ddc43": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "03df9d402c8760d31b174f65db9641bca24d80451e83cb7f97eeef7bab0ddc43"
+    },
+    "be9cadeec2db621061bd55a3a71b15d4bc7da738007ed4eaf9c83824d295533c": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "325f352ec6e3ed864de3424f53405912d66a22ffbf08351a819570dcab026e84"
+    },
+    "6242fca78d2e7d853cc34500ac3d9f76f991d96c0458c5f445eb706ad05d23a7": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "26df6fd14bb8289c41f7897255a2178a894f67ec2a5b4ebf4b96e239f878b734"
+    },
+    "e6000e88721110c09dadea43a68ef31b76a934c7e79ded27e74e203917297744": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "e6000e88721110c09dadea43a68ef31b76a934c7e79ded27e74e203917297744"
+    },
+    "b0161e5f2a1c74f0886ba0de3eadb8c44b070da94924c7287ae9dd560ccce6f1": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "8fc789d92553115e72231770445a81ef79e2af29551ac7c96c17c7a5cdc107b9"
+    },
+    "ae42f17cb858010fadea3a836bb7e98f16a390c03f4ed9c629de2e77c91ae850": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "8a4395ae10a61716efe8db19fdbdb9d97d20168f21101b68a0c8972529b535be"
+    },
+    "4be01c10e31c87c4e9ec22a646eaa155783465b3c135145c7fab23b0b9dcb193": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "f795d82b5a5ada0162208e543ade3370aea2dd576b9261a64b261f9c75c77a31"
+    },
+    "d6e7096ac2d9e5dc9da411a02810953578b377221798190b42447f1b714e648e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d8316605621c2fa23c16f2e3370b621fad60c23c48b6461fef04ff3f3e571f29"
+    },
+    "fdba6c5479563d92ae88378f7c0df6a0b18b38a77e42ffbb678c91001a65d9f2": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "fdba6c5479563d92ae88378f7c0df6a0b18b38a77e42ffbb678c91001a65d9f2"
+    },
+    "2d945652b89dbfa63ab59153d7bca5bf175480dfa39403eda800f7e2ca49c3da": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "2f8d57e612248f265ef85fbffd213f888ae39cb2e4482349b2148c7c3f34cb71"
+    },
+    "06c270bca40134a1ae9ed86931a44dc49ade7b8e54b16eee547747c33154f528": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "06c270bca40134a1ae9ed86931a44dc49ade7b8e54b16eee547747c33154f528"
+    },
+    "352a18bab81e4ed35d4ef63462033c17ae2cf6253c54523d813ca68189aa396d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "352a18bab81e4ed35d4ef63462033c17ae2cf6253c54523d813ca68189aa396d"
+    },
+    "cae61f61fbceaa1a403b1828401593a9f75b33d08b06cc50ea7836e4ddeb5eb9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "cae61f61fbceaa1a403b1828401593a9f75b33d08b06cc50ea7836e4ddeb5eb9"
+    },
+    "1d51b473d2dde046f974540f3520592bf37c795868b35eb982e73c8fb5a3b350": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "125e7e8ae36a5e706299d2e72e0e302cbb85921f2d6db3b28685ebcadc35c3ab"
+    },
+    "0a47fd897d87e7b4453dc3f8cd6798125ae5e12556a26be1b0d4f2860a72ec7e": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "0a47fd897d87e7b4453dc3f8cd6798125ae5e12556a26be1b0d4f2860a72ec7e"
+    },
+    "be46e24984c35c9a1f5a004f6af87911a8a37252fe0931239d021b8e0ae6b10d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "28fb75f656c674be04e62618ca0f14c00b872b956e681f6ded42565ab8565f63"
+    },
+    "0bccbc0453d8ba37cd9430a388c6305ecf9438520abb0f392cbe022500541a41": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "0bccbc0453d8ba37cd9430a388c6305ecf9438520abb0f392cbe022500541a41"
+    },
+    "b53c0fe5fc02617dcc2339547ec27af9bbf35b3d63a670e5ec2a735e1d4d7b41": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "b53c0fe5fc02617dcc2339547ec27af9bbf35b3d63a670e5ec2a735e1d4d7b41"
+    },
+    "082fd9a14182760ac55864f7ebe93df14fc5dc3967c0ca24897610dde5c29e0d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "082fd9a14182760ac55864f7ebe93df14fc5dc3967c0ca24897610dde5c29e0d"
+    },
+    "003163e33c9ca46372c435de248392baee2ae4376e769fb5332d38cd8ee992ff": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "cde3a1f9fb49093bbb54811f40f483afb865006c900c3979768a6a7b751ae408"
+    },
+    "95c1de43717590cf181e96bbb6446c0a08d61d44fb859eea3d1ded1d7f53ccf4": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "31a815df7f8621caf2225282e45470f1dc32c491b629360d1461c148f268568c"
+    },
+    "f122b869fc690767eef34cafc9fd6f7e5981fc3b99d52f3602e91e7f9e832f7b": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "06298aa06f67f994e173d4d6e439dfaf199553bbd591913694897347d92ae198"
+    },
+    "e82d74b7298fc1d4dae20d2711f6296e02a5722e9f21a6ba444d7ef47cf8fa5e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "22bff187b82d8b8fade13e0e0511d89df3abac62f0a08c71b55e92ce9aa60c18"
+    },
+    "08d18a0df32493a3beab26b9e3015153cb7a6852204bd668c8a617bbedda35bc": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5672adf0d502071097e9f5afa0980b40e9dcbd6e89734cf8029c67c99bc12855"
+    },
+    "56b0c9cc8b0f4bd25c82afd16151684012f2d55ee1fb9ee4554147a2c9f841de": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "56b0c9cc8b0f4bd25c82afd16151684012f2d55ee1fb9ee4554147a2c9f841de"
+    },
+    "446582bf1bd0442abeb2ea3010950cbb1b915f0c67e745bba86b2e3b78ea60b1": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1a40be60393230c9729b24bf269776870996a1399c9b0fe0b346ba5be6f6f896"
+    },
+    "a0f64862e610c88755f9b7589487e6f76ad5d02a82672045e6fb06b9de74ba3d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "b3cf37979747764aa36844e5b3511ac947966d1eedfa4121dd5dae4461b3a2cf"
+    },
+    "0be71f230a679062e8b9133cd6f36953a8a926f7ddacc63f5279a85be41c408c": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "f659bc68ce1d94bcb846a66eed2b76ce4df108406462bb76ea06c509fd3d744f"
+    },
+    "271e91b0402565dd213bb5fd30aad0e8f3c49644c846829582df4e3506bb063e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "348efddc7b408b20cad3e631cb17b32da3b97c92841b6439c6f129d613c31b27"
+    },
+    "9d9829b1e0efbc9aba6926efdb727d9bc6d333383527c6af1f07e7ca57d8d6dd": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "92bcd3c925b640c821c30369d37869acaad10fe3594dbe6e7776536cd4cfd3d2"
+    },
+    "1789587e49aa967ba54613f48964893fccee4d6f3144021568f50e0af50264aa": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a3ea1ba47dc2ee33ba524361e90bfb23810f86367553d17dec0b043a4ecb5c8b"
+    },
+    "09eda5bcba884ee6a5a66d65b4ed27f22ce7bb784620819465a57d8e378fc4ef": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "636f47e4990e05d4cd3830a6affc474aa3b78acbea7dcb2386200920991db455"
+    },
+    "e837255a37c7ea1f58771b9f3f56aa5d3af77fc55525b29a11ffa0cc6ce02768": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "35b0ec7f07908cf0f9b985a06c45c29f39f03368bf77a31577aa40fd184ec0e6"
+    },
+    "f915b4e48eb13869e3c762ccd718ee68dab545df9fa9d179919863dce296b994": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "624b90d05823fcad90adb040ed0aa82e3d782fb4c3c289201e32030364cf716d"
+    },
+    "855836e77f17964499a2f4680a10cc4e0dfc6033fdb63fe6a237eab1b92134cc": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e1dd5b1567938e8ccce0d439c5fc9033d80d5c132ab6cabe691f29ef968d84d5"
+    },
+    "c6b6ae8a46860b269e5ee6c9f1002fa8b9a59c9a26ce8a639b9a88b460f078f0": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "9efc710a5053a0ea05022e7c60221c174baf78c6568b78d47831078e5957e81e"
+    },
+    "efa3489ca19d051bbd934b737f35848234ec84ab79b04eaa6d19bda89cd0c982": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "2e0cb783d06a6e556c26f3b95a9bfc0a43daa51ce742ba2eab365a8bc8335c89"
+    },
+    "21697d8c9d9aac0c224bc0f45d0f23c2ad658f51b6be9332a6d72873f9b7e9e0": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "eb11257974cd0ffb277034fabefcb0a1d0ccf1afa07c40522581584c7fe337c5"
+    },
+    "3e38e25ef594ef0b616a407641b4a56f32e2d4554cc71ce5e1a5f4905b338770": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "357ea2ed667c114e521851c49aa58b9d11aa522bb87e7ea9ba96396dd089e852"
+    },
+    "86435bcf7b355c7d1fc9f43a7d7e374fe776d841e1ee48f7197cdf2dc6410253": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "754a6b08f390749913fb71ee7ac4a62769ba637b67ec13778293d5c3195a4af0"
+    },
+    "b6f11920af23ac4d312e3af0e042df2fc85ca70b8340787f8f54d42294bbfc09": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ce277dd2e58c5612f4e6125729deb57c7abbabafefceb0b631197fdacbaae38c"
+    },
+    "eb2628173413d5d4f46fdf9e853b6a6417f3ac14c51a7992c4bba5915a36b516": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e6ba470648ebe8bb2cd4ded1a0a43d1d3d079777be9ab86245a6671ee8a829e4"
+    },
+    "7f5898850dd563dda2c813e1523d6f3439003f82374f18b6f5c722afa5abb3bd": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "de22e61e79fe7290ec0b6f9861ec07c995c9e7464c281f2d2836731d84e7aab9"
+    },
+    "83ccca8f2c87fcd3ae721120942643b2dd51cf76626a5dd980ec4e7c702143b9": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "563a5cc7b1051a4df37014cde262b1de6dccc77b6ee3c76d8b97c46923ac0aec"
+    },
+    "0cce70a6d86f7b93f64805f00d7c7982a81fab97da764f2a0adebbcef7a48f48": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1945f2582f85eb2c632ebbdf92bb3726ad060b1155a3aa80f6be80e1353cea38"
+    },
+    "abc3d79ae5908edf205b2218a464fbd752b23ed86dff5a4925d3419f56fc612d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d5dd4018a273e2cde3e1953d41caf45fcce17e5b4eb2bc1ddbb2f2582c98904e"
+    },
+    "4f7af34247a7daf6d59dbe4b5c727acefd52c7ff3e7782ee0f70aac10113e6c4": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "f40dce26b8800c9d7bde7e6b1882c478ca564acef119ae9b9861cc8b71120311"
+    },
+    "05a64cacf760ba83e860d6b5ee4398860576b9902fcdc8e49f291e666c0213a2": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "fabd3ed2265abcf0da0093d1c7405ff93e8bbee942417db30dec240f86d3803c"
+    },
+    "ed5032372892b4812e3c85defbedc44685a9e90e0c9ed773555d31ec8682d88e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1c30f6edd4d6a29acdcd8c62bf85c35804dac8e0fd642fd3927c2a6218b58d97"
+    },
+    "7f0d0ef32d38f9a37e44f2af6c5eb25852ba6dbba6437d859d39d35b39da49dd": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "9a08c7e189d1b5f304e6db54e4f192f49044c2a61b2dad51ee54e8c4dd6957e0"
+    },
+    "ed1ada8dc61cc9c08112223745f3b9a9f6675ab3ed2f183371d298065b2f8cdf": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "51722cbad553842efb8fe99fce622394cbcd63aaf0747ab9fcf139ca05af3949"
+    },
+    "319361b01cafb80182ecf2675d025e667e711651b525543ee57d09c3b9df6e81": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "f3ddc237859c35386195819cf96f24627406697a148ad29818a60fe37fcab7a9"
+    },
+    "a708d28315be1fd7c61cc4e8687e6828fea054c45c05b3b0ebdbb18e58a350bf": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "82de22d72f4b68f8ad1d1ec71b72d05feb71a4642758d5bb496870fa2a5aace8"
+    },
+    "4f7f4ee6bf777a9b84fc05c82033dc53b48c0186e9ea08bd71df2f64fbe3be2b": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "4a5ff815119825e70b4b0f894ff4cd8ab3302de7e9ee6825c7452e0f2990f484"
+    },
+    "370895b4f035d11736825f3a4bb9fb726519b6612b77c0685fa7ff4a9a22e38d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e431945d13dda0e71b2481aa8373d8fc441038562beca1fbb6d70607f56216b4"
+    },
+    "70224f434f73d0b971a65cea1129d1469b9cccfa52c3c54b1d3fb0ca623ad87e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "392cd461c8ea8e459b1f9ef9bc275ca02f5789c8fc4d60b089ce4c2ccd4aaf9b"
+    },
+    "6d323ac04e31cd94d4c8c29ef462e429ebd2756fe5d8e1cb8638358edd132542": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "f13eaf8dd3f56d8f14e84f2332878669e53ffacd7e7981ca3803c7857181c255"
+    },
+    "9b2ccdcda3760ff72eee852637d4a826e61a85d27015745d1e4f94cc7a36fe51": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "7f8a1105a987d5c0048481ee335730726a610e0462eb0d7914243c62d87692c5"
+    },
+    "926c3104a7139adb531ba133bca0a03395fe23a25bc63608997f0c6743b1f197": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c09f9375fd7e3217b49d52257c0eefe881be6af6a1d6e5cd43e17f570662a1de"
+    },
+    "d33852139db2c094a80cf12e09cf1d9670db50e93c0528c88d3a23d9f38475ef": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "11530fa61e400fa4ed852b67e59618ee5d691470edfd10de90745f97c32edbd1"
+    },
+    "48ae858bccd2891232014531e6e78e20b9606b873078bdb0d7b8f66abbd722f1": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "d62a8f635f6cfc993f1dc288ce17f81e838b0313e9143cae5401eb5bcb7dcf3b"
+    },
+    "f0dfeed140cdd01527829a47eef5193f5d65b70360e045070079b57d3bce6d8c": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e14b3597e2c56116c161f430fdcca8a4fe8bc2cbd50cce6380690f3d4c81787a"
+    },
+    "19f8287a927fe7b045e8679292a463ccdc374a870d7e2817c80d0f9235c7e26e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "3b225f34a255d4254111205268b5ed8714492257b21cdb265504a8aaf86c4a9c"
+    },
+    "36c828ae4b0f020cb5d69ef4eb7238cac9193d1f74ef65e54043b5b6cd84f272": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ee2126dbbe90724c7b393d46e06c5fdac36795406fded82d312c0ce55ed9b171"
+    },
+    "f3838fe1d5018a6ab48d9b7211ab2b4294fdcac4539b8ed047f8d4f78bbd441e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "2fe4f69644dde9ea3306a2948294041d1e79e13b971db5f974f84d8bdf3dc531"
+    },
+    "d372cab11aa78c84a87ddede2ad7889dc34c17f5639f713397724af9171aec0d": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "3b83ca49fe34cefda3fc612785e5723cacfda3864bd7b801774ea80d254ec935"
+    },
+    "f12cbd3a8bf2c01906ae1663cb0e51102a34fbb96f9d74897bfe8d90b98412f7": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "f276c1c97fc930eecb98b53c06eaf3b43cbac756124036e647b487c450973160"
+    },
+    "c1af9f7d5688c50d39fd4632dfaa9c31810c514b6c6f95dbf985e8b965d5b5ec": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5fe2640e9c9282e8e938dbbe4b955af03a88533ae84e0411771216b149b149c4"
+    },
+    "586ec1cf7a00e2fba4f729eb3fc7ad7d3289bba667d0549be9706eeaa8fa7cca": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "7092cb8ce3c244d1d4f9e68e5a5337600bc8b8b5b53598487a5914c72abf5320"
+    },
+    "bba4aaaff0a6e1e5b345883b5de8079654621ec0df6770966d3fbaded83c67bc": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "8a6d7114ceace29dfa7f73b72bfefa893c3f3056527a7758a88751f31cc599a6"
+    },
+    "4a59d52c235ea9cb58e077c9d5a319f3e28cccd29601a9e979e7c88ff3cf6dce": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "ec7013c7c719f0adbdcfefc278c1d7c1e8bc5eb60dac28a636df5afda58041c8"
+    },
+    "df2ba718433e1ee56719d56dca7fb8a61326d246773c2a8d074b00e34d381aeb": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ad0e9a6dc570ab2a763f1471179029cda02bf98d0053bb284eefe720b6a545f3"
+    },
+    "7e2bf3f607600d1443da9ad7366507316733f15573356b6eed20c05cc6cc2769": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a37f4aa573d4d3718dada784f46c98c61beb735cf810cc7ced79618f9c4ca0e9"
+    },
+    "242e7a677115a5d0ae01a4af8aac445bf2677c9505207f3c1bc223beda20714b": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "b4d46f0ba4800cb705ad72383b7fac38cd64ad70d202ca4e255a887576255d27"
+    },
+    "3db0f426789e4a44974039e463f0516f3f8edd7af0d1c28aa30d25c84c4f2d9e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "dd04356187cce6d75d049ffb0a139dafe3b909def0515c9c402fc2a37a08c25a"
+    },
+    "d95a98693d98de571471dba00a41e35fe0d8f726c2501f02126821e32c7d8e2b": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "5be72764b57d53bb06ed1cabdc4b1ab5be494e9b85395aa6327beb5c63d1985a"
+    },
+    "40649332a1d10a526f92ad6cf4bcc4661ef7e61f87adad22bbebe56115c74c13": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "fab023b81c3370e3d5fd825751da66d513840a9e5d7a682fdd6644b655005166"
+    },
+    "1099c1af8837ea8a6aa186064d89ade3e5b4c9edde973e0ba6960384a8bc6731": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "94591e97431d723e325c1bfb616300eee7b1574bd758a4eacbe8be898f271763"
+    },
+    "3a444c2a6fb45ec5154009093278a86b301c800b1b00cd18098ed8e6064bb867": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "3e6ad0de897ad646731337af4c8fff210dddabd9e09970ffa8a32af8ab258e5b"
+    },
+    "1e535767618256b862fbd5fe86b3a5eadf3b6b728ccfff8e6fa7aec74c9f33c8": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c79e10e3f837a864ea1a1a9803bdfe4c9662b7ab7d706218a79078212b2be5fe"
+    },
+    "7f33095f937ddd144a06c16867e24f86f5b7ac290bf1d4e3767ecb37f125e024": {
+      "include": false,
+      "reason": "Conversation mixes unrelated domains or distracting fictional persona",
+      "prompt_sha256": "edc78e11c58bce0e829ed9dc2fa547146d6672f6453c51a455e452c761897f86"
+    },
+    "995e597a3533e51eef7a5b48ec7b0ae6c8a099fcbc509f3c4140061bcd387bfa": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "59641a04bbec85f927c7ddc601462060b7f785db399a7eaac8fa1d32fca200ef"
+    },
+    "9c3e69fb2cd9aa5279befc0141cb6975b86949d954f1df8ab1d0f117948c145f": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "180b042c31fe5a414d40a5647cb7d2c7bfbe0676df7060d530d3ec2672ec9417"
+    },
+    "40d6dc4d41209b03b91acd0d5f4a0f4123a3d0f8e3b8cda448ffbf5bbd625145": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "5f035cc0a5cac3d64042d0616a17f9cfe73e7b0cd8243201aff86574348eae4d"
+    },
+    "080bdba8c71a98a258ac91d0749f6a712f0c6ee07d0a4d9fffafb122c2060df6": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "9de31a9c4ec74597308046f65a7d9f846dd883beef1ab473cf3bf974dce6daae"
+    },
+    "a0c06831f5976c1b5aa6b20cc2c54b5f11cff6e35fa997bbb655cea2a240bf00": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "733ad6d2b5f2ed5f006865a765727c5b0f0c50893c4d2a06bb23fbf5df272d3e"
+    },
+    "8d51127aed6416f25491d983c62a252d7d701292c2f3fec0003f7891cbf38073": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "dfffc945534ee013b04d9637fb222be2c5a3802af46992095d8b05561cdec021"
+    },
+    "e251771eb471c8e4b947a4f2c6865003356e331a45ec349a7c1afbf2b8059d1a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "bf5454ee3dbc4a826f5de38b209010105f790386f446df1fd2e3fd865f2fa3af"
+    },
+    "0fceacffb322b4fabeb8a2077f44ca0dd9d5c86a456612c1db4a31787b931237": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d51427b54ba2c2d239f3993819aeb9a86cd1dcecd90d5308c32d0d8d6f6f22e9"
+    },
+    "fc4bb638a0cbf412df625d90db35f645a8c7e08f868f801ec1e64e855fa53d8e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "fc4bb638a0cbf412df625d90db35f645a8c7e08f868f801ec1e64e855fa53d8e"
+    },
+    "7308a430d6287434b31ca91516618266855623e47b5f267c2c2a3f78ea485f84": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ea479b3eef424572fa03c3ec34ca1ffbcab318293c38e905cfa595b51314b393"
+    },
+    "383e5cbe6abd2d92bea5b28140bbd0f5beca2bec22eaa40fa82788af39163885": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5a5a8194288a242dc328c0ee4db4d6d0cd93ab7ba4eac4579d58a618cce317db"
+    },
+    "88a6304ffa978e8396711321ef36b301f35a9d4268ecd575eed35dbe8b9c3753": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "0bbe278c1b747570e720aef8140fc8a6f68cfae231b339e12adf796f90aa979e"
+    },
+    "c3135670aca94d2f27d4730f790c031ec966f329ee95df87d1e2a9decd1cd404": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "185625bcf91ee71e84b921879b24979ac81751dca7d31da718c024d60d0ab994"
+    },
+    "f34f2cb5ffd41279725a380aacb7d253db20f66191244cda27de50c1673f97de": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "f53e37c8cc029fd48e50654d6fa2607baab757e9be477eebb18ec8a74c21c029"
+    },
+    "0611ddfa751c3f97338f6017335e2ab38fabf9d178097b3ed49261bf01c55769": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c1e3c6380936ff95aedce0adfdc200020527055a5b2e0c27d7d31aa8779d1ee3"
+    },
+    "6459de8824b5a4ca55dc01e824ef2f0c603041677dbd3c9bbc8b5b2c5ca995ea": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "37dc9e7cf13cfeb935015360b6f447ff0229ffc43e8d63b874cf60363f85d7a7"
+    },
+    "14acca5eea7e2ca9f8cf1c510d65eef02575a1a852dd357fcd88b09d6dbf49d8": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "211c5de13a5b295316d2e79225f96e68470b3cea48284fb1520eb639cd34dce1"
+    },
+    "62985ca75e928bc325dec9f647dc1b26d99ffd987fdde33eee5f82cd6d7858ea": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "febea24c629c9964a2bf870314f1060e644137cd561abbbe395203e0e98446a1"
+    },
+    "1e057dcbe48dba5a05ce9d538704d840121b82eda06b5a139be39672daa34724": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1e057dcbe48dba5a05ce9d538704d840121b82eda06b5a139be39672daa34724"
+    },
+    "38cb4cd3b30e4f3579ce9d0090e3aa60a54106c8b291b7d8a4ba64f02fe0ca31": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "38cb4cd3b30e4f3579ce9d0090e3aa60a54106c8b291b7d8a4ba64f02fe0ca31"
+    },
+    "736a0e5de09ca80b963ea28c7bc17d4150712acd245c95069085c45ae3326852": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "736a0e5de09ca80b963ea28c7bc17d4150712acd245c95069085c45ae3326852"
+    },
+    "5eaf0ca647777f4171029069ddc0d78ab42652b535d2ed9eb2fca99e519f36e5": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5eaf0ca647777f4171029069ddc0d78ab42652b535d2ed9eb2fca99e519f36e5"
+    },
+    "47b3fd0052fdcc9043d47de9b159bcf664f384b56b3ed64d5492f71fcaab8e35": {
+      "include": false,
+      "reason": "Non-programming content requested in code-like or HTML formatting",
+      "prompt_sha256": "7044142c53ed20dd747715d05a72357cfc074acfcc80ede2b8b4c839eef4479e"
+    },
+    "b5bf3d16d9880fffce6b13e82e36f9e590b947ec44029f34b6151e769f74a5bf": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d87ef09b32d5b5de6c30de667d9a4f23c6d8d859d43690629dbff58216a92bdb"
+    },
+    "4dd24a0708f347e4519ef65a880f01964a760913588d8a6b703dcc07561ce417": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "4dd24a0708f347e4519ef65a880f01964a760913588d8a6b703dcc07561ce417"
+    },
+    "45830ab6082417f70d0e7214aefaf5cdbd069176004137c047ba7182be771f4b": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "45830ab6082417f70d0e7214aefaf5cdbd069176004137c047ba7182be771f4b"
+    },
+    "51223958b651c1f84f3241122f66cdda11207f754b2f7feacc6fec85a3463423": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "51223958b651c1f84f3241122f66cdda11207f754b2f7feacc6fec85a3463423"
+    },
+    "631b6647575b6c75befd1cee60c745ce0d445e4e472060b1c8fc4cec4b45cc6c": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "631b6647575b6c75befd1cee60c745ce0d445e4e472060b1c8fc4cec4b45cc6c"
+    },
+    "cab63dc47dbe9b67cade3a57eaac92ab5aafc7c38ed2c4574df2ed6531aa1db3": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "cab63dc47dbe9b67cade3a57eaac92ab5aafc7c38ed2c4574df2ed6531aa1db3"
+    },
+    "38ff2c563919d17e81ade2b5c69be1b5a76465eea72e22031290fc4bc7475000": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "38ff2c563919d17e81ade2b5c69be1b5a76465eea72e22031290fc4bc7475000"
+    },
+    "8c32819cf3bf4999e7e3a86ed793d7f60844943a1c51d2bb029cebf4d1471d1c": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "45c5526c870704b71421c9d045d5b2efaa952663663eebc01c63ced66dd1ad6b"
+    },
+    "fb59d9583d09997c95d1b51265fd6e519ded39de52b69ae19ade70d5b750a54f": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "fb59d9583d09997c95d1b51265fd6e519ded39de52b69ae19ade70d5b750a54f"
+    },
+    "3a89f8256e741cb07588c4210ff549c63cec86af3c8c9bd7155bc8833b30d463": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "3a89f8256e741cb07588c4210ff549c63cec86af3c8c9bd7155bc8833b30d463"
+    },
+    "579c9cb9abda7cbe419e30b5ebb1fc412b173f37a120fd1607c619dddc0dc1f2": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "6fbdbe74d0b41df1c6230a01783fdb4b4103d38703e64279f0f00c185514fbe4"
+    },
+    "159de158146b2cc8b2bc022aab84799b28922f6f942a2817187eecf0fe1cc09c": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "159de158146b2cc8b2bc022aab84799b28922f6f942a2817187eecf0fe1cc09c"
+    },
+    "171ff78d9715aa93a549e8b3b38c20470d4321829751e646e54fc247bf032ad7": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a2eb89a806552baca0a332d2beca41149de4f41d74df34fb15ee01d527672a81"
+    },
+    "ced8e5ae36cc870a373d2d3527abeb62f702542ca7b3d6031b9b37756a5d3359": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ced8e5ae36cc870a373d2d3527abeb62f702542ca7b3d6031b9b37756a5d3359"
+    },
+    "32d51157c0b228c1144c912ab07dd9f8034382d918fefbcff191bbd2c3c8ba58": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "32d51157c0b228c1144c912ab07dd9f8034382d918fefbcff191bbd2c3c8ba58"
+    },
+    "67ee420a717692d2b62e84e65e5c46be8eb27d3d396aeae9ea8ec08423d3ad4f": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "67ee420a717692d2b62e84e65e5c46be8eb27d3d396aeae9ea8ec08423d3ad4f"
+    },
+    "9601fce0af44ad228e258d83979e66eaabc0bc7148526f9b6419392205949800": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "9601fce0af44ad228e258d83979e66eaabc0bc7148526f9b6419392205949800"
+    },
+    "8ffce7ead518724eb0abc03719e0dfb50fde79b0e111db4eb82c56f089da5c2d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "345a00cd0560a4ddd0540bff1535ef9af4a2d027f3de7acf6233cd5a707bacbd"
+    },
+    "c8d17fbcd9c869e4c3928e7fdb8c0767165b16b4042bbb3f7c90f81ef3becb13": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c8d17fbcd9c869e4c3928e7fdb8c0767165b16b4042bbb3f7c90f81ef3becb13"
+    },
+    "0b405815b44273d5ae6d9ab0778f7f0d8abf5a5b9994e9f8b3ae5c9b81cbe904": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "0b405815b44273d5ae6d9ab0778f7f0d8abf5a5b9994e9f8b3ae5c9b81cbe904"
+    },
+    "cc8b13181d21c221e17e8c80ad80dc7733473e6dac9f766ac749a57007860e9e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "834986d05569846b4bbe606bb4c0b7e838fdee4a3e13cb091ab3293db76aa378"
+    },
+    "61c238a85cbcecbc258b3cfc05ea4e44e9fad0ba7bd8de6b9729fbb6bcd8a839": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "61c238a85cbcecbc258b3cfc05ea4e44e9fad0ba7bd8de6b9729fbb6bcd8a839"
+    },
+    "63c6e009d2ac0afdd0550a862be0a9942a9dccfcc106a3ad28c9cd28aad15ee7": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "63c6e009d2ac0afdd0550a862be0a9942a9dccfcc106a3ad28c9cd28aad15ee7"
+    },
+    "7609d0702119951fe4f3903a7d4507606a67299637af76983a5ccf6f5b08c2fc": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a9cbe70c4dbb96c4b3bf36991f885f2e7e277b461cc29a7af08642e9da1d0dfc"
+    },
+    "49fcb0912e53756165b79213208b438343fa69e9428ca394c35a68da8444cde1": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "7dd7c3e694cf3115e0fb52f79149da333afc9eadff815871bfbf2a77e0f09c06"
+    },
+    "881edff0476970a1051c24bc4cb2e6a6ffe18a80a2c47ede31c2aab672446f65": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "b33717888b5a3edbf29156e3cc62fbeefe55f01201f687d7452cc0a04e1465db"
+    },
+    "116cd51dfe822ed382f590abcab3c2c04fd5f87281eebf1b3ea1738eaa7228d8": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "116cd51dfe822ed382f590abcab3c2c04fd5f87281eebf1b3ea1738eaa7228d8"
+    },
+    "2946b0693844a389795e3f90b03ac8a4b079ed62def84b5f5cd38b87c1469369": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "6a68aee6e8be881ffbf187faefa5a388bcba5442ad91299c9d366f4729d85bed"
+    },
+    "565cfed122ab78e6156002dd83c5c58f346d64e04e6769b1a2d5d8e979704193": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "357b512085b4cea87c5cdd5e80978669032ea26d764f2eb5ca6f046e845d8a64"
+    },
+    "040907e56627d3f3752ff5dc1f1cd99b8799a9488954e46254389264c92c1f9e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "040907e56627d3f3752ff5dc1f1cd99b8799a9488954e46254389264c92c1f9e"
+    },
+    "18121b964045ccbb6ed1838ad4bb95d1b0bb90d93b0ebe763ff441122c381ac9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "18121b964045ccbb6ed1838ad4bb95d1b0bb90d93b0ebe763ff441122c381ac9"
+    },
+    "cc671ef0b87e74c512898e7ad8bd4872bd536897446efac2e5a891a69c217f51": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "654abf50eafa041e9e4c885e42abf5d4572a5791414e057a7d8b1ecf2f164ca4"
+    },
+    "f3d3b5203da705a56ff2b8deab8ab25ac50766c9e43203101588b198a4926189": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "f3d3b5203da705a56ff2b8deab8ab25ac50766c9e43203101588b198a4926189"
+    },
+    "2cd745121f04dd56a6ab1eb20af4f810d68603033bc6cf8e10f0b473e116ec9a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "2cd745121f04dd56a6ab1eb20af4f810d68603033bc6cf8e10f0b473e116ec9a"
+    },
+    "cde934c17f57c71950da24abad9b04befa1f990d7ff652275b7be992cebdb2ed": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "fd2f8fc447257613d6e5f4acdce571c5c9deace9977d9c5512eb3f84ccdd48ca"
+    },
+    "a92c57757f64113cfb0f499c94f0245d622bb4934ed1e8c233c49df9af880474": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a92c57757f64113cfb0f499c94f0245d622bb4934ed1e8c233c49df9af880474"
+    },
+    "16a98015c354623289f158c4e5e23dc1af18820b35a2f08a52dea0eaa4b96bf0": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "7c52d050719964cd64a4e59f9006bdb43dce8197dda5452819236a84700f7548"
+    },
+    "038b512b79a85c82a7fd3d18f2dfc32ca47e7088034ef3d061a810f63c1dc209": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "4e725095e323308d59b04b6fcd9dab9018bfa7d37aaaea197eed8b658e46f078"
+    },
+    "454796efb24031555e1f54eb4324dd9cc5e1a84d068cf104bdfde70ffda1d423": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "454796efb24031555e1f54eb4324dd9cc5e1a84d068cf104bdfde70ffda1d423"
+    },
+    "a136c7b07b9592990140eee691c4fe9b8187ea4a5aed43734a1bf2bc9070b17a": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "a136c7b07b9592990140eee691c4fe9b8187ea4a5aed43734a1bf2bc9070b17a"
+    },
+    "1e68a7b78fee16b6f7671157b8ab3297efd56d0bfc937ef86ff045985973398b": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1e68a7b78fee16b6f7671157b8ab3297efd56d0bfc937ef86ff045985973398b"
+    },
+    "f60afdaef0b2f256a08c4baa830cb3a570981ae076473b2fa17eba5494cf6a71": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "f60afdaef0b2f256a08c4baa830cb3a570981ae076473b2fa17eba5494cf6a71"
+    },
+    "4920509e2ac4f529fce78fb890bd6b6efa7f7a06749f9fc565a98843ec0b2aed": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "4920509e2ac4f529fce78fb890bd6b6efa7f7a06749f9fc565a98843ec0b2aed"
+    },
+    "fc1de4ab36b894f2ec5e555e48f5a819bda2209c074d46576866a83bf1c3b9b4": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "fc1de4ab36b894f2ec5e555e48f5a819bda2209c074d46576866a83bf1c3b9b4"
+    },
+    "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1"
+    },
+    "5e72a2089450c2134a4ca3ab6790b95c5f03fa701095d74e1a6718dfe4c5b829": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "5e72a2089450c2134a4ca3ab6790b95c5f03fa701095d74e1a6718dfe4c5b829"
+    },
+    "14f21045cf587a689263f604849bad8586050e498a6711e555ccae5d4e116198": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "6392f39519eb11bd2de55b627877600030ce136c57f850d6b749952904cab8fc"
+    },
+    "80a309fb688afaa55a8e290cb4c3d4851c7f5d934caea6d1896142143d7c2eb9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "80a309fb688afaa55a8e290cb4c3d4851c7f5d934caea6d1896142143d7c2eb9"
+    },
+    "dbd3e6a5f10d9de48f5985c373bbc3f851e23b059c778742b440ec2b12a71401": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "dbd3e6a5f10d9de48f5985c373bbc3f851e23b059c778742b440ec2b12a71401"
+    },
+    "a593e495fcb34c6804d2a02086a49b5365bb16ddff89c425fc6142ee80e1f7fe": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "d17268e96009519cea4b96d71b508a42104ac057c661f21684d3c626f8ebc5f4"
+    },
+    "146db9c706c37e0c51665090a072821919fdc3b8d6e45c3d5c1ddd309f8bee81": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "146db9c706c37e0c51665090a072821919fdc3b8d6e45c3d5c1ddd309f8bee81"
+    },
+    "1461198b09b81eed8732e503590653854b2e432abd19e0148a004498c4752427": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "733bf5d91ca8a019d458c5dcd9f6f746256decb34397c68ca492e431c22c8ac2"
+    },
+    "2f38a696b5e4d0870175e65f4fa63a2b90c99614c53526acfbb18a27a705fe4d": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "2f38a696b5e4d0870175e65f4fa63a2b90c99614c53526acfbb18a27a705fe4d"
+    },
+    "8b6445cf17a9b6065d38fe3504205ec4f2b526a0ebf20e6c09ac3b12a2422c39": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "c17ce808fe83392d7edba765f3e5b27a8331ad74e46979e4dd8505adbf36d825"
+    },
+    "6a3ca5d3efa205fc21f352433f6ae3c5b65b2aaf259f21ab2668808a7ed04bf1": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "50608d6e2de8d4d98eb0d8efc5350ebe3fbf636b053246bc847125c62b2adbac"
+    },
+    "bd23366e5c50ebfaaca49b36c8d42d8c6386b0d2fc366cbdfd27917baacf0da0": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "bd23366e5c50ebfaaca49b36c8d42d8c6386b0d2fc366cbdfd27917baacf0da0"
+    },
+    "d7cdb5e3f74b90e0c991cb25bac17a2392915255aa4b29bcbe49d28a3f13c101": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d7cdb5e3f74b90e0c991cb25bac17a2392915255aa4b29bcbe49d28a3f13c101"
+    },
+    "788ae89f47456f2a404edcc9a86bdc1920f0fd2ba182a99b3e45118202d3c40b": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "788ae89f47456f2a404edcc9a86bdc1920f0fd2ba182a99b3e45118202d3c40b"
+    },
+    "616051aaa28af6b25fea3ff7ab378db9c2b855bff7388497cf2cd807e5fff0c0": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "616051aaa28af6b25fea3ff7ab378db9c2b855bff7388497cf2cd807e5fff0c0"
+    },
+    "371406f8edfeae344199e6646d565a516f3980afc0f4c11b6eb8cab130dec4b6": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "371406f8edfeae344199e6646d565a516f3980afc0f4c11b6eb8cab130dec4b6"
+    },
+    "e38f2be4df87b6ab5c9ef0de14ade6cb426864b05d9e1aa36294a1312f851449": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "3a300226f7eae8efc086b4b54d03d5fe986a7b404118f204144e9b1403377de8"
+    },
+    "1f1a9e8d54a53cf450ca07b5e16d512a43634b3a75aa912c96a6a6b17a3c4009": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1f1a9e8d54a53cf450ca07b5e16d512a43634b3a75aa912c96a6a6b17a3c4009"
+    },
+    "0f9c8852cf480cc13ff29db4ef104c01c12f6d78f23b946b0384455446871b5a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "0f9c8852cf480cc13ff29db4ef104c01c12f6d78f23b946b0384455446871b5a"
+    },
+    "90ba524fbb7b00943e54384184862bc6a5b1470311fc5ed72e9f94e8389617e2": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "90ba524fbb7b00943e54384184862bc6a5b1470311fc5ed72e9f94e8389617e2"
+    },
+    "2ac6bdb83abe1ab0111b09f2fe15dacb1de6c1dfa56c332ed71cc0a76dd72bb5": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "935017e2d72882a6929974a745ba5f8c26ae0b89fc258d9a206686d463ad6afb"
+    },
+    "a2de0ceed92a2a9a89c7ebb4c73bf7425b8345640a3a8887fbce03f3541fda29": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a2de0ceed92a2a9a89c7ebb4c73bf7425b8345640a3a8887fbce03f3541fda29"
+    },
+    "6f49186a086b4240ad9209e1c4249d0f569746c36d0dc888a9ebe380afbb3526": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "6f49186a086b4240ad9209e1c4249d0f569746c36d0dc888a9ebe380afbb3526"
+    },
+    "81f1667722bc48ea6e55f7e66cb5fac531d012301013935865d98d1bea18ba8e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "81f1667722bc48ea6e55f7e66cb5fac531d012301013935865d98d1bea18ba8e"
+    },
+    "8054cc8a17e2ec5919b66fe5c63e366038973e3f7773f9f894436785b081b6aa": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "8054cc8a17e2ec5919b66fe5c63e366038973e3f7773f9f894436785b081b6aa"
+    },
+    "e2f4cb61d92a5335617e2d2befbf3364e575c70156f41f9fd759d2fcac30badd": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e2f4cb61d92a5335617e2d2befbf3364e575c70156f41f9fd759d2fcac30badd"
+    },
+    "fb762a787e6c4fb6314330b1397e55332d939017af460de0f06979df19f859dd": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "d59d209ab1017f9475fa40f1e9f90e80ecb4fd959b0d9f51d56241a51a4ef387"
+    },
+    "c751b505920b16430f961f5d3a6f55358b593595e4b00f7b16a05a9a3800132b": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "d4e1e2775d62dc0bbca2359bc973648a778fef07bc37392205ee7ef7ac562511"
+    },
+    "5178b852f2832b28a4466fc5e54829cee12270b96ba19efc122a3904b68a1a0f": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5178b852f2832b28a4466fc5e54829cee12270b96ba19efc122a3904b68a1a0f"
+    },
+    "ae82fb14ac72aedbae77a619c0a85d0f57b23aabab27e47da0f210c223b0fc46": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ae82fb14ac72aedbae77a619c0a85d0f57b23aabab27e47da0f210c223b0fc46"
+    },
+    "7e95c077e5dfba5ad3b6435f7f4cf2914fed9acf0edfefa608f2be88999f8a92": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "7e95c077e5dfba5ad3b6435f7f4cf2914fed9acf0edfefa608f2be88999f8a92"
+    },
+    "723a8c7d920d3e2ad4d714591d556305f0f2f9d9cd7c3301d35582eaf4dd8ef1": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "723a8c7d920d3e2ad4d714591d556305f0f2f9d9cd7c3301d35582eaf4dd8ef1"
+    },
+    "d7ec3baace84211ed481abecb37ef88f17c1d554643831761527448de5d67b69": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "d070932ca3b9018a35584efa01df7a858eff4023378d49caed8d9bbbcec17263"
+    },
+    "64e8d5bd40c12a45e3354df39dbe3eab4f33a83c2f356e0eefbd777fb14503e0": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "64e8d5bd40c12a45e3354df39dbe3eab4f33a83c2f356e0eefbd777fb14503e0"
+    },
+    "8bb1054c289986b857d23e2e5a12cf6ac54c2ca9ccade58259aeb102a3b231b2": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "682454723ec423128e0f0bc064793e779ae5e22f4a149fd5a7e2df031d3b89d1"
+    },
+    "13916d08d3e7adcf8cd907a649241d7020bb685f69756a0be950c3146b64a355": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "37ddaca687e572cf7f1da37271b2f9670947325e58cbcd38c8e1213c7b105357"
+    },
+    "9136fe95b64db8d0f1828a82878b3cb04b46cd2be5450a09c567965485c9aba6": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "f36e1225035eb456e8ebc8d67f06ebc167118512c8a635dd001d87cca7a44c1e"
+    },
+    "62706ae15d9e69d8d98905206856131c7152e63a7f8ca3109c1819ae9ffffce0": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "62706ae15d9e69d8d98905206856131c7152e63a7f8ca3109c1819ae9ffffce0"
+    },
+    "cc48cda2b677082fdd1c73256596c81056210a6503dafab1f4ebbfedd8f2d829": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "cc48cda2b677082fdd1c73256596c81056210a6503dafab1f4ebbfedd8f2d829"
+    },
+    "9a0ca9e78e5e292574e53c4480e9b38081a85401a9aca1e1d9e23aa6f2dc04f9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "9a0ca9e78e5e292574e53c4480e9b38081a85401a9aca1e1d9e23aa6f2dc04f9"
+    },
+    "86e6dca22cb2fdf4c08fe55ee930141795d5f62cedff90d62bdb00a4c85fa3a5": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "422589eb7a5efd3517ee935acb8b9ec41a78e088ed660e7666ddf8e017626c82"
+    },
+    "cca82aac75758f0813fe82929a98d3593e115c418d99d5237eaecc44ec104ac4": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "d1db11da8b68e8b4dc5fb5f4c7ee918fbec2161fe8d6172e0a4ff53a625e451d"
+    },
+    "98baf6939a89c8b6fb834edd0051fb3a9532818c87c1199a3d31bb5168dbe61a": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "64cbb2bcd6fff020094af5b23a711671102a3293f72ac53fc01b184652e12608"
+    },
+    "2191640ea963f68609a416d636077487586f52c7a51b1c601fc30478213f4713": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "05e0e7d57354e4b441478495d26fa9e789d7248519645fb14f4ec60cc474be04"
+    },
+    "d146ea04890927f0b33d4ee237d860c11f3c8aa4b7865d9507d450e7b2e3ddee": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d146ea04890927f0b33d4ee237d860c11f3c8aa4b7865d9507d450e7b2e3ddee"
+    },
+    "01bda46730f90df551ace7b31fb46a69c4113239c1e598629d3e81c153a9991b": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "66dc965923d2afeeefcf2f3fecd4a45b80d9d74744d48d7439e8d74eabd36fe0"
+    },
+    "8f6d60049e255393a6572f50429d017c6c2d80ba4441bab3f64f7f61f94c6539": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "846e9004d095c199303b9648da96274e0c268fa1cfc8a8bf6395f42d69e8e82a"
+    },
+    "8f9f5f3092ec8ce40332862bb2af4003a94afda3bbe198d57b012e9267e8014e": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "cddcb8f32e5fdb45858543cb832e243c7443a11f6eda1d5b0ea5a7fc05f179f8"
+    },
+    "ffb2266b307c870000cc6c81d2ca0fd9217bde436565445a09e7df023d7d288b": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "0c33f5a14d7fc1c7e4526ab656b2354da9bb3a6fa134214ce9c246990ba8dd05"
+    },
+    "90a2d4e911ae446c073222cdc9f7075594a6f0104cf0d6c09906ccb0d267eb8b": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "90a2d4e911ae446c073222cdc9f7075594a6f0104cf0d6c09906ccb0d267eb8b"
+    },
+    "08f8155be616945027150f7444c8d4b16f30a3b1612f9c9716df05de5bda929d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "826a82fcf15fccc2ecd865a36478fa965f26b88fa2984349da5be910cf9d1cbd"
+    },
+    "1a462c9598b1f5284867f9a28002a0130dcb5715c12e344e701648b34d45d0e7": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1a462c9598b1f5284867f9a28002a0130dcb5715c12e344e701648b34d45d0e7"
+    },
+    "fc952f09ca6768eccda34fc8ba356e49aae1d9cef84460327d7a2944c01037ca": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c8585193a25bada9832e5b7b7b2f45778126cb6a18f8abf4cb7e90aa824126f4"
+    },
+    "46eeac4ddd9b0e2d519b3ee1eaee0789d6cfcb131a198c98a10e5eee14dad7c3": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "46eeac4ddd9b0e2d519b3ee1eaee0789d6cfcb131a198c98a10e5eee14dad7c3"
+    },
+    "9beb24286df9152334af8c9ad64575bc1a657bd24234b0c72321545388d6496b": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "9beb24286df9152334af8c9ad64575bc1a657bd24234b0c72321545388d6496b"
+    },
+    "f7efbed6dd8d10a830fd9d423c272d3628b12d15c88b93ad97835b3776c1e768": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "f7efbed6dd8d10a830fd9d423c272d3628b12d15c88b93ad97835b3776c1e768"
+    },
+    "ea4797b69759ac0af0c6fef826774145a21463c94d9989bd84d234d62bbaec66": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "c5e9d9aacf476a69ee676912a8b8cdf2dd6184afd3846d2dc6ad32473aa35a41"
+    },
+    "1bf2c0afd8eca51e5e8178f77fc7b03cf14c6540d65cde5697d01aab8b703fc8": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1bf2c0afd8eca51e5e8178f77fc7b03cf14c6540d65cde5697d01aab8b703fc8"
+    },
+    "e5c6f38da60368c14e2184dc55b031e93f25b8c8dfab7eb6b922d157d7908268": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e5c6f38da60368c14e2184dc55b031e93f25b8c8dfab7eb6b922d157d7908268"
+    },
+    "88fb5616be974db9254ae34d74b083f70437611605f73f8d264786109071f6d6": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "88fb5616be974db9254ae34d74b083f70437611605f73f8d264786109071f6d6"
+    },
+    "2b4057595b8c66a1554a0c2861f3ecd6bab5e2ec1885c46d9a8449ba2b5f3266": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "2b4057595b8c66a1554a0c2861f3ecd6bab5e2ec1885c46d9a8449ba2b5f3266"
+    },
+    "bc1211265b08d03cecc9381744569cd013ac4280f2cb2e169996c4f7106ef691": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "bc1211265b08d03cecc9381744569cd013ac4280f2cb2e169996c4f7106ef691"
+    },
+    "4f9237ba239645e60bbf86f9e90ac688bc2fe01c67755756eb4cdc54cbde8f4c": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "4f9237ba239645e60bbf86f9e90ac688bc2fe01c67755756eb4cdc54cbde8f4c"
+    },
+    "177ef269aa3e044d16640909d362f0013b2fc72d966423f03e66906ffedf1e6e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "177ef269aa3e044d16640909d362f0013b2fc72d966423f03e66906ffedf1e6e"
+    },
+    "c5aeedc96358ac5a6e4920297ffeb846e753418fd6f65cc8fd529b8395730203": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c5aeedc96358ac5a6e4920297ffeb846e753418fd6f65cc8fd529b8395730203"
+    },
+    "e24b3a9637cde41782d6390994e72ca086b9b8043ffbca8184803872e39ec77c": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e24b3a9637cde41782d6390994e72ca086b9b8043ffbca8184803872e39ec77c"
+    },
+    "d2955bbad35fc3ed61976b314e37ac7a865d27b083f5baed04888f6af99e1e64": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d2955bbad35fc3ed61976b314e37ac7a865d27b083f5baed04888f6af99e1e64"
+    },
+    "1f4c6987a3962b94291a4ccef0c973056864b975065be9de5f0a22dea8c0106d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1f4c6987a3962b94291a4ccef0c973056864b975065be9de5f0a22dea8c0106d"
+    },
+    "b20e60ae523dddf29f7b8070afdde2bc1a5036f364d639766ad9a68362a91e1c": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "b20e60ae523dddf29f7b8070afdde2bc1a5036f364d639766ad9a68362a91e1c"
+    },
+    "03fa52334a8f49f28c5404b05ba9e0ac935cec86ee032d489f0b088a77624244": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "03fa52334a8f49f28c5404b05ba9e0ac935cec86ee032d489f0b088a77624244"
+    },
+    "26a8ddd343ce4ae728ef55700298edfa00be7e08cf4f17c195f83e54a01d8b22": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "8e15d3feef7156cbeb7d5f697a96471f1e569026cd24d313d05273a22b7856f0"
+    },
+    "ac548048eedfbe09e6e975bbccce1e263174a051171d9f0a07cf96a10134aa8d": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "c9fe86132f09ef51595722d606f72d542e3c3d4cd81aa1ce446ba1209606980e"
+    },
+    "6dd4500e207a73ccbfe10ed13be25f36d3339612cb415b18edb874df7a00cb17": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "6dd4500e207a73ccbfe10ed13be25f36d3339612cb415b18edb874df7a00cb17"
+    },
+    "0a95754fe634979607221684b6914c931974cd3593161d7125f1e133fb31221c": {
+      "include": false,
+      "reason": "Non-programming content requested in code-like or HTML formatting",
+      "prompt_sha256": "699e11b7e9ce66954b3c46e2840be2ca2237ef1925fc261b003493023eef8ed8"
+    },
+    "cf290c5c921085770d6690eb2445d41979226b2a9d56c80af760f5b6829d3222": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "251271c97c17a6caacb407c91c832deab4323d4ca2c8f219390b0689f5bbf9f7"
+    },
+    "478091014d19df3b6fbd4f7034769a8e23bcea679135db12c6cd3d5a4b774052": {
+      "include": false,
+      "reason": "Non-programming content requested in code-like or HTML formatting",
+      "prompt_sha256": "3e0f7bf8c9e0a71a8dc29d3e3303cee6079826b26ac32f1c4e738b59301d689c"
+    },
+    "fd812a935a25de772742082345ac7173ada102296def980e05b3ad0aacfd27a4": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "c50da72478cb8f6230e774b9649a62d192f9d452a98b59de96e57517bf06a94b"
+    },
+    "12cf9a70af6cc13fe65760e2b7c82788ba969ad6ebbac3552784cf3f67b381dc": {
+      "include": false,
+      "reason": "Non-programming content requested in code-like or HTML formatting",
+      "prompt_sha256": "da8c6f7b91d265bd9a1557422417ec623e62c3e121e0d6f51d4d4861cb2f2b31"
+    },
+    "e84a769763dbecebf80184329390a3afc769f61c56a26169f0a7e67a3aa8d75c": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "6b0d64db7b2cb89b1ea918d13886c658063e1042c39ab1aeb7876400ef0d0ea0"
+    },
+    "5adf0a1d98a26b8ce60305d466bc402a6e0003958921241afe2d9a568c69a86c": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5adf0a1d98a26b8ce60305d466bc402a6e0003958921241afe2d9a568c69a86c"
+    },
+    "2f527fe997250027864fd37763177fbd807f07be071f406c684b8be2f03b126b": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "2f527fe997250027864fd37763177fbd807f07be071f406c684b8be2f03b126b"
+    },
+    "5c8fd81d44f8a5a803b732d087789b65497b5d4a8d6ded19f7493f993a61a3d9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5c8fd81d44f8a5a803b732d087789b65497b5d4a8d6ded19f7493f993a61a3d9"
+    },
+    "48b03b8c842e02e0d0e6fd235fdf5da314a06d0c5c8fdd7959262d5efd652616": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "48b03b8c842e02e0d0e6fd235fdf5da314a06d0c5c8fdd7959262d5efd652616"
+    },
+    "4f6fb32a8c7feb45e2ffd708ededf0dd439671f426a7e9faa854bd56de7a96ae": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "4f6fb32a8c7feb45e2ffd708ededf0dd439671f426a7e9faa854bd56de7a96ae"
+    },
+    "b7bd328b93b73c3e3f1d053a6d4a9eb9378a192473757a3d4013fab070430a51": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "b7bd328b93b73c3e3f1d053a6d4a9eb9378a192473757a3d4013fab070430a51"
+    },
+    "a53ecd4e2131bc31af5c890a759e36a861c8cfbbd56a7a105046505bea830952": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a53ecd4e2131bc31af5c890a759e36a861c8cfbbd56a7a105046505bea830952"
+    },
+    "e2353de078d39a877450dc4af46199895836e05db68a89f0b9f43e9eb8f9f8b8": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "869ea9dc9ecfe70e4b851792c52d97f095195ab83418ad1f5974776828379c5b"
+    },
+    "b12467f6fe419875170c5d6a0c5c1d7641cb87fbd11278a65736d7c3ecbf368b": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "1b33aecb6ca3e64e474a1a5c39eeb40d26652dd35921696950a6462077a8c27f"
+    },
+    "0b3a7ac9b000b202313fcb3851daddf4e21f5bdf2c012343376182f2b6ef110e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "046d32530d5917cc1df37c9bfc6704f3ac2836c4deaeff313c7ed3c3652d36e9"
+    },
+    "734bdf5a0e00756fb695a0ee6749cc4b24e2d58d2b7f2268df50860c77f722f2": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "cb9875650f7ea27d9c8e6a1db2340f79651de3088517597cd570b4b61d4189c1"
+    },
+    "785d885cbdf64cba153e28d0839b0ab303104c6e3f3d8431208c6a323c7b7cd4": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "773e0ef6f2c247faf08446f265ca2489895d5a2db1623a601b31e38c6f18e3c4"
+    },
+    "5e62805f227b8271caf0c96f1eeaaafda5cb8fdad50c1d37c02b2fbd34326225": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "decb21bbd85f60835d359b551f944b6aed5d548b8c1637f14f326ee60d42b8e0"
+    },
+    "e98725212d1e7ec9b58cc5ca856b8f853c5422b042d7dab85e3574265584a7f1": {
+      "include": false,
+      "reason": "Conversation mixes unrelated domains or distracting fictional persona",
+      "prompt_sha256": "fa69c2f230fb6dc7e3b79034c853dc9be13dd97e578f28bfc16f76af7ccf58dc"
+    },
+    "926042b053a24ad887bb96babc76002ad87a1ed79e7bde663509fbce8b59f41a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c0c0e6de1263ee8074da950bc432bc447ddc6684c51dd40be3d3273948b98ebb"
+    },
+    "0ce19b3af0db3928be332a8f1a5bf18f348989905f5e503ae6fd6689171da239": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "40c70a2ae2959a59de31664a21ba8ca79f8be6be5dccb89a1872c5fe17ae3f12"
+    },
+    "60e1b050209dff7c9bf97c967cd11350fae38d50889333cbe7db4e66246bc876": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "bb19b15e97579c1b08e0b712437c25b0f833df560d16eab3f5502c30cc2b30d3"
+    },
+    "e77f4a9136e7ce73a3ed3e0bd190c1b3aacab82e5b529622f47c538294daf8b8": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ad72216c4bbc452ec78eedaccc94d099d6b33714027c5dd8405018e58acfbe14"
+    },
+    "23157ad0d82a7fcfa646b583530d86a418b86fb742a5a95b19ed5f66bd2a3df3": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "260b5128d7b270194f8f20aa30962c7ccc5290c9fecd4ab23136351fd0228dbd"
+    },
+    "7a99951db04d59242c79ea5803178f9b84cb88dd7f98d1303f241af61996922d": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "9da5a61d567002b76a4a8cc9b9b75573d731dcd06856c7b5e0254803f6db0bed"
+    },
+    "7ac41431613044a9953eb090c92971d1c90038d085f31348d6306aa1e84dcca8": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ae2ef88fcfef066e90be0027d175c93adbe1e4a2b89da782e3f9787e973f088b"
+    },
+    "aa7d804f762b2304ad9330583432fba388697a261896e15720dd21e44a05f17a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a8394f4c63ea85cbac09e6d78130c6585dc0a7be22b53bbf2355559ea12b69ca"
+    },
+    "f1c5516774f079aa20d5b894a7dbb47897a31e439aa5c96591719929ad1fc9f9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "643887dde806cf15606133487900ed1d14c234578265fdfd374b7e89f311dbed"
+    },
+    "feb4a6c3140b2c460062469f0ab3812bf2084b6ab48f4e7404476b8eef748ea6": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "3940883c255a0c38362c2fc2b166839d0ad467921cd73a90badc3e27bc07e8ba"
+    },
+    "7494bd6083e68cd572da13f54c34dfdd0df1283a28e1667c56514b590a8aa4d5": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "50908a8ffce93be6d62e654dacc9cda6e5dc56fd16a38d5a1fe4d132e81cbab1"
+    },
+    "6fe4f31eba434c7f9bde392746f2788aabda97c0404a03876bad9abaa624eb36": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a3a75adc451a6da5d457012f62548958f2242c9b5333604a932b1e5a02589c6e"
+    },
+    "be0ba706cfcfb3f3592b46a28e874b42d5ac7e1f638e0a143480b3fa0a70c410": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "05aa4cdc1dd55d1a6600fac010418c4a76719d371fbdaeba9808421b638a81a2"
+    },
+    "97733480a97dafd370454b2d73ed5c1d8b292300a6cf8d8db0ad3305516cde76": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c9a19ff5464ea7efb1dd85a2517e251c6081afeae2e99fe871aef3505ff04f8b"
+    },
+    "4149f5702fb62f9383947506b7ae899930b9a2fc341ae2dc717d1f28f4982fbe": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "4149f5702fb62f9383947506b7ae899930b9a2fc341ae2dc717d1f28f4982fbe"
+    },
+    "f9f160be05f865a14ddcebf6dec9e64ad8e0e70570569eb9868f205f73258380": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d6ec0177877404ec3d9630d8e4c1f5ba3843f07c239201ba1f1ab90a4c3b314e"
+    },
+    "e80dcdcc0195008938e4c8af20d2a12b665fe84169e201d8bd29617e7c6b7a56": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "51fbdcaed9d22bdbc827fdc07fc2e8dbf6b03d996544923aedf30735b9a41781"
+    },
+    "9228cce96b303029e5b728ee1d98cc93c6110cf5644933f6a449c1791120495b": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "813df2688545b645df38e4ef2f3ace72226a3ca36d024de70a8a8d84a1157718"
+    },
+    "61de36ec2a232b908203e8f35d79229865b66d80cf6b1044130e56fd83a1f1a9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "61de36ec2a232b908203e8f35d79229865b66d80cf6b1044130e56fd83a1f1a9"
+    },
+    "ef86f3fecaa9322ec4b681cbbabca767730cee62c559597ce720ea868cc356db": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "bb6c23467132ac00665173dda46a34286ce3d58c48e639d4b2124827c1ae85d7"
+    },
+    "255a822b34dd69a2b7678d156b24854d252157839d8da4773bdbc23a9ec34ad0": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "6d2b7effb52288a0c7e0fed6bd758639cd30a2d69e9688edafaead7f5b4400ed"
+    },
+    "9195ad2d4dd3a2c1d47a19e3bf6ed453958a1c108ee9d213a5730507f7326124": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "56f8e0c42a89a54e42b33994efe2170a9c721b819efb0140608c43242a0a596c"
+    },
+    "8fe2117dfdb065a53dc89b8d77e48a9ffbe6e729a4cdbd7bc2f281c6beae8754": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "31cfe44a6b51d6737b0deb1855c386e927c9fd37edf6588b1f0d9c1a23e66abd"
+    },
+    "1f1049ee2ae8bd6793c6443273ae174f81a25ab0f51aae5f791e7f34a26d429a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e62fbd0e870df5a0ea51cd68f33c57c1fce8516769f2a455f918e1800d71184c"
+    },
+    "b7f7c42f26715500eb33d545caa68195656bbb389d847f20cf51dfce35ad360f": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "b15afcf8f4c30ae7d823e9669f6071f389b3618594df032681b3ea77b82cbfdd"
+    },
+    "eb677cae89e20c857e5c71b6e1e4051ca0041107e7e2322c3e25ff1d4950f50b": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c6466663e652ce755fe9a702c78f564f9fdc6840c79c59a1395f7abb2045a1f0"
+    },
+    "f6bd80a59fdfa08dcf64ba861dad5c17efc9a048eff88ea7ca9a63ac05225690": {
+      "include": false,
+      "reason": "Conversation mixes unrelated domains or distracting fictional persona",
+      "prompt_sha256": "cab36173224e66ab36127f6adc2ee3f6baca4f27f0a0c2d5d2d0afe3f33aa1d2"
+    },
+    "9a1edc24c15a63500c6fd69ef72c6ebcb7d28799eed856596f5286c5a275f140": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5bc3150fc7c6d9ca4f1ea17b8bc08f51a40876a19476d41aa974d9e0370103ce"
+    },
+    "3022efbabf1c0d3548e21cc723519dc9dba894934dfb77ca36dd400eb1a6e83a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "823748c3532f70b2fdf3f9a96cf56ec5a0797727721577a1a4d05b847df53026"
+    },
+    "cdafe8446ea0054c4af03362b0dbca78c394c6e9ad547e83e8adca39161a5ad5": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "7c578c478b2755b12f61d15bac93e51c0201d7e0c60634d7b6a1df63f1ae38c5"
+    },
+    "1ecd232fc17c0964c14bfb94a60ab0192640a4f9299d122b085cdf6f43d8c766": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "be6465f63c5b080264c10c3709d0f7a465fbc51152a8bf7e12c5d5e3d76322fb"
+    },
+    "9b21b486e6b3fd155ff4217fae4e8abd33ed5f79307718fb58504200d5fa9012": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "aabe40c816211508dcefd992054fa3b81a7097f90340c381f449448602090c34"
+    },
+    "af4449570d4035f4a7bb8e9ba66721aa2d2d896818568bee318e6ffc5ba598d8": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "4ab4e85c7f0a1382233e1658ba7c986de2263f45870a28cee595350685221b00"
+    },
+    "5e6da5b67ab8691deed230ed4fbaa75412760acfea229571f87a66419228d9f8": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5e975be479548041ed521ec8665d0f5d6d1e942213997c7ca60b0c0360189e51"
+    },
+    "8e413b5080343954ea7c684fa4ed3f3759782c566f9d8e85b0d8e55fb8bebc12": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "8a45754f83ca4083cbe0b4daa5f3d6eb6bc45327a5a5c5c8f90a89766d68ef15"
+    },
+    "c7e93111ba0b5a5c994c28d065fe173db7b1e970c316acdd7924a2fd183efade": {
+      "include": false,
+      "reason": "Mathematics, ML overview, philosophy, or machine-tool topic without implementation",
+      "prompt_sha256": "592bc943c1a1774427beb330174274e1b08ee6fdf4ba40ef8a377a2ab0b2da7d"
+    },
+    "e422ef64923074bda4d9e23b09b9300f406a26580d52926b4fa42fe38f9f958c": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "84b1b3050830ded850f212d9b01be24374c77f47431454f45a5dc2338f6e7f9b"
+    },
+    "37118689166f42fbc0611bb75d799edb65ee01080765b807ef8535a8bcc6cc9e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "0d8a2dc292df6b3ab08852ce475699d8808fdd646d532be2bd325d9cc66ab90c"
+    },
+    "b25a030c91ec158ba5e7950c129d6e7384f2540bd93de6d91e7f30569de06a99": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "b25a030c91ec158ba5e7950c129d6e7384f2540bd93de6d91e7f30569de06a99"
+    },
+    "3d4df2ac387b5c0688d05301f0f3c9347b1cf68f3a6631cbe98e32523fd01087": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "3d4df2ac387b5c0688d05301f0f3c9347b1cf68f3a6631cbe98e32523fd01087"
+    },
+    "834f073bc98d2d588a1b4dd7407c5c7a3267678352d58128c95a95a6a8c4a538": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "834f073bc98d2d588a1b4dd7407c5c7a3267678352d58128c95a95a6a8c4a538"
+    },
+    "81a96fdcf8fa8733d5796fc35ba991ce070b07059aa7769fc9a85ee34983e9af": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "bc872657efa4a48413440cca4746095743dbdac586f20f60cc26674402c78cb4"
+    },
+    "b3074a0fcfe2de77a8d918992c633e01335b1050051a1cd01c5baea8cf61c056": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "b3074a0fcfe2de77a8d918992c633e01335b1050051a1cd01c5baea8cf61c056"
+    },
+    "a6d04fde885662209c3338987b6fbffbb249d0515c52989b0bd4116c04f9ce73": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a6d04fde885662209c3338987b6fbffbb249d0515c52989b0bd4116c04f9ce73"
+    },
+    "acc13209890f3559ad6e701013e13fd1356d74bed9d333ac9de508ebc484c6e9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "acc13209890f3559ad6e701013e13fd1356d74bed9d333ac9de508ebc484c6e9"
+    },
+    "81d42c53a3abb8109ce0acb41c62ff5f975e41e45ea02920d6e3541119f9adf9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "81d42c53a3abb8109ce0acb41c62ff5f975e41e45ea02920d6e3541119f9adf9"
+    },
+    "e601a23abbb31a521090373bd5fc3dddb6b7f1baa264253fd5ca56e37fa50a0c": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e601a23abbb31a521090373bd5fc3dddb6b7f1baa264253fd5ca56e37fa50a0c"
+    },
+    "166e2b66a3571cd0556421347ec1625b2ee1988c220df92fc95609c1d1a78ebc": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "166e2b66a3571cd0556421347ec1625b2ee1988c220df92fc95609c1d1a78ebc"
+    },
+    "2902360b8e83da18412bfe7f3a351dddc614a16d1456a885872c55308c7d61fd": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5737acdbe1b24025a5184e25598b2c4a3a69717201cb8ca3a12f8ba98a942d62"
+    },
+    "9f0204b423f6de762614ec16f1cb49f49a08e0bb4ce4f76acdbe51193bce8ad5": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "9f0204b423f6de762614ec16f1cb49f49a08e0bb4ce4f76acdbe51193bce8ad5"
+    },
+    "ab16326178508f4491e3fc3813a769d2b8399bc84443579bfca5d6e3db60ac26": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e12c8a1051da16f77f18fe3393f8652101f547f9135d04c9a10a337f8f409a6b"
+    },
+    "ea23f5a36c4447d62dfa2271b4700e9e801d152149ef23d2bf46fbb8e800fbed": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "ea23f5a36c4447d62dfa2271b4700e9e801d152149ef23d2bf46fbb8e800fbed"
+    },
+    "9b16a99e9b574247e449aabe3650da73c508c9d9c00802d952c8a3ecf92b3384": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "9b16a99e9b574247e449aabe3650da73c508c9d9c00802d952c8a3ecf92b3384"
+    },
+    "8dd39ce13f7cbdc441f2de562e084269e6840d216b5aa53f04e02d133214a61b": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "3c71318e819d644aa0730f3bdc6fb32b6ce24f778f4647d8bf3dbf4ea5a8f200"
+    },
+    "1f3a7a42fc21ef5c999666f052fcd204a0dae4e212d04018396537d20b644649": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "b2a0f6899af7bd73b1334aa16a71f674615ae60e1410a525413b5ea6894914be"
+    },
+    "b5ce60d3a077ffa48b86e855c6b6dbc0d232373797e270f3361f147a12346a01": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "23d088f0d5e627fcde0cce446d2eb25055724569fddaaed4634dc58061e89058"
+    },
+    "96b7e1ae4144a668eb623d5bb34e9a5b00b5f42750c3622e0a26b696aac9584f": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a8ca05b5a2dbaa779288a8bd34e17022985f2a18fc4aa134e0f351a637c79094"
+    },
+    "d088cf9ddbb67eaee2140e092c682d5ca8cf1433c2170fea50049aa7a1b17e2f": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "49561c1b31bc243f5fb93a3a87751c733114a84022bab8cbd7b11b0311c5c92b"
+    },
+    "7c2b39b7c07363ab9b89623c68e8010b4fdfa4a4fa5a008005a564249aff0bbc": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "935944e3ec85290adde4e4793f3fda36600769b4da0b0a416910bf6441cfb084"
+    },
+    "b365f8f444520542fd579b87033facca42700f9ace3ddfc4aa4fcab2df1aae3d": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "b365f8f444520542fd579b87033facca42700f9ace3ddfc4aa4fcab2df1aae3d"
+    },
+    "c302a0fd41a8d02999db239dc2c38c37f084f685876a721601dbcb71949e348a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "aec5f19869e5f8afe73326fe635befa98eff99f04db6dd80032cd406cbba23c2"
+    },
+    "8273c9e8fd8f933fba77afe7fd53b943de47466393233adf1e626103d9e53817": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "8273c9e8fd8f933fba77afe7fd53b943de47466393233adf1e626103d9e53817"
+    },
+    "90787493f6cde7ef0129eef75ce537b46b1f39b598f169886fe8c283bf7e38cb": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "822fa98034376e3f879e13da2130affe120a5aeb94081c95737e95b16447c176"
+    },
+    "9caa3bf75279cefcb492d86442049dc3b67c988d4eafdb8cc5b354eb0344ebb8": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d82e2790b7f41064c18b846c833833912a3bc651018ff4e9bdeb2b67577f866a"
+    },
+    "355dcda4c11a4ed277d056950095e78fd05c6882526c10b8c8ba6af345a2d8a3": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "8a57fac94d60de5804a7e2f1bbdde18a5c19fc6f18b1a1f96bef4e2f80612853"
+    },
+    "f6662224edeb9fc53f7c430f9fea1e7f9661d94517f4ad63ab33af08daf3e907": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "734c5713f8d2044f3e6f98adb944d003d200719cb73d6b6417b1177efc3b17ed"
+    },
+    "e67324e2bc11f5dee55626b8b7b1e5ee1e406060c878e920afb733bb21e433ac": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e67324e2bc11f5dee55626b8b7b1e5ee1e406060c878e920afb733bb21e433ac"
+    },
+    "29e910c58e6fd1174f6aef5ca15eaa441a15ad2c252bd8594157bfe82fdca10b": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "29e910c58e6fd1174f6aef5ca15eaa441a15ad2c252bd8594157bfe82fdca10b"
+    },
+    "20953c838e7838ef4ff1531362543d1d8a4ccb6419aa9165bc27d308d692c097": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "9fa1f74316d0a261c70f3d0edc43f5d897a777b67cdb25b6063711a8ab8979e5"
+    },
+    "755c06bba77aa5235f3bb8a0ae7669cdbda2653c6bffe6c30558ecb69168fd78": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "755c06bba77aa5235f3bb8a0ae7669cdbda2653c6bffe6c30558ecb69168fd78"
+    },
+    "7277cc01429711c98791a3d23d652adcabc54efba06a46bd6671902cb764b2ae": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "7277cc01429711c98791a3d23d652adcabc54efba06a46bd6671902cb764b2ae"
+    },
+    "088ab0686778bd0304c048bc9da395b92bc7cffb62c7d440e42e68547482bf09": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "088ab0686778bd0304c048bc9da395b92bc7cffb62c7d440e42e68547482bf09"
+    },
+    "01308aae754535c73dd9ea842dbbdb8d9acd66c9ed539a7e5c91f6e5998b89ab": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "01308aae754535c73dd9ea842dbbdb8d9acd66c9ed539a7e5c91f6e5998b89ab"
+    },
+    "864500cb76af8a30a5bbcd0037743e1834c9aaafef33af974f476eb8d8910590": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "864500cb76af8a30a5bbcd0037743e1834c9aaafef33af974f476eb8d8910590"
+    },
+    "fd2a3f6a42ac79b14fa564175e6a186144e97e8bf7b86d5d902af67e47c810b0": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "fd2a3f6a42ac79b14fa564175e6a186144e97e8bf7b86d5d902af67e47c810b0"
+    },
+    "06f8cce91e48354b52630957314be093c4b8f34c54d629b6785922bec2641e94": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "06f8cce91e48354b52630957314be093c4b8f34c54d629b6785922bec2641e94"
+    },
+    "3ce095516857adcd409949dcb174d3416c5869449eb6f64a1e50296cd7c35c84": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "a220c35e52c0b18eaa1d0a3faf421b128755568f77f00ce5902e10b9f983edec"
+    },
+    "5dac3b39aaa50b49b579393c702bb4643a8dc1c1ee8a84264a6955a04569cd95": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "5dac3b39aaa50b49b579393c702bb4643a8dc1c1ee8a84264a6955a04569cd95"
+    },
+    "90c1f7a90da127eb8d1c637ffc66845f36eec917f941663e2d44823780793345": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "90c1f7a90da127eb8d1c637ffc66845f36eec917f941663e2d44823780793345"
+    },
+    "2e6a70ae57a05e0ea241c494024dfa1ed302d333aae195c50dd965ab0fcedff0": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "2e6a70ae57a05e0ea241c494024dfa1ed302d333aae195c50dd965ab0fcedff0"
+    },
+    "52a0e46463e74f0118444827df73b326f17c03893e92e018242098502df83c6a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "52a0e46463e74f0118444827df73b326f17c03893e92e018242098502df83c6a"
+    },
+    "fcb8e96706adc1c8d2927f46010a963530664fe283e2e909c589a36581f2339a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "25c4ddfb40aee8a9c48d2c80ec4437e2f2ba6abdcb0ad2cb8cef5f7e168ef5f6"
+    },
+    "c9cad3a647659c712e9235df493c8e13517687133037df29727609395ac8983a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "81707f46b06a652d5350c9dc64f69aaebcacc7017fee4621d9d5ef0ae910b305"
+    },
+    "cd24bcd2a365ab7c05de4ed832e306b898ca23ebbeb5b38fe7d47f6a2c6416d9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "cd24bcd2a365ab7c05de4ed832e306b898ca23ebbeb5b38fe7d47f6a2c6416d9"
+    },
+    "29fc393b9adbf5b990d389addc758aa38aa669a63bbf825979d02816fada5cfa": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "29fc393b9adbf5b990d389addc758aa38aa669a63bbf825979d02816fada5cfa"
+    },
+    "6fd7f6c630451fb6ff0ef92f9d6f550b3319fa8136ae3d334bc91fbaa894d102": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "df4afb4e0fb38d92c3c27e3c9af49207d0f6c0b48c74dbda2c078ca39a5819a9"
+    },
+    "802a7d6cd421434226b673f4f4652e81c52d35e7e78f57c9f7da98740800028c": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "802a7d6cd421434226b673f4f4652e81c52d35e7e78f57c9f7da98740800028c"
+    },
+    "4acfbc38b3e40a27db79b2e27f789dcdab3e989fe8be70e23ef7d8e251ae0169": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "4acfbc38b3e40a27db79b2e27f789dcdab3e989fe8be70e23ef7d8e251ae0169"
+    },
+    "74f51906acc05eb78bccb0fc87aa981239964340b0ee07e71304dd56ce00ecd5": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "eab49afeffc11248a3870705884a3dbf3fbce01956f356b313813968dd6615cc"
+    },
+    "08e66fd24a294e262be1e331546546bd2b5fd5e930f1e0939e142bf86917c95a": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "08e66fd24a294e262be1e331546546bd2b5fd5e930f1e0939e142bf86917c95a"
+    },
+    "b2375a56ab84bd54c41fd74a2467750abbdd98e446d7795effd2ea913f854614": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "b2375a56ab84bd54c41fd74a2467750abbdd98e446d7795effd2ea913f854614"
+    },
+    "a0e50735945cea6ea2ce9a86ccbcd44b9d93d901edc311d7ae3d022151f28cc9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "a0e50735945cea6ea2ce9a86ccbcd44b9d93d901edc311d7ae3d022151f28cc9"
+    },
+    "f40779cfb3afc4606485693db09f8e61a875f59a94f07b705011005e431214fc": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "2ad486b097c48864d4d80ae3ccf2de57ade9afd64f9a6292fd02732b697d8dd2"
+    },
+    "d6f2b35ce207b380def33d5394ee97d765d76e58b5cb12841311b787afffde79": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "59fba4f1ae61b12f802c26857103305a0458181421df056ccf9577a995da7905"
+    },
+    "69a13b055a47ecf47a38b2c2964a60fc851c7a68660f5bdc206dd7ab62bf0542": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "69a13b055a47ecf47a38b2c2964a60fc851c7a68660f5bdc206dd7ab62bf0542"
+    },
+    "83c29979fa3c0cc06f839d8738a5c515fe367dbd9fc88dfc9f6f27fe345b3205": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "634f30b8450baeb97c9ebc340981f52ee5f1de9730c6e0276aad8037f2793423"
+    },
+    "d4d32775f651a2f0ce30c455848638f352f03468549f827fd4d2abfead0bff05": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d4d32775f651a2f0ce30c455848638f352f03468549f827fd4d2abfead0bff05"
+    },
+    "8031fbddced8fdc85702edc368ee48eb13f5f993ba8ae7db67ba8e49c836818e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "8031fbddced8fdc85702edc368ee48eb13f5f993ba8ae7db67ba8e49c836818e"
+    },
+    "1c6e84faf2a3ba144382c5846f6275a383e0dc5ad1ae0e8a18b1645aa499c2e5": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1c6e84faf2a3ba144382c5846f6275a383e0dc5ad1ae0e8a18b1645aa499c2e5"
+    },
+    "30913248d1e7f92bda8201991765e9da4ede12ecf0aefe221ce4b00d249da6a9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "30913248d1e7f92bda8201991765e9da4ede12ecf0aefe221ce4b00d249da6a9"
+    },
+    "dcbf0fbb438d697aa490830cdbde8b033593ae50774d0a244d3ece0830ea8f0f": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "dcbf0fbb438d697aa490830cdbde8b033593ae50774d0a244d3ece0830ea8f0f"
+    },
+    "908495fadbdfbb8533dab6d9dec705bea6ea15c38cb6fa7ace5343e7a610afd0": {
+      "include": false,
+      "reason": "General office work, product use, marketing, fiction, or copy editing",
+      "prompt_sha256": "908495fadbdfbb8533dab6d9dec705bea6ea15c38cb6fa7ace5343e7a610afd0"
+    },
+    "1913ec71f7e76523b54abd8c8dc000217a16f05da4185fdc12b25917c25db2d3": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "1913ec71f7e76523b54abd8c8dc000217a16f05da4185fdc12b25917c25db2d3"
+    },
+    "3ad799126520722346d2098ce8c3551c1402a553cc3ab1fbfa7dda4c2083f58e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "3ad799126520722346d2098ce8c3551c1402a553cc3ab1fbfa7dda4c2083f58e"
+    },
+    "d10075de1b3fae20add8933fd121c5309c45d07f1486754c0f05587201146c97": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5f8057a1ff7adb660dba9c91c18a16c7521b6fba093341c46ea5f51d8e35e73a"
+    },
+    "12f64c45210aa4d41e04c0d4973078c097a8c308d93ac7047b6fee1f62828cf9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "12f64c45210aa4d41e04c0d4973078c097a8c308d93ac7047b6fee1f62828cf9"
+    },
+    "2d8e6f071bea40975e7a92020dc8ea83a9f1ded3d27a1bc9d27e92ad8f471aba": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "ce22bf7d3a7e64784cc83b85cc790a77ee44fb7f5f1f8293763b022d0898bec5"
+    },
+    "51a100ca04a522e46e8c198739f3f604ae70122ff7d3c40e721c896a13e96bf3": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "51a100ca04a522e46e8c198739f3f604ae70122ff7d3c40e721c896a13e96bf3"
+    },
+    "df3ae18be9156fde6dec19130498d2c42bda2f2e38df6ed5fcb959dd8bc6a4a9": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "df3ae18be9156fde6dec19130498d2c42bda2f2e38df6ed5fcb959dd8bc6a4a9"
+    },
+    "a5f212ad7dbe5530860258978d7e29b81f619981b36da02c83062475d4c8459f": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "a5f212ad7dbe5530860258978d7e29b81f619981b36da02c83062475d4c8459f"
+    },
+    "d36f10f4c15da46d6c053bf550a61a1083059842e25cbc05e877770f71095693": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "13caa5ba0c985be7d00969a0666e8ca63ee11b648ea4ef2bf4b5367c214bbdfc"
+    },
+    "eeba3137d1266a53d51307328e6e8653d7f40d088c896ac048f256fc5fecdf9f": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "544a9ed70785bb020f3e342558c58558c75456352db775d4b4747f2765a5bf05"
+    },
+    "35dd85c747fe71c751fddabf0a3798f9f71024810258ab233f0638d22bc1b1ac": {
+      "include": false,
+      "reason": "Non-programming topic or incidental keyword",
+      "prompt_sha256": "35dd85c747fe71c751fddabf0a3798f9f71024810258ab233f0638d22bc1b1ac"
+    },
+    "5bc394ed77a47117a21964923fc99644ba132fbdcbfd0db6f9c959e6a97acf4a": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "5bc394ed77a47117a21964923fc99644ba132fbdcbfd0db6f9c959e6a97acf4a"
+    },
+    "c211373329fd27ba5b116e5d74e125312352a4f2914dac3a3f7034f2c7722a91": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "c211373329fd27ba5b116e5d74e125312352a4f2914dac3a3f7034f2c7722a91"
+    },
+    "bdb0704a273e5c6a80a08155fb45cd06e97a9bcd470c0e292860c58a58b926ef": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "bdb0704a273e5c6a80a08155fb45cd06e97a9bcd470c0e292860c58a58b926ef"
+    },
+    "5d18131567da56a31b53acb66175d3cf01eb1b0e67e9d9bb4481e772bb0e6f82": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "0db87decb5f40a37e861fff882340d0695b7270cee9da87c33948329309b6c81"
+    },
+    "da06df3456b68835c91da2ab7a93e8ebbcea53dcfd4b963346eb27eed69435f2": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "e1796b03743e7675a17ba08cefc5f9d295c48a763aca3797160d7d2f35e49881"
+    },
+    "1ace8003d51ff4bfc4f3e276f0d63a5058e3292010ad2f4822e628320f58d507": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "7ca3d23f1a20d18787629a5e8b5ea51d7eca907cf5a0f1ce5668632d75c42f75"
+    },
+    "a754bb0a1ae97b84f6d9475681dc01c8e286be56309ee23a140fd1d51636efe1": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "d81dc536ad83d497623ad58495f2f4e21d476e3dcfb1e88b14a6cb809d4b325b"
+    },
+    "362e77042fc0d733419e91a92baea50d84ed4550e2e925d33fbb61a4ac9dff7d": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "bccb4248f76e93295c7712d22e77726fd709dd0606edb0ded6d83507a26b2d9a"
+    },
+    "e213f788b2d5ea382f962e897aec310e3749579a36b1800948dccf8ccbc77be7": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "ceb1341831ac947bac1b1cf7ec50998530881d7bd706948df8498e57aaedb757"
+    },
+    "d95b53e0e69ff031f4ae03c366028b538a7402bc5ad6ef7c8f31339f98b55fef": {
+      "include": false,
+      "reason": "Generic role setup, acknowledgement, or greeting without a programming task",
+      "prompt_sha256": "2f48c616092457799f00256d098a8cef58589032f4ad3ec15b393532009d62b5"
+    },
+    "c0c5158477d84ee892a4ff95e8d2ad18b4d3357574de8c78a5625f35129ff216": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "e322afc073dba50c79f427ba19808cdc9acbef0249e1394277b3f0a2e98c63ec"
+    },
+    "89ecc7bb1c5769ab47bf094a3bbfaa97354281b9feb07f156cebf5ddb48a336e": {
+      "include": true,
+      "reason": "Programming task, developer tooling, implementation, or technical explanation in context",
+      "prompt_sha256": "059b76f61c4e447ea2b0b88b06c3ccbc8d7234e7018eb15883dcc7164966e132"
+    },
+    "041f1917822ea483cef969984d5c37b72de6a3f9aecb934d5fa63187c156c5b4": {
+      "include": false,
+      "reason": "Career, recruiting, management, or business writing",
+      "prompt_sha256": "034d42645dd3b79d199a8f00ef0e210f0f658935abc297607622cc8e73432bf4"
+    }
+  }
+}

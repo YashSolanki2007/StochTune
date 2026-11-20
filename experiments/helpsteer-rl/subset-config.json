@@ -1,0 +1,13 @@
+{
+  "steps": 200,
+  "warmup_steps": 20,
+  "validation_every": 50,
+  "checkpoint_every": 50,
+  "train_budget_seconds": 2400,
+  "validation_prompt_count": 8,
+  "test_prompt_count": 16,
+  "subset_train_prompt_count": 128,
+  "experiment_profile": "subset-check-before-full-run",
+  "reuse_existing_reward_model": true,
+  "subset_allocation_seconds": 6300
+}

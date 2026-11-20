@@ -1,0 +1,5 @@
+{
+  "center": 2.3045746177755375,
+  "scale": 0.9505614016920908,
+  "transform": "sigmoid((raw_score-center)/scale); not human win probabilities"
+}

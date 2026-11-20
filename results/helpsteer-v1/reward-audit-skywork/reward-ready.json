@@ -1,0 +1,13 @@
+{
+  "path": "/gpfs/projects/mathai/permuformer2/yash_data/stoch/experiments/helpsteer-budget-v2/outputs/audit-skywork-501413",
+  "audit_path": "/gpfs/projects/mathai/permuformer2/yash_data/stoch/experiments/helpsteer-budget-v2/outputs/audit-skywork-501413",
+  "wandb_url": "https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/qqvwmmf9",
+  "reward_kind": "pretrained",
+  "reward_model_config": {
+    "reward_model_name": "Skywork/Skywork-Reward-V2-Qwen3-8B",
+    "reward_model_revision": "6f19fdefb933293d4898bdb59a96f7223d998659",
+    "reward_pretrained_full": true,
+    "offline_model_loading": true,
+    "reward_max_sequence_length": 4096
+  }
+}

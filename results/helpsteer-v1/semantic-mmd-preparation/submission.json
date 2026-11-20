@@ -1,0 +1,33 @@
+{
+  "job_id": "504124",
+  "state_at_last_check": "PENDING",
+  "reason": "Priority",
+  "checked_at_cluster_time": "2026-11-20T13:44:17-08:00",
+  "estimated_start": "2026-11-21T18:40:00-08:00",
+  "remote_directory": "/gpfs/projects/mathai/permuformer2/yash_data/stoch/experiments/helpsteer-semantic-mmd-v1",
+  "gpus": 2,
+  "maximum_wall_seconds": 5400,
+  "maximum_gpu_hours": 3,
+  "train_budget_seconds": 4500,
+  "distribution_objective": "conditional-semantic-mmd",
+  "distribution_weight": 0.5,
+  "counts": {
+    "train": 102,
+    "validation": 10,
+    "test": 19
+  },
+  "questions_per_update": 4,
+  "answers_per_question": 4,
+  "reference_answers_per_question": 2,
+  "teacher_generation_runs": 0,
+  "reward_training_runs": 0,
+  "wandb_project": "stochastic-llm",
+  "wandb_group": "helpsteer-conditional-semantic-mmd-v1",
+  "wandb_connection_verified": true,
+  "wandb_run_url": null,
+  "cpu_tests_passed": 30,
+  "deployed_encoder_parity_max_error": 1.4156103134155273e-07,
+  "original_submit_time_preserved": "2026-11-20T11:31:34-08:00",
+  "allocation_reduced_in_place": true,
+  "scheduler_estimate_is_not_guaranteed": true
+}

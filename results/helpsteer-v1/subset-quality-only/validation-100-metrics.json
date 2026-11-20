@@ -1,0 +1,10 @@
+{
+  "quality_reward_mean": 0.3172543731375811,
+  "raw_preference_reward_mean": 2.1541748046875,
+  "distribution_kl": 3.1247743039343345,
+  "unigram_kl": 3.1247743039343345,
+  "unknown_unigram_rate": 0.30786960816595327,
+  "passages": 16,
+  "terminated_rate": 0.5,
+  "mean_word_count": 189.8125
+}

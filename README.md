@@ -2,7 +2,7 @@
 
 Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
-This repository records completed **numeric SFT, numeric batch-KL RL, and Shakespeare passage-RL experiments**, including a two-H200 distributed run. The original mathematical overview is retained below. The optional direct soft-target KL trainer is implemented but has not been run.
+This repository records completed **numeric SFT, numeric batch-KL RL, Shakespeare passage RL, and HelpSteer human-preference/word-distribution experiments**. The latest implementation matches **question-conditioned semantic embedding distributions with MMD**. Its job is queued; no semantic-MMD policy result is available yet. The original mathematical overview is retained below. The optional direct soft-target KL trainer is implemented but has not been run.
 
 ## What has actually been run
 
@@ -14,9 +14,126 @@ This repository records completed **numeric SFT, numeric batch-KL RL, and Shakes
 | Short passage RL | Fresh Qwen2.5-3B-Instruct; quality + bigram matching | 100 updates; 1,600 passages; one H200 | No clear held-out improvement |
 | Longer passage RL | Fresh Qwen2.5-3B-Instruct; same reward, broader prompts, DDP | 1,200 updates; 19,200 passages; two H200s | Higher judge scores; small reduction in empirical bigram KL |
 | Unigram passage RL | Same starting model, judge, prompts, and coefficients; single-word KL reward | 1,097 updates; 17,552 passages; two H200s | Better measured word-frequency matching; quality improved over base, slightly below bigram run |
+| HelpSteer subset RL | Human-preference reward model; quality-only and unigram KL with λ = 0.1 / 0.5 | 200 updates per arm; 32 final responses per policy | No convincing joint quality/distribution gain |
+| Corrected broad HelpSteer RL | Audited frozen Skywork 8B reward; 4,948-answer word PMF; λ = 0.5 | 86 updates; 1,376 training responses; two H200s | Quality reward increased; unigram KL worsened |
+| Programming unigram RL | Programming-only references; frequent words + OTHER; same frozen reward | 75 updates; 1,200 training responses; two H200s | Target KL improved by only 0.7%; quality point estimates declined slightly |
+| Conditional semantic MMD | Four questions × four answers; two human-rated reference prototypes per exact question | Implemented; job 504124 queued, two H200s for at most 90 minutes | CPU checks passed; no policy-training results yet |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
-The passage runs use actual on-policy REINFORCE updates to LoRA weights, not supervised imitation of the reference corpus. The quality scorer is frozen and received no human preference training in this project; these passage results are **model-judged, not human-validated RLHF results**.
+The passage runs use actual on-policy REINFORCE updates to LoRA weights. The Shakespeare quality scorer is a frozen instruction-model judge, without preference training in this project. The later HelpSteer stages use a trained Bradley–Terry scorer or an audited pretrained reward model. Generated-answer evaluations remain **model-judged, not human-validated outcomes**.
+
+## HelpSteer results and conditional semantic MMD
+
+The completed HelpSteer runs do not establish successful joint control of writing
+quality and reference-word frequencies. They motivate changing the target from a
+pooled vocabulary across unrelated questions to a distribution conditioned on
+each exact question. Full metrics, baseline/final generations, training histories,
+scorer audits, configs, and source hashes are recorded in
+[results/helpsteer-v1](results/helpsteer-v1/README.md).
+
+### Completed broad-domain and programming experiments
+
+Each column pair below compares its own initial/final policy on 32 held-out
+questions × four responses. **The two experiments use different questions,
+reference corpora, and vocabularies; their absolute KL values are not a common
+cross-experiment benchmark.** Both use λ = 0.5 and initial-policy KL coefficient
+β = 0.002, with temperature 1, top-p 1, and top-k disabled.
+
+| Metric | Broad: initial | Broad: final | Programming: initial | Programming: final |
+|---|---:|---:|---:|---:|
+| Optimized word-PMF KL ↓ | 1.9163 | 1.9923 | 0.5920 | 0.5880 |
+| Full-vocabulary KL ↓ | 1.9163 | 1.9923 | 1.0729 | 1.0674 |
+| Frozen quality reward ↑ | 0.5432 | 0.5674 | 0.6641 | 0.6585 |
+| Independent coherence /5 ↑ | 4.023 | 4.080 | 4.510 | 4.464 |
+| Independent readability /5 ↑ | 4.045 | 4.081 | 4.319 | 4.283 |
+| Independent fulfillment /5 ↑ | 4.055 | 4.112 | 4.614 | 4.541 |
+| Mean words per answer | 227.3 | 206.7 | 434.4 | 432.6 |
+
+The broad run uses 4,948 preferred training references with 30,078 word types.
+It completed 86 updates; its pooled unigram KL increased despite an improvement
+in the reward model's quality score. The programming run uses 228 reference
+answers, retaining 1,589 words occurring at least five times and preserving the
+remaining 8.2% reference mass in OTHER. It completed 75 updates in **1h25m38s**
+including saving and evaluation. Generated OTHER mass increased from 22.8% to
+23.3%, and 20/128 final answers reached the generation cap. Its very small KL
+reduction is not convincing evidence of reliable learning.
+
+The corrected policy reward uses frozen
+`Skywork/Skywork-Reward-V2-Qwen3-8B`. On the model-selection audit it reached
+78.75% non-tied human-preference accuracy and passed the predefined engineering
+gates; the legacy 3B scorer reached 67.14% and failed. This audit selected the
+scorer, is not an independent final benchmark, and cannot rule out upstream
+HelpSteer overlap. A separate Qwen2.5-7B-Instruct supplies final coherence,
+readability, and fulfillment ratings; neither set of generated answers has human
+quality labels.
+
+- [Original HelpSteer preference/RL implementation](experiments/helpsteer-rl/README.md)
+- [Corrected length handling, scorer audit, and broad PMF](experiments/helpsteer-rl-v2/README.md)
+- [Programming selection, frequent-word PMF, and OTHER mathematics](experiments/helpsteer-programming/README.md)
+- [Programming run on W&B](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/d6hs9j2z)
+
+### Implemented conditional semantic-MMD objective — results pending
+
+The new experiment uses **102 training, 10 validation, and 19 test questions**,
+retaining questions with two distinct model-written answers whose human
+coherence, helpfulness, and correctness ratings are all at least 3/4. It keeps
+the existing splits and assigns equal weight to those two reference prototypes.
+They do not establish the true frequencies of every valid answer type.
+No new teacher is trained or sampled.
+
+Let `X_qa` be the frozen reference embeddings and `Z_qi` the embeddings of sampled
+student answers to the same exact question. With `m = 2` fixed references and
+`n = 4` independent student answers, the implemented cost is:
+
+```math
+\widehat d_q=
+\frac{1}{n(n-1)}\sum_{i\ne j}k(Z_{qi},Z_{qj})
++\frac{1}{m^2}\sum_{a,b}k(X_{qa},X_{qb})
+-\frac{2}{nm}\sum_{i,a}k(Z_{qi},X_{qa}).
+```
+
+The generated U-statistic excludes its diagonal; the fixed-reference V-statistic
+includes its diagonal. The resulting estimate is unbiased for population MMD²
+against this **fixed empirical reference measure**, assuming independent
+conditional generation. It can be negative in finite samples and is not clipped.
+It does not estimate distance to an unknown population of all valid human answers.
+
+The batch contains four distinct questions, each with four answers. The objective
+averages `mean(quality) − 0.5 × MMD²` equally across questions, with the same
+β = 0.002 initial-policy regularizer. Passage distribution credit is
+`n × [MMD²(without answer i) − MMD²(full question group)]`; quality leave-one-out
+baselines also remain within their question. This is on-policy REINFORCE with
+leave-one-out credit, without PPO clipping, GRPO normalization, or a learned critic.
+
+The frozen, pinned MiniLM encoder processes every 256-token chunk of each answer;
+chunk vectors are pooled without discarding the tail. A mixture of three Gaussian
+kernels uses bandwidth calibrated from training references only. The original
+word-PMF KL remains an evaluation diagnostic and does not enter the MMD reward.
+Matching semantic features does not guarantee lower lexical KL or correct code.
+
+**Job 504124 was still queued at the November 20, 2026 status check.** Its request
+was reduced in place to **two H200s for 90 minutes**, at most **three GPU-hours**:
+75 minutes for the policy stage and 15 minutes for final evaluation and saving.
+The deployed preflight, encoder parity, W&B connection, and 30 CPU math/regression
+checks passed. No semantic-MMD training improvement is claimed before completion.
+
+- [Full MMD mathematics, implementation, limitations, and run protocol](experiments/helpsteer-semantic-mmd/README.md)
+- [Recorded CPU checks and submitted-job snapshot](results/helpsteer-v1/semantic-mmd-preparation/)
+
+CPU preparation can be rebuilt from the pinned public dataset. The embedding
+checkpoint must be cached before the offline semantic preparation:
+
+```bash
+python experiments/helpsteer-rl-v2/prepare.py --raw outputs/helpsteer-data/raw
+python experiments/helpsteer-programming/prepare.py
+python -c "from huggingface_hub import snapshot_download; snapshot_download('sentence-transformers/all-MiniLM-L6-v2', revision='1110a243fdf4706b3f48f1d95db1a4f5529b4d41')"
+python experiments/helpsteer-semantic-mmd/prepare.py
+python -m unittest discover -s experiments/helpsteer-semantic-mmd -p 'test_mmd.py' -v
+```
+
+Preparation never submits a GPU job. Checkpoints, optimizer states, credentials,
+downloaded models, raw training caches, and local deployment archives remain
+outside Git. Results retain the pinned HelpSteer2 attribution and provenance.
 
 ## Unigram versus bigram passage RL
 
@@ -293,7 +410,7 @@ The following retains the original research formulation. The completed implement
 
 ---
 
-# llm-random-number-generator
+# StochTune
 Trying to make a LLM that can potentially generate numbers pseudo-randomly from some target distribution
 
 

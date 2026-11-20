@@ -1,0 +1,38 @@
+{
+  "cpu_only": true,
+  "model_predictions_computed": false,
+  "policy_training_prompts": 128,
+  "reference_answers": 4948,
+  "reference_word_types": 30078,
+  "reference_words": 1202701,
+  "old_reference_answers": 128,
+  "old_reference_words": 13194,
+  "same_human_test_answers": 32,
+  "human_test_unknown_word_rate_old_reference": 0.19411595038938564,
+  "human_test_unknown_word_rate_broad_reference": 0.025670608595327372,
+  "reward_validation_pairs": 372,
+  "long_reward_validation_pairs": 77,
+  "length_matched_non_tie_pairs": 73,
+  "human_coherence_distinguishable_pairs": 146,
+  "human_preference_baselines": {
+    "non_tie_pairs": 280,
+    "longer_answer_accuracy": 0.6392857142857142,
+    "training_majority_direction": 1,
+    "majority_direction_accuracy": 0.5678571428571428
+  },
+  "output_token_cap": 1024,
+  "reward_total_input_cap": 2048,
+  "independent_audit_input_cap": 4096,
+  "legacy_reward_eligibility": "Not approved: its reported accuracy matched the longer-answer baseline on the old validation set; no v2 per-pair audit exists.",
+  "caveats": [
+    "Coverage improvement describes human reference answers, not new model results.",
+    "Broader word coverage does not guarantee unbiased KL or coherent generation.",
+    "The fixed mixed-domain prompt pool still does not guarantee matching topic proportions."
+  ],
+  "reference_response_token_quantiles": [
+    292.0,
+    572.0,
+    971.0599999999995
+  ],
+  "references_longer_than_output_cap": 34
+}

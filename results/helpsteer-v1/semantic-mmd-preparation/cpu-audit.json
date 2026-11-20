@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "train": 102,
+    "validation": 10,
+    "test": 19
+  },
+  "references_per_question": 2,
+  "reference_answers": 262,
+  "collapsed_reference_detected_fraction": 1.0,
+  "wrong_question_detected_fraction": 1.0,
+  "bandwidth_squared": 0.2786315083503723,
+  "median_training_reference_cosine": 0.8606842756271362,
+  "encoder_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "encoder_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "new_teacher_generation": 0,
+  "gpu_allocations": 0,
+  "limitations": [
+    "Two model-written, human-rated answers are prototypes, not a well-estimated human answer distribution.",
+    "The encoder tests are controlled corruption checks, not independent validation of semantic correctness.",
+    "Equal prototype weights are an experimental choice, not measured human mode frequencies.",
+    "Chunk-pooled MiniLM may overlook code correctness and fine semantic distinctions.",
+    "MMD measures the feature distribution; word KL need not improve."
+  ]
+}

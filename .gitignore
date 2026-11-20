@@ -25,3 +25,5 @@ wandb/
 deployment-manifest.json
 deployment-status.json
 kl-rl-manifest.json
+/tmp/
+/output/

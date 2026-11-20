@@ -1,0 +1,15 @@
+{
+  "experiments/helpsteer-lambda05-v1/train_policy.py": "1c3401c102eb25675dd5d51ae3089bf517cc409322110c49bc036c730a9f9507",
+  "experiments/helpsteer-lambda05-v1/common.py": "e4850c2b0a5f1ae4ef165ffe14c8f8f28435dfa0b7bcd4a5613a0cd252834ea0",
+  "experiments/helpsteer-lambda05-v1/audit.py": "16a5b5bef2f8f212fb25bcda8e8c5c160278d519bbad44f8adb10c7d71d68d6d",
+  "experiments/helpsteer-lambda05-v1/config.json": "75ed8edc01b7590aafa43df2b2d6643ae3647088a75ff72314ec784b916ae79f",
+  "experiments/helpsteer-lambda05-v1/submission.json": "9273f123ed54b306ad491cdb7ae91a97bb40fa142b4c8078ab4cebd331e7e0e5",
+  "experiments/helpsteer-lambda05-v1/lambda05.sbatch": "dfa79115a3f05bab63845ef91f4c0b5567d385474117a56a77e1a66bdd1807a2",
+  "experiments/helpsteer-lambda05-v1/data/manifest.json": "50dc887ad7f8247104479e28bb333f310ff406a9e87a5d7820f27a3ee5000e00",
+  "experiments/helpsteer-lambda05-v1/support/ddp_passage_rl.py": "c784baa9c5a02f33aad9d88cdea62e19ddc93cca7b3ee7751860819e00f310cf",
+  "experiments/helpsteer-lambda05-v1/support/passage_reward.py": "e75bfb5e65f30bd850f67ab5da257c0a7a63f27b4c229124c555f290f223f830",
+  "experiments/helpsteer-lambda05-v1/support/pilot.py": "43b29e894bfa8911b49e5263c0ccab628a6bbeb01fd64e14b1899c0cd68f8bed",
+  "experiments/helpsteer-lambda05-v1/support/judge.py": "1d467d09e4053dc3401854f8b8e1d3195b735e7cf7276552205f8f9ba0ad2873",
+  "experiments/helpsteer-lambda05-v1/support/passage_rl.py": "7f33e7c3e830a2b2e4325509c1ab23f8cb7b0d1093b9c7205a3c5d75f4b5b246",
+  "experiments/helpsteer-lambda05-v1/support/quality.py": "9cb06d73e6cbc30f954e98466731b4cdecbb10e90694cc6a7cc9fe1d8c87980a"
+}

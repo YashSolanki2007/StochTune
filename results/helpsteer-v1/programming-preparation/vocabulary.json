@@ -1,0 +1,7962 @@
+{
+  "normalization": "Lowercase [A-Za-z]+(?:['’][A-Za-z]+)*; normalize curly apostrophes.",
+  "source": "Only preferred answers in policy_train; one per conversation family.",
+  "max_words": 10000,
+  "min_count": 5,
+  "reference_word_count": 61775,
+  "reference_word_types": 4400,
+  "other_index": 1589,
+  "categories": [
+    {
+      "word": "a",
+      "count": 1880,
+      "probability": 0.030433023067583973
+    },
+    {
+      "word": "ability",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "able",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "about",
+      "count": 40,
+      "probability": 0.0006475111290975314
+    },
+    {
+      "word": "above",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "absolute",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "abstract",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "access",
+      "count": 78,
+      "probability": 0.0012626467017401862
+    },
+    {
+      "word": "accessed",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "accessing",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "accordingly",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "account",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "accuracy",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "accurate",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "accurately",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "achieve",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "across",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "action",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "activate",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "active",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "activex",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "actix",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "ad",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "adapt",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "adapter",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "adapters",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "add",
+      "count": 91,
+      "probability": 0.0014730878186968838
+    },
+    {
+      "word": "added",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "adding",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "addition",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "additional",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "additionally",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "address",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "adjust",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "adjusting",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "advanced",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "advantage",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "advertisements",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "affect",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "after",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "again",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "against",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "age",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "agent",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "ai",
+      "count": 43,
+      "probability": 0.0006960744637798462
+    },
+    {
+      "word": "airbrake",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "alert",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "algorithm",
+      "count": 117,
+      "probability": 0.0018939700526102792
+    },
+    {
+      "word": "algorithms",
+      "count": 44,
+      "probability": 0.0007122622420072845
+    },
+    {
+      "word": "all",
+      "count": 72,
+      "probability": 0.0011655200323755564
+    },
+    {
+      "word": "allocation",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "allow",
+      "count": 39,
+      "probability": 0.0006313233508700931
+    },
+    {
+      "word": "allowing",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "allows",
+      "count": 71,
+      "probability": 0.0011493322541481182
+    },
+    {
+      "word": "along",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "already",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "also",
+      "count": 109,
+      "probability": 0.001764467826790773
+    },
+    {
+      "word": "alt",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "always",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "amazon",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "amount",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "an",
+      "count": 219,
+      "probability": 0.0035451234318089843
+    },
+    {
+      "word": "analysis",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "analyze",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "and",
+      "count": 2291,
+      "probability": 0.03708619991906111
+    },
+    {
+      "word": "android",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "angular",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "another",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "any",
+      "count": 84,
+      "probability": 0.0013597733711048158
+    },
+    {
+      "word": "apache",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "api",
+      "count": 143,
+      "probability": 0.0023148522865236746
+    },
+    {
+      "word": "apis",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "app",
+      "count": 138,
+      "probability": 0.0022339133953864832
+    },
+    {
+      "word": "app's",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "appearance",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "append",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "application",
+      "count": 176,
+      "probability": 0.002849048968029138
+    },
+    {
+      "word": "application's",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "applications",
+      "count": 83,
+      "probability": 0.0013435855928773776
+    },
+    {
+      "word": "applied",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "apply",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "applying",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "approach",
+      "count": 33,
+      "probability": 0.0005341966815054634
+    },
+    {
+      "word": "appropriate",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "approval",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "apps",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "apt",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "architecture",
+      "count": 40,
+      "probability": 0.0006475111290975314
+    },
+    {
+      "word": "architectures",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "are",
+      "count": 463,
+      "probability": 0.007494941319303926
+    },
+    {
+      "word": "argument",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "arise",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "around",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "array",
+      "count": 26,
+      "probability": 0.0004208822339133954
+    },
+    {
+      "word": "arraylist",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "arrays",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "as",
+      "count": 498,
+      "probability": 0.008061513557264265
+    },
+    {
+      "word": "assets",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "assignment",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "assistant",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "associated",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "asynchronous",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "at",
+      "count": 54,
+      "probability": 0.0008741400242816673
+    },
+    {
+      "word": "attribute",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "auditing",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "augmentation",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "authentication",
+      "count": 30,
+      "probability": 0.0004856333468231485
+    },
+    {
+      "word": "author",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "authorization",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "autohotkey",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "automate",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "automated",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "automatically",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "automation",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "available",
+      "count": 37,
+      "probability": 0.0005989477944152165
+    },
+    {
+      "word": "average",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "avoid",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "aws",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "azure",
+      "count": 26,
+      "probability": 0.0004208822339133954
+    },
+    {
+      "word": "b",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "babel",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "back",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "backend",
+      "count": 40,
+      "probability": 0.0006475111290975314
+    },
+    {
+      "word": "background",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "backtesting",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "backtrader",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "backup",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "bar",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "based",
+      "count": 94,
+      "probability": 0.0015216511533791986
+    },
+    {
+      "word": "bash",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "basic",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "basics",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "be",
+      "count": 471,
+      "probability": 0.0076244435451234315
+    },
+    {
+      "word": "beautiful",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "because",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "been",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "before",
+      "count": 31,
+      "probability": 0.0005018211250505868
+    },
+    {
+      "word": "behavior",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "being",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "benefits",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "best",
+      "count": 45,
+      "probability": 0.0007284500202347228
+    },
+    {
+      "word": "better",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "between",
+      "count": 80,
+      "probability": 0.0012950222581950628
+    },
+    {
+      "word": "bigquery",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "bin",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "binary",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "binding",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "bit",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "bleh",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "bloc",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "block",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "blocking",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "blog",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "blue",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "board",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "body",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "book",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "booking",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "boolean",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "boot",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "borrow",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "both",
+      "count": 41,
+      "probability": 0.0006636989073249696
+    },
+    {
+      "word": "box",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "brackets",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "brex",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "broken",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "broker",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "brown",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "browser",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "browsers",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "bucket",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "bug",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "bugs",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "build",
+      "count": 84,
+      "probability": 0.0013597733711048158
+    },
+    {
+      "word": "building",
+      "count": 39,
+      "probability": 0.0006313233508700931
+    },
+    {
+      "word": "built",
+      "count": 47,
+      "probability": 0.0007608255766895993
+    },
+    {
+      "word": "bulk",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "bus",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "business",
+      "count": 44,
+      "probability": 0.0007122622420072845
+    },
+    {
+      "word": "but",
+      "count": 47,
+      "probability": 0.0007608255766895993
+    },
+    {
+      "word": "button",
+      "count": 46,
+      "probability": 0.0007446377984621611
+    },
+    {
+      "word": "by",
+      "count": 292,
+      "probability": 0.004726831242411979
+    },
+    {
+      "word": "c",
+      "count": 116,
+      "probability": 0.001877782274382841
+    },
+    {
+      "word": "cache",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "cad",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "calculate",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "calculated",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "calibre",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "call",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "callback",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "called",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "calling",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "calls",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "can",
+      "count": 942,
+      "probability": 0.015248887090246863
+    },
+    {
+      "word": "cannot",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "capabilities",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "capture",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "carefully",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "cart",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "case",
+      "count": 50,
+      "probability": 0.0008093889113719142
+    },
+    {
+      "word": "cases",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "cassandra",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "cause",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "causing",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "cd",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "cdc",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "cell",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "central",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "certain",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "certificate",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "challenges",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "challenging",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "change",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "changes",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "changing",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "characters",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "chart",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "charts",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "chat",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "chatbot",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "check",
+      "count": 58,
+      "probability": 0.0009388911371914205
+    },
+    {
+      "word": "checking",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "checkout",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "checks",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "choice",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "choose",
+      "count": 83,
+      "probability": 0.0013435855928773776
+    },
+    {
+      "word": "ci",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "circle",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "class",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "classes",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "classification",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "clause",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "clean",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "clear",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "cli",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "click",
+      "count": 65,
+      "probability": 0.0010522055847834884
+    },
+    {
+      "word": "clicking",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "client",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "clients",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "clone",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "close",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "closed",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "cloud",
+      "count": 80,
+      "probability": 0.0012950222581950628
+    },
+    {
+      "word": "cloudformation",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "cluster",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "clustering",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "clusters",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "cmake",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "cmd",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "cnn",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "code",
+      "count": 259,
+      "probability": 0.0041926345609065154
+    },
+    {
+      "word": "codebase",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "coding",
+      "count": 29,
+      "probability": 0.00046944556859571026
+    },
+    {
+      "word": "coffee",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "collaborate",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "collect",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "collection",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "collections",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "colors",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "column",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "columns",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "com",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "combination",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "combine",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "combined",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "comes",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "command",
+      "count": 71,
+      "probability": 0.0011493322541481182
+    },
+    {
+      "word": "commands",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "commerce",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "common",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "commonly",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "communicate",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "communication",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "communities",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "community",
+      "count": 30,
+      "probability": 0.0004856333468231485
+    },
+    {
+      "word": "compare",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "compatibility",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "compatible",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "compile",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "compiler",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "compilers",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "complete",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "completed",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "complex",
+      "count": 37,
+      "probability": 0.0005989477944152165
+    },
+    {
+      "word": "complexity",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "component",
+      "count": 42,
+      "probability": 0.0006798866855524079
+    },
+    {
+      "word": "components",
+      "count": 34,
+      "probability": 0.0005503844597329017
+    },
+    {
+      "word": "composable",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "comprehensive",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "compression",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "computer",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "computers",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "computing",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "concept",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "concepts",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "concerns",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "concise",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "concurrency",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "concurrent",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "condition",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "conditions",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "configuration",
+      "count": 26,
+      "probability": 0.0004208822339133954
+    },
+    {
+      "word": "configurations",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "configure",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "conjunction",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "connect",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "connected",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "connecting",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "connection",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "connections",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "consider",
+      "count": 49,
+      "probability": 0.0007932011331444759
+    },
+    {
+      "word": "consistency",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "consistent",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "console",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "contact",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "contain",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "container",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "containerization",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "containerized",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "containers",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "contains",
+      "count": 33,
+      "probability": 0.0005341966815054634
+    },
+    {
+      "word": "content",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "contents",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "context",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "continue",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "continuous",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "contribute",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "control",
+      "count": 43,
+      "probability": 0.0006960744637798462
+    },
+    {
+      "word": "controls",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "convert",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "copy",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "core",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "corporation",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "correct",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "correctly",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "corrupted",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "cost",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "couchbase",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "could",
+      "count": 48,
+      "probability": 0.0007770133549170376
+    },
+    {
+      "word": "count",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "country",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "course",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "cpu",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "create",
+      "count": 219,
+      "probability": 0.0035451234318089843
+    },
+    {
+      "word": "created",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "creates",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "creating",
+      "count": 50,
+      "probability": 0.0008093889113719142
+    },
+    {
+      "word": "critical",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "cross",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "css",
+      "count": 59,
+      "probability": 0.0009550789154188587
+    },
+    {
+      "word": "csv",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "current",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "currentorder",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "custom",
+      "count": 34,
+      "probability": 0.0005503844597329017
+    },
+    {
+      "word": "customer",
+      "count": 26,
+      "probability": 0.0004208822339133954
+    },
+    {
+      "word": "customer's",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "customers",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "customize",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "cycle",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "cypress",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "d",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "dart",
+      "count": 30,
+      "probability": 0.0004856333468231485
+    },
+    {
+      "word": "dashboard",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "data",
+      "count": 517,
+      "probability": 0.008369081343585593
+    },
+    {
+      "word": "database",
+      "count": 91,
+      "probability": 0.0014730878186968838
+    },
+    {
+      "word": "databases",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "datalayer",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "dataset",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "datasets",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "date",
+      "count": 37,
+      "probability": 0.0005989477944152165
+    },
+    {
+      "word": "day",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "db",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "dbscan",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "debug",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "debugging",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "decide",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "decision",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "declaration",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "deduplication",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "deep",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "default",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "defects",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "define",
+      "count": 33,
+      "probability": 0.0005341966815054634
+    },
+    {
+      "word": "defined",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "defining",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "definition",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "delete",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "demand",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "department",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "depend",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "dependencies",
+      "count": 42,
+      "probability": 0.0006798866855524079
+    },
+    {
+      "word": "dependency",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "dependent",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "depending",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "depends",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "deploy",
+      "count": 44,
+      "probability": 0.0007122622420072845
+    },
+    {
+      "word": "deployed",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "deploying",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "deployment",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "description",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "design",
+      "count": 41,
+      "probability": 0.0006636989073249696
+    },
+    {
+      "word": "designed",
+      "count": 52,
+      "probability": 0.0008417644678267908
+    },
+    {
+      "word": "designs",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "desired",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "detailed",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "details",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "detect",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "detecting",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "detection",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "determine",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "develop",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "developed",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "developer",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "developers",
+      "count": 52,
+      "probability": 0.0008417644678267908
+    },
+    {
+      "word": "developing",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "development",
+      "count": 71,
+      "probability": 0.0011493322541481182
+    },
+    {
+      "word": "device",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "devices",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "devote",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "dialog",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "difference",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "differences",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "different",
+      "count": 117,
+      "probability": 0.0018939700526102792
+    },
+    {
+      "word": "difficult",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "directive",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "directly",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "directory",
+      "count": 42,
+      "probability": 0.0006798866855524079
+    },
+    {
+      "word": "disabling",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "display",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "displaying",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "distributed",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "django",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "do",
+      "count": 45,
+      "probability": 0.0007284500202347228
+    },
+    {
+      "word": "docker",
+      "count": 55,
+      "probability": 0.0008903278025091056
+    },
+    {
+      "word": "documentation",
+      "count": 54,
+      "probability": 0.0008741400242816673
+    },
+    {
+      "word": "documents",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "does",
+      "count": 26,
+      "probability": 0.0004208822339133954
+    },
+    {
+      "word": "domain",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "don't",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "done",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "down",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "download",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "driven",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "due",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "duplicate",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "duplicates",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "during",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "e",
+      "count": 29,
+      "probability": 0.00046944556859571026
+    },
+    {
+      "word": "each",
+      "count": 135,
+      "probability": 0.0021853500607041682
+    },
+    {
+      "word": "ease",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "easier",
+      "count": 58,
+      "probability": 0.0009388911371914205
+    },
+    {
+      "word": "easily",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "easy",
+      "count": 53,
+      "probability": 0.000857952246054229
+    },
+    {
+      "word": "ecosystem",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "ecs",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "edge",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "edges",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "editing",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "editor",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "effective",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "effectively",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "efficiency",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "efficient",
+      "count": 34,
+      "probability": 0.0005503844597329017
+    },
+    {
+      "word": "efficiently",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "effort",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "either",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "elasticsearch",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "element",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "elements",
+      "count": 32,
+      "probability": 0.0005180089032780251
+    },
+    {
+      "word": "else",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "email",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "employee",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "employees",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "enabled",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "encryption",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "end",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "endpoint",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "endpoints",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "engine",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "engineer",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "engineering",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "ensure",
+      "count": 103,
+      "probability": 0.0016673411574261432
+    },
+    {
+      "word": "ensuring",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "enter",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "entire",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "entities",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "entity",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "enumerate",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "environment",
+      "count": 58,
+      "probability": 0.0009388911371914205
+    },
+    {
+      "word": "environments",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "error",
+      "count": 41,
+      "probability": 0.0006636989073249696
+    },
+    {
+      "word": "errors",
+      "count": 31,
+      "probability": 0.0005018211250505868
+    },
+    {
+      "word": "especially",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "essential",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "established",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "evaluate",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "evaluation",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "even",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "event",
+      "count": 37,
+      "probability": 0.0005989477944152165
+    },
+    {
+      "word": "events",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "every",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "everyone",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "exact",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "example",
+      "count": 134,
+      "probability": 0.00216916228247673
+    },
+    {
+      "word": "examples",
+      "count": 39,
+      "probability": 0.0006313233508700931
+    },
+    {
+      "word": "excel",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "exception",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "exec",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "executable",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "execute",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "executed",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "execution",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "existing",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "expand",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "expected",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "experience",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "experiment",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "expired",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "explore",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "express",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "extension",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "external",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "extract",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "extraction",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "eye",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "f",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "face",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "faces",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "factors",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "familiarize",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "fargate",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "fast",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "faster",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "feature",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "features",
+      "count": 65,
+      "probability": 0.0010522055847834884
+    },
+    {
+      "word": "feedback",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "few",
+      "count": 43,
+      "probability": 0.0006960744637798462
+    },
+    {
+      "word": "fewer",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "field",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "fields",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "figma",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "file",
+      "count": 154,
+      "probability": 0.0024929178470254956
+    },
+    {
+      "word": "filename",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "files",
+      "count": 85,
+      "probability": 0.0013759611493322542
+    },
+    {
+      "word": "finally",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "find",
+      "count": 46,
+      "probability": 0.0007446377984621611
+    },
+    {
+      "word": "fine",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "finished",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "first",
+      "count": 35,
+      "probability": 0.0005665722379603399
+    },
+    {
+      "word": "fit",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "fits",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "fix",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "fixed",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "fl",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "flask",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "flexibility",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "flexible",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "flight",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "float",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "flow",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "flutter",
+      "count": 37,
+      "probability": 0.0005989477944152165
+    },
+    {
+      "word": "focus",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "focused",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "folder",
+      "count": 43,
+      "probability": 0.0006960744637798462
+    },
+    {
+      "word": "follow",
+      "count": 29,
+      "probability": 0.00046944556859571026
+    },
+    {
+      "word": "followed",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "following",
+      "count": 75,
+      "probability": 0.0012140833670578712
+    },
+    {
+      "word": "for",
+      "count": 920,
+      "probability": 0.014892755969243221
+    },
+    {
+      "word": "form",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "format",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "formats",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "forms",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "found",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "frame",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "framework",
+      "count": 40,
+      "probability": 0.0006475111290975314
+    },
+    {
+      "word": "frameworks",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "free",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "freebot",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "freezing",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "freshdesk",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "friend",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "friends",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "friendship",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "from",
+      "count": 198,
+      "probability": 0.0032051800890327805
+    },
+    {
+      "word": "front",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "frontend",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "full",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "function",
+      "count": 89,
+      "probability": 0.0014407122622420072
+    },
+    {
+      "word": "functional",
+      "count": 45,
+      "probability": 0.0007284500202347228
+    },
+    {
+      "word": "functionality",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "functions",
+      "count": 90,
+      "probability": 0.0014569000404694456
+    },
+    {
+      "word": "further",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "future",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "g",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "gain",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "game",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "gateway",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "gcp",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "gdpr",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "general",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "generally",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "generate",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "generated",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "generates",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "generating",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "generator",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "genetic",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "geograph",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "get",
+      "count": 43,
+      "probability": 0.0006960744637798462
+    },
+    {
+      "word": "getx",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "git",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "github",
+      "count": 51,
+      "probability": 0.0008255766895993525
+    },
+    {
+      "word": "give",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "given",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "glance",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "glob",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "global",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "go",
+      "count": 34,
+      "probability": 0.0005503844597329017
+    },
+    {
+      "word": "goal",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "goals",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "golang",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "good",
+      "count": 49,
+      "probability": 0.0007932011331444759
+    },
+    {
+      "word": "google",
+      "count": 32,
+      "probability": 0.0005180089032780251
+    },
+    {
+      "word": "gpg",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "gpt",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "graph",
+      "count": 26,
+      "probability": 0.0004208822339133954
+    },
+    {
+      "word": "graphics",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "graphql",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "great",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "group",
+      "count": 26,
+      "probability": 0.0004208822339133954
+    },
+    {
+      "word": "groups",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "gui",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "guide",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "hair",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "hand",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "handle",
+      "count": 35,
+      "probability": 0.0005665722379603399
+    },
+    {
+      "word": "handling",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "happy",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "hardware",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "has",
+      "count": 105,
+      "probability": 0.0016997167138810198
+    },
+    {
+      "word": "hash",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "have",
+      "count": 160,
+      "probability": 0.0025900445163901257
+    },
+    {
+      "word": "having",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "hds",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "head",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "header",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "health",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "help",
+      "count": 132,
+      "probability": 0.0021367867260218536
+    },
+    {
+      "word": "helpful",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "helps",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "here",
+      "count": 110,
+      "probability": 0.0017806556050182112
+    },
+    {
+      "word": "here's",
+      "count": 49,
+      "probability": 0.0007932011331444759
+    },
+    {
+      "word": "hexagonal",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "high",
+      "count": 39,
+      "probability": 0.0006313233508700931
+    },
+    {
+      "word": "home",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "hook",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "hope",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "horizon",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "host",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "hotel",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "hours",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "how",
+      "count": 105,
+      "probability": 0.0016997167138810198
+    },
+    {
+      "word": "however",
+      "count": 35,
+      "probability": 0.0005665722379603399
+    },
+    {
+      "word": "html",
+      "count": 52,
+      "probability": 0.0008417644678267908
+    },
+    {
+      "word": "http",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "https",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "huffman",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "human",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "hybrid",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "hyperparameters",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "i",
+      "count": 47,
+      "probability": 0.0007608255766895993
+    },
+    {
+      "word": "i'd",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "ibm's",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "id",
+      "count": 31,
+      "probability": 0.0005018211250505868
+    },
+    {
+      "word": "idea",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "ideal",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "ideas",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "identifier",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "identify",
+      "count": 48,
+      "probability": 0.0007770133549170376
+    },
+    {
+      "word": "identifying",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "identity",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "if",
+      "count": 185,
+      "probability": 0.0029947389720760826
+    },
+    {
+      "word": "ignite",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "image",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "imagery",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "images",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "impact",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "implement",
+      "count": 58,
+      "probability": 0.0009388911371914205
+    },
+    {
+      "word": "implementation",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "implementing",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "import",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "important",
+      "count": 62,
+      "probability": 0.0010036422501011736
+    },
+    {
+      "word": "improve",
+      "count": 44,
+      "probability": 0.0007122622420072845
+    },
+    {
+      "word": "improved",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "improving",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "in",
+      "count": 915,
+      "probability": 0.01481181707810603
+    },
+    {
+      "word": "include",
+      "count": 47,
+      "probability": 0.0007608255766895993
+    },
+    {
+      "word": "included",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "includes",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "including",
+      "count": 79,
+      "probability": 0.0012788344799676244
+    },
+    {
+      "word": "incoming",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "increase",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "increased",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "independent",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "index",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "indicating",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "indicators",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "information",
+      "count": 77,
+      "probability": 0.0012464589235127478
+    },
+    {
+      "word": "infrastructure",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "inheritance",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "initial",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "initialize",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "inject",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "inline",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "input",
+      "count": 66,
+      "probability": 0.0010683933630109268
+    },
+    {
+      "word": "inputs",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "install",
+      "count": 53,
+      "probability": 0.000857952246054229
+    },
+    {
+      "word": "installation",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "installed",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "instance",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "instead",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "instructgpt",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "instructions",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "integer",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "integrate",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "integrating",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "integration",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "integrity",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "intended",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "interact",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "interactive",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "interest",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "interface",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "interfaces",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "interpreters",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "interviewing",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "interviews",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "into",
+      "count": 87,
+      "probability": 0.0014083367057871306
+    },
+    {
+      "word": "introduced",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "introduction",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "invalid",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "invariant",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "involve",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "involved",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "involves",
+      "count": 32,
+      "probability": 0.0005180089032780251
+    },
+    {
+      "word": "io",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "ios",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "is",
+      "count": 826,
+      "probability": 0.013371104815864022
+    },
+    {
+      "word": "issue",
+      "count": 32,
+      "probability": 0.0005180089032780251
+    },
+    {
+      "word": "issues",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "it",
+      "count": 501,
+      "probability": 0.00811007689194658
+    },
+    {
+      "word": "it's",
+      "count": 84,
+      "probability": 0.0013597733711048158
+    },
+    {
+      "word": "item",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "items",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "its",
+      "count": 105,
+      "probability": 0.0016997167138810198
+    },
+    {
+      "word": "j",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "java",
+      "count": 50,
+      "probability": 0.0008093889113719142
+    },
+    {
+      "word": "javascript",
+      "count": 50,
+      "probability": 0.0008093889113719142
+    },
+    {
+      "word": "jenkins",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "join",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "js",
+      "count": 60,
+      "probability": 0.000971266693646297
+    },
+    {
+      "word": "json",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "junit",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "just",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "k",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "keep",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "key",
+      "count": 58,
+      "probability": 0.0009388911371914205
+    },
+    {
+      "word": "keyboard",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "keys",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "keyserver",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "keywords",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "kit",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "know",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "knowledge",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "known",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "kubernetes",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "label",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "labels",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "lambda",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "language",
+      "count": 88,
+      "probability": 0.001424524484014569
+    },
+    {
+      "word": "languages",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "laravel",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "large",
+      "count": 44,
+      "probability": 0.0007122622420072845
+    },
+    {
+      "word": "larger",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "last",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "latency",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "latent",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "later",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "latest",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "launch",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "launching",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "layer",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "layers",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "layout",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "lead",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "leaks",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "learn",
+      "count": 65,
+      "probability": 0.0010522055847834884
+    },
+    {
+      "word": "learned",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "learning",
+      "count": 70,
+      "probability": 0.0011331444759206798
+    },
+    {
+      "word": "least",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "length",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "less",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "level",
+      "count": 40,
+      "probability": 0.0006475111290975314
+    },
+    {
+      "word": "libraries",
+      "count": 48,
+      "probability": 0.0007770133549170376
+    },
+    {
+      "word": "library",
+      "count": 101,
+      "probability": 0.0016349656009712666
+    },
+    {
+      "word": "lightweight",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "like",
+      "count": 90,
+      "probability": 0.0014569000404694456
+    },
+    {
+      "word": "likely",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "line",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "linear",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "lines",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "link",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "linker",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "links",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "linux",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "lisp",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "list",
+      "count": 58,
+      "probability": 0.0009388911371914205
+    },
+    {
+      "word": "listen",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "lists",
+      "count": 26,
+      "probability": 0.0004208822339133954
+    },
+    {
+      "word": "load",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "loaded",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "loading",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "local",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "located",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "location",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "log",
+      "count": 33,
+      "probability": 0.0005341966815054634
+    },
+    {
+      "word": "logging",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "logic",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "logs",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "long",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "longer",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "look",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "looking",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "loss",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "low",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "lua",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "luck",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "machine",
+      "count": 64,
+      "probability": 0.0010360178065560502
+    },
+    {
+      "word": "machines",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "macro",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "macros",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "made",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "main",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "maintain",
+      "count": 37,
+      "probability": 0.0005989477944152165
+    },
+    {
+      "word": "maintainable",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "maintaining",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "maintenance",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "make",
+      "count": 109,
+      "probability": 0.001764467826790773
+    },
+    {
+      "word": "makes",
+      "count": 48,
+      "probability": 0.0007770133549170376
+    },
+    {
+      "word": "making",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "manage",
+      "count": 67,
+      "probability": 0.001084581141238365
+    },
+    {
+      "word": "managed",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "management",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "manager",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "managing",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "manner",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "manually",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "many",
+      "count": 26,
+      "probability": 0.0004208822339133954
+    },
+    {
+      "word": "map",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "match",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "math",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "mathematical",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "matrix",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "may",
+      "count": 99,
+      "probability": 0.0016025900445163902
+    },
+    {
+      "word": "me",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "meal",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "meaning",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "means",
+      "count": 31,
+      "probability": 0.0005018211250505868
+    },
+    {
+      "word": "measures",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "mechanism",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "meet",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "meets",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "members",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "memory",
+      "count": 88,
+      "probability": 0.001424524484014569
+    },
+    {
+      "word": "mental",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "message",
+      "count": 37,
+      "probability": 0.0005989477944152165
+    },
+    {
+      "word": "messages",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "metadata",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "method",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "methods",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "metrics",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "microservices",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "microsoft",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "might",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "migration",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "migrations",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "mind",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "mines",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "mobile",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "model",
+      "count": 127,
+      "probability": 0.0020558478348846622
+    },
+    {
+      "word": "model's",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "models",
+      "count": 45,
+      "probability": 0.0007284500202347228
+    },
+    {
+      "word": "modern",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "modify",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "modifying",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "modular",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "module",
+      "count": 60,
+      "probability": 0.000971266693646297
+    },
+    {
+      "word": "modules",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "mongodb",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "monitor",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "monitoring",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "more",
+      "count": 129,
+      "probability": 0.0020882233913395386
+    },
+    {
+      "word": "most",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "mturk",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "multi",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "multiple",
+      "count": 45,
+      "probability": 0.0007284500202347228
+    },
+    {
+      "word": "must",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "mvc",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "my",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "myarray",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "n",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "name",
+      "count": 75,
+      "probability": 0.0012140833670578712
+    },
+    {
+      "word": "named",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "native",
+      "count": 35,
+      "probability": 0.0005665722379603399
+    },
+    {
+      "word": "natural",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "nature",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "navigate",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "navigating",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "navigation",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "necessary",
+      "count": 29,
+      "probability": 0.00046944556859571026
+    },
+    {
+      "word": "need",
+      "count": 151,
+      "probability": 0.002444354512343181
+    },
+    {
+      "word": "needed",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "needs",
+      "count": 56,
+      "probability": 0.0009065155807365439
+    },
+    {
+      "word": "neo",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "nested",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "net",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "network",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "networking",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "networks",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "neural",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "new",
+      "count": 131,
+      "probability": 0.002120598947794415
+    },
+    {
+      "word": "next",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "nginx",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "nist",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "no",
+      "count": 34,
+      "probability": 0.0005503844597329017
+    },
+    {
+      "word": "node",
+      "count": 53,
+      "probability": 0.000857952246054229
+    },
+    {
+      "word": "nodes",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "non",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "none",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "not",
+      "count": 96,
+      "probability": 0.0015540267098340752
+    },
+    {
+      "word": "note",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "notification",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "notifications",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "now",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "npm",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "null",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "number",
+      "count": 55,
+      "probability": 0.0008903278025091056
+    },
+    {
+      "word": "numbers",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "numerical",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "o",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "object",
+      "count": 69,
+      "probability": 0.0011169566976932416
+    },
+    {
+      "word": "objects",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "occur",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "ocr",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "of",
+      "count": 1208,
+      "probability": 0.01955483609874545
+    },
+    {
+      "word": "official",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "offline",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "often",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "ok",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "older",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "on",
+      "count": 413,
+      "probability": 0.006685552407932011
+    },
+    {
+      "word": "once",
+      "count": 70,
+      "probability": 0.0011331444759206798
+    },
+    {
+      "word": "one",
+      "count": 64,
+      "probability": 0.0010360178065560502
+    },
+    {
+      "word": "onedrive",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "ones",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "online",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "only",
+      "count": 31,
+      "probability": 0.0005018211250505868
+    },
+    {
+      "word": "open",
+      "count": 45,
+      "probability": 0.0007284500202347228
+    },
+    {
+      "word": "openai",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "openapi",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "openstack",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "operating",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "operation",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "operations",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "operator",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "operators",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "optimization",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "optimize",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "optimized",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "optimum",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "option",
+      "count": 32,
+      "probability": 0.0005180089032780251
+    },
+    {
+      "word": "optional",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "options",
+      "count": 29,
+      "probability": 0.00046944556859571026
+    },
+    {
+      "word": "or",
+      "count": 412,
+      "probability": 0.006669364629704573
+    },
+    {
+      "word": "order",
+      "count": 51,
+      "probability": 0.0008255766895993525
+    },
+    {
+      "word": "orders",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "orderstatus",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "org",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "organization",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "organize",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "organized",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "oriented",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "origin",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "original",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "ot",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "other",
+      "count": 143,
+      "probability": 0.0023148522865236746
+    },
+    {
+      "word": "others",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "out",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "outline",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "output",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "outside",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "over",
+      "count": 31,
+      "probability": 0.0005018211250505868
+    },
+    {
+      "word": "overall",
+      "count": 49,
+      "probability": 0.0007932011331444759
+    },
+    {
+      "word": "overhead",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "overview",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "own",
+      "count": 35,
+      "probability": 0.0005665722379603399
+    },
+    {
+      "word": "ownership",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "p",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "package",
+      "count": 49,
+      "probability": 0.0007932011331444759
+    },
+    {
+      "word": "packages",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "page",
+      "count": 32,
+      "probability": 0.0005180089032780251
+    },
+    {
+      "word": "pages",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "pair",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "pairs",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "panel",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "parameter",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "parameters",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "parent",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "parse",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "part",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "particular",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "particularly",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "parts",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "party",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "pass",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "passed",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "password",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "passwords",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "path",
+      "count": 37,
+      "probability": 0.0005989477944152165
+    },
+    {
+      "word": "pattern",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "patterns",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "payment",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "payments",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "pdf",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "perform",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "performance",
+      "count": 91,
+      "probability": 0.0014730878186968838
+    },
+    {
+      "word": "performing",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "performs",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "permissions",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "persistent",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "person",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "personal",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "phishing",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "phone",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "php",
+      "count": 42,
+      "probability": 0.0006798866855524079
+    },
+    {
+      "word": "pinescript",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "pip",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "pipeline",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "place",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "plan",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "planning",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "platform",
+      "count": 61,
+      "probability": 0.0009874544718737354
+    },
+    {
+      "word": "platforms",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "play",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "plugin",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "point",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "points",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "popular",
+      "count": 40,
+      "probability": 0.0006475111290975314
+    },
+    {
+      "word": "port",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "portal",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "position",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "possible",
+      "count": 31,
+      "probability": 0.0005018211250505868
+    },
+    {
+      "word": "post",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "postgresql",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "potential",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "power",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "powerful",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "powerquery",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "practical",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "practice",
+      "count": 34,
+      "probability": 0.0005503844597329017
+    },
+    {
+      "word": "practices",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "pre",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "predict",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "predictions",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "preferences",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "prepare",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "preprocess",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "press",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "prevent",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "previous",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "print",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "private",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "probing",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "problem",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "problems",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "process",
+      "count": 94,
+      "probability": 0.0015216511533791986
+    },
+    {
+      "word": "processed",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "processes",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "processing",
+      "count": 41,
+      "probability": 0.0006636989073249696
+    },
+    {
+      "word": "product",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "production",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "products",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "program",
+      "count": 70,
+      "probability": 0.0011331444759206798
+    },
+    {
+      "word": "programmers",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "programming",
+      "count": 119,
+      "probability": 0.0019263456090651558
+    },
+    {
+      "word": "programs",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "progress",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "project",
+      "count": 117,
+      "probability": 0.0018939700526102792
+    },
+    {
+      "word": "project's",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "projects",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "prompt",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "prompts",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "properties",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "protect",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "protected",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "protocol",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "protocols",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "provide",
+      "count": 70,
+      "probability": 0.0011331444759206798
+    },
+    {
+      "word": "provided",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "provider",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "provides",
+      "count": 82,
+      "probability": 0.0013273978146499392
+    },
+    {
+      "word": "providing",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "provisioner",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "proxy",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "publish",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "purchase",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "purchases",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "purpose",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "push",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "pypi",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "python",
+      "count": 137,
+      "probability": 0.002217725617159045
+    },
+    {
+      "word": "pytorch",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "quality",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "quantum",
+      "count": 50,
+      "probability": 0.0008093889113719142
+    },
+    {
+      "word": "queries",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "query",
+      "count": 45,
+      "probability": 0.0007284500202347228
+    },
+    {
+      "word": "question",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "questions",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "queue",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "quickly",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "quotes",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "r",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "random",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "range",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "rather",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "react",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "read",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "readable",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "ready",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "real",
+      "count": 30,
+      "probability": 0.0004856333468231485
+    },
+    {
+      "word": "reasons",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "receive",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "receiving",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "recognition",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "recommend",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "recommendation",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "recommended",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "record",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "reduce",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "reducing",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "refer",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "reference",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "references",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "refresh",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "regardless",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "region",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "regions",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "registry",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "regular",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "regularly",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "reinforcement",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "related",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "relationship",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "relationships",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "relevant",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "reliable",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "remember",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "remote",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "remove",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "removing",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "repetitive",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "replace",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "replication",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "replit",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "reporter",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "reporters",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "reports",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "repository",
+      "count": 47,
+      "probability": 0.0007608255766895993
+    },
+    {
+      "word": "represent",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "representation",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "representations",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "represents",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "request",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "requests",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "require",
+      "count": 32,
+      "probability": 0.0005180089032780251
+    },
+    {
+      "word": "required",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "requirements",
+      "count": 55,
+      "probability": 0.0008903278025091056
+    },
+    {
+      "word": "requires",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "research",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "resolve",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "resource",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "resources",
+      "count": 59,
+      "probability": 0.0009550789154188587
+    },
+    {
+      "word": "respond",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "response",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "responses",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "responsible",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "responsive",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "rest",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "result",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "results",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "rete",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "retrieve",
+      "count": 31,
+      "probability": 0.0005018211250505868
+    },
+    {
+      "word": "return",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "returns",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "review",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "right",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "ripper",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "risks",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "robust",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "rocket",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "role",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "rollbar",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "roundtrip",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "route",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "routerlink",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "routing",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "rows",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "rule",
+      "count": 26,
+      "probability": 0.0004208822339133954
+    },
+    {
+      "word": "rules",
+      "count": 41,
+      "probability": 0.0006636989073249696
+    },
+    {
+      "word": "run",
+      "count": 104,
+      "probability": 0.0016835289356535816
+    },
+    {
+      "word": "running",
+      "count": 44,
+      "probability": 0.0007122622420072845
+    },
+    {
+      "word": "runs",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "runtime",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "rust",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "s",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "safe",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "safety",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "salary",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "sales",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "same",
+      "count": 33,
+      "probability": 0.0005341966815054634
+    },
+    {
+      "word": "sample",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "save",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "saved",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "scalability",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "scalable",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "scale",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "scales",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "scenario",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "scenarios",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "schema",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "scope",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "scraping",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "screen",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "script",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "scripting",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "scripts",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "sdk",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "search",
+      "count": 30,
+      "probability": 0.0004856333468231485
+    },
+    {
+      "word": "searching",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "second",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "section",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "sections",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "secure",
+      "count": 30,
+      "probability": 0.0004856333468231485
+    },
+    {
+      "word": "securely",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "security",
+      "count": 50,
+      "probability": 0.0008093889113719142
+    },
+    {
+      "word": "see",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "select",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "self",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "send",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "sendbonus",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "sending",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "sensitive",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "sentence",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "sentences",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "separate",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "separates",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "sequence",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "series",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "serve",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "server",
+      "count": 95,
+      "probability": 0.001537838931606637
+    },
+    {
+      "word": "servers",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "service",
+      "count": 61,
+      "probability": 0.0009874544718737354
+    },
+    {
+      "word": "services",
+      "count": 46,
+      "probability": 0.0007446377984621611
+    },
+    {
+      "word": "session",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "set",
+      "count": 101,
+      "probability": 0.0016349656009712666
+    },
+    {
+      "word": "sets",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "setting",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "settings",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "setup",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "several",
+      "count": 47,
+      "probability": 0.0007608255766895993
+    },
+    {
+      "word": "sex",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "shape",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "share",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "shared",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "sharepoint",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "sharing",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "shifuproc",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "shop",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "shopping",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "short",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "should",
+      "count": 93,
+      "probability": 0.0015054633751517604
+    },
+    {
+      "word": "side",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "significant",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "similar",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "simple",
+      "count": 41,
+      "probability": 0.0006636989073249696
+    },
+    {
+      "word": "simplified",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "single",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "size",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "sizes",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "skills",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "small",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "smaller",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "so",
+      "count": 48,
+      "probability": 0.0007770133549170376
+    },
+    {
+      "word": "social",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "software",
+      "count": 60,
+      "probability": 0.000971266693646297
+    },
+    {
+      "word": "solution",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "solutions",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "solve",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "some",
+      "count": 113,
+      "probability": 0.001829218939700526
+    },
+    {
+      "word": "source",
+      "count": 44,
+      "probability": 0.0007122622420072845
+    },
+    {
+      "word": "sources",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "space",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "sparkle",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "specific",
+      "count": 123,
+      "probability": 0.001991096721974909
+    },
+    {
+      "word": "specifically",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "specification",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "specified",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "specify",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "spend",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "spreadsheet",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "spring",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "sqa",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "sql",
+      "count": 43,
+      "probability": 0.0006960744637798462
+    },
+    {
+      "word": "sqlite",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "square",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "squares",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "sso",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "stack",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "stage",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "standard",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "standards",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "start",
+      "count": 40,
+      "probability": 0.0006475111290975314
+    },
+    {
+      "word": "started",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "starting",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "state",
+      "count": 49,
+      "probability": 0.0007932011331444759
+    },
+    {
+      "word": "statement",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "static",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "status",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "step",
+      "count": 32,
+      "probability": 0.0005180089032780251
+    },
+    {
+      "word": "steps",
+      "count": 80,
+      "probability": 0.0012950222581950628
+    },
+    {
+      "word": "still",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "stop",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "storage",
+      "count": 41,
+      "probability": 0.0006636989073249696
+    },
+    {
+      "word": "store",
+      "count": 66,
+      "probability": 0.0010683933630109268
+    },
+    {
+      "word": "storing",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "str",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "strategies",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "streams",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "strengths",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "strict",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "string",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "strong",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "struct",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "structure",
+      "count": 46,
+      "probability": 0.0007446377984621611
+    },
+    {
+      "word": "structures",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "students",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "studio",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "study",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "style",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "styles",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "styling",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "subfolders",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "subscribe",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "subscription",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "such",
+      "count": 225,
+      "probability": 0.003642250101173614
+    },
+    {
+      "word": "sudo",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "suggested",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "suggestions",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "suitable",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "suited",
+      "count": 21,
+      "probability": 0.00033994334277620395
+    },
+    {
+      "word": "summary",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "support",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "supported",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "supports",
+      "count": 34,
+      "probability": 0.0005503844597329017
+    },
+    {
+      "word": "sure",
+      "count": 88,
+      "probability": 0.001424524484014569
+    },
+    {
+      "word": "svd",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "swagger",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "swift",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "symbol",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "synchronization",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "synchronized",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "syntax",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "system",
+      "count": 114,
+      "probability": 0.0018454067179279644
+    },
+    {
+      "word": "systems",
+      "count": 40,
+      "probability": 0.0006475111290975314
+    },
+    {
+      "word": "tab",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "table",
+      "count": 32,
+      "probability": 0.0005180089032780251
+    },
+    {
+      "word": "tables",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "tag",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "tags",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "tailwind",
+      "count": 34,
+      "probability": 0.0005503844597329017
+    },
+    {
+      "word": "take",
+      "count": 31,
+      "probability": 0.0005018211250505868
+    },
+    {
+      "word": "takes",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "taking",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "tarball",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "task",
+      "count": 72,
+      "probability": 0.0011655200323755564
+    },
+    {
+      "word": "tasks",
+      "count": 53,
+      "probability": 0.000857952246054229
+    },
+    {
+      "word": "team",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "technical",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "technique",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "techniques",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "technologies",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "technology",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "template",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "templates",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "tensorflow",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "term",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "terminal",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "terms",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "terraform",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "test",
+      "count": 65,
+      "probability": 0.0010522055847834884
+    },
+    {
+      "word": "testing",
+      "count": 33,
+      "probability": 0.0005341966815054634
+    },
+    {
+      "word": "tests",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "text",
+      "count": 39,
+      "probability": 0.0006313233508700931
+    },
+    {
+      "word": "than",
+      "count": 32,
+      "probability": 0.0005180089032780251
+    },
+    {
+      "word": "that",
+      "count": 807,
+      "probability": 0.013063537029542695
+    },
+    {
+      "word": "that's",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "the",
+      "count": 3899,
+      "probability": 0.06311614730878187
+    },
+    {
+      "word": "their",
+      "count": 91,
+      "probability": 0.0014730878186968838
+    },
+    {
+      "word": "them",
+      "count": 61,
+      "probability": 0.0009874544718737354
+    },
+    {
+      "word": "then",
+      "count": 67,
+      "probability": 0.001084581141238365
+    },
+    {
+      "word": "there",
+      "count": 86,
+      "probability": 0.0013921489275596924
+    },
+    {
+      "word": "these",
+      "count": 129,
+      "probability": 0.0020882233913395386
+    },
+    {
+      "word": "thestorygraph",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "they",
+      "count": 66,
+      "probability": 0.0010683933630109268
+    },
+    {
+      "word": "things",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "third",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "this",
+      "count": 439,
+      "probability": 0.007106434641845407
+    },
+    {
+      "word": "those",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "though",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "thread",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "threads",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "three",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "through",
+      "count": 34,
+      "probability": 0.0005503844597329017
+    },
+    {
+      "word": "throughout",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "time",
+      "count": 139,
+      "probability": 0.0022501011736139214
+    },
+    {
+      "word": "times",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "tips",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "title",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "to",
+      "count": 2442,
+      "probability": 0.03953055443140429
+    },
+    {
+      "word": "together",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "tool",
+      "count": 61,
+      "probability": 0.0009874544718737354
+    },
+    {
+      "word": "toolchain",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "tools",
+      "count": 48,
+      "probability": 0.0007770133549170376
+    },
+    {
+      "word": "top",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "topic",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "topics",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "topology",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "tracing",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "track",
+      "count": 18,
+      "probability": 0.0002913800080938891
+    },
+    {
+      "word": "tracking",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "trading",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "tradingview",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "traditional",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "train",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "trained",
+      "count": 29,
+      "probability": 0.00046944556859571026
+    },
+    {
+      "word": "training",
+      "count": 36,
+      "probability": 0.0005827600161877782
+    },
+    {
+      "word": "transform",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "tree",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "trigger",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "true",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "try",
+      "count": 29,
+      "probability": 0.00046944556859571026
+    },
+    {
+      "word": "trying",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "ts",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "tune",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "tuning",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "tuple",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "tutorials",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "two",
+      "count": 53,
+      "probability": 0.000857952246054229
+    },
+    {
+      "word": "type",
+      "count": 104,
+      "probability": 0.0016835289356535816
+    },
+    {
+      "word": "types",
+      "count": 51,
+      "probability": 0.0008255766895993525
+    },
+    {
+      "word": "typescript",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "typically",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "ubuntu",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "ui",
+      "count": 27,
+      "probability": 0.00043707001214083365
+    },
+    {
+      "word": "ultimately",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "unauthorized",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "under",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "understand",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "understanding",
+      "count": 29,
+      "probability": 0.00046944556859571026
+    },
+    {
+      "word": "unique",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "unit",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "up",
+      "count": 78,
+      "probability": 0.0012626467017401862
+    },
+    {
+      "word": "update",
+      "count": 39,
+      "probability": 0.0006313233508700931
+    },
+    {
+      "word": "updated",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "updates",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "updating",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "upload",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "url",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "usage",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "use",
+      "count": 438,
+      "probability": 0.0070902468636179685
+    },
+    {
+      "word": "used",
+      "count": 182,
+      "probability": 0.0029461756373937676
+    },
+    {
+      "word": "useful",
+      "count": 31,
+      "probability": 0.0005018211250505868
+    },
+    {
+      "word": "user",
+      "count": 137,
+      "probability": 0.002217725617159045
+    },
+    {
+      "word": "user's",
+      "count": 14,
+      "probability": 0.00022662889518413598
+    },
+    {
+      "word": "username",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "users",
+      "count": 84,
+      "probability": 0.0013597733711048158
+    },
+    {
+      "word": "uses",
+      "count": 41,
+      "probability": 0.0006636989073249696
+    },
+    {
+      "word": "using",
+      "count": 255,
+      "probability": 0.004127883447996763
+    },
+    {
+      "word": "utility",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "uvicorn",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "v",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "valid",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "validation",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "valuable",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "value",
+      "count": 53,
+      "probability": 0.000857952246054229
+    },
+    {
+      "word": "values",
+      "count": 30,
+      "probability": 0.0004856333468231485
+    },
+    {
+      "word": "var",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "variable",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": "variables",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "variety",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "various",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "ve",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "venv",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "version",
+      "count": 56,
+      "probability": 0.0009065155807365439
+    },
+    {
+      "word": "vertex",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "vertices",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "very",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "via",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "video",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "view",
+      "count": 53,
+      "probability": 0.000857952246054229
+    },
+    {
+      "word": "views",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "virtual",
+      "count": 30,
+      "probability": 0.0004856333468231485
+    },
+    {
+      "word": "visual",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "visualize",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "vite",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "vs",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "vulnerability",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "w",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "wait",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "wallet",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "want",
+      "count": 99,
+      "probability": 0.0016025900445163902
+    },
+    {
+      "word": "was",
+      "count": 13,
+      "probability": 0.0002104411169566977
+    },
+    {
+      "word": "way",
+      "count": 64,
+      "probability": 0.0010360178065560502
+    },
+    {
+      "word": "waypoints",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "ways",
+      "count": 15,
+      "probability": 0.00024281667341157425
+    },
+    {
+      "word": "we",
+      "count": 28,
+      "probability": 0.00045325779036827196
+    },
+    {
+      "word": "weaknesses",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "web",
+      "count": 126,
+      "probability": 0.0020396600566572236
+    },
+    {
+      "word": "webgl",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "website",
+      "count": 68,
+      "probability": 0.0011007689194658034
+    },
+    {
+      "word": "website's",
+      "count": 6,
+      "probability": 9.71266693646297e-05
+    },
+    {
+      "word": "websites",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "week",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "well",
+      "count": 61,
+      "probability": 0.0009874544718737354
+    },
+    {
+      "word": "were",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "what",
+      "count": 37,
+      "probability": 0.0005989477944152165
+    },
+    {
+      "word": "wheel",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "when",
+      "count": 90,
+      "probability": 0.0014569000404694456
+    },
+    {
+      "word": "where",
+      "count": 83,
+      "probability": 0.0013435855928773776
+    },
+    {
+      "word": "whether",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "which",
+      "count": 152,
+      "probability": 0.0024605422905706192
+    },
+    {
+      "word": "while",
+      "count": 45,
+      "probability": 0.0007284500202347228
+    },
+    {
+      "word": "who",
+      "count": 29,
+      "probability": 0.00046944556859571026
+    },
+    {
+      "word": "why",
+      "count": 7,
+      "probability": 0.00011331444759206799
+    },
+    {
+      "word": "wide",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "widely",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "widgets",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "will",
+      "count": 223,
+      "probability": 0.0036098745447187375
+    },
+    {
+      "word": "window",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "windows",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "with",
+      "count": 399,
+      "probability": 0.0064589235127478755
+    },
+    {
+      "word": "within",
+      "count": 19,
+      "probability": 0.0003075677863213274
+    },
+    {
+      "word": "without",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "work",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "worker",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "working",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "works",
+      "count": 23,
+      "probability": 0.00037231889923108056
+    },
+    {
+      "word": "workspace",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "world",
+      "count": 20,
+      "probability": 0.0003237555645487657
+    },
+    {
+      "word": "worst",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "would",
+      "count": 62,
+      "probability": 0.0010036422501011736
+    },
+    {
+      "word": "write",
+      "count": 65,
+      "probability": 0.0010522055847834884
+    },
+    {
+      "word": "writing",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "written",
+      "count": 8,
+      "probability": 0.00012950222581950628
+    },
+    {
+      "word": "www",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "x",
+      "count": 22,
+      "probability": 0.00035613112100364226
+    },
+    {
+      "word": "xampp",
+      "count": 5,
+      "probability": 8.093889113719143e-05
+    },
+    {
+      "word": "xml",
+      "count": 9,
+      "probability": 0.00014569000404694455
+    },
+    {
+      "word": "y",
+      "count": 11,
+      "probability": 0.00017806556050182113
+    },
+    {
+      "word": "yaml",
+      "count": 24,
+      "probability": 0.0003885066774585188
+    },
+    {
+      "word": "yes",
+      "count": 38,
+      "probability": 0.0006151355726426548
+    },
+    {
+      "word": "you",
+      "count": 1007,
+      "probability": 0.01630109267503035
+    },
+    {
+      "word": "you'll",
+      "count": 34,
+      "probability": 0.0005503844597329017
+    },
+    {
+      "word": "you're",
+      "count": 25,
+      "probability": 0.0004046944556859571
+    },
+    {
+      "word": "you've",
+      "count": 16,
+      "probability": 0.00025900445163901255
+    },
+    {
+      "word": "your",
+      "count": 705,
+      "probability": 0.01141238365034399
+    },
+    {
+      "word": "yourself",
+      "count": 12,
+      "probability": 0.0001942533387292594
+    },
+    {
+      "word": "z",
+      "count": 10,
+      "probability": 0.00016187778227438285
+    },
+    {
+      "word": "zig",
+      "count": 17,
+      "probability": 0.00027519222986645086
+    },
+    {
+      "word": null,
+      "label": "OTHER",
+      "count": 5063,
+      "probability": 0.08195872116552003
+    }
+  ]
+}
