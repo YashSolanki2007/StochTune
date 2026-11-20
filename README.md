@@ -1,4 +1,4 @@
-# llm-random-number-generator
+# StochTune
 
 Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
