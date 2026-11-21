@@ -89,46 +89,141 @@ def global_credit(local_rows, local_quality, target, weight, device):
     return tensor[offset : offset + sizes[dist.get_rank()]], metrics
 
 
-def distributed_update(policy, optimizer, rows, credit, pad_id, microbatch, reference_beta):
+def prompt_loo_baselines(values, case_ids):
+    """Each baseline excludes its own answer and includes only the same question."""
+    values = np.asarray(values, dtype=np.float64)
+    if len(values) != len(case_ids) or not np.all(np.isfinite(values)):
+        raise ValueError("Need one finite log ratio per question-labelled answer")
+    groups = {}
+    for i, key in enumerate(case_ids):
+        groups.setdefault(key, []).append(i)
+    result = np.empty_like(values)
+    for indices in groups.values():
+        if len(indices) < 2:
+            raise ValueError("KL centering needs at least two answers per exact question")
+        group = values[indices]
+        result[indices] = (group.sum() - group) / (len(group) - 1)
+    return result
+
+
+def distributed_update(
+    policy,
+    optimizer,
+    rows,
+    credit,
+    pad_id,
+    microbatch,
+    reference_beta,
+    *,
+    reference_kl_centering="none",
+    loss_divisor=1.0,
+    record_log_probs=False,
+):
     """Average local sequence losses; DDP averaging yields the global batch mean."""
     actor = policy.module.actor
+    if reference_kl_centering not in ("none", "prompt-loo"):
+        raise ValueError("Unknown initial-policy KL centering mode")
+    if not np.isfinite(loss_divisor) or loss_divisor <= 0:
+        raise ValueError("Loss divisor must be fixed, finite, and positive")
     actor.eval()
     optimizer.zero_grad(set_to_none=True)
+    cached_reference, baselines = None, np.zeros(len(rows))
+    if reference_kl_centering == "prompt-loo":
+        # The full question group is needed before any answer's backward pass.
+        # Cache the base scores, adding one no-grad current-policy forward pass.
+        reference_values, current_values = [], []
+        for start in range(0, len(rows), microbatch):
+            chunk = rows[start : start + microbatch]
+            with torch.no_grad(), actor.disable_adapter():
+                reference_values.extend(completion_log_probs(actor, chunk, pad_id).cpu().tolist())
+            with torch.no_grad():
+                current_values.extend(completion_log_probs(actor, chunk, pad_id).cpu().tolist())
+        cached_reference = torch.tensor(reference_values, device=credit.device, dtype=credit.dtype)
+        local = [
+            {"case_id": row["case_id"], "delta": current - reference}
+            for row, current, reference in zip(rows, current_values, reference_values)
+        ]
+        gathered = gather_objects(local)
+        flat = [row for part in gathered for row in part]
+        global_baselines = prompt_loo_baselines(
+            [r["delta"] for r in flat], [r["case_id"] for r in flat]
+        )
+        offset = sum(len(part) for part in gathered[: dist.get_rank()])
+        baselines = global_baselines[offset : offset + len(rows)]
     loss_sum, reference_sum = 0.0, 0.0
+    raw_squared, centered_squared, row_metrics = 0.0, 0.0, []
     for start in range(0, len(rows), microbatch):
         chunk = rows[start : start + microbatch]
         last = start + microbatch >= len(rows)
         sync = contextlib.nullcontext() if last else policy.no_sync()
-        with torch.no_grad(), actor.disable_adapter():
-            reference = completion_log_probs(actor, chunk, pad_id)
+        if cached_reference is None:
+            with torch.no_grad(), actor.disable_adapter():
+                reference = completion_log_probs(actor, chunk, pad_id)
+        else:
+            reference = cached_reference[start : start + len(chunk)]
         # no_sync must wrap both forward AND backward for accumulation to work.
         with sync:
             current = policy(chunk, pad_id)
             delta = current.detach() - reference
-            advantage = (
-                credit[start : start + len(chunk)].to(current.dtype) - reference_beta * delta
+            baseline = torch.tensor(
+                baselines[start : start + len(chunk)], device=current.device, dtype=current.dtype
             )
-            loss = -(advantage.detach() * current).sum() / len(rows)
+            centered_delta = delta - baseline
+            advantage = (
+                credit[start : start + len(chunk)].to(current.dtype)
+                - reference_beta * centered_delta
+            )
+            loss = -(advantage.detach() * current).sum() / (len(rows) * loss_divisor)
             if not torch.isfinite(loss):
                 raise FloatingPointError("Nonfinite distributed policy loss")
             loss.backward()
         loss_sum += loss.detach().item()
         reference_sum += delta.sum().item()
+        raw_squared += delta.square().sum().item()
+        centered_squared += centered_delta.square().sum().item()
+        if record_log_probs:
+            row_metrics.extend(
+                {
+                    "policy_logprob_before_update": current_value,
+                    "initial_policy_logprob": reference_value,
+                    "reference_log_ratio": current_value - reference_value,
+                    "reference_loo_baseline": float(base),
+                    "centered_reference_log_ratio": current_value - reference_value - float(base),
+                }
+                for current_value, reference_value, base in zip(
+                    current.detach().cpu().tolist(),
+                    reference.cpu().tolist(),
+                    baselines[start : start + len(chunk)],
+                )
+            )
     parameters = [p for p in actor.parameters() if p.requires_grad]
     norm = torch.nn.utils.clip_grad_norm_(parameters, 1.0)
     if not torch.isfinite(norm):
         raise FloatingPointError("Nonfinite distributed gradient")
     optimizer.step()
     metrics = torch.tensor(
-        [loss_sum, reference_sum / len(rows)], device=credit.device, dtype=torch.float64
+        [
+            loss_sum,
+            reference_sum / len(rows),
+            raw_squared / len(rows),
+            centered_squared / len(rows),
+        ],
+        device=credit.device,
+        dtype=torch.float64,
     )
     dist.all_reduce(metrics)
     metrics /= dist.get_world_size()
-    return {
+    result = {
         "policy_gradient_loss": metrics[0].item(),
         "reference_sequence_kl_estimate": metrics[1].item(),
         "gradient_norm": float(norm),
+        "reference_kl_credit_rms_raw": float(metrics[2].sqrt().item()),
+        "reference_kl_credit_rms_centered": float(metrics[3].sqrt().item()),
+        "objective_loss_divisor": float(loss_divisor),
     }
+    if record_log_probs:
+        result["_row_metrics"] = row_metrics
+    return result
 
 
 def rank_rng_state(device):

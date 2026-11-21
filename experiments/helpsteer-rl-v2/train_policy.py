@@ -342,16 +342,30 @@ def train(arm, output):
             if hasattr(target, "embed_records"):
                 rows = target.embed_records(rows)
             credit, metrics = global_credit(rows, quality, target, weight, device)
+            update_metrics = distributed_update(
+                policy,
+                optimizer,
+                rows,
+                credit,
+                tokenizer.pad_token_id,
+                cfg["gradient_microbatch_size"],
+                cfg["reference_kl_beta"],
+                reference_kl_centering=cfg.get("reference_kl_centering", "none"),
+                loss_divisor=cfg.get("objective_loss_divisor", 1.0),
+                record_log_probs=cfg.get("record_policy_log_probs", False),
+            )
+            per_answer = update_metrics.pop("_row_metrics", None)
+            if per_answer is not None:
+                rows = [{**row, **extra} for row, extra in zip(rows, per_answer)]
+            metrics.update(update_metrics)
+            divisor = cfg.get("objective_loss_divisor", 1.0)
             metrics.update(
-                distributed_update(
-                    policy,
-                    optimizer,
-                    rows,
-                    credit,
-                    tokenizer.pad_token_id,
-                    cfg["gradient_microbatch_size"],
-                    cfg["reference_kl_beta"],
-                )
+                normalized_joint_reward=metrics["joint_reward"] / divisor,
+                effective_quality_credit_rms=metrics["quality_advantage_rms"] / divisor,
+                effective_distribution_credit_rms=metrics["distribution_advantage_rms"] / divisor,
+                effective_reference_kl_credit_rms=cfg["reference_kl_beta"]
+                * update_metrics["reference_kl_credit_rms_centered"]
+                / divisor,
             )
             scheduler.step()
             step += 1

@@ -13,10 +13,16 @@ def preflight():
     cfg = config()
     if not cfg.get("gpu_submission_authorized"):
         raise RuntimeError("GPU submission has not been authorized for this runtime")
-    if cfg["approved_allocation_seconds"] != 5400 or cfg["approved_maximum_gpus"] != 2:
-        raise ValueError("This experiment is capped at two GPUs and 90 minutes")
+    if not 600 < cfg["approved_allocation_seconds"] <= 5400 or cfg["approved_maximum_gpus"] != 2:
+        raise ValueError("Each policy is capped at two GPUs and at most 90 minutes")
+    if not 0 < cfg["train_budget_seconds"] <= cfg["approved_allocation_seconds"] - 600:
+        raise ValueError("Reserve at least ten minutes per policy for evaluation and saving")
     if cfg["distribution_objective"] != "conditional-semantic-mmd":
         raise ValueError("The actual policy reward must include conditional semantic MMD")
+    if cfg.get("reference_kl_centering", "none") not in ("none", "prompt-loo"):
+        raise ValueError("Unknown KL centering mode")
+    if cfg.get("semantic_kernel_name", "rbf") not in ("rbf", "energy"):
+        raise ValueError("Unknown semantic kernel")
     if (cfg["prompts_per_group"], cfg["global_group_size"]) != (4, 16):
         raise ValueError("Expected four questions with four answers each")
     if cfg["distribution_weight"] != 0.5 or cfg["semantic_kernel_scales"] != [0.5, 1.0, 2.0]:
@@ -49,6 +55,30 @@ def preflight():
         if any(min(attributes.values()) < 3 for attributes in row["human_attributes"]):
             raise ValueError("Reference fails the human-quality floor")
     metadata = json.loads((data / "semantic-metadata.json").read_text())
+    if cfg.get("semantic_calibration_runtime_file"):
+        calibration_path = ROOT / cfg["semantic_calibration_runtime_file"]
+        if (
+            hashlib.sha256(calibration_path.read_bytes()).hexdigest()
+            != cfg["semantic_calibration_sha256"]
+        ):
+            raise ValueError("Frozen calibration report changed")
+        calibration = json.loads(calibration_path.read_text())
+        for name, field in (
+            ("semantic-reference-vectors.npz", "source_reference_vectors_sha256"),
+            ("semantic-metadata.json", "source_semantic_metadata_sha256"),
+        ):
+            if hashlib.sha256((data / name).read_bytes()).hexdigest() != calibration[field]:
+                raise ValueError("Calibration belongs to different semantic reference data")
+        if (
+            cfg["semantic_kernel_scale"]
+            != calibration["kernel_scales"][cfg["semantic_kernel_name"]]
+        ):
+            raise ValueError("Runtime kernel scale differs from the frozen calibration")
+        expected_divisor = 1 + cfg["distribution_weight"] + cfg["reference_kl_beta"]
+        if abs(cfg["objective_loss_divisor"] - expected_divisor) > 1e-12:
+            raise ValueError("Objective normalization must preserve all three coefficient ratios")
+    elif cfg.get("semantic_kernel_scale", 1.0) != 1.0:
+        raise ValueError("A scaled kernel requires a frozen calibration report")
     if set(metadata["training_prompt_ids"]) != sets["train"]:
         raise ValueError("Training reference whitelist differs from policy-training IDs")
     if (

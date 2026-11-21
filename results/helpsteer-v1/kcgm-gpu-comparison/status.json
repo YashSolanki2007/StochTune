@@ -1,0 +1,9 @@
+{
+  "job_id": "508718",
+  "status": "PENDING",
+  "reason": "Priority",
+  "checked_at": "2026-11-21T15:39:00-08:00",
+  "scheduler_start_estimate_pacific": "2026-11-21T17:29:46-08:00",
+  "estimate_is_not_guaranteed": true,
+  "new_training_results_available": false
+}

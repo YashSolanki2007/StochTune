@@ -1,15 +1,16 @@
 {
-  "recorded_on": "2026-11-20",
+  "recorded_on": "2026-11-21",
   "completed_policy_jobs": [
     "500689",
     "501019",
     "501413",
-    "501852"
+    "501852",
+    "504124"
   ],
   "semantic_mmd_job": "504124",
-  "semantic_mmd_status": "PENDING at 2026-11-20T13:44:17-08:00; no policy results",
+  "semantic_mmd_status": "COMPLETED; 94 updates, 1504 training answers; results under semantic-mmd/",
   "files": {
-    "README.md": "8e876a8e0c2d46f45c63dd4aef57ec7b30a229625867a068ab6167543934a6fa",
+    "README.md": "9d087be0294d916e79a7499c0cbfe3420f6fa0496285118ac1fd9cdf3b6dcc2a",
     "broad-v2/baseline-metrics.json": "0ddfcf06bf2a8126707eaff16da250a3496e8b168d7d1c6912ef3fadbc715c13",
     "broad-v2/baseline-samples.jsonl": "b105d2d8f63eaa85f46ec72558c08503c608ccafe9c5380b1a9d17ee4e081e39",
     "broad-v2/comparison.json": "da38a8725b3e5a729b62d5a2ea3b2c07e78a82cfc9054fa81ffc4e7b71bf55f1",
@@ -21,6 +22,17 @@
     "broad-v2/validation-0-metrics.json": "911947abfa835160d4ba555d0ee389332626984b5635c6cc76402a8f50d0c1cd",
     "broad-v2/validation-50-metrics.json": "448a45f43f1b0c62f55ae592b27b65659167b4f3d7ad2e7a294e48026091a870",
     "broad-v2/wandb_run.json": "4b26700a6699582483c8363e9e01b0ca0fc0253e4a93cb58c68d46645834ede6",
+    "kcgm-cpu-audit/README.md": "e4df7a34639b8dfb5041e5d6b69d800ab07a7fc806052012d624572a646ef284",
+    "kcgm-cpu-audit/calibration.json": "dbad049566db2031125e268c8c4b361a8bd93b6c27708453f39a492f1e7bc955",
+    "kcgm-cpu-audit/question-group-costs.json": "ab96e9af4ba4c2ee84eb6d96ee816bdfd5c857fa1f9d76e1675ad7f353e4f606",
+    "kcgm-cpu-audit/report.json": "ce1b4ff258f465305885cfddad7930755a27daf98616951a0f18671a6853fff4",
+    "kcgm-gpu-comparison/comparison.sbatch": "5e83853e9915f8f25053563329deb7fe301a010d89fa711add126d3e49ae632b",
+    "kcgm-gpu-comparison/energy-config.json": "19cae3dbfea20a7ef0aecfa60e2f7058885d5c62c1ec4416c38e9ce2f16a38f7",
+    "kcgm-gpu-comparison/payload-sha256.json": "b8349e839d2844c06894e2343b75180793a9b1fc9b423dbc77e5f4581b634f5c",
+    "kcgm-gpu-comparison/rbf-config.json": "cf0eccb2be3f2d35a406b26f3a5ece6ba2068599554cc2954d45747da673ca6b",
+    "kcgm-gpu-comparison/run-plan.json": "eff10994134fada8d46a47f49abe3e0f18118b3b8dc29b927a3a6aa65ed6b777",
+    "kcgm-gpu-comparison/status.json": "55084920736b0ef62570c1b27cda8af02dbabf1982642b6dfd74db842f83dde0",
+    "kcgm-gpu-comparison/submission.json": "89047c07cacc1a15f56b589d56410578992e132bbf75fc79737dad87885c1570",
     "programming-preparation/cpu-report.json": "9952c0ac24e9c3f008bd52124a749b94fa012dc2cff133b9c8209f2dc43c8347",
     "programming-preparation/manifest.json": "68af33ecd4b4a725a27d2c4501d377d42662a9ac752fe4eb43f33c8de23c49ef",
     "programming-preparation/vocabulary.json": "d6fafe0a10c7162bda294f700e8ad171415e2fa8d40273290d0c0058e4c08af0",
@@ -48,6 +60,19 @@
     "reward-audit-skywork/run_config.json": "c7d1bdd55a33898d966af65f97345dd96cedec3d6ac0fc4802c25a0b96c530fb",
     "reward-audit-skywork/source-manifest.json": "6bf8a3afdc4dfcdb0a067e3a87503fa920c96e5ed584da2da59962141f9461b1",
     "reward-audit-skywork/wandb_run.json": "d1831b6f6b326774caf59d34af1066f03289f182bbb8f5748d3dcce6d344e173",
+    "semantic-mmd/baseline-conditional-mmd.json": "ceb4e0156d82ddbae4758761ae3eb99288390b9002dcca8af68eaacbd844e8ca",
+    "semantic-mmd/baseline-metrics.json": "d9a0d7d545a38ae233bac6552d004ce5130f10839b0650c1a3c285926e9c5325",
+    "semantic-mmd/baseline-samples.jsonl": "6ebfd9473f07c21619a927f733d1284f4a7353ddc882d0c82a353b9ef4d4987c",
+    "semantic-mmd/comparison.json": "dcc4454b9788e7568cdc154d6509da7fb7779b26855da7a73ba3d14349842628",
+    "semantic-mmd/final-conditional-mmd.json": "b7e5bb30d599f3b757804cfcebb7aec5aed020ff237ac1c904c5a62809316d2c",
+    "semantic-mmd/final-metrics.json": "bcf8362b4e59f7fb917afce4e78801df85bf73dd027fa71f0b779e12b8496ab0",
+    "semantic-mmd/final-samples.jsonl": "baa2035ec416782dd9538656e503939d5709cca820ea659abe9c54a1634b0bc5",
+    "semantic-mmd/history.jsonl": "077e06ef4db14962041393bb05951eec3e193094c775a74d1c9d1a6500f7bf23",
+    "semantic-mmd/run_config.json": "0832b935d542e9565e6f8739673f68871d05f4a9bbd8d9553b21217153c8ad96",
+    "semantic-mmd/source-manifest.json": "d59503007fc76c8f4cb6df8b0283106c09bd0b81bbc9db7e26ede9a7c2222ace",
+    "semantic-mmd/validation-0-metrics.json": "998eea89f228f9fc823396a6b1183868d6f8574333cf00d914aeef38f2f23737",
+    "semantic-mmd/validation-50-metrics.json": "7de4b466860d0291fb0fb00a5e47a4674e85451703aa7540a33444419006f5a4",
+    "semantic-mmd/wandb_run.json": "fc5473c873ae3b5986fe288fcb3434cf3f01effc0014556c02b3f1e4ec6a22ac",
     "semantic-mmd-preparation/cpu-audit.json": "888c80559ebbb8f765be513a6324001d46992ba16550d9866d18ca4a47cac3df",
     "semantic-mmd-preparation/deployed-config.json": "653bde38f6092a246af5d53b997d367d1192629875889474edcb04d1c1af3fd6",
     "semantic-mmd-preparation/manifest.json": "f8183826b3d33aef5a570f44727caece06ca9a5e79c39f9de5a06e10e568fa94",
@@ -96,5 +121,7 @@
     "subset-quality-unigram/validation-200-metrics.json": "5397f0e171d833bcbf9b5cfe677c85e9cd129f1c3bbcc1fae286be5291ff4776",
     "subset-quality-unigram/validation-50-metrics.json": "25d56f74e5d73fb4944b26790a42d6af0b7e4c02245c886cc85c2ca388992d45",
     "subset-quality-unigram/wandb_run.json": "fcddbc7a122358d3288796a744ed4f6ae324761cb19d675ea66366d2b3b36bdb"
-  }
+  },
+  "kcgm_comparison_job": "508718",
+  "kcgm_comparison_status": "PENDING priority at November 21, 2026 snapshot; no new policy results"
 }

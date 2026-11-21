@@ -1,12 +1,17 @@
 # Prompt-conditioned semantic MMD
 
-Slurm job **504124** was submitted on November 20, 2026. At the last check
-(November 20, 1:44 PM Pacific), it remained pending priority. Scheduler estimates
-are transient; this document records no MMD policy-training result.
-The isolated runtime is deployed at
-`/gpfs/projects/mathai/permuformer2/yash_data/stoch/experiments/helpsteer-semantic-mmd-v1`.
-The deployed CPU preflight, encoder parity, and W&B connection checks passed.
-All 30 relevant CPU tests passed (7 MMD tests plus 23 existing regression checks).
+Slurm job **504124** completed on November 20, 2026 after **1h 21m 36s**
+on two H200s (about 2.72 GPU-hours). It performed 94 updates with 1,504 sampled
+answers. On 19 held-out questions, Gaussian MMD decreased from 0.39224 to 0.38330,
+while quality reward decreased from 0.66961 to 0.66314. Paired prompt-bootstrap
+intervals include zero for both changes; this is not a convincing overall gain.
+[Completed run on W&B](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/3q2tgmmj).
+
+A subsequent **CPU-only** replay implements initial-policy KL centering, frozen
+kernel scaling, and an energy-distance alternative. No new policy was trained.
+See the [audit, mathematics, measurements, and limitations](../../results/helpsteer-v1/kcgm-cpu-audit/README.md).
+The reusable `kcgm-*-config.json` templates do not authorize submission. After explicit user authorization, derived 45-minute training profiles were submitted as **job 508718**, Gaussian then energy sequentially within one two-H200 allocation capped at two hours total. At the latest check the job was pending priority; no new policy result is available. [Exact submitted profiles, budget, and script](../../results/helpsteer-v1/kcgm-gpu-comparison/).
+The protocol below describes the completed original Gaussian run.
 
 This experiment replaces the word-PMF reward with answer-embedding MMD computed
 separately for each exact question. It retains the frozen audited Skywork quality

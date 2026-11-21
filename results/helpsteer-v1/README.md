@@ -99,3 +99,7 @@ recorded with the semantic preparation metadata.
 
 `manifest.json` lists SHA-256 checksums of the exported files. Read-only analysis
 of these records does not require a GPU or a new W&B run.
+
+## Semantic MMD and kCGM follow-up
+
+Job **504124** completed: [metrics, samples, training history, configuration and source hashes](semantic-mmd/). Gaussian MMD improved slightly while quality fell slightly; paired prompt-bootstrap intervals include zero. The [CPU replay audit](kcgm-cpu-audit/README.md) records KL centering, frozen scaling, energy-distance diagnostics, and their limitations. A subsequent [GPU comparison](kcgm-gpu-comparison/) is queued as **job 508718**, using at most two H200s for two hours total. No results from that comparison are claimed yet.

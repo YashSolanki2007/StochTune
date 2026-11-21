@@ -1,0 +1,2258 @@
+[
+  {
+    "step": 1,
+    "case_id": "45830ab6082417f70d0e7214aefaf5cdbd069176004137c047ba7182be771f4b",
+    "rbf_cost": 0.8157537935680768,
+    "energy_cost": 1.1597703185199535
+  },
+  {
+    "step": 1,
+    "case_id": "6f49186a086b4240ad9209e1c4249d0f569746c36d0dc888a9ebe380afbb3526",
+    "rbf_cost": 0.45946833215043026,
+    "energy_cost": 0.5298343119429433
+  },
+  {
+    "step": 1,
+    "case_id": "53e3da132ed9bd03c1a984c704050432a0cd0ad8d13cb3636d6b0e22100fa7c1",
+    "rbf_cost": 0.3386962230409152,
+    "energy_cost": 0.3923765828771151
+  },
+  {
+    "step": 1,
+    "case_id": "7494bd6083e68cd572da13f54c34dfdd0df1283a28e1667c56514b590a8aa4d5",
+    "rbf_cost": 0.5071258984370116,
+    "energy_cost": 0.6910247713901501
+  },
+  {
+    "step": 2,
+    "case_id": "3db0f426789e4a44974039e463f0516f3f8edd7af0d1c28aa30d25c84c4f2d9e",
+    "rbf_cost": 0.6292702539291832,
+    "energy_cost": 1.0841514328842972
+  },
+  {
+    "step": 2,
+    "case_id": "e5c6f38da60368c14e2184dc55b031e93f25b8c8dfab7eb6b922d157d7908268",
+    "rbf_cost": 0.41706236809113084,
+    "energy_cost": 0.5178529924669788
+  },
+  {
+    "step": 2,
+    "case_id": "785d885cbdf64cba153e28d0839b0ab303104c6e3f3d8431208c6a323c7b7cd4",
+    "rbf_cost": 0.29705629655438504,
+    "energy_cost": 0.3570973778118576
+  },
+  {
+    "step": 2,
+    "case_id": "9c3e69fb2cd9aa5279befc0141cb6975b86949d954f1df8ab1d0f117948c145f",
+    "rbf_cost": 0.5878079737854647,
+    "energy_cost": 0.7599002348893118
+  },
+  {
+    "step": 3,
+    "case_id": "53e3da132ed9bd03c1a984c704050432a0cd0ad8d13cb3636d6b0e22100fa7c1",
+    "rbf_cost": 0.36459114971175177,
+    "energy_cost": 0.40468987473674645
+  },
+  {
+    "step": 3,
+    "case_id": "fc1de4ab36b894f2ec5e555e48f5a819bda2209c074d46576866a83bf1c3b9b4",
+    "rbf_cost": 0.4956759324397704,
+    "energy_cost": 0.6841147445127813
+  },
+  {
+    "step": 3,
+    "case_id": "8d51127aed6416f25491d983c62a252d7d701292c2f3fec0003f7891cbf38073",
+    "rbf_cost": 0.47928889649179307,
+    "energy_cost": 0.6060604869607336
+  },
+  {
+    "step": 3,
+    "case_id": "cab63dc47dbe9b67cade3a57eaac92ab5aafc7c38ed2c4574df2ed6531aa1db3",
+    "rbf_cost": 0.26005650884543696,
+    "energy_cost": 0.29889236254012963
+  },
+  {
+    "step": 4,
+    "case_id": "082fd9a14182760ac55864f7ebe93df14fc5dc3967c0ca24897610dde5c29e0d",
+    "rbf_cost": 0.3465674252420061,
+    "energy_cost": 0.40969543923195884
+  },
+  {
+    "step": 4,
+    "case_id": "56b0c9cc8b0f4bd25c82afd16151684012f2d55ee1fb9ee4554147a2c9f841de",
+    "rbf_cost": 0.45164578060657845,
+    "energy_cost": 0.5480198399498595
+  },
+  {
+    "step": 4,
+    "case_id": "0f9c8852cf480cc13ff29db4ef104c01c12f6d78f23b946b0384455446871b5a",
+    "rbf_cost": 0.39497409321346566,
+    "energy_cost": 0.4838526968196848
+  },
+  {
+    "step": 4,
+    "case_id": "412c2ff69a52557c29329d83470be64db782d7646398f4ad001703183caf36e7",
+    "rbf_cost": 0.39361507479295144,
+    "energy_cost": 0.43877872108541016
+  },
+  {
+    "step": 5,
+    "case_id": "3a444c2a6fb45ec5154009093278a86b301c800b1b00cd18098ed8e6064bb867",
+    "rbf_cost": 0.5145322769466916,
+    "energy_cost": 0.7779740206709798
+  },
+  {
+    "step": 5,
+    "case_id": "6f49186a086b4240ad9209e1c4249d0f569746c36d0dc888a9ebe380afbb3526",
+    "rbf_cost": 0.4564011965864697,
+    "energy_cost": 0.5536718729598742
+  },
+  {
+    "step": 5,
+    "case_id": "56b0c9cc8b0f4bd25c82afd16151684012f2d55ee1fb9ee4554147a2c9f841de",
+    "rbf_cost": 0.3841756022973901,
+    "energy_cost": 0.4489041719804765
+  },
+  {
+    "step": 5,
+    "case_id": "a53ecd4e2131bc31af5c890a759e36a861c8cfbbd56a7a105046505bea830952",
+    "rbf_cost": 0.42988584874835767,
+    "energy_cost": 0.5326131281930057
+  },
+  {
+    "step": 6,
+    "case_id": "4920509e2ac4f529fce78fb890bd6b6efa7f7a06749f9fc565a98843ec0b2aed",
+    "rbf_cost": 0.5002547448636616,
+    "energy_cost": 0.6492048798777892
+  },
+  {
+    "step": 6,
+    "case_id": "6f49186a086b4240ad9209e1c4249d0f569746c36d0dc888a9ebe380afbb3526",
+    "rbf_cost": 0.47737096461758033,
+    "energy_cost": 0.5648173512098812
+  },
+  {
+    "step": 6,
+    "case_id": "7609d0702119951fe4f3903a7d4507606a67299637af76983a5ccf6f5b08c2fc",
+    "rbf_cost": 0.4331658617719353,
+    "energy_cost": 0.5757721271262364
+  },
+  {
+    "step": 6,
+    "case_id": "ced8e5ae36cc870a373d2d3527abeb62f702542ca7b3d6031b9b37756a5d3359",
+    "rbf_cost": 0.42082822872801184,
+    "energy_cost": 0.560969276087176
+  },
+  {
+    "step": 7,
+    "case_id": "446582bf1bd0442abeb2ea3010950cbb1b915f0c67e745bba86b2e3b78ea60b1",
+    "rbf_cost": 0.5058614188045775,
+    "energy_cost": 0.6186541028739944
+  },
+  {
+    "step": 7,
+    "case_id": "f3d3b5203da705a56ff2b8deab8ab25ac50766c9e43203101588b198a4926189",
+    "rbf_cost": 0.3858229847526019,
+    "energy_cost": 0.44981950603402787
+  },
+  {
+    "step": 7,
+    "case_id": "a708d28315be1fd7c61cc4e8687e6828fea054c45c05b3b0ebdbb18e58a350bf",
+    "rbf_cost": 0.5167071640484766,
+    "energy_cost": 0.6886969265449152
+  },
+  {
+    "step": 7,
+    "case_id": "b6ada8febc1cb1e12e98a1ecf14decbc74f6a182e86a775294b73f47ab3fd804",
+    "rbf_cost": 0.5132735070078831,
+    "energy_cost": 0.7214475659630654
+  },
+  {
+    "step": 8,
+    "case_id": "3db0f426789e4a44974039e463f0516f3f8edd7af0d1c28aa30d25c84c4f2d9e",
+    "rbf_cost": 0.6444655835262969,
+    "energy_cost": 1.1175701055403273
+  },
+  {
+    "step": 8,
+    "case_id": "cab63dc47dbe9b67cade3a57eaac92ab5aafc7c38ed2c4574df2ed6531aa1db3",
+    "rbf_cost": 0.21348701870263032,
+    "energy_cost": 0.24327323593048455
+  },
+  {
+    "step": 8,
+    "case_id": "29fc393b9adbf5b990d389addc758aa38aa669a63bbf825979d02816fada5cfa",
+    "rbf_cost": 0.24896358685399278,
+    "energy_cost": 0.2874251565086021
+  },
+  {
+    "step": 8,
+    "case_id": "3d4df2ac387b5c0688d05301f0f3c9347b1cf68f3a6631cbe98e32523fd01087",
+    "rbf_cost": 0.3931046324667524,
+    "energy_cost": 0.42800914806413703
+  },
+  {
+    "step": 9,
+    "case_id": "0f9c8852cf480cc13ff29db4ef104c01c12f6d78f23b946b0384455446871b5a",
+    "rbf_cost": 0.4278792881581204,
+    "energy_cost": 0.5218180067428988
+  },
+  {
+    "step": 9,
+    "case_id": "b7bd328b93b73c3e3f1d053a6d4a9eb9378a192473757a3d4013fab070430a51",
+    "rbf_cost": 0.23007516649521254,
+    "energy_cost": 0.2664931565735932
+  },
+  {
+    "step": 9,
+    "case_id": "0be6e4214c2223f94f55a85b792ef08a82f0fe3582ca00b176033664a6dfc4ae",
+    "rbf_cost": 0.46403253060104643,
+    "energy_cost": 0.5640261360626493
+  },
+  {
+    "step": 9,
+    "case_id": "e5c6f38da60368c14e2184dc55b031e93f25b8c8dfab7eb6b922d157d7908268",
+    "rbf_cost": 0.37343085240287066,
+    "energy_cost": 0.48485884526333867
+  },
+  {
+    "step": 10,
+    "case_id": "082fd9a14182760ac55864f7ebe93df14fc5dc3967c0ca24897610dde5c29e0d",
+    "rbf_cost": 0.3699753225172111,
+    "energy_cost": 0.4276781038492612
+  },
+  {
+    "step": 10,
+    "case_id": "08d18a0df32493a3beab26b9e3015153cb7a6852204bd668c8a617bbedda35bc",
+    "rbf_cost": 0.49587916564199674,
+    "energy_cost": 0.7675912261473552
+  },
+  {
+    "step": 10,
+    "case_id": "83c29979fa3c0cc06f839d8738a5c515fe367dbd9fc88dfc9f6f27fe345b3205",
+    "rbf_cost": 0.2918126034205726,
+    "energy_cost": 0.35269736488806513
+  },
+  {
+    "step": 10,
+    "case_id": "a708d28315be1fd7c61cc4e8687e6828fea054c45c05b3b0ebdbb18e58a350bf",
+    "rbf_cost": 0.4825936428138815,
+    "energy_cost": 0.6159005419284596
+  },
+  {
+    "step": 11,
+    "case_id": "3a444c2a6fb45ec5154009093278a86b301c800b1b00cd18098ed8e6064bb867",
+    "rbf_cost": 0.41370265470541445,
+    "energy_cost": 0.5518497449654911
+  },
+  {
+    "step": 11,
+    "case_id": "e5c6f38da60368c14e2184dc55b031e93f25b8c8dfab7eb6b922d157d7908268",
+    "rbf_cost": 0.39178164807496374,
+    "energy_cost": 0.48472259476949653
+  },
+  {
+    "step": 11,
+    "case_id": "0be6e4214c2223f94f55a85b792ef08a82f0fe3582ca00b176033664a6dfc4ae",
+    "rbf_cost": 0.5620657658288519,
+    "energy_cost": 0.671681651299161
+  },
+  {
+    "step": 11,
+    "case_id": "e213f788b2d5ea382f962e897aec310e3749579a36b1800948dccf8ccbc77be7",
+    "rbf_cost": 0.32368944528660437,
+    "energy_cost": 0.3624834292373228
+  },
+  {
+    "step": 12,
+    "case_id": "56b0c9cc8b0f4bd25c82afd16151684012f2d55ee1fb9ee4554147a2c9f841de",
+    "rbf_cost": 0.438886778063475,
+    "energy_cost": 0.542763332947394
+  },
+  {
+    "step": 12,
+    "case_id": "83c29979fa3c0cc06f839d8738a5c515fe367dbd9fc88dfc9f6f27fe345b3205",
+    "rbf_cost": 0.319458071711461,
+    "energy_cost": 0.38763210074418497
+  },
+  {
+    "step": 12,
+    "case_id": "8d51127aed6416f25491d983c62a252d7d701292c2f3fec0003f7891cbf38073",
+    "rbf_cost": 0.5886693894682447,
+    "energy_cost": 0.7600318911981574
+  },
+  {
+    "step": 12,
+    "case_id": "f122b869fc690767eef34cafc9fd6f7e5981fc3b99d52f3602e91e7f9e832f7b",
+    "rbf_cost": 0.2595942227904544,
+    "energy_cost": 0.29302879785180136
+  },
+  {
+    "step": 13,
+    "case_id": "145113827d3591c0a399b47c34ab65339ed7e4600b0afca29a35808fbafb77cd",
+    "rbf_cost": 0.2508133961790855,
+    "energy_cost": 0.29067040193521554
+  },
+  {
+    "step": 13,
+    "case_id": "2e6a70ae57a05e0ea241c494024dfa1ed302d333aae195c50dd965ab0fcedff0",
+    "rbf_cost": 0.3827485168933459,
+    "energy_cost": 0.4398574464265754
+  },
+  {
+    "step": 13,
+    "case_id": "18121b964045ccbb6ed1838ad4bb95d1b0bb90d93b0ebe763ff441122c381ac9",
+    "rbf_cost": 0.40246268639959737,
+    "energy_cost": 0.5510819935398428
+  },
+  {
+    "step": 13,
+    "case_id": "7609d0702119951fe4f3903a7d4507606a67299637af76983a5ccf6f5b08c2fc",
+    "rbf_cost": 0.37038821620373485,
+    "energy_cost": 0.4798134426488534
+  },
+  {
+    "step": 14,
+    "case_id": "8273c9e8fd8f933fba77afe7fd53b943de47466393233adf1e626103d9e53817",
+    "rbf_cost": 0.3264461477672107,
+    "energy_cost": 0.3641392299276054
+  },
+  {
+    "step": 14,
+    "case_id": "be46e24984c35c9a1f5a004f6af87911a8a37252fe0931239d021b8e0ae6b10d",
+    "rbf_cost": 0.4716268718440819,
+    "energy_cost": 0.5992471234098316
+  },
+  {
+    "step": 14,
+    "case_id": "96b24f632a45f825116c10a7b33bf57ed52ce5130bbff0387f4b400d1b2b7aea",
+    "rbf_cost": 0.4054812011772093,
+    "energy_cost": 0.45708225578976935
+  },
+  {
+    "step": 14,
+    "case_id": "c1af9f7d5688c50d39fd4632dfaa9c31810c514b6c6f95dbf985e8b965d5b5ec",
+    "rbf_cost": 0.5270665359948183,
+    "energy_cost": 0.668278403094249
+  },
+  {
+    "step": 15,
+    "case_id": "2c25ed39d74d9eb4a68aa95a8568e3634302c8ac5f9a8453bcdeb9e4679ac513",
+    "rbf_cost": 0.35178546622072293,
+    "energy_cost": 0.4411427546053268
+  },
+  {
+    "step": 15,
+    "case_id": "f122b869fc690767eef34cafc9fd6f7e5981fc3b99d52f3602e91e7f9e832f7b",
+    "rbf_cost": 0.24566408671650386,
+    "energy_cost": 0.2865506702128471
+  },
+  {
+    "step": 15,
+    "case_id": "36c828ae4b0f020cb5d69ef4eb7238cac9193d1f74ef65e54043b5b6cd84f272",
+    "rbf_cost": 0.43606997731751773,
+    "energy_cost": 0.6126933051971808
+  },
+  {
+    "step": 15,
+    "case_id": "81d42c53a3abb8109ce0acb41c62ff5f975e41e45ea02920d6e3541119f9adf9",
+    "rbf_cost": 0.4014477356573454,
+    "energy_cost": 0.514709694507925
+  },
+  {
+    "step": 16,
+    "case_id": "32d51157c0b228c1144c912ab07dd9f8034382d918fefbcff191bbd2c3c8ba58",
+    "rbf_cost": 0.44171138844628954,
+    "energy_cost": 0.5135554354354063
+  },
+  {
+    "step": 16,
+    "case_id": "ab16326178508f4491e3fc3813a769d2b8399bc84443579bfca5d6e3db60ac26",
+    "rbf_cost": 0.24281701281826784,
+    "energy_cost": 0.27439491808540795
+  },
+  {
+    "step": 16,
+    "case_id": "14acca5eea7e2ca9f8cf1c510d65eef02575a1a852dd357fcd88b09d6dbf49d8",
+    "rbf_cost": 0.854160650785159,
+    "energy_cost": 1.2735041273790444
+  },
+  {
+    "step": 16,
+    "case_id": "9f88876b667f575aa7b359e6e56045f276f601613f86aa507153f8cb892cc1fd",
+    "rbf_cost": 0.44864892462125594,
+    "energy_cost": 0.5287716717615479
+  },
+  {
+    "step": 17,
+    "case_id": "38ff2c563919d17e81ade2b5c69be1b5a76465eea72e22031290fc4bc7475000",
+    "rbf_cost": 0.42278820207688517,
+    "energy_cost": 0.4823106331814879
+  },
+  {
+    "step": 17,
+    "case_id": "d146ea04890927f0b33d4ee237d860c11f3c8aa4b7865d9507d450e7b2e3ddee",
+    "rbf_cost": 0.4077079798430794,
+    "energy_cost": 0.5077714187128493
+  },
+  {
+    "step": 17,
+    "case_id": "01308aae754535c73dd9ea842dbbdb8d9acd66c9ed539a7e5c91f6e5998b89ab",
+    "rbf_cost": 0.3781298582436017,
+    "energy_cost": 0.47194855832672045
+  },
+  {
+    "step": 17,
+    "case_id": "4acfbc38b3e40a27db79b2e27f789dcdab3e989fe8be70e23ef7d8e251ae0169",
+    "rbf_cost": 0.3725252775489686,
+    "energy_cost": 0.4596304875685665
+  },
+  {
+    "step": 18,
+    "case_id": "a92c57757f64113cfb0f499c94f0245d622bb4934ed1e8c233c49df9af880474",
+    "rbf_cost": 0.39787849161254774,
+    "energy_cost": 0.4364412020880668
+  },
+  {
+    "step": 18,
+    "case_id": "f4bbec86c11dc8e9918e4cdc2f373ba552b775b912066b0b6e2f040c0cdaa03f",
+    "rbf_cost": 0.29471212797785107,
+    "energy_cost": 0.33930410907396225
+  },
+  {
+    "step": 18,
+    "case_id": "a53ecd4e2131bc31af5c890a759e36a861c8cfbbd56a7a105046505bea830952",
+    "rbf_cost": 0.4194245955347764,
+    "energy_cost": 0.5078143428711246
+  },
+  {
+    "step": 18,
+    "case_id": "c1af9f7d5688c50d39fd4632dfaa9c31810c514b6c6f95dbf985e8b965d5b5ec",
+    "rbf_cost": 0.4741877627064308,
+    "energy_cost": 0.6247674676421922
+  },
+  {
+    "step": 19,
+    "case_id": "23157ad0d82a7fcfa646b583530d86a418b86fb742a5a95b19ed5f66bd2a3df3",
+    "rbf_cost": 0.48808353418773565,
+    "energy_cost": 0.5902247997857681
+  },
+  {
+    "step": 19,
+    "case_id": "81d42c53a3abb8109ce0acb41c62ff5f975e41e45ea02920d6e3541119f9adf9",
+    "rbf_cost": 0.33191418365430025,
+    "energy_cost": 0.4140400279473264
+  },
+  {
+    "step": 19,
+    "case_id": "14acca5eea7e2ca9f8cf1c510d65eef02575a1a852dd357fcd88b09d6dbf49d8",
+    "rbf_cost": 0.747438974959556,
+    "energy_cost": 1.1359029247583379
+  },
+  {
+    "step": 19,
+    "case_id": "a53ecd4e2131bc31af5c890a759e36a861c8cfbbd56a7a105046505bea830952",
+    "rbf_cost": 0.31969455642852174,
+    "energy_cost": 0.3886474335777905
+  },
+  {
+    "step": 20,
+    "case_id": "145113827d3591c0a399b47c34ab65339ed7e4600b0afca29a35808fbafb77cd",
+    "rbf_cost": 0.27300387582827135,
+    "energy_cost": 0.31316794659141245
+  },
+  {
+    "step": 20,
+    "case_id": "e5c6f38da60368c14e2184dc55b031e93f25b8c8dfab7eb6b922d157d7908268",
+    "rbf_cost": 0.42580060011092213,
+    "energy_cost": 0.5768900778985844
+  },
+  {
+    "step": 20,
+    "case_id": "96b24f632a45f825116c10a7b33bf57ed52ce5130bbff0387f4b400d1b2b7aea",
+    "rbf_cost": 0.40386603741430394,
+    "energy_cost": 0.4678367429216379
+  },
+  {
+    "step": 20,
+    "case_id": "f122b869fc690767eef34cafc9fd6f7e5981fc3b99d52f3602e91e7f9e832f7b",
+    "rbf_cost": 0.29887071326130243,
+    "energy_cost": 0.3418476574119438
+  },
+  {
+    "step": 21,
+    "case_id": "08d18a0df32493a3beab26b9e3015153cb7a6852204bd668c8a617bbedda35bc",
+    "rbf_cost": 0.39889168051590473,
+    "energy_cost": 0.5379596668894164
+  },
+  {
+    "step": 21,
+    "case_id": "45830ab6082417f70d0e7214aefaf5cdbd069176004137c047ba7182be771f4b",
+    "rbf_cost": 0.8090348753344108,
+    "energy_cost": 1.1865576171446093
+  },
+  {
+    "step": 21,
+    "case_id": "cc8b13181d21c221e17e8c80ad80dc7733473e6dac9f766ac749a57007860e9e",
+    "rbf_cost": 0.4745691285798457,
+    "energy_cost": 0.5547804466394748
+  },
+  {
+    "step": 21,
+    "case_id": "d146ea04890927f0b33d4ee237d860c11f3c8aa4b7865d9507d450e7b2e3ddee",
+    "rbf_cost": 0.4988898496064612,
+    "energy_cost": 0.6065602833981122
+  },
+  {
+    "step": 22,
+    "case_id": "18121b964045ccbb6ed1838ad4bb95d1b0bb90d93b0ebe763ff441122c381ac9",
+    "rbf_cost": 0.33205363780681885,
+    "energy_cost": 0.42258902633364226
+  },
+  {
+    "step": 22,
+    "case_id": "29e910c58e6fd1174f6aef5ca15eaa441a15ad2c252bd8594157bfe82fdca10b",
+    "rbf_cost": 0.3306822536035843,
+    "energy_cost": 0.39160481700046
+  },
+  {
+    "step": 22,
+    "case_id": "0ce19b3af0db3928be332a8f1a5bf18f348989905f5e503ae6fd6689171da239",
+    "rbf_cost": 0.4477998313519196,
+    "energy_cost": 0.5035328473546957
+  },
+  {
+    "step": 22,
+    "case_id": "f3838fe1d5018a6ab48d9b7211ab2b4294fdcac4539b8ed047f8d4f78bbd441e",
+    "rbf_cost": 0.34196557827202634,
+    "energy_cost": 0.3927994715304439
+  },
+  {
+    "step": 23,
+    "case_id": "a708d28315be1fd7c61cc4e8687e6828fea054c45c05b3b0ebdbb18e58a350bf",
+    "rbf_cost": 0.5498388094753153,
+    "energy_cost": 0.7289549993456124
+  },
+  {
+    "step": 23,
+    "case_id": "f8b5379bc9bdffaa208e07e6ff71bcd94e72f5c1ec18e397f6153073dbc79ad4",
+    "rbf_cost": 0.6480284859946959,
+    "energy_cost": 0.8408570874905419
+  },
+  {
+    "step": 23,
+    "case_id": "319361b01cafb80182ecf2675d025e667e711651b525543ee57d09c3b9df6e81",
+    "rbf_cost": 0.3680032219810371,
+    "energy_cost": 0.4423709596222326
+  },
+  {
+    "step": 23,
+    "case_id": "995e597a3533e51eef7a5b48ec7b0ae6c8a099fcbc509f3c4140061bcd387bfa",
+    "rbf_cost": 0.5734183547846539,
+    "energy_cost": 0.7465339741321251
+  },
+  {
+    "step": 24,
+    "case_id": "7609d0702119951fe4f3903a7d4507606a67299637af76983a5ccf6f5b08c2fc",
+    "rbf_cost": 0.44907813982678535,
+    "energy_cost": 0.6089489125230466
+  },
+  {
+    "step": 24,
+    "case_id": "c9cad3a647659c712e9235df493c8e13517687133037df29727609395ac8983a",
+    "rbf_cost": 0.3106595200671137,
+    "energy_cost": 0.37509760289937133
+  },
+  {
+    "step": 24,
+    "case_id": "2c25ed39d74d9eb4a68aa95a8568e3634302c8ac5f9a8453bcdeb9e4679ac513",
+    "rbf_cost": 0.2954710844093066,
+    "energy_cost": 0.35818064726954635
+  },
+  {
+    "step": 24,
+    "case_id": "45830ab6082417f70d0e7214aefaf5cdbd069176004137c047ba7182be771f4b",
+    "rbf_cost": 0.7973984017780776,
+    "energy_cost": 1.0828319361810697
+  },
+  {
+    "step": 25,
+    "case_id": "08d18a0df32493a3beab26b9e3015153cb7a6852204bd668c8a617bbedda35bc",
+    "rbf_cost": 0.38409668223459925,
+    "energy_cost": 0.5053913267544663
+  },
+  {
+    "step": 25,
+    "case_id": "be46e24984c35c9a1f5a004f6af87911a8a37252fe0931239d021b8e0ae6b10d",
+    "rbf_cost": 0.4562334591189461,
+    "energy_cost": 0.542456918208642
+  },
+  {
+    "step": 25,
+    "case_id": "9c3e69fb2cd9aa5279befc0141cb6975b86949d954f1df8ab1d0f117948c145f",
+    "rbf_cost": 0.5068298984019062,
+    "energy_cost": 0.681744166712426
+  },
+  {
+    "step": 25,
+    "case_id": "b5bf3d16d9880fffce6b13e82e36f9e590b947ec44029f34b6151e769f74a5bf",
+    "rbf_cost": 0.3364571205190161,
+    "energy_cost": 0.40187326647744026
+  },
+  {
+    "step": 26,
+    "case_id": "45830ab6082417f70d0e7214aefaf5cdbd069176004137c047ba7182be771f4b",
+    "rbf_cost": 0.7566892705229121,
+    "energy_cost": 1.0600413152068136
+  },
+  {
+    "step": 26,
+    "case_id": "f122b869fc690767eef34cafc9fd6f7e5981fc3b99d52f3602e91e7f9e832f7b",
+    "rbf_cost": 0.23071832747264942,
+    "energy_cost": 0.2722697107892287
+  },
+  {
+    "step": 26,
+    "case_id": "1bf2c0afd8eca51e5e8178f77fc7b03cf14c6540d65cde5697d01aab8b703fc8",
+    "rbf_cost": 0.23112397850616428,
+    "energy_cost": 0.26645027076187
+  },
+  {
+    "step": 26,
+    "case_id": "f3838fe1d5018a6ab48d9b7211ab2b4294fdcac4539b8ed047f8d4f78bbd441e",
+    "rbf_cost": 0.46702833942355126,
+    "energy_cost": 0.5724063264196487
+  },
+  {
+    "step": 27,
+    "case_id": "995e597a3533e51eef7a5b48ec7b0ae6c8a099fcbc509f3c4140061bcd387bfa",
+    "rbf_cost": 0.5138539952621929,
+    "energy_cost": 0.6417991755666804
+  },
+  {
+    "step": 27,
+    "case_id": "ced8e5ae36cc870a373d2d3527abeb62f702542ca7b3d6031b9b37756a5d3359",
+    "rbf_cost": 0.4133195691128866,
+    "energy_cost": 0.5189941346567446
+  },
+  {
+    "step": 27,
+    "case_id": "3db0f426789e4a44974039e463f0516f3f8edd7af0d1c28aa30d25c84c4f2d9e",
+    "rbf_cost": 0.5760647308056714,
+    "energy_cost": 0.9931145184149219
+  },
+  {
+    "step": 27,
+    "case_id": "e2f4cb61d92a5335617e2d2befbf3364e575c70156f41f9fd759d2fcac30badd",
+    "rbf_cost": 0.4703779086483929,
+    "energy_cost": 0.5998177802601662
+  },
+  {
+    "step": 28,
+    "case_id": "23157ad0d82a7fcfa646b583530d86a418b86fb742a5a95b19ed5f66bd2a3df3",
+    "rbf_cost": 0.407103826705868,
+    "energy_cost": 0.49856163703233003
+  },
+  {
+    "step": 28,
+    "case_id": "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1",
+    "rbf_cost": 0.5610951411722651,
+    "energy_cost": 0.805804271743354
+  },
+  {
+    "step": 28,
+    "case_id": "370895b4f035d11736825f3a4bb9fb726519b6612b77c0685fa7ff4a9a22e38d",
+    "rbf_cost": 0.5685734549793001,
+    "energy_cost": 0.7732584193876116
+  },
+  {
+    "step": 28,
+    "case_id": "a53ecd4e2131bc31af5c890a759e36a861c8cfbbd56a7a105046505bea830952",
+    "rbf_cost": 0.4021315689239189,
+    "energy_cost": 0.49643215396403284
+  },
+  {
+    "step": 29,
+    "case_id": "412c2ff69a52557c29329d83470be64db782d7646398f4ad001703183caf36e7",
+    "rbf_cost": 0.45946892197409417,
+    "energy_cost": 0.5186837467024322
+  },
+  {
+    "step": 29,
+    "case_id": "f60afdaef0b2f256a08c4baa830cb3a570981ae076473b2fa17eba5494cf6a71",
+    "rbf_cost": 0.4644704231197301,
+    "energy_cost": 0.6654411134475307
+  },
+  {
+    "step": 29,
+    "case_id": "e80dcdcc0195008938e4c8af20d2a12b665fe84169e201d8bd29617e7c6b7a56",
+    "rbf_cost": 0.6394955051410167,
+    "energy_cost": 0.8972396882402229
+  },
+  {
+    "step": 29,
+    "case_id": "f3838fe1d5018a6ab48d9b7211ab2b4294fdcac4539b8ed047f8d4f78bbd441e",
+    "rbf_cost": 0.5336891650974416,
+    "energy_cost": 0.6352008831417038
+  },
+  {
+    "step": 30,
+    "case_id": "9a1edc24c15a63500c6fd69ef72c6ebcb7d28799eed856596f5286c5a275f140",
+    "rbf_cost": 0.28079961409032306,
+    "energy_cost": 0.3560041387001369
+  },
+  {
+    "step": 30,
+    "case_id": "f4bbec86c11dc8e9918e4cdc2f373ba552b775b912066b0b6e2f040c0cdaa03f",
+    "rbf_cost": 0.3036990812939988,
+    "energy_cost": 0.36607082683117986
+  },
+  {
+    "step": 30,
+    "case_id": "3a444c2a6fb45ec5154009093278a86b301c800b1b00cd18098ed8e6064bb867",
+    "rbf_cost": 0.48958511719985665,
+    "energy_cost": 0.698002007067291
+  },
+  {
+    "step": 30,
+    "case_id": "b6ada8febc1cb1e12e98a1ecf14decbc74f6a182e86a775294b73f47ab3fd804",
+    "rbf_cost": 0.4816353088157104,
+    "energy_cost": 0.6787707195634236
+  },
+  {
+    "step": 31,
+    "case_id": "446582bf1bd0442abeb2ea3010950cbb1b915f0c67e745bba86b2e3b78ea60b1",
+    "rbf_cost": 0.5570648607622709,
+    "energy_cost": 0.7205356474799729
+  },
+  {
+    "step": 31,
+    "case_id": "e80dcdcc0195008938e4c8af20d2a12b665fe84169e201d8bd29617e7c6b7a56",
+    "rbf_cost": 0.577263745913142,
+    "energy_cost": 0.7837755566585362
+  },
+  {
+    "step": 31,
+    "case_id": "271e91b0402565dd213bb5fd30aad0e8f3c49644c846829582df4e3506bb063e",
+    "rbf_cost": 0.2712480497554177,
+    "energy_cost": 0.30270448777383197
+  },
+  {
+    "step": 31,
+    "case_id": "3a444c2a6fb45ec5154009093278a86b301c800b1b00cd18098ed8e6064bb867",
+    "rbf_cost": 0.5168221289078733,
+    "energy_cost": 0.767865719986637
+  },
+  {
+    "step": 32,
+    "case_id": "96b24f632a45f825116c10a7b33bf57ed52ce5130bbff0387f4b400d1b2b7aea",
+    "rbf_cost": 0.42282421498212597,
+    "energy_cost": 0.4816419239921199
+  },
+  {
+    "step": 32,
+    "case_id": "aa7d804f762b2304ad9330583432fba388697a261896e15720dd21e44a05f17a",
+    "rbf_cost": 0.3366026819402812,
+    "energy_cost": 0.37745129423882906
+  },
+  {
+    "step": 32,
+    "case_id": "4f6fb32a8c7feb45e2ffd708ededf0dd439671f426a7e9faa854bd56de7a96ae",
+    "rbf_cost": 0.30576568245351354,
+    "energy_cost": 0.330734760471167
+  },
+  {
+    "step": 32,
+    "case_id": "f8b5379bc9bdffaa208e07e6ff71bcd94e72f5c1ec18e397f6153073dbc79ad4",
+    "rbf_cost": 0.45523508386328815,
+    "energy_cost": 0.5483827596618329
+  },
+  {
+    "step": 33,
+    "case_id": "8273c9e8fd8f933fba77afe7fd53b943de47466393233adf1e626103d9e53817",
+    "rbf_cost": 0.3771322222505864,
+    "energy_cost": 0.4189821145084355
+  },
+  {
+    "step": 33,
+    "case_id": "9c3e69fb2cd9aa5279befc0141cb6975b86949d954f1df8ab1d0f117948c145f",
+    "rbf_cost": 0.5519847468193527,
+    "energy_cost": 0.7408080164793519
+  },
+  {
+    "step": 33,
+    "case_id": "1f3a7a42fc21ef5c999666f052fcd204a0dae4e212d04018396537d20b644649",
+    "rbf_cost": 0.6796256930984675,
+    "energy_cost": 1.0020806730969432
+  },
+  {
+    "step": 33,
+    "case_id": "785d885cbdf64cba153e28d0839b0ab303104c6e3f3d8431208c6a323c7b7cd4",
+    "rbf_cost": 0.24057872827716054,
+    "energy_cost": 0.28588152864821126
+  },
+  {
+    "step": 34,
+    "case_id": "8273c9e8fd8f933fba77afe7fd53b943de47466393233adf1e626103d9e53817",
+    "rbf_cost": 0.36356290213787323,
+    "energy_cost": 0.40036220290759794
+  },
+  {
+    "step": 34,
+    "case_id": "ced8e5ae36cc870a373d2d3527abeb62f702542ca7b3d6031b9b37756a5d3359",
+    "rbf_cost": 0.4406388764293683,
+    "energy_cost": 0.5363303247308854
+  },
+  {
+    "step": 34,
+    "case_id": "1f3a7a42fc21ef5c999666f052fcd204a0dae4e212d04018396537d20b644649",
+    "rbf_cost": 0.6873096387794801,
+    "energy_cost": 0.907135913548039
+  },
+  {
+    "step": 34,
+    "case_id": "2c25ed39d74d9eb4a68aa95a8568e3634302c8ac5f9a8453bcdeb9e4679ac513",
+    "rbf_cost": 0.36882728374484675,
+    "energy_cost": 0.45042897959808825
+  },
+  {
+    "step": 35,
+    "case_id": "7e2bf3f607600d1443da9ad7366507316733f15573356b6eed20c05cc6cc2769",
+    "rbf_cost": 0.473287396169666,
+    "energy_cost": 0.5612492978327337
+  },
+  {
+    "step": 35,
+    "case_id": "f60afdaef0b2f256a08c4baa830cb3a570981ae076473b2fa17eba5494cf6a71",
+    "rbf_cost": 0.49563459374726526,
+    "energy_cost": 0.7082707212606003
+  },
+  {
+    "step": 35,
+    "case_id": "082fd9a14182760ac55864f7ebe93df14fc5dc3967c0ca24897610dde5c29e0d",
+    "rbf_cost": 0.3255090526354598,
+    "energy_cost": 0.36992800582226204
+  },
+  {
+    "step": 35,
+    "case_id": "d146ea04890927f0b33d4ee237d860c11f3c8aa4b7865d9507d450e7b2e3ddee",
+    "rbf_cost": 0.575684752711661,
+    "energy_cost": 0.7207238797237231
+  },
+  {
+    "step": 36,
+    "case_id": "3db0f426789e4a44974039e463f0516f3f8edd7af0d1c28aa30d25c84c4f2d9e",
+    "rbf_cost": 0.6227644219459938,
+    "energy_cost": 1.0686456593798848
+  },
+  {
+    "step": 36,
+    "case_id": "8bb1054c289986b857d23e2e5a12cf6ac54c2ca9ccade58259aeb102a3b231b2",
+    "rbf_cost": 0.38731934564221615,
+    "energy_cost": 0.5137514172141251
+  },
+  {
+    "step": 36,
+    "case_id": "271e91b0402565dd213bb5fd30aad0e8f3c49644c846829582df4e3506bb063e",
+    "rbf_cost": 0.2403459239906769,
+    "energy_cost": 0.2714647248103854
+  },
+  {
+    "step": 36,
+    "case_id": "785d885cbdf64cba153e28d0839b0ab303104c6e3f3d8431208c6a323c7b7cd4",
+    "rbf_cost": 0.27931944203270165,
+    "energy_cost": 0.33495719218447406
+  },
+  {
+    "step": 37,
+    "case_id": "19f8287a927fe7b045e8679292a463ccdc374a870d7e2817c80d0f9235c7e26e",
+    "rbf_cost": 0.5551009526428163,
+    "energy_cost": 0.8573847428060157
+  },
+  {
+    "step": 37,
+    "case_id": "56b0c9cc8b0f4bd25c82afd16151684012f2d55ee1fb9ee4554147a2c9f841de",
+    "rbf_cost": 0.40175355740586305,
+    "energy_cost": 0.45398581000903027
+  },
+  {
+    "step": 37,
+    "case_id": "0bccbc0453d8ba37cd9430a388c6305ecf9438520abb0f392cbe022500541a41",
+    "rbf_cost": 0.37989624502777875,
+    "energy_cost": 0.4136159051598215
+  },
+  {
+    "step": 37,
+    "case_id": "7494bd6083e68cd572da13f54c34dfdd0df1283a28e1667c56514b590a8aa4d5",
+    "rbf_cost": 0.49244548602832805,
+    "energy_cost": 0.6759673703920088
+  },
+  {
+    "step": 38,
+    "case_id": "08d18a0df32493a3beab26b9e3015153cb7a6852204bd668c8a617bbedda35bc",
+    "rbf_cost": 0.4002997108148483,
+    "energy_cost": 0.5571957100873477
+  },
+  {
+    "step": 38,
+    "case_id": "e213f788b2d5ea382f962e897aec310e3749579a36b1800948dccf8ccbc77be7",
+    "rbf_cost": 0.2986005759917876,
+    "energy_cost": 0.336216291049792
+  },
+  {
+    "step": 38,
+    "case_id": "09eda5bcba884ee6a5a66d65b4ed27f22ce7bb784620819465a57d8e378fc4ef",
+    "rbf_cost": 0.44060262979922826,
+    "energy_cost": 0.6435866229286615
+  },
+  {
+    "step": 38,
+    "case_id": "32d51157c0b228c1144c912ab07dd9f8034382d918fefbcff191bbd2c3c8ba58",
+    "rbf_cost": 0.41330234781080644,
+    "energy_cost": 0.5040879086618644
+  },
+  {
+    "step": 39,
+    "case_id": "166e2b66a3571cd0556421347ec1625b2ee1988c220df92fc95609c1d1a78ebc",
+    "rbf_cost": 0.41251791135725135,
+    "energy_cost": 0.4808379364007396
+  },
+  {
+    "step": 39,
+    "case_id": "995e597a3533e51eef7a5b48ec7b0ae6c8a099fcbc509f3c4140061bcd387bfa",
+    "rbf_cost": 0.5628372008474658,
+    "energy_cost": 0.744226830294179
+  },
+  {
+    "step": 39,
+    "case_id": "082fd9a14182760ac55864f7ebe93df14fc5dc3967c0ca24897610dde5c29e0d",
+    "rbf_cost": 0.2832171099444434,
+    "energy_cost": 0.32668826019337527
+  },
+  {
+    "step": 39,
+    "case_id": "f4bbec86c11dc8e9918e4cdc2f373ba552b775b912066b0b6e2f040c0cdaa03f",
+    "rbf_cost": 0.43814795722773625,
+    "energy_cost": 0.5306903794857458
+  },
+  {
+    "step": 40,
+    "case_id": "166e2b66a3571cd0556421347ec1625b2ee1988c220df92fc95609c1d1a78ebc",
+    "rbf_cost": 0.3285290391765596,
+    "energy_cost": 0.3797499429611825
+  },
+  {
+    "step": 40,
+    "case_id": "8ffce7ead518724eb0abc03719e0dfb50fde79b0e111db4eb82c56f089da5c2d",
+    "rbf_cost": 0.3701871864505848,
+    "energy_cost": 0.4349061189355101
+  },
+  {
+    "step": 40,
+    "case_id": "b5bf3d16d9880fffce6b13e82e36f9e590b947ec44029f34b6151e769f74a5bf",
+    "rbf_cost": 0.44631203056031665,
+    "energy_cost": 0.5887194776010994
+  },
+  {
+    "step": 40,
+    "case_id": "f122b869fc690767eef34cafc9fd6f7e5981fc3b99d52f3602e91e7f9e832f7b",
+    "rbf_cost": 0.30030788369743444,
+    "energy_cost": 0.34378689900557713
+  },
+  {
+    "step": 41,
+    "case_id": "12f64c45210aa4d41e04c0d4973078c097a8c308d93ac7047b6fee1f62828cf9",
+    "rbf_cost": 0.6882891306120844,
+    "energy_cost": 0.9768490625207723
+  },
+  {
+    "step": 41,
+    "case_id": "ab16326178508f4491e3fc3813a769d2b8399bc84443579bfca5d6e3db60ac26",
+    "rbf_cost": 0.4089161330991091,
+    "energy_cost": 0.4676873512084484
+  },
+  {
+    "step": 41,
+    "case_id": "ef86f3fecaa9322ec4b681cbbabca767730cee62c559597ce720ea868cc356db",
+    "rbf_cost": 0.4670729210756288,
+    "energy_cost": 0.5649286662589266
+  },
+  {
+    "step": 41,
+    "case_id": "fd2a3f6a42ac79b14fa564175e6a186144e97e8bf7b86d5d902af67e47c810b0",
+    "rbf_cost": 0.49548561728726614,
+    "energy_cost": 0.6980518796936075
+  },
+  {
+    "step": 42,
+    "case_id": "7494bd6083e68cd572da13f54c34dfdd0df1283a28e1667c56514b590a8aa4d5",
+    "rbf_cost": 0.4935450797677279,
+    "energy_cost": 0.6907283359560352
+  },
+  {
+    "step": 42,
+    "case_id": "995e597a3533e51eef7a5b48ec7b0ae6c8a099fcbc509f3c4140061bcd387bfa",
+    "rbf_cost": 0.4657816986348122,
+    "energy_cost": 0.5922853727525328
+  },
+  {
+    "step": 42,
+    "case_id": "2c25ed39d74d9eb4a68aa95a8568e3634302c8ac5f9a8453bcdeb9e4679ac513",
+    "rbf_cost": 0.35068798102068766,
+    "energy_cost": 0.434639149147658
+  },
+  {
+    "step": 42,
+    "case_id": "602655cc588e139bd839bfe2b3dacd7a671162f77df2e6c04c022b4e3737d455",
+    "rbf_cost": 0.3829817694722395,
+    "energy_cost": 0.5404582332135481
+  },
+  {
+    "step": 43,
+    "case_id": "0bccbc0453d8ba37cd9430a388c6305ecf9438520abb0f392cbe022500541a41",
+    "rbf_cost": 0.3492093175347488,
+    "energy_cost": 0.37144761475202626
+  },
+  {
+    "step": 43,
+    "case_id": "23157ad0d82a7fcfa646b583530d86a418b86fb742a5a95b19ed5f66bd2a3df3",
+    "rbf_cost": 0.43292248499113584,
+    "energy_cost": 0.5424680745128869
+  },
+  {
+    "step": 43,
+    "case_id": "f3838fe1d5018a6ab48d9b7211ab2b4294fdcac4539b8ed047f8d4f78bbd441e",
+    "rbf_cost": 0.47170501952777055,
+    "energy_cost": 0.5554279996746478
+  },
+  {
+    "step": 43,
+    "case_id": "f8b5379bc9bdffaa208e07e6ff71bcd94e72f5c1ec18e397f6153073dbc79ad4",
+    "rbf_cost": 0.47045816691021636,
+    "energy_cost": 0.5895925058250748
+  },
+  {
+    "step": 44,
+    "case_id": "14acca5eea7e2ca9f8cf1c510d65eef02575a1a852dd357fcd88b09d6dbf49d8",
+    "rbf_cost": 0.7975197450661886,
+    "energy_cost": 1.2472986974131897
+  },
+  {
+    "step": 44,
+    "case_id": "83c29979fa3c0cc06f839d8738a5c515fe367dbd9fc88dfc9f6f27fe345b3205",
+    "rbf_cost": 0.2935505562939382,
+    "energy_cost": 0.35421675278638953
+  },
+  {
+    "step": 44,
+    "case_id": "0b405815b44273d5ae6d9ab0778f7f0d8abf5a5b9994e9f8b3ae5c9b81cbe904",
+    "rbf_cost": 0.33737609737614127,
+    "energy_cost": 0.4194057415396205
+  },
+  {
+    "step": 44,
+    "case_id": "7494bd6083e68cd572da13f54c34dfdd0df1283a28e1667c56514b590a8aa4d5",
+    "rbf_cost": 0.4533922933918848,
+    "energy_cost": 0.62301212659519
+  },
+  {
+    "step": 45,
+    "case_id": "08d18a0df32493a3beab26b9e3015153cb7a6852204bd668c8a617bbedda35bc",
+    "rbf_cost": 0.37512614968742075,
+    "energy_cost": 0.5068659864241656
+  },
+  {
+    "step": 45,
+    "case_id": "b7bd328b93b73c3e3f1d053a6d4a9eb9378a192473757a3d4013fab070430a51",
+    "rbf_cost": 0.2892917532899495,
+    "energy_cost": 0.32453215617353337
+  },
+  {
+    "step": 45,
+    "case_id": "602655cc588e139bd839bfe2b3dacd7a671162f77df2e6c04c022b4e3737d455",
+    "rbf_cost": 0.44998436521973584,
+    "energy_cost": 0.5703900991492035
+  },
+  {
+    "step": 45,
+    "case_id": "96b24f632a45f825116c10a7b33bf57ed52ce5130bbff0387f4b400d1b2b7aea",
+    "rbf_cost": 0.42983340662677516,
+    "energy_cost": 0.5113162398070787
+  },
+  {
+    "step": 46,
+    "case_id": "4920509e2ac4f529fce78fb890bd6b6efa7f7a06749f9fc565a98843ec0b2aed",
+    "rbf_cost": 0.497164000828927,
+    "energy_cost": 0.609192611060416
+  },
+  {
+    "step": 46,
+    "case_id": "602655cc588e139bd839bfe2b3dacd7a671162f77df2e6c04c022b4e3737d455",
+    "rbf_cost": 0.49538671822291774,
+    "energy_cost": 0.7947911517355872
+  },
+  {
+    "step": 46,
+    "case_id": "0be6e4214c2223f94f55a85b792ef08a82f0fe3582ca00b176033664a6dfc4ae",
+    "rbf_cost": 0.4942122263749684,
+    "energy_cost": 0.6012698651044219
+  },
+  {
+    "step": 46,
+    "case_id": "8273c9e8fd8f933fba77afe7fd53b943de47466393233adf1e626103d9e53817",
+    "rbf_cost": 0.41939318607095144,
+    "energy_cost": 0.46291603103406964
+  },
+  {
+    "step": 47,
+    "case_id": "1f1a9e8d54a53cf450ca07b5e16d512a43634b3a75aa912c96a6a6b17a3c4009",
+    "rbf_cost": 0.477581517844075,
+    "energy_cost": 0.6071014950378603
+  },
+  {
+    "step": 47,
+    "case_id": "8d51127aed6416f25491d983c62a252d7d701292c2f3fec0003f7891cbf38073",
+    "rbf_cost": 0.49822155028520554,
+    "energy_cost": 0.6401089096227863
+  },
+  {
+    "step": 47,
+    "case_id": "32d51157c0b228c1144c912ab07dd9f8034382d918fefbcff191bbd2c3c8ba58",
+    "rbf_cost": 0.40636403720262937,
+    "energy_cost": 0.47856270126901124
+  },
+  {
+    "step": 47,
+    "case_id": "4920509e2ac4f529fce78fb890bd6b6efa7f7a06749f9fc565a98843ec0b2aed",
+    "rbf_cost": 0.4772402193894332,
+    "energy_cost": 0.5830152004703606
+  },
+  {
+    "step": 48,
+    "case_id": "4920509e2ac4f529fce78fb890bd6b6efa7f7a06749f9fc565a98843ec0b2aed",
+    "rbf_cost": 0.5264943294208377,
+    "energy_cost": 0.6434208244072307
+  },
+  {
+    "step": 48,
+    "case_id": "f34f2cb5ffd41279725a380aacb7d253db20f66191244cda27de50c1673f97de",
+    "rbf_cost": 0.38035018258267383,
+    "energy_cost": 0.5605095666064828
+  },
+  {
+    "step": 48,
+    "case_id": "45830ab6082417f70d0e7214aefaf5cdbd069176004137c047ba7182be771f4b",
+    "rbf_cost": 0.7935921367575944,
+    "energy_cost": 1.1043457849035088
+  },
+  {
+    "step": 48,
+    "case_id": "7609d0702119951fe4f3903a7d4507606a67299637af76983a5ccf6f5b08c2fc",
+    "rbf_cost": 0.3840647753586943,
+    "energy_cost": 0.5148113905606624
+  },
+  {
+    "step": 49,
+    "case_id": "cc8b13181d21c221e17e8c80ad80dc7733473e6dac9f766ac749a57007860e9e",
+    "rbf_cost": 0.4295469267581742,
+    "energy_cost": 0.5298365224521135
+  },
+  {
+    "step": 49,
+    "case_id": "f3d3b5203da705a56ff2b8deab8ab25ac50766c9e43203101588b198a4926189",
+    "rbf_cost": 0.3603762594593458,
+    "energy_cost": 0.4324522605465265
+  },
+  {
+    "step": 49,
+    "case_id": "0be6e4214c2223f94f55a85b792ef08a82f0fe3582ca00b176033664a6dfc4ae",
+    "rbf_cost": 0.46109826201893056,
+    "energy_cost": 0.5557050959637884
+  },
+  {
+    "step": 49,
+    "case_id": "e213f788b2d5ea382f962e897aec310e3749579a36b1800948dccf8ccbc77be7",
+    "rbf_cost": 0.3905312947058752,
+    "energy_cost": 0.4438969473630987
+  },
+  {
+    "step": 50,
+    "case_id": "08d18a0df32493a3beab26b9e3015153cb7a6852204bd668c8a617bbedda35bc",
+    "rbf_cost": 0.4487435679417514,
+    "energy_cost": 0.651841763037043
+  },
+  {
+    "step": 50,
+    "case_id": "370895b4f035d11736825f3a4bb9fb726519b6612b77c0685fa7ff4a9a22e38d",
+    "rbf_cost": 0.4917952575390956,
+    "energy_cost": 0.6348724115100137
+  },
+  {
+    "step": 50,
+    "case_id": "12f64c45210aa4d41e04c0d4973078c097a8c308d93ac7047b6fee1f62828cf9",
+    "rbf_cost": 0.5802975941619276,
+    "energy_cost": 0.7522996036090959
+  },
+  {
+    "step": 50,
+    "case_id": "cab63dc47dbe9b67cade3a57eaac92ab5aafc7c38ed2c4574df2ed6531aa1db3",
+    "rbf_cost": 0.24792447024478292,
+    "energy_cost": 0.2662687506285579
+  },
+  {
+    "step": 51,
+    "case_id": "b7bd328b93b73c3e3f1d053a6d4a9eb9378a192473757a3d4013fab070430a51",
+    "rbf_cost": 0.3006675642009746,
+    "energy_cost": 0.3503364883398834
+  },
+  {
+    "step": 51,
+    "case_id": "e2f4cb61d92a5335617e2d2befbf3364e575c70156f41f9fd759d2fcac30badd",
+    "rbf_cost": 0.4127911118478327,
+    "energy_cost": 0.4974487611725359
+  },
+  {
+    "step": 51,
+    "case_id": "166e2b66a3571cd0556421347ec1625b2ee1988c220df92fc95609c1d1a78ebc",
+    "rbf_cost": 0.37490973885311374,
+    "energy_cost": 0.43346729374865134
+  },
+  {
+    "step": 51,
+    "case_id": "95c1de43717590cf181e96bbb6446c0a08d61d44fb859eea3d1ded1d7f53ccf4",
+    "rbf_cost": 0.46920651097031785,
+    "energy_cost": 0.6128961928482148
+  },
+  {
+    "step": 52,
+    "case_id": "1ecd232fc17c0964c14bfb94a60ab0192640a4f9299d122b085cdf6f43d8c766",
+    "rbf_cost": 0.37327336500932007,
+    "energy_cost": 0.4595536880248787
+  },
+  {
+    "step": 52,
+    "case_id": "d146ea04890927f0b33d4ee237d860c11f3c8aa4b7865d9507d450e7b2e3ddee",
+    "rbf_cost": 0.4755033274457552,
+    "energy_cost": 0.5663060578212781
+  },
+  {
+    "step": 52,
+    "case_id": "7494bd6083e68cd572da13f54c34dfdd0df1283a28e1667c56514b590a8aa4d5",
+    "rbf_cost": 0.498342069195679,
+    "energy_cost": 0.6535667559940701
+  },
+  {
+    "step": 52,
+    "case_id": "e601a23abbb31a521090373bd5fc3dddb6b7f1baa264253fd5ca56e37fa50a0c",
+    "rbf_cost": 0.36857898700310554,
+    "energy_cost": 0.4143697906457975
+  },
+  {
+    "step": 53,
+    "case_id": "9a1edc24c15a63500c6fd69ef72c6ebcb7d28799eed856596f5286c5a275f140",
+    "rbf_cost": 0.34336897747487316,
+    "energy_cost": 0.4426086868340344
+  },
+  {
+    "step": 53,
+    "case_id": "be9cadeec2db621061bd55a3a71b15d4bc7da738007ed4eaf9c83824d295533c",
+    "rbf_cost": 0.4737252863999346,
+    "energy_cost": 0.6603668994024464
+  },
+  {
+    "step": 53,
+    "case_id": "81d42c53a3abb8109ce0acb41c62ff5f975e41e45ea02920d6e3541119f9adf9",
+    "rbf_cost": 0.39805694716162476,
+    "energy_cost": 0.5346953093848177
+  },
+  {
+    "step": 53,
+    "case_id": "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1",
+    "rbf_cost": 0.6266356209055142,
+    "energy_cost": 0.9647933083664624
+  },
+  {
+    "step": 54,
+    "case_id": "81d42c53a3abb8109ce0acb41c62ff5f975e41e45ea02920d6e3541119f9adf9",
+    "rbf_cost": 0.35092865983359667,
+    "energy_cost": 0.4506156861577917
+  },
+  {
+    "step": 54,
+    "case_id": "95c1de43717590cf181e96bbb6446c0a08d61d44fb859eea3d1ded1d7f53ccf4",
+    "rbf_cost": 0.4201311861401328,
+    "energy_cost": 0.5392652019179351
+  },
+  {
+    "step": 54,
+    "case_id": "be46e24984c35c9a1f5a004f6af87911a8a37252fe0931239d021b8e0ae6b10d",
+    "rbf_cost": 0.44413726721258306,
+    "energy_cost": 0.5197238540806283
+  },
+  {
+    "step": 54,
+    "case_id": "f4bbec86c11dc8e9918e4cdc2f373ba552b775b912066b0b6e2f040c0cdaa03f",
+    "rbf_cost": 0.430388200952759,
+    "energy_cost": 0.504737340163429
+  },
+  {
+    "step": 55,
+    "case_id": "0be6e4214c2223f94f55a85b792ef08a82f0fe3582ca00b176033664a6dfc4ae",
+    "rbf_cost": 0.4691853812485035,
+    "energy_cost": 0.5472789544792329
+  },
+  {
+    "step": 55,
+    "case_id": "23157ad0d82a7fcfa646b583530d86a418b86fb742a5a95b19ed5f66bd2a3df3",
+    "rbf_cost": 0.41308302484991843,
+    "energy_cost": 0.5068902925823904
+  },
+  {
+    "step": 55,
+    "case_id": "2c25ed39d74d9eb4a68aa95a8568e3634302c8ac5f9a8453bcdeb9e4679ac513",
+    "rbf_cost": 0.35869357136444247,
+    "energy_cost": 0.45395459124564086
+  },
+  {
+    "step": 55,
+    "case_id": "2cd745121f04dd56a6ab1eb20af4f810d68603033bc6cf8e10f0b473e116ec9a",
+    "rbf_cost": 0.3799438808763651,
+    "energy_cost": 0.46220795408081394
+  },
+  {
+    "step": 56,
+    "case_id": "2cd745121f04dd56a6ab1eb20af4f810d68603033bc6cf8e10f0b473e116ec9a",
+    "rbf_cost": 0.35078100887362174,
+    "energy_cost": 0.41232372552729313
+  },
+  {
+    "step": 56,
+    "case_id": "62985ca75e928bc325dec9f647dc1b26d99ffd987fdde33eee5f82cd6d7858ea",
+    "rbf_cost": 0.38571304166321196,
+    "energy_cost": 0.4990849882144237
+  },
+  {
+    "step": 56,
+    "case_id": "a92c57757f64113cfb0f499c94f0245d622bb4934ed1e8c233c49df9af880474",
+    "rbf_cost": 0.26920456232424195,
+    "energy_cost": 0.3067647138005103
+  },
+  {
+    "step": 56,
+    "case_id": "ab16326178508f4491e3fc3813a769d2b8399bc84443579bfca5d6e3db60ac26",
+    "rbf_cost": 0.2855789387349328,
+    "energy_cost": 0.3224688732620289
+  },
+  {
+    "step": 57,
+    "case_id": "12f64c45210aa4d41e04c0d4973078c097a8c308d93ac7047b6fee1f62828cf9",
+    "rbf_cost": 0.5901591493061149,
+    "energy_cost": 0.782839966872852
+  },
+  {
+    "step": 57,
+    "case_id": "c9cad3a647659c712e9235df493c8e13517687133037df29727609395ac8983a",
+    "rbf_cost": 0.33160100424430605,
+    "energy_cost": 0.40021815371932945
+  },
+  {
+    "step": 57,
+    "case_id": "7609d0702119951fe4f3903a7d4507606a67299637af76983a5ccf6f5b08c2fc",
+    "rbf_cost": 0.45019088207529556,
+    "energy_cost": 0.5757651732161946
+  },
+  {
+    "step": 57,
+    "case_id": "8273c9e8fd8f933fba77afe7fd53b943de47466393233adf1e626103d9e53817",
+    "rbf_cost": 0.3603044366950132,
+    "energy_cost": 0.39603032100382085
+  },
+  {
+    "step": 58,
+    "case_id": "082fd9a14182760ac55864f7ebe93df14fc5dc3967c0ca24897610dde5c29e0d",
+    "rbf_cost": 0.315180078542479,
+    "energy_cost": 0.361316589763644
+  },
+  {
+    "step": 58,
+    "case_id": "cab63dc47dbe9b67cade3a57eaac92ab5aafc7c38ed2c4574df2ed6531aa1db3",
+    "rbf_cost": 0.2798329316136752,
+    "energy_cost": 0.320162422616147
+  },
+  {
+    "step": 58,
+    "case_id": "0bccbc0453d8ba37cd9430a388c6305ecf9438520abb0f392cbe022500541a41",
+    "rbf_cost": 0.2833862257392554,
+    "energy_cost": 0.31757035863688854
+  },
+  {
+    "step": 58,
+    "case_id": "3a444c2a6fb45ec5154009093278a86b301c800b1b00cd18098ed8e6064bb867",
+    "rbf_cost": 0.461017291523239,
+    "energy_cost": 0.6687629232377348
+  },
+  {
+    "step": 59,
+    "case_id": "be46e24984c35c9a1f5a004f6af87911a8a37252fe0931239d021b8e0ae6b10d",
+    "rbf_cost": 0.495498653507751,
+    "energy_cost": 0.6028211023296621
+  },
+  {
+    "step": 59,
+    "case_id": "f3d3b5203da705a56ff2b8deab8ab25ac50766c9e43203101588b198a4926189",
+    "rbf_cost": 0.3626029988933577,
+    "energy_cost": 0.41961045655518114
+  },
+  {
+    "step": 59,
+    "case_id": "1bf2c0afd8eca51e5e8178f77fc7b03cf14c6540d65cde5697d01aab8b703fc8",
+    "rbf_cost": 0.20537708423237255,
+    "energy_cost": 0.23868747341836238
+  },
+  {
+    "step": 59,
+    "case_id": "b6ada8febc1cb1e12e98a1ecf14decbc74f6a182e86a775294b73f47ab3fd804",
+    "rbf_cost": 0.4839753607326912,
+    "energy_cost": 0.6915450706124039
+  },
+  {
+    "step": 60,
+    "case_id": "29e910c58e6fd1174f6aef5ca15eaa441a15ad2c252bd8594157bfe82fdca10b",
+    "rbf_cost": 0.3292948930167896,
+    "energy_cost": 0.4142158620965277
+  },
+  {
+    "step": 60,
+    "case_id": "e601a23abbb31a521090373bd5fc3dddb6b7f1baa264253fd5ca56e37fa50a0c",
+    "rbf_cost": 0.43801570484792474,
+    "energy_cost": 0.5024977229547478
+  },
+  {
+    "step": 60,
+    "case_id": "446582bf1bd0442abeb2ea3010950cbb1b915f0c67e745bba86b2e3b78ea60b1",
+    "rbf_cost": 0.35965392476548397,
+    "energy_cost": 0.44137600129183596
+  },
+  {
+    "step": 60,
+    "case_id": "f60afdaef0b2f256a08c4baa830cb3a570981ae076473b2fa17eba5494cf6a71",
+    "rbf_cost": 0.4397198963515233,
+    "energy_cost": 0.634814755763252
+  },
+  {
+    "step": 61,
+    "case_id": "cc8b13181d21c221e17e8c80ad80dc7733473e6dac9f766ac749a57007860e9e",
+    "rbf_cost": 0.4074603758888069,
+    "energy_cost": 0.5035721332151726
+  },
+  {
+    "step": 61,
+    "case_id": "dbd3e6a5f10d9de48f5985c373bbc3f851e23b059c778742b440ec2b12a71401",
+    "rbf_cost": 0.2861939647150826,
+    "energy_cost": 0.3267148952189888
+  },
+  {
+    "step": 61,
+    "case_id": "29fc393b9adbf5b990d389addc758aa38aa669a63bbf825979d02816fada5cfa",
+    "rbf_cost": 0.22544032441306472,
+    "energy_cost": 0.26877835896302815
+  },
+  {
+    "step": 61,
+    "case_id": "40649332a1d10a526f92ad6cf4bcc4661ef7e61f87adad22bbebe56115c74c13",
+    "rbf_cost": 0.3641132888253321,
+    "energy_cost": 0.4912212386748389
+  },
+  {
+    "step": 62,
+    "case_id": "36c828ae4b0f020cb5d69ef4eb7238cac9193d1f74ef65e54043b5b6cd84f272",
+    "rbf_cost": 0.3948587120945173,
+    "energy_cost": 0.5543064856801034
+  },
+  {
+    "step": 62,
+    "case_id": "3db0f426789e4a44974039e463f0516f3f8edd7af0d1c28aa30d25c84c4f2d9e",
+    "rbf_cost": 0.6176611323030022,
+    "energy_cost": 1.0819345082863268
+  },
+  {
+    "step": 62,
+    "case_id": "9c3e69fb2cd9aa5279befc0141cb6975b86949d954f1df8ab1d0f117948c145f",
+    "rbf_cost": 0.5429629719864497,
+    "energy_cost": 0.716507029324153
+  },
+  {
+    "step": 62,
+    "case_id": "f4bbec86c11dc8e9918e4cdc2f373ba552b775b912066b0b6e2f040c0cdaa03f",
+    "rbf_cost": 0.3952804442698469,
+    "energy_cost": 0.4534541531356395
+  },
+  {
+    "step": 63,
+    "case_id": "0f9c8852cf480cc13ff29db4ef104c01c12f6d78f23b946b0384455446871b5a",
+    "rbf_cost": 0.44944291437919937,
+    "energy_cost": 0.5678361941154522
+  },
+  {
+    "step": 63,
+    "case_id": "83c29979fa3c0cc06f839d8738a5c515fe367dbd9fc88dfc9f6f27fe345b3205",
+    "rbf_cost": 0.3041230755919121,
+    "energy_cost": 0.361640583724145
+  },
+  {
+    "step": 63,
+    "case_id": "1ecd232fc17c0964c14bfb94a60ab0192640a4f9299d122b085cdf6f43d8c766",
+    "rbf_cost": 0.39749831045407835,
+    "energy_cost": 0.4663800562188889
+  },
+  {
+    "step": 63,
+    "case_id": "ab16326178508f4491e3fc3813a769d2b8399bc84443579bfca5d6e3db60ac26",
+    "rbf_cost": 0.5200231088673628,
+    "energy_cost": 0.5801907693265489
+  },
+  {
+    "step": 64,
+    "case_id": "3db0f426789e4a44974039e463f0516f3f8edd7af0d1c28aa30d25c84c4f2d9e",
+    "rbf_cost": 0.6551914646326684,
+    "energy_cost": 1.1829082833195743
+  },
+  {
+    "step": 64,
+    "case_id": "a53ecd4e2131bc31af5c890a759e36a861c8cfbbd56a7a105046505bea830952",
+    "rbf_cost": 0.286145545842865,
+    "energy_cost": 0.3586623409005735
+  },
+  {
+    "step": 64,
+    "case_id": "0f9c8852cf480cc13ff29db4ef104c01c12f6d78f23b946b0384455446871b5a",
+    "rbf_cost": 0.42204050837754836,
+    "energy_cost": 0.5240721763391314
+  },
+  {
+    "step": 64,
+    "case_id": "b7bd328b93b73c3e3f1d053a6d4a9eb9378a192473757a3d4013fab070430a51",
+    "rbf_cost": 0.27885794060477376,
+    "energy_cost": 0.322110293312176
+  },
+  {
+    "step": 65,
+    "case_id": "319361b01cafb80182ecf2675d025e667e711651b525543ee57d09c3b9df6e81",
+    "rbf_cost": 0.41918081030845167,
+    "energy_cost": 0.503177044707609
+  },
+  {
+    "step": 65,
+    "case_id": "32d51157c0b228c1144c912ab07dd9f8034382d918fefbcff191bbd2c3c8ba58",
+    "rbf_cost": 0.41611001492208977,
+    "energy_cost": 0.474586914592809
+  },
+  {
+    "step": 65,
+    "case_id": "01308aae754535c73dd9ea842dbbdb8d9acd66c9ed539a7e5c91f6e5998b89ab",
+    "rbf_cost": 0.46378917692249666,
+    "energy_cost": 0.5941106971223582
+  },
+  {
+    "step": 65,
+    "case_id": "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1",
+    "rbf_cost": 0.5602754210590584,
+    "energy_cost": 0.8065321362528284
+  },
+  {
+    "step": 66,
+    "case_id": "412c2ff69a52557c29329d83470be64db782d7646398f4ad001703183caf36e7",
+    "rbf_cost": 0.4743240566281596,
+    "energy_cost": 0.5362056135588107
+  },
+  {
+    "step": 66,
+    "case_id": "a53ecd4e2131bc31af5c890a759e36a861c8cfbbd56a7a105046505bea830952",
+    "rbf_cost": 0.3273705522499629,
+    "energy_cost": 0.41605095722635244
+  },
+  {
+    "step": 66,
+    "case_id": "9136fe95b64db8d0f1828a82878b3cb04b46cd2be5450a09c567965485c9aba6",
+    "rbf_cost": 0.607923028714042,
+    "energy_cost": 0.8990372766526442
+  },
+  {
+    "step": 66,
+    "case_id": "f4bbec86c11dc8e9918e4cdc2f373ba552b775b912066b0b6e2f040c0cdaa03f",
+    "rbf_cost": 0.38485019095746087,
+    "energy_cost": 0.4837569281543269
+  },
+  {
+    "step": 67,
+    "case_id": "319361b01cafb80182ecf2675d025e667e711651b525543ee57d09c3b9df6e81",
+    "rbf_cost": 0.33965409359382215,
+    "energy_cost": 0.4129614555532122
+  },
+  {
+    "step": 67,
+    "case_id": "be9cadeec2db621061bd55a3a71b15d4bc7da738007ed4eaf9c83824d295533c",
+    "rbf_cost": 0.5609431921219191,
+    "energy_cost": 0.8164580450669013
+  },
+  {
+    "step": 67,
+    "case_id": "8bb1054c289986b857d23e2e5a12cf6ac54c2ca9ccade58259aeb102a3b231b2",
+    "rbf_cost": 0.45840484029867823,
+    "energy_cost": 0.6106804276985798
+  },
+  {
+    "step": 67,
+    "case_id": "e5c6f38da60368c14e2184dc55b031e93f25b8c8dfab7eb6b922d157d7908268",
+    "rbf_cost": 0.37979299539479117,
+    "energy_cost": 0.5052896180931641
+  },
+  {
+    "step": 68,
+    "case_id": "29e910c58e6fd1174f6aef5ca15eaa441a15ad2c252bd8594157bfe82fdca10b",
+    "rbf_cost": 0.3231954762608813,
+    "energy_cost": 0.38557340881790725
+  },
+  {
+    "step": 68,
+    "case_id": "3a444c2a6fb45ec5154009093278a86b301c800b1b00cd18098ed8e6064bb867",
+    "rbf_cost": 0.4441364625240076,
+    "energy_cost": 0.6544809372473781
+  },
+  {
+    "step": 68,
+    "case_id": "95c1de43717590cf181e96bbb6446c0a08d61d44fb859eea3d1ded1d7f53ccf4",
+    "rbf_cost": 0.4646014342046074,
+    "energy_cost": 0.6055495128355737
+  },
+  {
+    "step": 68,
+    "case_id": "cab63dc47dbe9b67cade3a57eaac92ab5aafc7c38ed2c4574df2ed6531aa1db3",
+    "rbf_cost": 0.28415370961839403,
+    "energy_cost": 0.3235410722208172
+  },
+  {
+    "step": 69,
+    "case_id": "2cd745121f04dd56a6ab1eb20af4f810d68603033bc6cf8e10f0b473e116ec9a",
+    "rbf_cost": 0.3544978106419181,
+    "energy_cost": 0.4354971141437427
+  },
+  {
+    "step": 69,
+    "case_id": "4acfbc38b3e40a27db79b2e27f789dcdab3e989fe8be70e23ef7d8e251ae0169",
+    "rbf_cost": 0.3796568052817746,
+    "energy_cost": 0.45738336862993145
+  },
+  {
+    "step": 69,
+    "case_id": "602655cc588e139bd839bfe2b3dacd7a671162f77df2e6c04c022b4e3737d455",
+    "rbf_cost": 0.4788892980512921,
+    "energy_cost": 0.7040886321305913
+  },
+  {
+    "step": 69,
+    "case_id": "62985ca75e928bc325dec9f647dc1b26d99ffd987fdde33eee5f82cd6d7858ea",
+    "rbf_cost": 0.35216092765844365,
+    "energy_cost": 0.4253884834408894
+  },
+  {
+    "step": 70,
+    "case_id": "62985ca75e928bc325dec9f647dc1b26d99ffd987fdde33eee5f82cd6d7858ea",
+    "rbf_cost": 0.27553649741615116,
+    "energy_cost": 0.33017082217794536
+  },
+  {
+    "step": 70,
+    "case_id": "9c3e69fb2cd9aa5279befc0141cb6975b86949d954f1df8ab1d0f117948c145f",
+    "rbf_cost": 0.5575562738351768,
+    "energy_cost": 0.7115793641819785
+  },
+  {
+    "step": 70,
+    "case_id": "6c87afea0d93f2d5171ef78f0554d7208f39439e94e4d3d41026735ed05ec591",
+    "rbf_cost": 0.3529957802905581,
+    "energy_cost": 0.43791130037991355
+  },
+  {
+    "step": 70,
+    "case_id": "e24b3a9637cde41782d6390994e72ca086b9b8043ffbca8184803872e39ec77c",
+    "rbf_cost": 0.3733770136863912,
+    "energy_cost": 0.4324200457698216
+  },
+  {
+    "step": 71,
+    "case_id": "38ff2c563919d17e81ade2b5c69be1b5a76465eea72e22031290fc4bc7475000",
+    "rbf_cost": 0.3213383680539901,
+    "energy_cost": 0.3622718960948398
+  },
+  {
+    "step": 71,
+    "case_id": "a92c57757f64113cfb0f499c94f0245d622bb4934ed1e8c233c49df9af880474",
+    "rbf_cost": 0.34574292552396724,
+    "energy_cost": 0.3838285329697916
+  },
+  {
+    "step": 71,
+    "case_id": "0b405815b44273d5ae6d9ab0778f7f0d8abf5a5b9994e9f8b3ae5c9b81cbe904",
+    "rbf_cost": 0.3259665509948969,
+    "energy_cost": 0.40731025312079294
+  },
+  {
+    "step": 71,
+    "case_id": "145113827d3591c0a399b47c34ab65339ed7e4600b0afca29a35808fbafb77cd",
+    "rbf_cost": 0.3409269156714858,
+    "energy_cost": 0.3789788162336374
+  },
+  {
+    "step": 72,
+    "case_id": "18121b964045ccbb6ed1838ad4bb95d1b0bb90d93b0ebe763ff441122c381ac9",
+    "rbf_cost": 0.3933630843535345,
+    "energy_cost": 0.525529923509179
+  },
+  {
+    "step": 72,
+    "case_id": "e24b3a9637cde41782d6390994e72ca086b9b8043ffbca8184803872e39ec77c",
+    "rbf_cost": 0.22545994679762726,
+    "energy_cost": 0.2652473931416429
+  },
+  {
+    "step": 72,
+    "case_id": "082fd9a14182760ac55864f7ebe93df14fc5dc3967c0ca24897610dde5c29e0d",
+    "rbf_cost": 0.33526431389503486,
+    "energy_cost": 0.3862129902488822
+  },
+  {
+    "step": 72,
+    "case_id": "b5bf3d16d9880fffce6b13e82e36f9e590b947ec44029f34b6151e769f74a5bf",
+    "rbf_cost": 0.48075032333703815,
+    "energy_cost": 0.6046542109660172
+  },
+  {
+    "step": 73,
+    "case_id": "be46e24984c35c9a1f5a004f6af87911a8a37252fe0931239d021b8e0ae6b10d",
+    "rbf_cost": 0.46069275140529453,
+    "energy_cost": 0.5638394062879046
+  },
+  {
+    "step": 73,
+    "case_id": "fc1de4ab36b894f2ec5e555e48f5a819bda2209c074d46576866a83bf1c3b9b4",
+    "rbf_cost": 0.5001470326358632,
+    "energy_cost": 0.7025249812542677
+  },
+  {
+    "step": 73,
+    "case_id": "19f8287a927fe7b045e8679292a463ccdc374a870d7e2817c80d0f9235c7e26e",
+    "rbf_cost": 0.5052259222860742,
+    "energy_cost": 0.7747097652578818
+  },
+  {
+    "step": 73,
+    "case_id": "446582bf1bd0442abeb2ea3010950cbb1b915f0c67e745bba86b2e3b78ea60b1",
+    "rbf_cost": 0.4484048791168319,
+    "energy_cost": 0.5817691810270395
+  },
+  {
+    "step": 74,
+    "case_id": "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1",
+    "rbf_cost": 0.5829367137017465,
+    "energy_cost": 0.8833921306477
+  },
+  {
+    "step": 74,
+    "case_id": "f8b5379bc9bdffaa208e07e6ff71bcd94e72f5c1ec18e397f6153073dbc79ad4",
+    "rbf_cost": 0.5001830856625669,
+    "energy_cost": 0.6499457343534224
+  },
+  {
+    "step": 74,
+    "case_id": "145113827d3591c0a399b47c34ab65339ed7e4600b0afca29a35808fbafb77cd",
+    "rbf_cost": 0.3119819292346291,
+    "energy_cost": 0.3646788222791699
+  },
+  {
+    "step": 74,
+    "case_id": "f60afdaef0b2f256a08c4baa830cb3a570981ae076473b2fa17eba5494cf6a71",
+    "rbf_cost": 0.4955356624206265,
+    "energy_cost": 0.697806653021052
+  },
+  {
+    "step": 75,
+    "case_id": "8d51127aed6416f25491d983c62a252d7d701292c2f3fec0003f7891cbf38073",
+    "rbf_cost": 0.5054462951266296,
+    "energy_cost": 0.6542427686773646
+  },
+  {
+    "step": 75,
+    "case_id": "be46e24984c35c9a1f5a004f6af87911a8a37252fe0931239d021b8e0ae6b10d",
+    "rbf_cost": 0.4410121844430328,
+    "energy_cost": 0.520127419657132
+  },
+  {
+    "step": 75,
+    "case_id": "83c29979fa3c0cc06f839d8738a5c515fe367dbd9fc88dfc9f6f27fe345b3205",
+    "rbf_cost": 0.2836247849242113,
+    "energy_cost": 0.3208502141000755
+  },
+  {
+    "step": 75,
+    "case_id": "9c3e69fb2cd9aa5279befc0141cb6975b86949d954f1df8ab1d0f117948c145f",
+    "rbf_cost": 0.5074137578263209,
+    "energy_cost": 0.6958547321379615
+  },
+  {
+    "step": 76,
+    "case_id": "29fc393b9adbf5b990d389addc758aa38aa669a63bbf825979d02816fada5cfa",
+    "rbf_cost": 0.1889243465224908,
+    "energy_cost": 0.20987290719084162
+  },
+  {
+    "step": 76,
+    "case_id": "38ff2c563919d17e81ade2b5c69be1b5a76465eea72e22031290fc4bc7475000",
+    "rbf_cost": 0.2931523941760532,
+    "energy_cost": 0.35262043278827404
+  },
+  {
+    "step": 76,
+    "case_id": "2c25ed39d74d9eb4a68aa95a8568e3634302c8ac5f9a8453bcdeb9e4679ac513",
+    "rbf_cost": 0.348321333040128,
+    "energy_cost": 0.4260002558235554
+  },
+  {
+    "step": 76,
+    "case_id": "785d885cbdf64cba153e28d0839b0ab303104c6e3f3d8431208c6a323c7b7cd4",
+    "rbf_cost": 0.27913214966365063,
+    "energy_cost": 0.323060858237856
+  },
+  {
+    "step": 77,
+    "case_id": "082fd9a14182760ac55864f7ebe93df14fc5dc3967c0ca24897610dde5c29e0d",
+    "rbf_cost": 0.38326797522302747,
+    "energy_cost": 0.44084591242153404
+  },
+  {
+    "step": 77,
+    "case_id": "e5c6f38da60368c14e2184dc55b031e93f25b8c8dfab7eb6b922d157d7908268",
+    "rbf_cost": 0.3311707111345539,
+    "energy_cost": 0.4138195083821081
+  },
+  {
+    "step": 77,
+    "case_id": "9caa3bf75279cefcb492d86442049dc3b67c988d4eafdb8cc5b354eb0344ebb8",
+    "rbf_cost": 0.4481883208338391,
+    "energy_cost": 0.5749929000909565
+  },
+  {
+    "step": 77,
+    "case_id": "b5bf3d16d9880fffce6b13e82e36f9e590b947ec44029f34b6151e769f74a5bf",
+    "rbf_cost": 0.5330099002615215,
+    "energy_cost": 0.6391775182749841
+  },
+  {
+    "step": 78,
+    "case_id": "40649332a1d10a526f92ad6cf4bcc4661ef7e61f87adad22bbebe56115c74c13",
+    "rbf_cost": 0.4749046683110312,
+    "energy_cost": 0.7725797798420699
+  },
+  {
+    "step": 78,
+    "case_id": "9c3e69fb2cd9aa5279befc0141cb6975b86949d954f1df8ab1d0f117948c145f",
+    "rbf_cost": 0.5059806086778378,
+    "energy_cost": 0.6753636306370461
+  },
+  {
+    "step": 78,
+    "case_id": "319361b01cafb80182ecf2675d025e667e711651b525543ee57d09c3b9df6e81",
+    "rbf_cost": 0.3726491363682267,
+    "energy_cost": 0.45212126529542185
+  },
+  {
+    "step": 78,
+    "case_id": "ab16326178508f4491e3fc3813a769d2b8399bc84443579bfca5d6e3db60ac26",
+    "rbf_cost": 0.5137487098541775,
+    "energy_cost": 0.5731029901178427
+  },
+  {
+    "step": 79,
+    "case_id": "145113827d3591c0a399b47c34ab65339ed7e4600b0afca29a35808fbafb77cd",
+    "rbf_cost": 0.35466045128976,
+    "energy_cost": 0.3970536606662669
+  },
+  {
+    "step": 79,
+    "case_id": "446582bf1bd0442abeb2ea3010950cbb1b915f0c67e745bba86b2e3b78ea60b1",
+    "rbf_cost": 0.4497725112122589,
+    "energy_cost": 0.5898536624877068
+  },
+  {
+    "step": 79,
+    "case_id": "19f8287a927fe7b045e8679292a463ccdc374a870d7e2817c80d0f9235c7e26e",
+    "rbf_cost": 0.4318517573121122,
+    "energy_cost": 0.6629293390333213
+  },
+  {
+    "step": 79,
+    "case_id": "cab63dc47dbe9b67cade3a57eaac92ab5aafc7c38ed2c4574df2ed6531aa1db3",
+    "rbf_cost": 0.2684386109787591,
+    "energy_cost": 0.3093957899873201
+  },
+  {
+    "step": 80,
+    "case_id": "0bccbc0453d8ba37cd9430a388c6305ecf9438520abb0f392cbe022500541a41",
+    "rbf_cost": 0.2380817987432331,
+    "energy_cost": 0.2888685149011081
+  },
+  {
+    "step": 80,
+    "case_id": "fd2a3f6a42ac79b14fa564175e6a186144e97e8bf7b86d5d902af67e47c810b0",
+    "rbf_cost": 0.5278591316906984,
+    "energy_cost": 0.7570467383283295
+  },
+  {
+    "step": 80,
+    "case_id": "56b0c9cc8b0f4bd25c82afd16151684012f2d55ee1fb9ee4554147a2c9f841de",
+    "rbf_cost": 0.404610122650776,
+    "energy_cost": 0.48970128638685706
+  },
+  {
+    "step": 80,
+    "case_id": "be9cadeec2db621061bd55a3a71b15d4bc7da738007ed4eaf9c83824d295533c",
+    "rbf_cost": 0.44010969146547296,
+    "energy_cost": 0.6050912692642179
+  },
+  {
+    "step": 81,
+    "case_id": "95c1de43717590cf181e96bbb6446c0a08d61d44fb859eea3d1ded1d7f53ccf4",
+    "rbf_cost": 0.5247018369821013,
+    "energy_cost": 0.6827688985917459
+  },
+  {
+    "step": 81,
+    "case_id": "c9cad3a647659c712e9235df493c8e13517687133037df29727609395ac8983a",
+    "rbf_cost": 0.3250800684422246,
+    "energy_cost": 0.39363390351903416
+  },
+  {
+    "step": 81,
+    "case_id": "e24b3a9637cde41782d6390994e72ca086b9b8043ffbca8184803872e39ec77c",
+    "rbf_cost": 0.3025683299302695,
+    "energy_cost": 0.34975259738090925
+  },
+  {
+    "step": 81,
+    "case_id": "ed5032372892b4812e3c85defbedc44685a9e90e0c9ed773555d31ec8682d88e",
+    "rbf_cost": 0.5464999800756979,
+    "energy_cost": 0.7439462023813843
+  },
+  {
+    "step": 82,
+    "case_id": "3a444c2a6fb45ec5154009093278a86b301c800b1b00cd18098ed8e6064bb867",
+    "rbf_cost": 0.4931862243382642,
+    "energy_cost": 0.8072571593392255
+  },
+  {
+    "step": 82,
+    "case_id": "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1",
+    "rbf_cost": 0.6139783816586752,
+    "energy_cost": 0.91908508722693
+  },
+  {
+    "step": 82,
+    "case_id": "c9cad3a647659c712e9235df493c8e13517687133037df29727609395ac8983a",
+    "rbf_cost": 0.3380251124267455,
+    "energy_cost": 0.42035580165211517
+  },
+  {
+    "step": 82,
+    "case_id": "f60afdaef0b2f256a08c4baa830cb3a570981ae076473b2fa17eba5494cf6a71",
+    "rbf_cost": 0.4092455932981728,
+    "energy_cost": 0.5649287050276979
+  },
+  {
+    "step": 83,
+    "case_id": "8ffce7ead518724eb0abc03719e0dfb50fde79b0e111db4eb82c56f089da5c2d",
+    "rbf_cost": 0.33509299312749863,
+    "energy_cost": 0.3828942273953443
+  },
+  {
+    "step": 83,
+    "case_id": "f122b869fc690767eef34cafc9fd6f7e5981fc3b99d52f3602e91e7f9e832f7b",
+    "rbf_cost": 0.26475197928086036,
+    "energy_cost": 0.3006014024507009
+  },
+  {
+    "step": 83,
+    "case_id": "8273c9e8fd8f933fba77afe7fd53b943de47466393233adf1e626103d9e53817",
+    "rbf_cost": 0.4490977625308139,
+    "energy_cost": 0.50673890955429
+  },
+  {
+    "step": 83,
+    "case_id": "b7bd328b93b73c3e3f1d053a6d4a9eb9378a192473757a3d4013fab070430a51",
+    "rbf_cost": 0.26022820325600593,
+    "energy_cost": 0.2929601721741464
+  },
+  {
+    "step": 84,
+    "case_id": "6c87afea0d93f2d5171ef78f0554d7208f39439e94e4d3d41026735ed05ec591",
+    "rbf_cost": 0.4037885986253209,
+    "energy_cost": 0.5212833880652208
+  },
+  {
+    "step": 84,
+    "case_id": "c6b6ae8a46860b269e5ee6c9f1002fa8b9a59c9a26ce8a639b9a88b460f078f0",
+    "rbf_cost": 0.2732628737869012,
+    "energy_cost": 0.30238360579459156
+  },
+  {
+    "step": 84,
+    "case_id": "082fd9a14182760ac55864f7ebe93df14fc5dc3967c0ca24897610dde5c29e0d",
+    "rbf_cost": 0.3704526628971554,
+    "energy_cost": 0.4029445165914557
+  },
+  {
+    "step": 84,
+    "case_id": "96b24f632a45f825116c10a7b33bf57ed52ce5130bbff0387f4b400d1b2b7aea",
+    "rbf_cost": 0.36395395792551377,
+    "energy_cost": 0.43020590575700646
+  },
+  {
+    "step": 85,
+    "case_id": "6c87afea0d93f2d5171ef78f0554d7208f39439e94e4d3d41026735ed05ec591",
+    "rbf_cost": 0.4250343119270289,
+    "energy_cost": 0.5623447429512838
+  },
+  {
+    "step": 85,
+    "case_id": "a708d28315be1fd7c61cc4e8687e6828fea054c45c05b3b0ebdbb18e58a350bf",
+    "rbf_cost": 0.4696039565030987,
+    "energy_cost": 0.6369671420493512
+  },
+  {
+    "step": 85,
+    "case_id": "be46e24984c35c9a1f5a004f6af87911a8a37252fe0931239d021b8e0ae6b10d",
+    "rbf_cost": 0.5102400267965206,
+    "energy_cost": 0.6524273997416984
+  },
+  {
+    "step": 85,
+    "case_id": "ced8e5ae36cc870a373d2d3527abeb62f702542ca7b3d6031b9b37756a5d3359",
+    "rbf_cost": 0.4958109628568548,
+    "energy_cost": 0.6088895535006913
+  },
+  {
+    "step": 86,
+    "case_id": "95c1de43717590cf181e96bbb6446c0a08d61d44fb859eea3d1ded1d7f53ccf4",
+    "rbf_cost": 0.4697675122908671,
+    "energy_cost": 0.6193272539876715
+  },
+  {
+    "step": 86,
+    "case_id": "a92c57757f64113cfb0f499c94f0245d622bb4934ed1e8c233c49df9af880474",
+    "rbf_cost": 0.4259679002980843,
+    "energy_cost": 0.4616177903572005
+  },
+  {
+    "step": 86,
+    "case_id": "b6ada8febc1cb1e12e98a1ecf14decbc74f6a182e86a775294b73f47ab3fd804",
+    "rbf_cost": 0.520813922871062,
+    "energy_cost": 0.7689385391896956
+  },
+  {
+    "step": 86,
+    "case_id": "e213f788b2d5ea382f962e897aec310e3749579a36b1800948dccf8ccbc77be7",
+    "rbf_cost": 0.31605394049705393,
+    "energy_cost": 0.347657983337074
+  },
+  {
+    "step": 87,
+    "case_id": "38ff2c563919d17e81ade2b5c69be1b5a76465eea72e22031290fc4bc7475000",
+    "rbf_cost": 0.3540318445058317,
+    "energy_cost": 0.3970269294688895
+  },
+  {
+    "step": 87,
+    "case_id": "3a444c2a6fb45ec5154009093278a86b301c800b1b00cd18098ed8e6064bb867",
+    "rbf_cost": 0.45019440730042626,
+    "energy_cost": 0.6276970515158062
+  },
+  {
+    "step": 87,
+    "case_id": "14acca5eea7e2ca9f8cf1c510d65eef02575a1a852dd357fcd88b09d6dbf49d8",
+    "rbf_cost": 0.7895089663975591,
+    "energy_cost": 1.1524546842499723
+  },
+  {
+    "step": 87,
+    "case_id": "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1",
+    "rbf_cost": 0.5494832648034658,
+    "energy_cost": 0.8067462670076544
+  },
+  {
+    "step": 88,
+    "case_id": "7e2bf3f607600d1443da9ad7366507316733f15573356b6eed20c05cc6cc2769",
+    "rbf_cost": 0.4706900307111601,
+    "energy_cost": 0.5526614084956987
+  },
+  {
+    "step": 88,
+    "case_id": "cab63dc47dbe9b67cade3a57eaac92ab5aafc7c38ed2c4574df2ed6531aa1db3",
+    "rbf_cost": 0.27297606426716814,
+    "energy_cost": 0.3068005474061877
+  },
+  {
+    "step": 88,
+    "case_id": "53e3da132ed9bd03c1a984c704050432a0cd0ad8d13cb3636d6b0e22100fa7c1",
+    "rbf_cost": 0.44956781219537767,
+    "energy_cost": 0.504619466594862
+  },
+  {
+    "step": 88,
+    "case_id": "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1",
+    "rbf_cost": 0.5330142824696726,
+    "energy_cost": 0.7725027263779511
+  },
+  {
+    "step": 89,
+    "case_id": "1f3a7a42fc21ef5c999666f052fcd204a0dae4e212d04018396537d20b644649",
+    "rbf_cost": 0.6905400464709348,
+    "energy_cost": 0.964218820606769
+  },
+  {
+    "step": 89,
+    "case_id": "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1",
+    "rbf_cost": 0.4241763731971848,
+    "energy_cost": 0.5911671164099019
+  },
+  {
+    "step": 89,
+    "case_id": "19f8287a927fe7b045e8679292a463ccdc374a870d7e2817c80d0f9235c7e26e",
+    "rbf_cost": 0.46031513044836336,
+    "energy_cost": 0.6548189394185961
+  },
+  {
+    "step": 89,
+    "case_id": "e80dcdcc0195008938e4c8af20d2a12b665fe84169e201d8bd29617e7c6b7a56",
+    "rbf_cost": 0.5323408704496826,
+    "energy_cost": 0.7197871546979837
+  },
+  {
+    "step": 90,
+    "case_id": "4920509e2ac4f529fce78fb890bd6b6efa7f7a06749f9fc565a98843ec0b2aed",
+    "rbf_cost": 0.44626122393596335,
+    "energy_cost": 0.563897792024678
+  },
+  {
+    "step": 90,
+    "case_id": "7e2bf3f607600d1443da9ad7366507316733f15573356b6eed20c05cc6cc2769",
+    "rbf_cost": 0.5300766602570226,
+    "energy_cost": 0.5930439939608403
+  },
+  {
+    "step": 90,
+    "case_id": "12f64c45210aa4d41e04c0d4973078c097a8c308d93ac7047b6fee1f62828cf9",
+    "rbf_cost": 0.6567416865688683,
+    "energy_cost": 0.9237613611665093
+  },
+  {
+    "step": 90,
+    "case_id": "ed5032372892b4812e3c85defbedc44685a9e90e0c9ed773555d31ec8682d88e",
+    "rbf_cost": 0.5185147866892537,
+    "energy_cost": 0.7065678727822523
+  },
+  {
+    "step": 91,
+    "case_id": "08d18a0df32493a3beab26b9e3015153cb7a6852204bd668c8a617bbedda35bc",
+    "rbf_cost": 0.3829513350665068,
+    "energy_cost": 0.5043462301065964
+  },
+  {
+    "step": 91,
+    "case_id": "8bb1054c289986b857d23e2e5a12cf6ac54c2ca9ccade58259aeb102a3b231b2",
+    "rbf_cost": 0.43750385993138075,
+    "energy_cost": 0.5499616347554923
+  },
+  {
+    "step": 91,
+    "case_id": "81d42c53a3abb8109ce0acb41c62ff5f975e41e45ea02920d6e3541119f9adf9",
+    "rbf_cost": 0.36741971974376453,
+    "energy_cost": 0.46704777699768907
+  },
+  {
+    "step": 91,
+    "case_id": "ea12b0cc865e66c5e891f6e5d25c87b595bd1e2a66683f3e17fb01004fee20e1",
+    "rbf_cost": 0.5984304642991796,
+    "energy_cost": 0.9048252198990292
+  },
+  {
+    "step": 92,
+    "case_id": "166e2b66a3571cd0556421347ec1625b2ee1988c220df92fc95609c1d1a78ebc",
+    "rbf_cost": 0.3244105172081284,
+    "energy_cost": 0.38152680531531946
+  },
+  {
+    "step": 92,
+    "case_id": "9caa3bf75279cefcb492d86442049dc3b67c988d4eafdb8cc5b354eb0344ebb8",
+    "rbf_cost": 0.41675101823948113,
+    "energy_cost": 0.5468042629977797
+  },
+  {
+    "step": 92,
+    "case_id": "f4bbec86c11dc8e9918e4cdc2f373ba552b775b912066b0b6e2f040c0cdaa03f",
+    "rbf_cost": 0.402778597949462,
+    "energy_cost": 0.48063468007730625
+  },
+  {
+    "step": 92,
+    "case_id": "fc1de4ab36b894f2ec5e555e48f5a819bda2209c074d46576866a83bf1c3b9b4",
+    "rbf_cost": 0.5324571253650876,
+    "energy_cost": 0.7973726926165192
+  },
+  {
+    "step": 93,
+    "case_id": "36c828ae4b0f020cb5d69ef4eb7238cac9193d1f74ef65e54043b5b6cd84f272",
+    "rbf_cost": 0.43033760167958235,
+    "energy_cost": 0.6101140721100824
+  },
+  {
+    "step": 93,
+    "case_id": "be9cadeec2db621061bd55a3a71b15d4bc7da738007ed4eaf9c83824d295533c",
+    "rbf_cost": 0.5023559218361686,
+    "energy_cost": 0.6959464723939383
+  },
+  {
+    "step": 93,
+    "case_id": "9a1edc24c15a63500c6fd69ef72c6ebcb7d28799eed856596f5286c5a275f140",
+    "rbf_cost": 0.3093380333599638,
+    "energy_cost": 0.41998426781482534
+  },
+  {
+    "step": 93,
+    "case_id": "f60afdaef0b2f256a08c4baa830cb3a570981ae076473b2fa17eba5494cf6a71",
+    "rbf_cost": 0.44356931345327943,
+    "energy_cost": 0.6482920920620936
+  },
+  {
+    "step": 94,
+    "case_id": "166e2b66a3571cd0556421347ec1625b2ee1988c220df92fc95609c1d1a78ebc",
+    "rbf_cost": 0.3305490975762784,
+    "energy_cost": 0.39102430906526087
+  },
+  {
+    "step": 94,
+    "case_id": "9c3e69fb2cd9aa5279befc0141cb6975b86949d954f1df8ab1d0f117948c145f",
+    "rbf_cost": 0.5107531221748948,
+    "energy_cost": 0.686721150812124
+  },
+  {
+    "step": 94,
+    "case_id": "7e2bf3f607600d1443da9ad7366507316733f15573356b6eed20c05cc6cc2769",
+    "rbf_cost": 0.5471419474449752,
+    "energy_cost": 0.6012546152224003
+  },
+  {
+    "step": 94,
+    "case_id": "c1af9f7d5688c50d39fd4632dfaa9c31810c514b6c6f95dbf985e8b965d5b5ec",
+    "rbf_cost": 0.45835335753035533,
+    "energy_cost": 0.5675824436599655
+  }
+]

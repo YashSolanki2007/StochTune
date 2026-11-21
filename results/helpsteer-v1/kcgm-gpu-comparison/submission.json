@@ -1,0 +1,13 @@
+{
+  "job_id": "508718",
+  "submitted_utc": "2026-11-21T23:36:07.139308+00:00",
+  "maximum_gpus": 2,
+  "wall_limit": "02:00:00",
+  "maximum_gpu_hours": 4,
+  "order": [
+    "rbf",
+    "energy"
+  ],
+  "training_minutes_per_variant": 45,
+  "wandb_required": true
+}

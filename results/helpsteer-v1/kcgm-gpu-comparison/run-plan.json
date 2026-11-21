@@ -1,0 +1,14 @@
+{
+  "variants": [
+    "rbf",
+    "energy"
+  ],
+  "maximum_concurrent_gpus": 2,
+  "shared_wall_seconds": 7200,
+  "maximum_gpu_hours": 4,
+  "per_variant_controller_seconds": 3300,
+  "per_variant_train_seconds": 2700,
+  "reward_model_training": false,
+  "teacher_training": false,
+  "execution": "sequential; stop if first variant fails; no retries or extra allocation"
+}

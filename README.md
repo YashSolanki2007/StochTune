@@ -2,7 +2,7 @@
 
 Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
-This repository records completed **numeric SFT, numeric batch-KL RL, Shakespeare passage RL, and HelpSteer human-preference/word-distribution experiments**. The latest implementation matches **question-conditioned semantic embedding distributions with MMD**. Its job is queued; no semantic-MMD policy result is available yet. The original mathematical overview is retained below. The optional direct soft-target KL trainer is implemented but has not been run.
+This repository records completed **numeric SFT, numeric batch-KL RL, Shakespeare passage RL, and HelpSteer human-preference/word-distribution experiments**. The latest implementation matches **question-conditioned semantic embedding distributions with MMD**. Its first run completed with a small, statistically uncertain distribution improvement and slightly lower quality. Subsequent kCGM-inspired changes passed CPU replay checks; GPU comparison job **508718** is queued, with no new policy results yet. The original mathematical overview is retained below. The optional direct soft-target KL trainer is implemented but has not been run.
 
 ## What has actually been run
 
@@ -17,7 +17,7 @@ This repository records completed **numeric SFT, numeric batch-KL RL, Shakespear
 | HelpSteer subset RL | Human-preference reward model; quality-only and unigram KL with λ = 0.1 / 0.5 | 200 updates per arm; 32 final responses per policy | No convincing joint quality/distribution gain |
 | Corrected broad HelpSteer RL | Audited frozen Skywork 8B reward; 4,948-answer word PMF; λ = 0.5 | 86 updates; 1,376 training responses; two H200s | Quality reward increased; unigram KL worsened |
 | Programming unigram RL | Programming-only references; frequent words + OTHER; same frozen reward | 75 updates; 1,200 training responses; two H200s | Target KL improved by only 0.7%; quality point estimates declined slightly |
-| Conditional semantic MMD | Four questions × four answers; two human-rated reference prototypes per exact question | Implemented; job 504124 queued, two H200s for at most 90 minutes | CPU checks passed; no policy-training results yet |
+| Conditional semantic MMD | Four questions × four answers; two human-rated reference prototypes per exact question | Completed job 504124; two H200s, 81m36s | MMD 0.3922 → 0.3833; quality 0.6696 → 0.6631; uncertain changes |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
 The passage runs use actual on-policy REINFORCE updates to LoRA weights. The Shakespeare quality scorer is a frozen instruction-model judge, without preference training in this project. The later HelpSteer stages use a trained Bradley–Terry scorer or an audited pretrained reward model. Generated-answer evaluations remain **model-judged, not human-validated outcomes**.
@@ -72,7 +72,7 @@ quality labels.
 - [Programming selection, frequent-word PMF, and OTHER mathematics](experiments/helpsteer-programming/README.md)
 - [Programming run on W&B](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/d6hs9j2z)
 
-### Implemented conditional semantic-MMD objective — results pending
+### Conditional semantic-MMD objective and completed first run
 
 The new experiment uses **102 training, 10 validation, and 19 test questions**,
 retaining questions with two distinct model-written answers whose human
@@ -111,12 +111,34 @@ kernels uses bandwidth calibrated from training references only. The original
 word-PMF KL remains an evaluation diagnostic and does not enter the MMD reward.
 Matching semantic features does not guarantee lower lexical KL or correct code.
 
-**Job 504124 was still queued at the November 20, 2026 status check.** Its request
-was reduced in place to **two H200s for 90 minutes**, at most **three GPU-hours**:
-75 minutes for the policy stage and 15 minutes for final evaluation and saving.
-The deployed preflight, encoder parity, W&B connection, and 30 CPU math/regression
-checks passed. No semantic-MMD training improvement is claimed before completion.
+**Job 504124 completed** with 94 updates and 1,504 sampled answers in
+**81 minutes 36 seconds on two H200s**. On 19 test questions, MMD changed
+0.39224 → 0.38330 and quality reward 0.66961 → 0.66314. Paired prompt-bootstrap
+95% intervals for final-minus-baseline changes were [-0.03421, 0.01611] for MMD
+and [-0.04043, 0.02798] for quality. These results do not establish an overall gain.
 
+The subsequent [kCGM-inspired CPU audit](results/helpsteer-v1/kcgm-cpu-audit/README.md)
+adds exact-question KL centering, frozen scale calibration, and an energy-distance
+kernel. Replay shows calibrated distribution coefficients comparable to quality
+coefficients, with Gaussian/energy credit correlation 0.951. These changes have
+**not** produced a new trained-policy result. Their GPU comparison is queued as **job 508718**: Gaussian then energy distance in one **two-H200, two-hour maximum allocation** (up to four GPU-hours), with **45 minutes of training per variant**, evaluation time, and required online W&B logging. Both start from the same pinned actor and reuse the frozen quality scorer; there is no reward-model or teacher training.
+
+The calibrated objective to minimize is
+
+```math
+L(\theta)=\frac{-\mathbb E[r_{\mathrm{quality}}]+0.5s_k D_k(\pi_\theta,P)
++0.002D_{\mathrm{KL}}(\pi_\theta\|\pi_0)}{1.502},
+```
+
+with frozen scales `s_rbf = 2.29718` and `s_energy = 1.77101`, fitted on the
+first ten saved training updates. The KL policy-gradient coefficient subtracts
+the other same-question answers’ mean log-ratio. The energy kernel is
+`k(x,y) = −||x−y||`, avoiding Gaussian bandwidth selection. Exact-gradient and
+DDP checks passed; these are existing kCGM ideas adapted to our conditional
+text experiment, not a claim of a new estimator. See the audit for limitations.
+
+- [Completed first MMD run: metrics, samples, and configuration](results/helpsteer-v1/semantic-mmd/)
+- [Queued comparison: exact submitted profiles, budget, and Slurm script](results/helpsteer-v1/kcgm-gpu-comparison/)
 - [Full MMD mathematics, implementation, limitations, and run protocol](experiments/helpsteer-semantic-mmd/README.md)
 - [Recorded CPU checks and submitted-job snapshot](results/helpsteer-v1/semantic-mmd-preparation/)
 

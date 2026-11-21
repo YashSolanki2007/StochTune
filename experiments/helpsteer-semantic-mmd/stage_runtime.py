@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parents[1]
 
 
-def stage(output, reward_ready):
+def stage(output, reward_ready, config_path=None):
     from huggingface_hub import snapshot_download
 
     output.mkdir(parents=True, exist_ok=False)
@@ -46,7 +46,17 @@ def stage(output, reward_ready):
     shutil.copytree(ROOT / "data", output / "data")
     (output / "outputs").mkdir()
     shutil.copy2(reward_ready, output / "outputs/reward-ready.json")
-    cfg = json.loads((ROOT / "config.json").read_text())
+    cfg = json.loads((config_path or ROOT / "config.json").read_text())
+    if cfg.get("semantic_calibration_report"):
+        calibration = REPO / cfg["semantic_calibration_report"]
+        if (
+            hashlib.sha256(calibration.read_bytes()).hexdigest()
+            != cfg["semantic_calibration_sha256"]
+        ):
+            raise ValueError("Calibrated profile no longer matches its CPU calibration report")
+        destination = output / "data/semantic-calibration.json"
+        shutil.copy2(calibration, destination)
+        cfg["semantic_calibration_runtime_file"] = "data/semantic-calibration.json"
     encoder_cache = Path(
         snapshot_download(
             cfg["semantic_encoder_model"],
@@ -67,13 +77,13 @@ def stage(output, reward_ready):
     ):
         shutil.copy2(encoder_cache / name, encoder_dir / name)
     cfg.update(
-        gpu_submission_authorized=True,
-        approved_allocation_seconds=5400,
+        approved_allocation_seconds=cfg.get("approved_allocation_seconds", 5400),
         approved_maximum_gpus=2,
-        approved_maximum_gpu_hours=3,
+        approved_maximum_gpu_hours=2 * cfg.get("approved_allocation_seconds", 5400) / 3600,
         semantic_encoder_local_path="encoder",
-        authorization="User requested reducing this run to two H200s for 90 minutes.",
     )
+    # Packaging a new profile must not reuse the completed v1 run's spending approval.
+    cfg.setdefault("gpu_submission_authorized", False)
     (output / "config.json").write_text(json.dumps(cfg, indent=2) + "\n")
     manifest_path = output / "data/manifest.json"
     manifest = json.loads(manifest_path.read_text())
@@ -81,6 +91,10 @@ def stage(output, reward_ready):
     manifest["configuration_sha256"] = hashlib.sha256(
         (output / "config.json").read_bytes()
     ).hexdigest()
+    if cfg.get("semantic_calibration_report"):
+        manifest["prepared_sha256"]["semantic-calibration.json"] = cfg[
+            "semantic_calibration_sha256"
+        ]
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n")
     hashes = {
         str(p.relative_to(output)): hashlib.sha256(p.read_bytes()).hexdigest()
@@ -95,5 +109,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--reward-ready", type=Path, required=True)
+    parser.add_argument("--config", type=Path, default=ROOT / "config.json")
     args = parser.parse_args()
-    stage(args.output.resolve(), args.reward_ready.resolve())
+    stage(args.output.resolve(), args.reward_ready.resolve(), args.config.resolve())

@@ -17,6 +17,8 @@ class ConditionalSemanticTarget:
         metadata = json.loads((ROOT / "data/semantic-metadata.json").read_text())
         self.bandwidth_squared = metadata["bandwidth_squared"]
         self.train_ids = set(metadata["training_prompt_ids"])
+        self.kernel_name = cfg.get("semantic_kernel_name", "rbf")
+        self.kernel_scale = cfg.get("semantic_kernel_scale", 1.0)
 
     def embed_records(self, rows):
         vectors = self.encoder.encode([row["passage"] for row in rows])
@@ -27,10 +29,23 @@ class ConditionalSemanticTarget:
     def training_credit(self, rows, quality):
         if any(row["case_id"] not in self.train_ids for row in rows):
             raise ValueError("Held-out semantic references cannot enter policy optimization")
-        return conditional_credit(rows, quality, self.references, self.bandwidth_squared)
+        return conditional_credit(
+            rows,
+            quality,
+            self.references,
+            self.bandwidth_squared,
+            kernel_name=getattr(self, "kernel_name", "rbf"),
+            kernel_scale=getattr(self, "kernel_scale", 1.0),
+        )
 
     def per_prompt_metrics(self, rows):
-        return per_question_metrics(rows, self.references, self.bandwidth_squared)
+        return per_question_metrics(
+            rows,
+            self.references,
+            self.bandwidth_squared,
+            kernel_name=getattr(self, "kernel_name", "rbf"),
+            kernel_scale=getattr(self, "kernel_scale", 1.0),
+        )
 
     def diagnostics(self, rows):
         results = list(self.per_prompt_metrics(rows).values())
@@ -39,6 +54,8 @@ class ConditionalSemanticTarget:
             for name in (
                 "conditional_mmd2_u",
                 "conditional_mmd2_v",
+                "conditional_rbf_u_unscaled",
+                "conditional_energy_u_unscaled",
                 "reference_prototype_coverage",
                 "reference_prototype_one_fraction",
             )
