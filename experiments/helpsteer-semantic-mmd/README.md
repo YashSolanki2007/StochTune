@@ -10,7 +10,7 @@ intervals include zero for both changes; this is not a convincing overall gain.
 A subsequent **CPU-only** replay implements initial-policy KL centering, frozen
 kernel scaling, and an energy-distance alternative. No new policy was trained.
 See the [audit, mathematics, measurements, and limitations](../../results/helpsteer-v1/kcgm-cpu-audit/README.md).
-The reusable `kcgm-*-config.json` templates do not authorize submission. After explicit user authorization, derived 45-minute training profiles were submitted as **job 508718**, Gaussian then energy sequentially within one two-H200 allocation capped at two hours total. At the latest check the job was pending priority; no new policy result is available. [Exact submitted profiles, budget, and script](../../results/helpsteer-v1/kcgm-gpu-comparison/).
+The reusable `kcgm-*-config.json` templates do not authorize submission. After explicit user authorization, derived 45-minute training profiles were submitted as **job 508718**, Gaussian then energy sequentially within one two-H200 allocation capped at two hours total. The job completed in 1h43m52s; energy improved semantic point estimates while Gaussian worsened, with uncertain changes. [Exact submitted profiles, budget, and script](../../results/helpsteer-v1/kcgm-gpu-comparison/).
 The protocol below describes the completed original Gaussian run.
 
 This experiment replaces the word-PMF reward with answer-embedding MMD computed
@@ -151,3 +151,28 @@ Consequently cross-run differences cannot isolate MMD's causal effect.
 
 References: [MiniLM model card](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2),
 [Gretton et al., A Kernel Two-Sample Test](https://jmlr.org/papers/v13/gretton12a.html).
+
+## Longer energy continuation
+
+On November 21, 2026, the user approved two H200s for a maximum of four hours
+total, including evaluation (at most eight GPU-hours). **Job 509031** was
+submitted at 7:40 PM Pacific and was pending priority without a start estimate
+at submission. It continues the completed energy-distance job 508718 from
+checkpoint 53 toward its original 200-update target (147 additional updates).
+The controller stops at the update target or its 3h40 policy-stage deadline,
+reserving 20 minutes within the hard four-hour allocation for final evaluation
+and saving. No reward model is retrained and no teacher is sampled.
+
+Adapter weights, AdamW state, the original cosine schedule, prompt RNG, and both
+ranks' RNG states are restored. The reward, frozen kernel scale, data, batch
+composition, and learning-rate schedule remain unchanged. CPU preflight binds
+the source configuration and checkpoint files by hash and rejects changed data
+or scientific settings. A real tiny-model continuation test reproduces the next
+uninterrupted update and all saved random streams; 30 relevant CPU checks passed.
+The runtime is `experiments/helpsteer-kcgm-energy-long-v3` on Tillicum. Online
+W&B logging is required, with the source job/checkpoint recorded in configuration.
+Final evaluation compares against the original base model; the prior job's
+update-53 final evaluation supplies the shorter-training comparison. The longer run completed all 200 cumulative updates in 2h00m03s. Quality reward
+rose 0.6696 → 0.6940, but energy distance changed only 0.4830 → 0.4813. See the
+[root README](../../README.md#completed-energy-continuation-and-distribution-only-diagnostic)
+and [recorded results](../../results/helpsteer-v1/energy-long/).

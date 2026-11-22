@@ -2,7 +2,7 @@
 
 Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
-This repository records completed **numeric SFT, numeric batch-KL RL, Shakespeare passage RL, and HelpSteer human-preference/word-distribution experiments**. The latest implementation matches **question-conditioned semantic embedding distributions with MMD**. Its first run completed with a small, statistically uncertain distribution improvement and slightly lower quality. Subsequent kCGM-inspired changes passed CPU replay checks; GPU comparison job **508718** is queued, with no new policy results yet. The original mathematical overview is retained below. The optional direct soft-target KL trainer is implemented but has not been run.
+This repository records completed **numeric SFT, numeric batch-KL RL, Shakespeare passage RL, and HelpSteer human-preference/word-distribution experiments**. The latest implementation matches **question-conditioned semantic embedding distributions with MMD**. Its first run completed with a small, statistically uncertain distribution improvement and slightly lower quality. The kCGM-inspired Gaussian/energy comparison, longer energy continuation, and distribution-only fitting diagnostic have now completed. Results show modest, uncertain changes and no reliable joint distribution/quality improvement. The original mathematical overview is retained below. The optional direct soft-target KL trainer is implemented but has not been run.
 
 See [References and acknowledgments](#references-and-acknowledgments) for the papers, original blog, datasets, models, and implementations informing this work.
 
@@ -20,6 +20,9 @@ See [References and acknowledgments](#references-and-acknowledgments) for the pa
 | Corrected broad HelpSteer RL | Audited frozen Skywork 8B reward; 4,948-answer word PMF; λ = 0.5 | 86 updates; 1,376 training responses; two H200s | Quality reward increased; unigram KL worsened |
 | Programming unigram RL | Programming-only references; frequent words + OTHER; same frozen reward | 75 updates; 1,200 training responses; two H200s | Target KL improved by only 0.7%; quality point estimates declined slightly |
 | Conditional semantic MMD | Four questions × four answers; two human-rated reference prototypes per exact question | Completed job 504124; two H200s, 81m36s | MMD 0.3922 → 0.3833; quality 0.6696 → 0.6631; uncertain changes |
+| Calibrated Gaussian / energy | Fresh actors; quality + calibrated discrepancy + centered base-policy KL | Job 508718: 50 / 53 updates; two H200s, 1h43m52s | Energy improved semantic point estimates; Gaussian worsened; uncertain changes |
+| Longer energy continuation | Restore energy checkpoint 53 and retain the original schedule | Job 509031: 200 cumulative updates; 147 new updates; two H200s, 2h00m03s | Quality point estimates improved; most semantic-matching gain disappeared |
+| Distribution-only fitting diagnostic | Fresh actor; four fixed training questions × 16 answers; energy + base-policy KL, quality weight zero | Job 510187: 17 updates, 1,088 answers; two H200s, 1h18m37s | Seen energy distance 3.8% lower; unseen 1.5% higher; weak fitting evidence |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
 The passage runs use actual on-policy REINFORCE updates to LoRA weights. The Shakespeare quality scorer is a frozen instruction-model judge, without preference training in this project. The later HelpSteer stages use a trained Bradley–Terry scorer or an audited pretrained reward model. Generated-answer evaluations remain **model-judged, not human-validated outcomes**.
@@ -121,9 +124,10 @@ and [-0.04043, 0.02798] for quality. These results do not establish an overall g
 
 The subsequent [kCGM-inspired CPU audit](results/helpsteer-v1/kcgm-cpu-audit/README.md)
 adds exact-question KL centering, frozen scale calibration, and an energy-distance
-kernel. Replay shows calibrated distribution coefficients comparable to quality
-coefficients, with Gaussian/energy credit correlation 0.951. These changes have
-**not** produced a new trained-policy result. Their GPU comparison is queued as **job 508718**: Gaussian then energy distance in one **two-H200, two-hour maximum allocation** (up to four GPU-hours), with **45 minutes of training per variant**, evaluation time, and required online W&B logging. Both start from the same pinned actor and reuse the frozen quality scorer; there is no reward-model or teacher training.
+kernel. The corresponding GPU comparison **job 508718 completed**, running
+Gaussian then energy sequentially in **1h43m52s on two H200s**. Both started from
+the same pinned actor and reused the frozen quality scorer. No reward model or
+teacher was trained. The table below records the completed comparison and follow-ups.
 
 The calibrated objective to minimize is
 
@@ -140,9 +144,112 @@ DDP checks passed; these are existing kCGM ideas adapted to our conditional
 text experiment, not a claim of a new estimator. See the audit for limitations.
 
 - [Completed first MMD run: metrics, samples, and configuration](results/helpsteer-v1/semantic-mmd/)
-- [Queued comparison: exact submitted profiles, budget, and Slurm script](results/helpsteer-v1/kcgm-gpu-comparison/)
+- [Completed comparison: metrics, samples, exact profiles, budget, and Slurm script](results/helpsteer-v1/kcgm-gpu-comparison/)
 - [Full MMD mathematics, implementation, limitations, and run protocol](experiments/helpsteer-semantic-mmd/README.md)
 - [Recorded CPU checks and submitted-job snapshot](results/helpsteer-v1/semantic-mmd-preparation/)
+
+### Completed energy continuation and distribution-only diagnostic
+
+All columns in the following table use the same 19 held-out questions and four
+answers per question. Discrepancies are **unscaled** for comparison; quality is
+model-judged. The longer run restores update 53, including optimizer, original
+200-step cosine schedule, prompt RNG, and both ranks' RNG states.
+
+| Metric | Base | Gaussian, 50 updates | Energy, 53 updates | Energy, 200 updates |
+|---|---:|---:|---:|---:|
+| Gaussian MMD ↓ | 0.3922 | 0.4077 | **0.3703** | 0.3904 |
+| Energy distance ↓ | 0.4830 | 0.5082 | **0.4564** | 0.4813 |
+| Quality reward ↑ | 0.6696 | 0.6615 | 0.6735 | **0.6940** |
+| Independent coherence /5 ↑ | 4.517 | 4.461 | 4.494 | **4.532** |
+| Independent readability /5 ↑ | 4.325 | 4.292 | 4.270 | **4.349** |
+| Independent fulfillment /5 ↑ | 4.612 | 4.530 | 4.560 | **4.634** |
+| Full-vocabulary word KL ↓ | 1.2104 | 1.2578 | **1.1889** | 1.2381 |
+
+Energy training at update 53 reduced semantic discrepancies by about 5.5%, but
+independent quality scores fell slightly. Continuing to update 200 increased
+quality point estimates while losing most of that distribution-matching gain.
+Paired question-bootstrap 95% intervals for semantic-discrepancy and quality-reward
+changes include zero. One seed and 19 questions do not establish a reliable gain.
+Job **509031** completed 147 additional updates / 2,352 answers in **2h00m03s**
+on two H200s, ending at its 200-update target before the approved four-hour cap.
+
+The subsequent **distribution-only diagnostic**, job **510187**, removes the
+quality term completely and loads no reward scorer or judge. A fresh actor sees
+four fixed training questions every update, with 16 independently sampled answers
+each (64 globally, 32 per GPU). Four questions from the original validation split
+are reserved for secondary unseen-question evaluation. The original test split
+is unused. Selection rules and seed are recorded before training.
+
+Its minimized objective is
+
+```math
+L_{\mathrm{diag}}(\theta)=\frac{
+0.5s_E\,\mathbb E_q[D_E(P_\theta(\cdot\mid q),T_q)]
++0.002\,\mathbb E_q[D_{\mathrm{KL}}(\pi_\theta(\cdot\mid q)\|\pi_0(\cdot\mid q))]
+}{1.502},\qquad s_E=1.7710087348.
+```
+
+The energy term matches answer embeddings to the two equal-weight reference
+prototypes per question. The KL term limits changes from the original actor;
+**it is not the earlier target-word-PMF KL**. Word-frequency KL is evaluated
+post hoc and does not enter this diagnostic's reward. Coupled MMD leave-one-out
+credit and same-question KL centering remain active; quality coefficients are
+exactly zero. The historical divisor 1.502 is retained without rescaling the
+remaining terms. Full mathematics, selection rules, and CPU checks are in the
+[diagnostic guide](experiments/helpsteer-mmd-diagnostic/README.md).
+
+The diagnostic completed **17 updates / 1,088 training answers** in **1h18m37s**
+on two H200s, within its approved 90-minute cap. It evaluates 32 answers per seen
+question and 16 per unseen question, before and after training.
+
+| Energy distance ↓ | Before | After | Relative change |
+|---|---:|---:|---:|
+| Four seen training questions | 0.5261 | 0.5061 | 3.8% better |
+| Four unseen validation questions | 0.5879 | 0.5969 | 1.5% worse |
+
+Three of four training questions improved. Seen-question evaluations progressed
+0.5261 → 0.5197 → 0.5061. The four-question bootstrap interval for the mean change
+was [-0.0546, 0.0111], including zero. This is a modest fitting signal, not strong
+overfitting or demonstrated generalization. Removing quality competition did not
+resolve the difficulty; optimization, representation, and sparse targets remain
+possible limitations. Quality was not measured in this diagnostic.
+
+### Word-frequency audit of the diagnostic samples
+
+A CPU-only analysis reuses the actual saved before/after generations. It compares
+word counts with **each question's own two references**, then averages question
+metrics equally. This differs from the older pooled programming-corpus PMF.
+Forward KL uses total generated pseudocount mass 1 and retains out-of-reference
+words in an OTHER category; JS and total variation are unsmoothed. Every word
+participates in the numerical metrics. Reference answers are pooled by word count,
+which differs from equal-answer weighting in the embedding target.
+
+| Mean word-distribution metric ↓ | Seen: before | Seen: after | Unseen: before | Unseen: after |
+|---|---:|---:|---:|---:|
+| Forward unigram KL | 1.3325 | 1.2785 | 1.6379 | 1.6590 |
+| Jensen–Shannon divergence | 0.2726 | 0.2712 | 0.3003 | 0.3005 |
+| Total variation | 0.5478 | 0.5483 | 0.5923 | 0.5931 |
+
+The roughly 4.1% seen-question KL reduction does not translate to an unseen gain
+or consistent improvement across metrics. The plot displays the most frequent
+reference content words; its stopword filtering affects display only.
+
+![Word frequencies before and after the distribution-only diagnostic](results/helpsteer-v1/word-frequency-audit/word-frequency-comparison.png)
+
+- [Gaussian / energy comparison records](results/helpsteer-v1/kcgm-gpu-comparison/)
+- [Longer energy continuation records](results/helpsteer-v1/energy-long/)
+- [Distribution-only diagnostic records and samples](results/helpsteer-v1/distribution-only-diagnostic/)
+- [Word-frequency numerical report](results/helpsteer-v1/word-frequency-audit/word-frequency-report.json)
+- [Readable actual sampled responses](results/helpsteer-v1/word-frequency-audit/sampled-responses.txt)
+- W&B: [Gaussian](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/9m8sxpla), [energy](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/dyvs9hxd), [longer energy](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/a4cbew2c), [distribution-only diagnostic](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/wsqcmlnk).
+
+Rebuild the word-frequency audit using the committed samples and reference inputs:
+
+```bash
+python experiments/helpsteer-mmd-diagnostic/analyze_word_frequencies.py \
+  --source results/helpsteer-v1/distribution-only-diagnostic \
+  --output outputs/reproduced-word-frequency-audit
+```
 
 CPU preparation can be rebuilt from the pinned public dataset. The embedding
 checkpoint must be cached before the offline semantic preparation:

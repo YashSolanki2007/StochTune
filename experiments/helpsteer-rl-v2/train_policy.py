@@ -299,6 +299,23 @@ def train(arm, output):
         prompt_rng = random.Random(cfg["seed"])
         torch.manual_seed(cfg["seed"] + rank * 100003)
         random.seed(cfg["seed"] + rank * 100003)
+        step = 0
+        if cfg.get("resume_checkpoint"):
+            from resume_policy import restore_policy_checkpoint, validate_resume_checkpoint
+
+            state = validate_resume_checkpoint(cfg, arm, world)
+            step = restore_policy_checkpoint(
+                actor,
+                optimizer,
+                scheduler,
+                prompt_rng,
+                state,
+                cfg["resume_checkpoint"],
+                rank,
+                device,
+            )
+            del state
+        initial_step = step
         initial = evaluate(
             policy,
             tokenizer,
@@ -307,12 +324,12 @@ def train(arm, output):
             cases["validation"],
             cfg,
             output,
-            "validation-0",
+            f"validation-{initial_step}",
             device,
         )
         if rank == 0:
-            run.log({f"validation/{k}": v for k, v in initial.items()}, step=0)
-        step, reason = 0, "step_limit"
+            run.log({f"validation/{k}": v for k, v in initial.items()}, step=initial_step)
+        reason = "step_limit"
         while step < cfg["steps"]:
             flag = torch.tensor(int(stop[0]), device=device)
             dist.all_reduce(flag, op=dist.ReduceOp.MAX)
@@ -471,6 +488,9 @@ def train(arm, output):
                 "final": final,
                 "training_updates": step,
                 "training_passages": step * cfg["global_group_size"],
+                "resumed_from_step": initial_step,
+                "training_updates_this_run": step - initial_step,
+                "training_passages_this_run": (step - initial_step) * cfg["global_group_size"],
                 "stop_reason": reason,
                 "elapsed_seconds": time.monotonic() - started,
                 "human_validated": False,

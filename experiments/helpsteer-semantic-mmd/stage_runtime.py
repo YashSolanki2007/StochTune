@@ -17,6 +17,7 @@ def stage(output, reward_ready, config_path=None):
     for name in (
         "common.py",
         "train_policy.py",
+        "resume_policy.py",
         "audit.py",
         "validation.py",
         "word_distribution.py",

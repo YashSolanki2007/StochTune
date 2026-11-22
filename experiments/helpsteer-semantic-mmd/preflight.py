@@ -13,8 +13,9 @@ def preflight():
     cfg = config()
     if not cfg.get("gpu_submission_authorized"):
         raise RuntimeError("GPU submission has not been authorized for this runtime")
-    if not 600 < cfg["approved_allocation_seconds"] <= 5400 or cfg["approved_maximum_gpus"] != 2:
-        raise ValueError("Each policy is capped at two GPUs and at most 90 minutes")
+    maximum = 14400 if cfg.get("resume_checkpoint") else 5400
+    if not 600 < cfg["approved_allocation_seconds"] <= maximum or cfg["approved_maximum_gpus"] != 2:
+        raise ValueError("Invalid two-GPU allocation cap")
     if not 0 < cfg["train_budget_seconds"] <= cfg["approved_allocation_seconds"] - 600:
         raise ValueError("Reserve at least ten minutes per policy for evaluation and saving")
     if cfg["distribution_objective"] != "conditional-semantic-mmd":
@@ -39,6 +40,15 @@ def preflight():
     for name, expected in manifest["prepared_sha256"].items():
         if hashlib.sha256((data / name).read_bytes()).hexdigest() != expected:
             raise ValueError(f"Prepared data changed: {name}")
+    if cfg.get("resume_checkpoint"):
+        from resume_policy import validate_resume_checkpoint
+
+        validate_resume_checkpoint(cfg, "quality-semantic-mmd")
+        source_manifest = json.loads(
+            (Path(cfg["resume_source_config"]).parent / "data/manifest.json").read_text()
+        )
+        if source_manifest["prepared_sha256"] != manifest["prepared_sha256"]:
+            raise ValueError("Continuation must retain the original training and evaluation data")
     sets = {
         name: {r["id"] for r in read_rows(data / f"policy_{name}.jsonl")}
         for name in ("train", "validation", "test")

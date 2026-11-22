@@ -1,0 +1,18 @@
+{
+  "selection_seed": 42,
+  "eligible_training_questions": 32,
+  "seen_ids": [
+    "32d51157c0b228c1144c912ab07dd9f8034382d918fefbcff191bbd2c3c8ba58",
+    "0be6e4214c2223f94f55a85b792ef08a82f0fe3582ca00b176033664a6dfc4ae",
+    "9f88876b667f575aa7b359e6e56045f276f601613f86aa507153f8cb892cc1fd",
+    "8ffce7ead518724eb0abc03719e0dfb50fde79b0e111db4eb82c56f089da5c2d"
+  ],
+  "unseen_ids": [
+    "0611ddfa751c3f97338f6017335e2ab38fabf9d178097b3ed49261bf01c55769",
+    "6459de8824b5a4ca55dc01e824ef2f0c603041677dbd3c9bbc8b5b2c5ca995ea",
+    "088ab0686778bd0304c048bc9da395b92bc7cffb62c7d440e42e68547482bf09",
+    "48b03b8c842e02e0d0e6fd235fdf5da314a06d0c5c8fdd7959262d5efd652616"
+  ],
+  "selection_uses_model_scores": false,
+  "criteria": "Train only; single-turn prompt of 5\u2013100 whitespace words; both references 80\u2013350 words; reference length ratio <=2; sorted IDs then seeded selection."
+}

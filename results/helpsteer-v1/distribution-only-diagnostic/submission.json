@@ -1,0 +1,18 @@
+{
+  "job_id": "510187",
+  "submitted_utc": "2026-11-22T09:32:00.364286+00:00",
+  "objective": "distribution-only energy distance plus initial-policy KL",
+  "maximum_gpus": 2,
+  "wall_limit": "01:30:00",
+  "maximum_gpu_hours": 3,
+  "training_questions": 4,
+  "samples_per_question_per_update": 16,
+  "global_batch_size": 64,
+  "quality_weight": 0,
+  "initial_policy_kl_beta": 0.002,
+  "fresh_actor": true,
+  "seen_eval_answers_per_question": 32,
+  "unseen_questions": 4,
+  "unseen_eval_answers_per_question": 16,
+  "wandb_required": true
+}

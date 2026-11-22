@@ -1,0 +1,71 @@
+{
+  "distribution_kl": 1.2908527479871623,
+  "bucketed_unigram_kl": 1.2908527479871623,
+  "other_word_rate": 0.26272773710199215,
+  "reference_other_mass": 0.08195872116552003,
+  "histogram_observations": 29365,
+  "unobserved_reference_mass": 0.09947389720760826,
+  "missing_word_kl_contribution": 0.91587276795465,
+  "distribution_js": 0.14692418791534484,
+  "common_words_other_js": 0.1186362141700689,
+  "common_word_categories": 1000,
+  "common_word_reference_mass": 0.8582921893970051,
+  "full_vocabulary_distribution_kl": 1.9772125913496694,
+  "full_vocabulary_unigram_kl": 1.9772125913496694,
+  "full_vocabulary_unknown_unigram_rate": 0.14925932232249275,
+  "full_vocabulary_histogram_observations": 29365,
+  "full_vocabulary_unobserved_reference_mass": 0.16051800890327805,
+  "full_vocabulary_missing_word_kl_contribution": 1.5249193762147675,
+  "full_vocabulary_distribution_js": 0.21916853605572528,
+  "full_vocabulary_common_words_other_js": 0.11850799733705981,
+  "full_vocabulary_common_word_categories": 1000,
+  "full_vocabulary_common_word_reference_mass": 0.8582921893970051,
+  "conditional_mmd2_u": 1.057130677265176,
+  "conditional_mmd2_v": 1.1171630534916377,
+  "conditional_rbf_u_unscaled": 0.4542896527485312,
+  "conditional_energy_u_unscaled": 0.5969087879102739,
+  "reference_prototype_coverage": 0.75,
+  "reference_prototype_one_fraction": 0.234375,
+  "mmd_questions": 4,
+  "passages": 64,
+  "terminated_rate": 0.59375,
+  "mean_word_count": 458.828125,
+  "per_question": {
+    "0611ddfa751c3f97338f6017335e2ab38fabf9d178097b3ed49261bf01c55769": {
+      "conditional_mmd2_u": 1.3728404280520818,
+      "conditional_mmd2_v": 1.4461211009024417,
+      "conditional_rbf_u_unscaled": 0.5047906650437992,
+      "conditional_energy_u_unscaled": 0.7751742840561155,
+      "reference_prototype_coverage": 0.5,
+      "reference_prototype_one_fraction": 0.0,
+      "generated_answers": 16
+    },
+    "088ab0686778bd0304c048bc9da395b92bc7cffb62c7d440e42e68547482bf09": {
+      "conditional_mmd2_u": 0.6513617521317634,
+      "conditional_mmd2_v": 0.7026270115735382,
+      "conditional_rbf_u_unscaled": 0.32275525033303776,
+      "conditional_energy_u_unscaled": 0.36779138314472903,
+      "reference_prototype_coverage": 1.0,
+      "reference_prototype_one_fraction": 0.5625,
+      "generated_answers": 16
+    },
+    "6459de8824b5a4ca55dc01e824ef2f0c603041677dbd3c9bbc8b5b2c5ca995ea": {
+      "conditional_mmd2_u": 1.1636101641587326,
+      "conditional_mmd2_v": 1.2315759982666963,
+      "conditional_rbf_u_unscaled": 0.496555792636052,
+      "conditional_energy_u_unscaled": 0.6570324252484396,
+      "reference_prototype_coverage": 1.0,
+      "reference_prototype_one_fraction": 0.375,
+      "generated_answers": 16
+    },
+    "48b03b8c842e02e0d0e6fd235fdf5da314a06d0c5c8fdd7959262d5efd652616": {
+      "conditional_mmd2_u": 1.0407103647181262,
+      "conditional_mmd2_v": 1.0883281032238745,
+      "conditional_rbf_u_unscaled": 0.49305690298123594,
+      "conditional_energy_u_unscaled": 0.5876370591918113,
+      "reference_prototype_coverage": 0.5,
+      "reference_prototype_one_fraction": 0.0,
+      "generated_answers": 16
+    }
+  }
+}

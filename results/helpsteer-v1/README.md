@@ -1,7 +1,7 @@
 # Recorded HelpSteer and programming experiments
 
 These are completed-run records downloaded from Tillicum, plus CPU preparation
-and submission records for the queued conditional semantic-MMD experiment.
+and records for completed conditional semantic-MMD and diagnostic experiments.
 No new GPU work was started while exporting these results.
 
 ## Completed policy comparisons
@@ -102,4 +102,4 @@ of these records does not require a GPU or a new W&B run.
 
 ## Semantic MMD and kCGM follow-up
 
-Job **504124** completed: [metrics, samples, training history, configuration and source hashes](semantic-mmd/). Gaussian MMD improved slightly while quality fell slightly; paired prompt-bootstrap intervals include zero. The [CPU replay audit](kcgm-cpu-audit/README.md) records KL centering, frozen scaling, energy-distance diagnostics, and their limitations. A subsequent [GPU comparison](kcgm-gpu-comparison/) is queued as **job 508718**, using at most two H200s for two hours total. No results from that comparison are claimed yet.
+Job **504124** completed: [metrics, samples, training history, configuration and source hashes](semantic-mmd/). Gaussian MMD improved slightly while quality fell slightly; paired prompt-bootstrap intervals include zero. The [CPU replay audit](kcgm-cpu-audit/README.md) records KL centering, frozen scaling, energy-distance diagnostics, and their limitations. The subsequent [GPU comparison](kcgm-gpu-comparison/) completed as **job 508718**, followed by [energy continuation job 509031](energy-long/) and [distribution-only diagnostic job 510187](distribution-only-diagnostic/). The [word-frequency audit](word-frequency-audit/word-frequency-report.json) uses committed diagnostic samples and reference inputs. See the root README for mathematics, budgets, result tables, uncertainty, and limitations.
