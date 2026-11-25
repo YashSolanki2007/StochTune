@@ -2,7 +2,7 @@
 
 Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
-This repository records completed **numeric SFT, numeric batch-KL RL, Shakespeare passage RL, and HelpSteer human-preference/word-distribution experiments**. The latest implementation matches **question-conditioned semantic embedding distributions with MMD**. Its first run completed with a small, statistically uncertain distribution improvement and slightly lower quality. The kCGM-inspired Gaussian/energy comparison, longer energy continuation, and distribution-only fitting diagnostic have now completed. Results show modest, uncertain changes and no reliable joint distribution/quality improvement. The original mathematical overview is retained below. The optional direct soft-target KL trainer is implemented but has not been run.
+This repository records completed **numeric SFT, numeric batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments**. The latest experiment returns to **quality plus unigram-KL matching on Jane Austen's Emma**, after CPU screening found lower source-text discrepancy than Tiny Shakespeare under a matched protocol. **Emma job 519712 is submitted and pending as of November 24, 2026; there are no Emma trained-model results yet.** The preceding LitBench attempt was cancelled after a validation-logging failure, before RL. Earlier semantic-MMD/energy experiments showed modest, uncertain changes without reliable joint quality/distribution improvement. The optional direct soft-target KL trainer is implemented but has not been run.
 
 See [References and acknowledgments](#references-and-acknowledgments) for the papers, original blog, datasets, models, and implementations informing this work.
 
@@ -23,9 +23,136 @@ See [References and acknowledgments](#references-and-acknowledgments) for the pa
 | Calibrated Gaussian / energy | Fresh actors; quality + calibrated discrepancy + centered base-policy KL | Job 508718: 50 / 53 updates; two H200s, 1h43m52s | Energy improved semantic point estimates; Gaussian worsened; uncertain changes |
 | Longer energy continuation | Restore energy checkpoint 53 and retain the original schedule | Job 509031: 200 cumulative updates; 147 new updates; two H200s, 2h00m03s | Quality point estimates improved; most semantic-matching gain disappeared |
 | Distribution-only fitting diagnostic | Fresh actor; four fixed training questions × 16 answers; energy + base-policy KL, quality weight zero | Job 510187: 17 updates, 1,088 answers; two H200s, 1h18m37s | Seen energy distance 3.8% lower; unseen 1.5% higher; weak fitting evidence |
+| LitBench fantasy attempt | New literary Bradley–Terry scorer, followed by quality + word KL if validated | Job 519547 cancelled after 8 minutes on two H200s | Validation JSON serialization failed; no RL updates or policy results; regression fixed |
+| Emma source screening | Pinned single novel; equal-word source batches; chapter/section holdouts | CPU only; 1,000 resampled batches per condition | Shared-vocabulary source KL 0.266 vs Tiny Shakespeare 0.479; not model results |
+| Emma quality + unigram RL | Fresh Qwen2.5-3B-Instruct; frozen 7B fiction judge; word KL λ = 0.1 | Job 519712 submitted/pending; two H200s, hard cap 110 minutes including evaluation | No trained-model results yet; judge checks must pass before RL |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
 The passage runs use actual on-policy REINFORCE updates to LoRA weights. The Shakespeare quality scorer is a frozen instruction-model judge, without preference training in this project. The later HelpSteer stages use a trained Bradley–Terry scorer or an audited pretrained reward model. Generated-answer evaluations remain **model-judged, not human-validated outcomes**.
+
+## Emma: source stability and the submitted word-KL experiment
+
+The broad HelpSteer target pooled unrelated answers. A narrow fantasy keyword
+filter in LitBench still mixed different settings and vocabulary. Emma instead
+provides one author's narrative within a single novel. This is a hypothesis about
+a more suitable pooled target, not an assumption that all chapters have one PMF.
+
+### CPU source-text results, not trained-model performance
+
+For a comparable screen, both Emma and the existing Tiny Shakespeare text were
+divided into consecutive 4,000-word sections, with 70% assigned to references and
+the remainder held out using seed 42. Each sampled batch contains sixteen
+400-word passages, totaling exactly 6,400 words. The shared vocabulary consists
+of the 1,000 most frequent words in the two corpora's **training sections only**,
+plus OTHER. Forward KL uses total generated pseudocount mass 1.0. Each condition
+contains 1,000 resampled batches.
+
+| Source-text condition: median KL ↓ | Emma | Tiny Shakespeare |
+|---|---:|---:|
+| Random sixteen passages; shared 1,000 words + OTHER | **0.266** | 0.479 |
+| Four sections × four passages; same shared vocabulary | **0.275** | 0.544 |
+| Random sixteen passages; each corpus's own capped vocabulary | **0.638** | 1.002 |
+
+Emma has lower discrepancy under this protocol. This does not establish that RL
+will improve, or that author identity alone explains the difference. Shared
+support hides distinctions inside OTHER; the own-vocabulary comparison has
+different supports. Resampling percentiles describe finite-corpus batches, not
+independent experiments or population confidence intervals.
+
+### Actual continuation data and reward
+
+The pinned NLTK Gutenberg edition of Emma contains 55 chapters and 160,874 words
+under our existing tokenizer, excluding headings. Whole chapters are assigned
+**39 train / 8 validation / 8 test**, independently of the comparable section
+screen. Non-overlapping complete paragraphs produce **168 / 35 / 29** continuation
+pairs: an 80–180-word prefix followed by a 250–450-word source continuation.
+Length constraints leave eligible examples in 38 training chapters and seven
+test chapters; no chapter crosses partitions.
+
+The training word PMF counts only the **168 source continuations paired with the
+exact training-prompt population**. Prefixes and held-out chapters are excluded.
+Words need at least five occurrences, with a maximum vocabulary of 10,000;
+this preparation yields **1,053 retained words plus OTHER**, holding 10.47% of
+source word mass in OTHER. This is the selected training subset's support, not
+the complete novel's vocabulary. Pooling still does not enforce prompt-specific
+word frequencies.
+
+Emma has **no preference rankings**. No Bradley–Terry reward model is trained for
+this run. A frozen, pinned **Qwen2.5-7B-Instruct** judge scores coherence,
+readability, and consistency with the provided narrative prefix. Each dimension
+uses the expected rating conditional on tokens 1–5; rating-token mass below 0.01
+fails scoring. If those expected ratings are \(s_d(q,y)\), quality is
+
+\[
+r_{\mathrm{quality}}(q,y)
+=\frac{1}{3}\sum_{d=1}^{3}\frac{s_d(q,y)-1}{4}
+-0.1\,\mathbf 1\{\text{generation did not terminate}\}.
+\]
+
+These are model judgments, not calibrated human-preference probabilities. At the
+start of the same allocation, eight training-only source continuations and their
+shuffled/repetitive corruptions form 24 sanity-check examples. Source coherence
+must beat each corruption in at least 7/8 comparisons, source readability must
+beat shuffling in at least 7/8, and the mean normalized quality margin over
+repetition must be at least 0.1. A failed check stops the allocation before RL.
+Passing these easy controls does not establish nuanced literary-quality accuracy.
+
+For a generated batch \(\mathcal B=(Y_1,\ldots,Y_N)\), the objective is
+
+\[
+J(\theta)=\mathbb E\left[
+\frac1N\sum_i r_{\mathrm{quality}}(q_i,Y_i)
+-0.1\,D_{\mathrm{KL}}(P_{\mathrm{words}}\|\widehat Q_{\mathcal B})
+\right]
+-0.002\,\mathbb E_qD_{\mathrm{KL}}(\pi_\theta(\cdot\mid q)\|\pi_0(\cdot\mid q)).
+\]
+
+The word-PMF KL measures corpus fidelity; the separate sequence-policy KL
+regularizes departure from the initial model. Word statistics are pooled across
+complete responses, not rewarded after each individual word. On-policy
+REINFORCE uses whole-batch leave-one-out quality credit and coupled distribution
+credit \(N[D_{-i}-D_{\mathrm{full}}]\), with same-prompt leave-one-out centering
+for base-policy KL. Four prompts × four samples form each global DDP batch.
+GRPO has not been substituted in this dataset experiment. Lambda 0.1 remains a
+heuristic starting value, not an optimized coefficient.
+
+### Submitted run and reproducibility
+
+**Job 519712 is pending as of the November 24, 2026 status check.** One allocation
+uses two H200s for at most **110 minutes**, including scorer checks, training,
+checkpointing and evaluation. Together with cancelled LitBench job 519547's
+eight minutes, maximum cumulative usage is **3.93 GPU-hours**, below the original
+four-GPU-hour approval. There are no automatic retries or extra benchmark jobs.
+
+The fresh Qwen2.5-3B-Instruct actor uses LoRA rank 16 / alpha 32 and AdamW learning
+rate 5e-6. Generation uses temperature 1, no top-k/top-p truncation, and at most
+1,024 new tokens. Training has an 80-update cap and an 80-minute setup/update
+budget, reserving time for final evaluation; completing 80 updates is not
+guaranteed. Both stages require online W&B in the existing
+[stochastic-llm project](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm).
+
+Baseline and final evaluation use identical held-out prompts, sampling settings
+and seeds: sixteen prompts, two responses each. Quality evaluation uses the
+**same frozen training judge**, not independent or human evaluation. Generated
+12-word-window overlap with the complete novel tracks copying. Chapter holdout
+does not rule out base-model pretraining memorization. Held-out source statistics
+were inspected during dataset selection, so this is not a pristine external
+benchmark.
+
+The preceding LitBench attempt trained neither a usable reward model nor an RL
+policy: its initial validation report contained NumPy boolean scalars that could
+not be JSON-serialized. The job was cancelled after eight minutes. The source now
+converts these scalars to native booleans, and its regression test serializes the
+actual report. The original uploaded runtime is not silently restarted.
+
+- [Emma implementation, protocol and CPU reproduction](experiments/emma-word-kl/README.md)
+- [Full CPU screening statistics](experiments/emma-word-kl/screening-results.json)
+- [Emma submission and preparation metadata](results/emma-v1/README.md)
+- [LitBench implementation and cancelled-attempt record](experiments/litbench-rl/README.md)
+
+All twelve Emma CPU checks passed locally and on Tillicum before submission,
+including actual two-rank policy updates and scorer-certificate export/reload.
+The LitBench validation regression suite contains seven additional checks.
 
 ## HelpSteer results and conditional semantic MMD
 
@@ -794,6 +921,7 @@ runs are recorded in their configurations and source manifests.
 | Wang et al. (2024), [HelpSteer2: Open-source dataset for training top-performing reward models](https://arxiv.org/abs/2406.08673) · [dataset](https://huggingface.co/datasets/nvidia/HelpSteer2) | Human attribute ratings used to select acceptable references and check quality scorers. The answers themselves are model-written. |
 | Wang et al. (2024), [HelpSteer2-Preference: Complementing Ratings with Preferences](https://arxiv.org/abs/2410.01257) | Human pairwise preferences used by the HelpSteer preference-training and scorer-audit stages. |
 | Liu et al. (2025), [Skywork-Reward-V2: Scaling Preference Data Curation via Human-AI Synergy](https://arxiv.org/abs/2507.01352) · [8B reward model](https://huggingface.co/Skywork/Skywork-Reward-V2-Qwen3-8B) | Source of the frozen pretrained quality scorer used after our legacy scorer audit. We did not train Skywork or establish a contamination-free benchmark. |
+| [LitBench paper](https://arxiv.org/abs/2507.00769) · [published version](https://aclanthology.org/2026.eacl-long.362/) · [training data](https://huggingface.co/datasets/SAA-Lab/LitBench-Train) · [test release](https://huggingface.co/datasets/SAA-Lab/LitBench-Test) | Literary-preference dataset explored in the cancelled fantasy attempt. Training labels derive from curated Reddit-vote comparisons, not expert coherence ratings. We used internal splits, not the official test benchmark. |
 
 ### Models, embeddings, and corpus sources
 
@@ -802,12 +930,16 @@ runs are recorded in their configurations and source manifests.
 | [Qwen2.5 Technical Report](https://arxiv.org/abs/2412.15115) · [Qwen2.5-3B](https://huggingface.co/Qwen/Qwen2.5-3B) · [Qwen2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct) · [Qwen2.5-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct) | Numeric base model, passage/HelpSteer actor, and instruction-model judge, respectively. |
 | [all-MiniLM-L6-v2 model card](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) · Reimers & Gurevych (2019), [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084) | Frozen answer embeddings and sentence-embedding background. Our full-answer chunk pooling is a project-specific extension, not a validated code-correctness metric. |
 | Karpathy, [Tiny Shakespeare / char-rnn](https://github.com/karpathy/char-rnn/tree/master/data/tinyshakespeare) | Corpus source for the Shakespeare unigram and bigram target PMFs. |
+| Austen, [Emma / Project Gutenberg](https://www.gutenberg.org/ebooks/158) · [pinned NLTK Gutenberg distribution](https://github.com/nltk/nltk_data/blob/5f09e470fe339e1a119dd174ca284129a3c7a5bb/packages/corpora/gutenberg.zip) | Single-novel source for the new continuation corpus and training-only word PMF. The text archive, extracted member and prepared data have recorded hashes. |
+| Eldan & Li (2023), [TinyStories](https://arxiv.org/abs/2305.07759) · [dataset](https://huggingface.co/datasets/roneneldan/TinyStories) | Controlled-vocabulary synthetic-story candidate considered during corpus selection; no TinyStories training has been run here. |
+| Novikova, Dušek & Rieser (2017), [The E2E Dataset: New Challenges For End-to-End Generation](https://arxiv.org/abs/1706.09254) · [author data](https://github.com/tuetschek/e2e-dataset) | Narrow restaurant-domain, multiple-reference candidate considered during corpus selection; not used in a training run. |
 
 ### Additional related work considered
 
 These papers informed comparisons and discussion; their complete training procedures
 have not been implemented or evaluated as baselines in this repository.
 
+- Shao et al. (2024), [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300): GRPO and within-prompt group advantages, discussed as a potential updater comparison; the Emma implementation remains REINFORCE.
 - Zhang et al. (2024), [Forcing Diffuse Distributions out of Language Models](https://arxiv.org/abs/2404.10859): fine-tuning for diffuse distributions over valid outputs.
 - Khalifa, Elsahar & Dymetman (2021), [A Distributional Approach to Controlled Text Generation](https://arxiv.org/abs/2012.11635): pointwise and distributional constraints with divergence control relative to an initial language model.
 - Anschel et al. (2025), [Group-Aware Reinforcement Learning for Output Diversity in Large Language Models](https://aclanthology.org/2025.emnlp-main.1649/): GAPO and frequency-aware group rewards for output diversity.

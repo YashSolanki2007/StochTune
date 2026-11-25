@@ -1,0 +1,11 @@
+{
+  "job_id": "519547",
+  "state": "CANCELLED",
+  "wall_seconds": 480,
+  "gpus": 2,
+  "allocated_gpu_hours": 0.26666666666666666,
+  "rl_updates": 0,
+  "usable_reward_model_exported": false,
+  "reason": "Initial validation report contained NumPy boolean values unsupported by JSON serialization; fixed in source with a report-serialization regression test.",
+  "automatic_retry": false
+}

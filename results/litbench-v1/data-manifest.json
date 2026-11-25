@@ -1,0 +1,36 @@
+{
+  "dataset": "SAA-Lab/LitBench-Train",
+  "revision": "079a36dd2d56185f76cf466a08a05dda146795dd",
+  "raw_parquet_sha256": "b654e9bc8670dd021301490fd5fefd1fdcfb059860c9d37a931a62653687a1bd",
+  "configuration_sha256": "adf64bc364c0610799de22aa63e2356bde197790c24a10f325aadfe8a8ed7366",
+  "counts": {
+    "reward_train": 8192,
+    "reward_validation": 256,
+    "reward_audit": 256,
+    "policy_train": 44,
+    "policy_validation": 8,
+    "policy_test": 16
+  },
+  "excluded": {
+    "story_word_length": 26581,
+    "token_context_length": 5
+  },
+  "deduplicated_reference_stories": 614,
+  "vocabulary_words": 4584,
+  "reference_other_mass": 0.08583278657793608,
+  "official_test_used": false,
+  "pyarrow_version": "26.0.1",
+  "split_protocol": "Connected components over canonical prompts and shared story texts, before filtering; hashed component assignment with seed 42.",
+  "fantasy_prompt_regex": "\\b(dragon|dragons|wizard|wizards|magic|magical|witch|witches|elf|elves|fairy|fairies|sorcerer|sorceress|necromancer|enchanted)\\b",
+  "reference_protocol": "Unique preferred stories from eligible fantasy prompts in original internal training partitions only. No held-out references.",
+  "prepared_sha256": {
+    "reference.jsonl": "f2ef49eabe83eebf9edc3e0e6ef02b63235324879f1ee14a764b160ad025a1ea",
+    "vocabulary.json": "5dd624af1975f7342dce499d4228ed9e89e60c637cf4a779940a9a4ac764ddee",
+    "reward_audit.jsonl": "a8228ad18d30402043738f1ad7725a2bf1745ad62f43c3a575df5f711ea4fa0a",
+    "policy_test.jsonl": "05d7fb271559070a6e9618f4017b4165b8c395a1fcfc222d194a51ef3be70a69",
+    "reward_validation.jsonl": "f7ec401b12d32f0ee8b806d9b7ed78de1049239f91f0d9e083e1eefb987b7ed6",
+    "policy_validation.jsonl": "cab76d063ffad1e1e642f21581019e12cc670fefa8abaa4f34e792d27ea4691c",
+    "reward_train.jsonl": "caa4a4039be4e2480849e9a7b8ee0a14e60afa4d9bb8044820b9efb706aebe8d",
+    "policy_train.jsonl": "2b97db3c9c3f6555e66858a563fdd531d00f2ee61ba4f25d987f2bda6f051d28"
+  }
+}

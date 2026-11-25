@@ -1,0 +1,371 @@
+{
+  "resamples_per_condition": 1000,
+  "gpu_used": false,
+  "trained_model_results": false,
+  "smoothing_total_mass": 1.0,
+  "actual_chapter_split": {
+    "train": {
+      "source_passages": 272,
+      "source_groups": 39,
+      "groups_with_at_least_four_passages": 36,
+      "word_categories": 1924,
+      "reference_other_mass": 0.06335904598378651,
+      "words_per_batch": 6400,
+      "random_16_passages": {
+        "kl_nats": {
+          "mean": 0.5731527137823347,
+          "median": 0.5730813131578224,
+          "p05_p95": [
+            0.5393515015046233,
+            0.606611013291085
+          ]
+        },
+        "js_nats": {
+          "mean": 0.04706565635311169,
+          "median": 0.04699418716912528,
+          "p05_p95": [
+            0.04450759848718736,
+            0.04983000234834741
+          ]
+        }
+      },
+      "four_groups_four_passages": {
+        "kl_nats": {
+          "mean": 0.6103628631817956,
+          "median": 0.6088871810518726,
+          "p05_p95": [
+            0.5682048793836214,
+            0.656426474854313
+          ]
+        },
+        "js_nats": {
+          "mean": 0.05070837923657876,
+          "median": 0.050449660963417256,
+          "p05_p95": [
+            0.04731048873313423,
+            0.05512489596171291
+          ]
+        }
+      }
+    },
+    "validation": {
+      "source_passages": 51,
+      "source_groups": 8,
+      "groups_with_at_least_four_passages": 8,
+      "word_categories": 1924,
+      "reference_other_mass": 0.06335904598378651,
+      "words_per_batch": 6400,
+      "random_16_passages": {
+        "kl_nats": {
+          "mean": 0.6554988294412872,
+          "median": 0.6539412217260507,
+          "p05_p95": [
+            0.6155730465591567,
+            0.6966745118006303
+          ]
+        },
+        "js_nats": {
+          "mean": 0.0535634652208652,
+          "median": 0.053447649027066474,
+          "p05_p95": [
+            0.05045039030618234,
+            0.05701048252785752
+          ]
+        }
+      },
+      "four_groups_four_passages": {
+        "kl_nats": {
+          "mean": 0.6643222640225858,
+          "median": 0.6656105589495043,
+          "p05_p95": [
+            0.6136364882792077,
+            0.7148417289740093
+          ]
+        },
+        "js_nats": {
+          "mean": 0.055007267553581374,
+          "median": 0.05497228986480593,
+          "p05_p95": [
+            0.051584886708459204,
+            0.058588567223898394
+          ]
+        }
+      }
+    },
+    "test": {
+      "source_passages": 51,
+      "source_groups": 8,
+      "groups_with_at_least_four_passages": 8,
+      "word_categories": 1924,
+      "reference_other_mass": 0.06335904598378651,
+      "words_per_batch": 6400,
+      "random_16_passages": {
+        "kl_nats": {
+          "mean": 0.6741812740497175,
+          "median": 0.672636628161096,
+          "p05_p95": [
+            0.6369878639805017,
+            0.7157302996916
+          ]
+        },
+        "js_nats": {
+          "mean": 0.055401555240019836,
+          "median": 0.05529699864807209,
+          "p05_p95": [
+            0.05229026409830841,
+            0.059050846282476796
+          ]
+        }
+      },
+      "four_groups_four_passages": {
+        "kl_nats": {
+          "mean": 0.6964937008780961,
+          "median": 0.6937546247277889,
+          "p05_p95": [
+            0.6491805345232518,
+            0.7530749576141915
+          ]
+        },
+        "js_nats": {
+          "mean": 0.05786644005184684,
+          "median": 0.05749620142606555,
+          "p05_p95": [
+            0.0535704507174179,
+            0.0630916695805321
+          ]
+        }
+      }
+    }
+  },
+  "matched_section_comparison": {
+    "emma": {
+      "training_sections": 28,
+      "heldout_sections": 12,
+      "own_capped_vocabulary": {
+        "source_passages": 120,
+        "source_groups": 12,
+        "groups_with_at_least_four_passages": 12,
+        "word_categories": 1852,
+        "reference_other_mass": 0.065,
+        "words_per_batch": 6400,
+        "random_16_passages": {
+          "kl_nats": {
+            "mean": 0.6399153555139208,
+            "median": 0.6382782225249547,
+            "p05_p95": [
+              0.5975646577729368,
+              0.6868458456015948
+            ]
+          },
+          "js_nats": {
+            "mean": 0.05227782829372288,
+            "median": 0.052175202730032955,
+            "p05_p95": [
+              0.04891402949088361,
+              0.05593373309303924
+            ]
+          }
+        },
+        "four_groups_four_passages": {
+          "kl_nats": {
+            "mean": 0.6534602928291315,
+            "median": 0.650393015132019,
+            "p05_p95": [
+              0.6022854887301152,
+              0.719800339701168
+            ]
+          },
+          "js_nats": {
+            "mean": 0.0535615735554172,
+            "median": 0.05342935375041069,
+            "p05_p95": [
+              0.04929026437953732,
+              0.05881795893143598
+            ]
+          }
+        }
+      },
+      "shared_1000_words_plus_other": {
+        "source_passages": 120,
+        "source_groups": 12,
+        "groups_with_at_least_four_passages": 12,
+        "word_categories": 1001,
+        "reference_other_mass": 0.15348214285714284,
+        "words_per_batch": 6400,
+        "random_16_passages": {
+          "kl_nats": {
+            "mean": 0.2669838146734716,
+            "median": 0.26591018654254084,
+            "p05_p95": [
+              0.23290532249575807,
+              0.3060382491882753
+            ]
+          },
+          "js_nats": {
+            "mean": 0.026636491144254842,
+            "median": 0.02652825660454477,
+            "p05_p95": [
+              0.02361441560934004,
+              0.029923165492630893
+            ]
+          }
+        },
+        "four_groups_four_passages": {
+          "kl_nats": {
+            "mean": 0.27790941758749627,
+            "median": 0.2751029484951678,
+            "p05_p95": [
+              0.23677408245528864,
+              0.3299906019862765
+            ]
+          },
+          "js_nats": {
+            "mean": 0.02773285331760025,
+            "median": 0.02762198128716278,
+            "p05_p95": [
+              0.02396512413544665,
+              0.032308818205422446
+            ]
+          }
+        }
+      }
+    },
+    "tiny_shakespeare": {
+      "training_sections": 35,
+      "heldout_sections": 15,
+      "own_capped_vocabulary": {
+        "source_passages": 150,
+        "source_groups": 15,
+        "groups_with_at_least_four_passages": 15,
+        "word_categories": 2522,
+        "reference_other_mass": 0.08913571428571429,
+        "words_per_batch": 6400,
+        "random_16_passages": {
+          "kl_nats": {
+            "mean": 1.0036205878274342,
+            "median": 1.001867873657829,
+            "p05_p95": [
+              0.9340932094839477,
+              1.0768876761093005
+            ]
+          },
+          "js_nats": {
+            "mean": 0.07697340724213789,
+            "median": 0.07666152380150258,
+            "p05_p95": [
+              0.07212964727066405,
+              0.08234748088927325
+            ]
+          }
+        },
+        "four_groups_four_passages": {
+          "kl_nats": {
+            "mean": 1.093450942286357,
+            "median": 1.0827805946464684,
+            "p05_p95": [
+              1.0122974312267825,
+              1.2142709686651474
+            ]
+          },
+          "js_nats": {
+            "mean": 0.08312984619261557,
+            "median": 0.08229289491222247,
+            "p05_p95": [
+              0.0768520960244777,
+              0.09184646616883164
+            ]
+          }
+        }
+      },
+      "shared_1000_words_plus_other": {
+        "source_passages": 150,
+        "source_groups": 15,
+        "groups_with_at_least_four_passages": 15,
+        "word_categories": 1001,
+        "reference_other_mass": 0.19425,
+        "words_per_batch": 6400,
+        "random_16_passages": {
+          "kl_nats": {
+            "mean": 0.4799980891889765,
+            "median": 0.47907591712617226,
+            "p05_p95": [
+              0.41992983034560977,
+              0.5387105486123337
+            ]
+          },
+          "js_nats": {
+            "mean": 0.04072769354904187,
+            "median": 0.04046129049903441,
+            "p05_p95": [
+              0.03656161575458978,
+              0.04551590766847618
+            ]
+          }
+        },
+        "four_groups_four_passages": {
+          "kl_nats": {
+            "mean": 0.5537375888827019,
+            "median": 0.5443562671027777,
+            "p05_p95": [
+              0.48072435072344255,
+              0.6563849747325152
+            ]
+          },
+          "js_nats": {
+            "mean": 0.04607140124251875,
+            "median": 0.04539516295649959,
+            "p05_p95": [
+              0.04053746896737945,
+              0.05399638344452875
+            ]
+          }
+        }
+      }
+    }
+  },
+  "training_objective_human_continuation_baselines": {
+    "validation": {
+      "source_batch_kl_nats": {
+        "mean": 0.5295192670438255,
+        "median": 0.5284559710061822,
+        "p05_p95": [
+          0.48894027910364724,
+          0.5747134663709527
+        ]
+      },
+      "source_batch_word_count": {
+        "mean": 4678.84,
+        "median": 4677.0,
+        "p05_p95": [
+          4431.95,
+          4927.05
+        ]
+      }
+    },
+    "test": {
+      "source_batch_kl_nats": {
+        "mean": 0.5500001225137287,
+        "median": 0.5493564730473532,
+        "p05_p95": [
+          0.5115104838577138,
+          0.5901359686039823
+        ]
+      },
+      "source_batch_word_count": {
+        "mean": 4868.359,
+        "median": 4870.0,
+        "p05_p95": [
+          4682.95,
+          5048.05
+        ]
+      }
+    }
+  },
+  "limitations": [
+    "Descriptive source-text diagnostics, not evidence RL will improve.",
+    "Resampled batches reuse a finite corpus; intervals describe batches, not population confidence.",
+    "Own vocabularies differ; the shared 1000-word comparison aggregates much of the lexical tail.",
+    "Equal sections are not semantic topics; chapter splits and section splits answer different questions.",
+    "Classic-book pretraining memorization is possible and must be checked on generated text."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "submitted_at_utc": "2026-11-25T01:48:49.155889+00:00",
+  "gpus": 2,
+  "maximum_wall_seconds": 7200,
+  "maximum_gpu_hours": 4,
+  "experiment": "litbench-fantasy-quality-word-kl-v1",
+  "phase": "submitted",
+  "job_id": "519547",
+  "sbatch_stderr": "sbatch: GPUs: 2.0\nsbatch: CPUs: 16.0\nsbatch: MEM: 128.0 GB\nsbatch: TIME: 2.00 hrs\nsbatch: *COST: $3.60 (Est.)\nsbatch: *NOTE: This is only an estimate based upon GPU hours requested.\nsbatch: *NOTE: You can still cancel this job at no charge (i.e., scancel <JOB_ID>).\n"
+}
