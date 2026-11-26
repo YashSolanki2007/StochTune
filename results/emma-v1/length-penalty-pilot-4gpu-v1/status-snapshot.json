@@ -1,9 +1,9 @@
 {
   "job_id": "529095",
-  "observed_at_utc": "2026-11-26T19:11:54.722432+00:00",
-  "state": "PENDING",
+  "observed_at_utc": "2026-11-26T19:41:06.855967+00:00",
+  "state": "CANCELLED",
   "elapsed": "0:00",
-  "reason": "(Priority)",
+  "reason": "User requested replacement with two H200s before training",
   "target_steps": 100,
   "schedule_steps": 500,
   "gpus": 4,

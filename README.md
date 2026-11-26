@@ -2,7 +2,7 @@
 
 Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
-This repository records numeric SFT and batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments. The latest completed **Emma REINFORCE run (job 524624) finished 500 updates / 8,000 answers on four H200s**: training-judge quality increased from **0.7826 to 0.8806**, but mean length grew from **274 to 416 words**, and equal-word-budget KL worsened from **0.5112 to 0.5661**. This does **not** establish successful joint quality/distribution control. An earlier custom GRPO pilot showed small, uncertain changes. A **100-step length-penalty pilot (job 529095)** is submitted and **queued as of November 26, 2026**; no pilot policy results are available. The optional direct soft-target KL trainer remains implemented but unrun.
+This repository records numeric SFT and batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments. The latest completed **Emma REINFORCE run (job 524624) finished 500 updates / 8,000 answers on four H200s**: training-judge quality increased from **0.7826 to 0.8806**, but mean length grew from **274 to 416 words**, and equal-word-budget KL worsened from **0.5112 to 0.5661**. This does **not** establish successful joint quality/distribution control. An earlier custom GRPO pilot showed small, uncertain changes. A **100-step length-penalty pilot (job 529144)** is submitted and **queued as of November 26, 2026**; no pilot policy results are available. The optional direct soft-target KL trainer remains implemented but unrun.
 
 See [References and acknowledgments](#references-and-acknowledgments) for the papers, original blog, datasets, models, and implementations informing this work.
 
@@ -28,7 +28,7 @@ See [References and acknowledgments](#references-and-acknowledgments) for the pa
 | Emma quality + unigram RL | Fresh Qwen2.5-3B-Instruct; frozen 7B fiction judge; word KL λ = 0.1 | Job 519712: 80 updates / 1,280 answers; two H200s, 34m09s | Validation matching improves modestly; postprocessing failure fixed on CPU; final test unavailable |
 | Emma custom GRPO | Fresh Qwen2.5-3B-Instruct; prompt-LOO quality and coupled word-KL credits; clipped two-pass updates | Job 520789: 80 batches / 1,280 answers / 160 optimizer steps; two H200s, 39m39s | Judge quality 0.8011 → 0.8137; raw KL 0.4882 → 0.4857, but count-matched KL and JSD worsen |
 | Emma longer REINFORCE | Fresh actor; prompt-LOO quality, word KL λ = 0.1, base-policy KL β = 0.002 | Job 524624: 500 updates / 8,000 answers; four H200s, 2h17m20s | Judge quality improves; answers become longer; equal-word-budget KL worsens |
-| Emma length-penalty pilot | Same REINFORCE objective plus fixed 250–350-word penalty | Job 529095: queued; 100-step target / 1,600 answers; four H200s, 90-minute cap | No results yet; online W&B required; no automatic continuation |
+| Emma length-penalty pilot | Same REINFORCE objective plus fixed 250–350-word penalty | Job 529144: queued; 100-step target / 1,600 answers; two H200s, 90-minute cap | No results yet; online W&B required; no automatic continuation |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
 The passage runs use actual on-policy REINFORCE updates to LoRA weights. The Shakespeare quality scorer is a frozen instruction-model judge, without preference training in this project. The later HelpSteer stages use a trained Bradley–Terry scorer or an audited pretrained reward model. Generated-answer evaluations remain **model-judged, not human-validated outcomes**.
@@ -54,7 +54,8 @@ these saved generations and one training seed. Different budgets and sampling
 prevent a controlled optimizer comparison against the 80-batch GRPO experiment.
 See [completed metrics and analysis](results/emma-v1/reinforce-long-4gpu-v1/).
 
-The approved proof of concept, **job 529095**, adds
+The pending four-GPU job 529095 was cancelled before training at the user's
+request. Its two-GPU replacement, **job 529144**, adds
 
 ```math
 r'_i=r_i-0.2\,\frac{\max(0,250-L_i)+\max(0,L_i-350)}{100}.
@@ -66,17 +67,17 @@ The coefficient was selected by CPU replay of the preceding run's first 50
 training updates (800 answers), excluding test generations. This calibration
 is not evidence of a trained-policy improvement.
 
-The pilot requests **four H200s for at most 90 minutes / 6 GPU-hours** and stops
+The pilot requests **two H200s for at most 90 minutes / 3 GPU-hours** and stops
 at **100 updates / 1,600 training answers**, retaining the 500-step cosine schedule
 and 50-step warmup. Checkpoints preserve adapters, optimizer, scheduler and RNG
 state. Evaluation uses validation prompts at 0/50/100; final pilot probes also
-use validation, reserving the test split. **All 42 cluster CPU checks passed.**
+use validation, reserving the test split. **All 43 cluster CPU checks passed.**
 W&B access is verified and online logging is mandatory. As last checked on
 November 26, the job is **queued for priority**, with no new policy results.
 The earlier 500-step length-control draft remains unsubmitted; continuation
 requires a later decision.
 
-- [Pilot submission, exact config and CPU checks](results/emma-v1/length-penalty-pilot-4gpu-v1/)
+- [Pilot submission, exact config and CPU checks](results/emma-v1/length-penalty-pilot-2gpu-v1/)
 - [Coefficient calibration](experiments/emma-word-kl/length-penalty-calibration.json)
 - [Complete Emma experiment record](results/emma-v1/README.md)
 - [W&B project](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm)

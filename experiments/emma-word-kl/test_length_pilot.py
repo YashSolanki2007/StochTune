@@ -14,6 +14,39 @@ from train_policy import training_step_limit
 
 
 class LengthPilotTests(unittest.TestCase):
+    def test_two_gpu_replacement_keeps_global_batch_and_reduces_allocation(self):
+        cfg = pilot_profile(gpus=2)
+        original = pilot_profile(gpus=4)
+        for key in (
+            "steps",
+            "warmup_steps",
+            "stop_after_steps",
+            "global_group_size",
+            "prompts_per_group",
+            "samples_per_prompt",
+            "length_penalty_weight",
+        ):
+            self.assertEqual(cfg.get(key), original.get(key))
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            source = root / "config.json"
+            source.write_text(json.dumps(cfg))
+            runtime = root / "runtime"
+            stage(runtime, source)
+            script = (runtime / "policy.sbatch").read_text()
+            for directive in (
+                "--time=01:30:00",
+                "--gres=gpu:2",
+                "--cpus-per-task=16",
+                "--mem=128G",
+            ):
+                self.assertIn(directive, script)
+            with patch.object(preflight_gpu, "ROOT", runtime):
+                report = preflight_gpu.preflight_gpu(False)
+                self.assertEqual(report["gpus"], 2)
+                self.assertEqual(report["gpu_wall_seconds"], 5400)
+        self.assertRaises(ValueError, pilot_profile, 3)
+
     def test_stop_limit_keeps_full_schedule_and_rejects_invalid_limits(self):
         cfg = pilot_profile()
         self.assertEqual(training_step_limit(cfg), 100)

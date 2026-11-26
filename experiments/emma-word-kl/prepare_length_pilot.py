@@ -8,11 +8,15 @@ from prepare_length import length_profile
 from stage_runtime import stage
 
 
-def pilot_profile():
+def pilot_profile(gpus=4):
+    if gpus not in (2, 4):
+        raise ValueError("Pilot requires two or four H200s")
     cfg = length_profile()
     cfg.update(
-        experiment_profile="emma-reinforce-length-pilot-4gpu-v1",
-        wandb_group="emma-reinforce-length-pilot-4gpu-v1",
+        experiment_profile=f"emma-reinforce-length-pilot-{gpus}gpu-v1",
+        wandb_group=f"emma-reinforce-length-pilot-{gpus}gpu-v1",
+        requested_gpus=gpus,
+        distributed_world_size=gpus,
         stop_after_steps=100,
         final_evaluation_split="validation",
         requested_allocation_seconds=5400,
@@ -30,8 +34,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--stage", action="store_true")
+    parser.add_argument("--gpus", type=int, choices=(2, 4), default=4)
     args = parser.parse_args()
-    cfg = pilot_profile()
+    cfg = pilot_profile(args.gpus)
     output = args.output.resolve()
     config_path = output.with_suffix(".json") if args.stage else output
     if config_path.exists():

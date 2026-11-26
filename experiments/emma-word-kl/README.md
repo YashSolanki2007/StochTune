@@ -386,3 +386,19 @@ the word PMF, distribution weight and reference-policy penalty are unchanged.
 Training and validation log the raw judge score separately from the length
 penalty and adjusted reward. CPU checks and W&B connectivity must pass
 before submission. The earlier three-hour full-run draft is not submitted.
+
+The user subsequently reduced this pilot to **two H200s**, keeping the 90-minute
+cap (maximum **3 GPU-hours**). The pending four-GPU job 529095 was cancelled
+before training. Prepare its isolated replacement with:
+
+```bash
+python experiments/emma-word-kl/prepare_length_pilot.py --gpus 2 \
+  --output outputs/emma-reinforce-length-pilot-2gpu-v1 --stage
+```
+
+The global batch stays 16 (four prompts × four answers); two ranks each process
+two prompts. The 100-step stop, 500-step schedule, coefficients and validation
+protocol are unchanged. Rank-dependent generation seeds differ, so the two
+world sizes are not guaranteed to generate identical passages. Training may
+reach its time deadline before 100 steps; final checkpoint/evaluation reserves
+remain enforced.

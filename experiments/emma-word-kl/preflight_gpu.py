@@ -12,8 +12,15 @@ ROOT = Path(__file__).resolve().parent
 def allocation_limits(cfg):
     """Fixed ceilings for the original pilot and the separately proposed long run."""
     profile = cfg.get("experiment_profile")
-    pilot = profile == "emma-reinforce-length-pilot-4gpu-v1"
-    four = pilot or profile in ("emma-reinforce-long-4gpu-v1", "emma-reinforce-length-4gpu-v1")
+    pilot = profile in (
+        "emma-reinforce-length-pilot-2gpu-v1",
+        "emma-reinforce-length-pilot-4gpu-v1",
+    )
+    four = profile in (
+        "emma-reinforce-length-pilot-4gpu-v1",
+        "emma-reinforce-long-4gpu-v1",
+        "emma-reinforce-length-4gpu-v1",
+    )
     longer = four or profile == "emma-reinforce-long-v1"
     return {
         "allocation_seconds": 5400 if pilot else 10800 if four else 14400 if longer else 6600,
@@ -30,7 +37,10 @@ def preflight_gpu(require_authorization=True):
     if require_authorization and not cfg["gpu_submission_authorized"]:
         raise PermissionError("This GPU run requires fresh user approval")
     comparison = cfg.get("experiment_profile", "").startswith("emma-optimizer-comparison-")
-    pilot = cfg.get("experiment_profile") == "emma-reinforce-length-pilot-4gpu-v1"
+    pilot = cfg.get("experiment_profile") in (
+        "emma-reinforce-length-pilot-2gpu-v1",
+        "emma-reinforce-length-pilot-4gpu-v1",
+    )
     length_profile = pilot or cfg.get("experiment_profile") == "emma-reinforce-length-4gpu-v1"
     longer = length_profile or cfg.get("experiment_profile") in (
         "emma-reinforce-long-v1",

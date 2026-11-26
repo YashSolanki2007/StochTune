@@ -1,0 +1,16 @@
+{
+  "job_id": "529144",
+  "observed_at_utc": "2026-11-26T19:43:17.217973+00:00",
+  "state": "PENDING",
+  "elapsed": "0:00",
+  "estimated_start_cluster_pacific": "2026-11-26T13:00:51",
+  "reason": "(Priority)",
+  "target_steps": 100,
+  "schedule_steps": 500,
+  "gpus": 2,
+  "maximum_wall_seconds": 5400,
+  "maximum_gpu_hours": 3,
+  "online_wandb_required": true,
+  "training_results_available": false,
+  "replaces_cancelled_job": "529095"
+}

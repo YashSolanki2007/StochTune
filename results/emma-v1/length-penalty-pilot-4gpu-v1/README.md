@@ -1,7 +1,6 @@
 # Length-penalty pilot: job 529095
 
-Submitted November 26, 2026 after explicit user approval. At the last recorded
-snapshot the job was pending scheduler priority; no training result is available.
+Submitted November 26, 2026 after explicit user approval. Cancelled while pending on November 26 at the user's request to replace it with two H200s. No training started and no policy result exists.
 See `status-snapshot.json` for the observation time, not a live status.
 
 - 100 REINFORCE updates, 16 answers/update, four H200s.
