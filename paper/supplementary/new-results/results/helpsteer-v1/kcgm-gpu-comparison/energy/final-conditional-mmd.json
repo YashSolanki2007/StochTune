@@ -1,0 +1,173 @@
+{
+  "b2643b43d2a9166f17df8eb49bcba4cc48e14a7953176be50b6ed3ba868abf71": {
+    "conditional_mmd2_u": 0.67574382977753,
+    "conditional_mmd2_v": 0.8999907906304447,
+    "conditional_rbf_u_unscaled": 0.3200496837969735,
+    "conditional_energy_u_unscaled": 0.38155872215708264,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 0.0,
+    "generated_answers": 4
+  },
+  "6fd7f6c630451fb6ff0ef92f9d6f550b3319fa8136ae3d334bc91fbaa894d102": {
+    "conditional_mmd2_u": 1.0973246659111462,
+    "conditional_mmd2_v": 1.3171119905809834,
+    "conditional_rbf_u_unscaled": 0.5124651033376219,
+    "conditional_energy_u_unscaled": 0.6196043217358682,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 1.0,
+    "generated_answers": 4
+  },
+  "1f4c6987a3962b94291a4ccef0c973056864b975065be9de5f0a22dea8c0106d": {
+    "conditional_mmd2_u": 0.7058651142999892,
+    "conditional_mmd2_v": 0.9635966461689431,
+    "conditional_rbf_u_unscaled": 0.32756681351987327,
+    "conditional_energy_u_unscaled": 0.3985667040662968,
+    "reference_prototype_coverage": 1.0,
+    "reference_prototype_one_fraction": 0.5,
+    "generated_answers": 4
+  },
+  "3a89f8256e741cb07588c4210ff549c63cec86af3c8c9bd7155bc8833b30d463": {
+    "conditional_mmd2_u": 0.7510903268667868,
+    "conditional_mmd2_v": 0.9341200864503418,
+    "conditional_rbf_u_unscaled": 0.3924211392650452,
+    "conditional_energy_u_unscaled": 0.42410311824554403,
+    "reference_prototype_coverage": 1.0,
+    "reference_prototype_one_fraction": 0.25,
+    "generated_answers": 4
+  },
+  "d4d32775f651a2f0ce30c455848638f352f03468549f827fd4d2abfead0bff05": {
+    "conditional_mmd2_u": 0.7254556701290134,
+    "conditional_mmd2_v": 1.0060665603709862,
+    "conditional_rbf_u_unscaled": 0.3053230922107617,
+    "conditional_energy_u_unscaled": 0.40962851050695703,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 0.0,
+    "generated_answers": 4
+  },
+  "df3ae18be9156fde6dec19130498d2c42bda2f2e38df6ed5fcb959dd8bc6a4a9": {
+    "conditional_mmd2_u": 0.6891729824587862,
+    "conditional_mmd2_v": 0.8822290503430084,
+    "conditional_rbf_u_unscaled": 0.3440678722145656,
+    "conditional_energy_u_unscaled": 0.38914149259599196,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 1.0,
+    "generated_answers": 4
+  },
+  "1e057dcbe48dba5a05ce9d538704d840121b82eda06b5a139be39672daa34724": {
+    "conditional_mmd2_u": 0.6789838763410045,
+    "conditional_mmd2_v": 0.8279233681775391,
+    "conditional_rbf_u_unscaled": 0.36154657618736197,
+    "conditional_energy_u_unscaled": 0.3833882142989433,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 0.0,
+    "generated_answers": 4
+  },
+  "fc952f09ca6768eccda34fc8ba356e49aae1d9cef84460327d7a2944c01037ca": {
+    "conditional_mmd2_u": 0.9411662765057454,
+    "conditional_mmd2_v": 1.2509919326166306,
+    "conditional_rbf_u_unscaled": 0.3893149174520075,
+    "conditional_energy_u_unscaled": 0.5314294943974536,
+    "reference_prototype_coverage": 1.0,
+    "reference_prototype_one_fraction": 0.25,
+    "generated_answers": 4
+  },
+  "7ac41431613044a9953eb090c92971d1c90038d085f31348d6306aa1e84dcca8": {
+    "conditional_mmd2_u": 1.1771963546159574,
+    "conditional_mmd2_v": 1.4491151756042324,
+    "conditional_rbf_u_unscaled": 0.4796546018591099,
+    "conditional_energy_u_unscaled": 0.664703867060269,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 0.0,
+    "generated_answers": 4
+  },
+  "acc13209890f3559ad6e701013e13fd1356d74bed9d333ac9de508ebc484c6e9": {
+    "conditional_mmd2_u": 0.9654151277200376,
+    "conditional_mmd2_v": 1.2072939270481833,
+    "conditional_rbf_u_unscaled": 0.431468793919634,
+    "conditional_energy_u_unscaled": 0.5451216071114513,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 1.0,
+    "generated_answers": 4
+  },
+  "825aa07d3811ec39a6bf1c0b84355c3fd26cac3997b116a1aa1423f800178ffe": {
+    "conditional_mmd2_u": 0.9197029356280113,
+    "conditional_mmd2_v": 1.107740259195945,
+    "conditional_rbf_u_unscaled": 0.44152340231115694,
+    "conditional_energy_u_unscaled": 0.5193102199658597,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 0.0,
+    "generated_answers": 4
+  },
+  "eb677cae89e20c857e5c71b6e1e4051ca0041107e7e2322c3e25ff1d4950f50b": {
+    "conditional_mmd2_u": 0.969067750337159,
+    "conditional_mmd2_v": 1.2229959649758169,
+    "conditional_rbf_u_unscaled": 0.4233892165235803,
+    "conditional_energy_u_unscaled": 0.547184060302877,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 1.0,
+    "generated_answers": 4
+  },
+  "bc1211265b08d03cecc9381744569cd013ac4280f2cb2e169996c4f7106ef691": {
+    "conditional_mmd2_u": 0.6413576131322811,
+    "conditional_mmd2_v": 0.8251290740191084,
+    "conditional_rbf_u_unscaled": 0.3006426679082863,
+    "conditional_energy_u_unscaled": 0.36214254652245315,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 0.0,
+    "generated_answers": 4
+  },
+  "565cfed122ab78e6156002dd83c5c58f346d64e04e6769b1a2d5d8e979704193": {
+    "conditional_mmd2_u": 1.0031032383004987,
+    "conditional_mmd2_v": 1.2693652842341714,
+    "conditional_rbf_u_unscaled": 0.43312266625588336,
+    "conditional_energy_u_unscaled": 0.5664021970035266,
+    "reference_prototype_coverage": 1.0,
+    "reference_prototype_one_fraction": 0.5,
+    "generated_answers": 4
+  },
+  "864500cb76af8a30a5bbcd0037743e1834c9aaafef33af974f476eb8d8910590": {
+    "conditional_mmd2_u": 0.4402467729350179,
+    "conditional_mmd2_v": 0.6315727195194072,
+    "conditional_rbf_u_unscaled": 0.22429412514133817,
+    "conditional_energy_u_unscaled": 0.2485853199283632,
+    "reference_prototype_coverage": 1.0,
+    "reference_prototype_one_fraction": 0.5,
+    "generated_answers": 4
+  },
+  "30913248d1e7f92bda8201991765e9da4ede12ecf0aefe221ce4b00d249da6a9": {
+    "conditional_mmd2_u": 0.45470365697334536,
+    "conditional_mmd2_v": 0.6246278181087974,
+    "conditional_rbf_u_unscaled": 0.2291699684089059,
+    "conditional_energy_u_unscaled": 0.25674839883039846,
+    "reference_prototype_coverage": 1.0,
+    "reference_prototype_one_fraction": 0.5,
+    "generated_answers": 4
+  },
+  "c5aeedc96358ac5a6e4920297ffeb846e753418fd6f65cc8fd529b8395730203": {
+    "conditional_mmd2_u": 0.8632945268283005,
+    "conditional_mmd2_v": 1.1781464697304367,
+    "conditional_rbf_u_unscaled": 0.37169075382322436,
+    "conditional_energy_u_unscaled": 0.4874592145521397,
+    "reference_prototype_coverage": 0.5,
+    "reference_prototype_one_fraction": 1.0,
+    "generated_answers": 4
+  },
+  "f1c5516774f079aa20d5b894a7dbb47897a31e439aa5c96591719929ad1fc9f9": {
+    "conditional_mmd2_u": 0.6724705813743554,
+    "conditional_mmd2_v": 0.9488751751626805,
+    "conditional_rbf_u_unscaled": 0.33706633590728186,
+    "conditional_energy_u_unscaled": 0.37971048259797446,
+    "reference_prototype_coverage": 1.0,
+    "reference_prototype_one_fraction": 0.5,
+    "generated_answers": 4
+  },
+  "171ff78d9715aa93a549e8b3b38c20470d4321829751e646e54fc247bf032ad7": {
+    "conditional_mmd2_u": 0.9852789926008212,
+    "conditional_mmd2_v": 1.362770732152875,
+    "conditional_rbf_u_unscaled": 0.4103815265091294,
+    "conditional_energy_u_unscaled": 0.5563377374955172,
+    "reference_prototype_coverage": 1.0,
+    "reference_prototype_one_fraction": 0.75,
+    "generated_answers": 4
+  }
+}

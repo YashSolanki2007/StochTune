@@ -1,0 +1,279 @@
+\section{Prompt-conditional distribution matching with MMD}
+\label{sec:mmd}
+\noindent\textbf{Evidence status.} This section gives the original
+conditional-MMD method and preparation checks. Completed policy results,
+calibrated-kernel follow-ups, and diagnostics appear in
+Section~\ref{sec:newresults}. This section distinguishes the
+implemented two-reference target from the earlier proposal to generate
+larger reference sets with an existing frozen teacher. JSD is documented
+as a comparison candidate, not an executed conditional training arm.
+
+\subsection{Separating reference choice from discrepancy choice}
+A single word PMF pooled across unrelated questions may reward vocabulary
+that is inappropriate for an individual answer. Replacing KL with a
+bounded or kernel discrepancy does not repair that target mismatch.
+The conditional proposal therefore makes two separate choices:
+\begin{enumerate}
+\item Define a reference distribution for the exact prompt or conversation.
+\item Compare generated answers with that reference using a categorical
+discrepancy such as JSD, or a feature-space discrepancy such as MMD.
+\end{enumerate}
+For example, answers to ``What is a Jupyter notebook?'' should be compared
+with valid answers to that question, not with pooled vocabulary from
+unrelated programming tasks. Features may capture lexical frequencies,
+code/prose proportions, formatting, or semantic embeddings. Their choice
+defines which properties are controlled; these targets are not
+interchangeable notions of successful sampling.
+
+\subsection{Implemented reference subset: two acceptable answers per question}
+The current implementation avoids new teacher generation. Starting from
+the prepared programming split (228 training, 16 validation, 32 test
+prompts), it retains questions with exactly two distinct source answers
+whose human coherence, correctness, and helpfulness ratings are each
+at least 3 on the 0--4 scale. These answers are model-written and
+human-rated, not newly collected human-written demonstrations.
+The filtered counts are shown in Table~\ref{tab:mmddata}.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Verified conditional-MMD preparation statistics. Reference answers
+are cached source examples; none is a new student or teacher generation.}
+\label{tab:mmddata}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Split & Exact questions & Reference answers\\
+\midrule
+Training & 102 & 204\\
+Validation & 10 & 20\\
+Test & 19 & 38\\
+\midrule
+Total & 131 & 262\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Splits inherit the programming dataset's conversation-family separation.
+The implementation additionally keys every comparison by its exact
+canonical conversation ID, rather than by topic or a shared opening.
+Training rejects held-out reference IDs; validation/test references are
+used only to evaluate their corresponding questions. The original
+programming word PMF remains a training-only diagnostic and is not the
+semantic optimization target.
+
+Let $a_{c,1},a_{c,2}$ denote the two acceptable answers and $e(a)$ their
+frozen embeddings. The actual target is
+\begin{equation}
+ P_c^{\mathrm{ref}}=\tfrac12\delta_{e(a_{c,1})}
+                        +\tfrac12\delta_{e(a_{c,2})}.
+ \label{eq:mmdtarget}
+\end{equation}
+Equal weights are an experimental choice. Two acceptable answers do not
+estimate the frequencies of all valid human answer styles. This target
+therefore represents two prototypes, not a recovered human distribution.
+
+\subsection{Frozen full-answer features and the configured kernel}
+The encoder is the pinned
+\texttt{sentence-transformers/all-MiniLM-L6-v2}, which provides
+384-dimensional representations \cite{minilmcard}. Encoder weights stay
+frozen. To avoid dropping long-answer tails, tokenization is performed
+without truncation, followed by nonoverlapping chunks fitting within
+256 encoder tokens including special tokens. Each chunk has
+attention-masked mean pooling and unit normalization. Chunk vectors
+are combined using their content-token counts as weights, then
+renormalized:
+\begin{equation}
+ u_j=\frac{\operatorname{MeanPool}(h_j)}
+              {\|\operatorname{MeanPool}(h_j)\|_2},\qquad
+ e(a)=\frac{\sum_j L_j u_j}{\|\sum_j L_j u_j\|_2},
+ \label{eq:chunkembedding}
+\end{equation}
+where $L_j$ is the chunk's content length, with weight one for an empty
+chunk. This preserves all visible token chunks, but averaging can lose
+global order and dependencies. It is not a proof that code semantics
+or correctness are preserved.
+
+The kernel is a mixture of three Gaussian RBF kernels:
+\begin{equation}
+ k(u,v)=\frac13\sum_{s\in\{0.5,1,2\}}
+      \exp\!\left(-\frac{\|u-v\|_2^2}{2b^2s^2}\right).
+ \label{eq:mmdkernel}
+\end{equation}
+The fixed base bandwidth squared is the median nonzero within-question
+squared distance between the two training-reference embeddings only:
+$b^2=0.2786315084$. No validation/test pair sets this bandwidth.
+The median training-pair cosine similarity is 0.8606843. These values
+describe the cached reference representation, not model-generation
+quality. Both the encoder and reference vectors remain fixed in RL;
+new student answers still require encoder inference.
+
+\subsection{Population MMD and the implemented finite estimator}
+For independent reference features $X,X'\sim P_c$ and generated
+features $Z,Z'\sim Q_{\theta,c}$, the squared MMD is
+\begin{align}
+ \operatorname{MMD}_k^2(P_c,Q_{\theta,c})
+ &=\|\mu_{P_c}-\mu_{Q_{\theta,c}}\|_{\mathcal H_k}^2\nonumber\\
+ &=\E k(X,X')+\E k(Z,Z')-2\E k(X,Z),
+ \label{eq:mmdpopulation}
+\end{align}
+where $\mu_P=\E_{X\sim P}k(X,\cdot)$ is the kernel mean embedding
+\cite{gretton2012}. The two within-distribution terms and the cross term
+compare both spread and cross-group similarity. For suitable
+characteristic kernels, zero population MMD identifies equality of
+feature distributions. A noninjective text encoder can still map
+different or incorrect answers to similar features, so equality in
+feature space does not imply equality of text distributions or correctness.
+
+For $n$ generated features $z_1,\ldots,z_n$ and $m=2$ fixed reference
+features $x_1,x_2$, the implementation uses
+\begin{equation}
+ \widehat D_U=
+ \frac{\sum_{i\ne j}k(z_i,z_j)}{n(n-1)}
+ +\frac{\sum_{a,b=1}^{m}k(x_a,x_b)}{m^2}
+ -\frac{2\sum_{i=1}^{n}\sum_{a=1}^{m}k(z_i,x_a)}{nm}.
+ \label{eq:mmdestimator}
+\end{equation}
+Only the generated self-term is a U-statistic; the reference term
+includes diagonal terms because it defines the fixed empirical target
+in Equation~\eqref{eq:mmdtarget}. Conditional on that target and
+independent generated answers, $\E\widehat D_U=
+\operatorname{MMD}_k^2(P_c^{\mathrm{ref}},Q_{\theta,c})$.
+This is not an unbiased estimate against an unknown population of human
+answers. The finite estimate can be negative and is not clipped to zero.
+Evaluation also records a nonnegative V-statistic version that replaces
+the first denominator by $n^2$ and includes generated diagonal terms.
+The two estimators must not be silently interchanged.
+
+MMD does not require estimating a full categorical word PMF and avoids
+the specific logarithmic singularity of unsmoothed forward KL. It still
+depends on the representation, kernel, bandwidth, reference coverage,
+and generated sample count. Minimizing feature MMD does not imply that
+the previous full-word KL objective will improve.
+
+\subsection{Conditional policy objective and leave-one-answer-out credit}
+The configured batch has $G=4$ distinct questions and $n=4$ answers per
+question, giving 16 generated answers across two GPU ranks. Every
+semantic comparison and quality baseline remains within its exact
+question. The actor starts from the pinned Qwen2.5-3B-Instruct checkpoint
+with a fresh LoRA adapter. It reuses the frozen
+\texttt{Skywork-Reward-V2-Qwen3-8B} scorer and its existing audit/calibration;
+it does not retrain the 3B Bradley--Terry scorer described in the earlier
+protocol. This is an independently prepared profile, not a continuation
+of the numerical SFT adapter.
+
+The updated quality term preserves the score of a capped answer and
+subtracts a separate nontermination penalty:
+\begin{equation}
+ r_Q(c,y)=\sigma\!\left(\frac{r_\phi(c,y)-m_\phi}{s_\phi}\right)
+             -0.1\,\ind\{y\text{ reaches its generation cap}\}.
+ \label{eq:mmdquality}
+\end{equation}
+It therefore differs from the earlier protocol's EOS-multiplied reward.
+The standardized score is clipped to $[-30,30]$ before the sigmoid.
+The objective combines average quality, average conditional MMD, and
+the separate sequence-policy regularizer:
+\begin{equation}
+ J=\E\!\left[\frac1{Gn}\sum_{g,i}r_Q(c_g,Y_{g,i})
+          -\frac{\lambda}{G}\sum_g\widehat D_{U,g}\right]
+       -\beta\E_c\KL(\pi_\theta(\cdot\mid c)\Vert\pi_0(\cdot\mid c)),
+ \label{eq:mmdobjective}
+\end{equation}
+with configured $\lambda=0.5$ and $\beta=0.002$.
+The MMD weight is an initial setting: a coefficient of 0.5 has a different
+scale from 0.5 times word KL and does not establish the same quality trade-off.
+
+Writing $D_g$ for the full-question estimate and $D_{g,-i}$ for the
+estimate after removing answer $i$ and recomputing all generated
+normalizers, the credits are
+\begin{align}
+ A^D_{g,i}&=n(D_{g,-i}-D_g),\\
+ A^Q_{g,i}&=r_Q(c_g,Y_{g,i})-
+               \frac1{n-1}\sum_{j\ne i}r_Q(c_g,Y_{g,j}),\\
+ \widehat{\mathcal L}_{\mathrm{MMD}}
+ &=-\frac1{Gn}\sum_{g,i}\sg\!\left[A^Q_{g,i}+\lambda A^D_{g,i}
+       -\beta\log\frac{\pi_\theta(Y_{g,i}\mid c_g)}{\pi_0(Y_{g,i}\mid c_g)}\right]
+       \log\pi_\theta(Y_{g,i}\mid c_g).
+ \label{eq:mmdsurrogate}
+\end{align}
+The generated U-statistic requires at least two answers, so its
+leave-one-out credit requires at least three. Four answers satisfy both
+requirements. Scores and embeddings are treated as detached reward
+inputs; gradients flow through actor completion log probabilities,
+not through sampled text or the frozen encoder. Global DDP aggregation
+collects the groups before computing credits. The configured run uses
+up to 200 updates, learning rate $5\times10^{-6}$, 20 warmup updates,
+one-passage gradient microbatches, temperature one without top-$p$/top-$k$
+truncation, and at most 1,024 new actor tokens. The original run actually
+completed 94 updates and 1,504 training answers. Validation/test use
+four answers per question, giving 40/76 generated answers per policy.
+
+\subsection{What the current CPU checks establish}
+The recorded CPU audit compares cached training-reference embeddings
+under three constructions: two copies of each prototype; four copies
+of one prototype; and four copies of a reference from another question.
+The balanced construction has lower estimated MMD than either
+comparison for all 102 training questions. This is a controlled
+representation/kernel check using reference-derived points. It is not
+an evaluation of generated answers, independently annotated semantic
+quality, or learned stochasticity. In particular, preferring balanced
+prototype copies over collapsed copies follows naturally from the
+kernel objective and does not validate code correctness.
+Seven CPU tests passed in the inspected snapshot, covering exact expected
+MMD policy gradients, conditional credit, full-text chunk coverage,
+reference separation, and two-rank aggregation. They do not supply a
+trained-policy result.
+
+Reported prototype coverage assigns generated embeddings to their nearest
+reference by cosine similarity and records how many of the two prototypes
+are represented. This measures coverage of those prototypes, not the
+number or frequencies of true semantic modes. Held-out references remain
+unavailable to training. Policy quality, conditional MMD, independent
+rubric scores, generation length, termination, and word-distribution
+diagnostics must all be examined before a policy benefit can be claimed.
+The configured single-policy profile has no matched quality-only control
+or second seed. It reserves a 75-minute policy stage within a two-H200,
+two-hour allocation template. These are configured budget limits; observed
+process times and achieved updates are in Section~\ref{sec:newresults}.
+Cross-run differences from
+the unigram profile would also change the target, references, scorer,
+and batching, so they could not isolate MMD's causal contribution.
+
+\subsection{Frozen-teacher references and conditional JSD: proposed comparisons}
+The original discussion proposed a larger prompt-specific reference
+set sampled from an existing frozen teacher. This would not train a
+new teacher. References could be generated once, quality-checked,
+cached, and reused after unloading the teacher. Twenty prompts with
+eight answers each require 160 reference generations; 228 prompts
+with eight or 16 answers require 1,824 or 3,648. These are illustrative
+counts, not performed runs or GPU-time estimates. The implemented
+two-human-rated-reference version instead requires zero new teacher
+generations, but inherits its narrow prototype coverage.
+
+For categorical prompt-specific word laws, the proposed JSD comparison is
+\begin{equation}
+ M_c=\tfrac12(P_c+Q_c),\qquad
+ \operatorname{JSD}(P_c,Q_c)=
+ \tfrac12\KL(P_c\Vert M_c)+\tfrac12\KL(Q_c\Vert M_c).
+ \label{eq:conditionaljsd}
+\end{equation}
+With natural logarithms it lies in $[0,\log 2]$ and is finite despite
+missing categories, using the usual zero-mass convention \cite{lin1991}.
+A common category partition, including a category for novel words,
+must still be specified. A bounded discrepancy does not resolve
+reference mismatch or finite-sample noise. Lexical JSD and embedding
+MMD control different properties, so their numerical scales and meanings
+are not directly interchangeable.
+
+The proposed sequence is to check agreement between independent teacher
+reference batches on the same prompts, then compare conditional JSD
+and MMD on identical references and student draws. Any subsequent
+training comparison should include SFT on those same reference answers,
+plus a quality-only control and matched training/evaluation budgets.
+Code execution or task-specific correctness checks are useful when
+available for programming answers. Teacher bias, missing valid answer
+styles, frozen-encoder errors, tiny per-question batches, one seed, and
+public-data overlap remain limitations. Neither MMD nor JSD supplies
+a trustworthy target by itself, replaces the quality reward, or
+guarantees conditional randomness. Larger frozen-teacher reference sets,
+conditional-JSD training, and matched SFT/quality-only controls remain
+unrun. Post hoc lexical JSD audits in Section~\ref{sec:newresults} are
+not a JSD policy-training experiment.

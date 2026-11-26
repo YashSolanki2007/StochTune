@@ -1,0 +1,39 @@
+test_profiles_match_science_and_both_require_new_authorization (test_comparison.ComparisonTests.test_profiles_match_science_and_both_require_new_authorization) ... ok
+test_staging_rejects_inherited_approval_before_creating_runtime (test_comparison.ComparisonTests.test_staging_rejects_inherited_approval_before_creating_runtime) ... ok
+test_all_chapters_unique_despite_repeated_roman_numerals (test_emma.EmmaTests.test_all_chapters_unique_despite_repeated_roman_numerals) ... ok
+test_prefix_and_continuation_are_adjacent_original_paragraphs (test_emma.EmmaTests.test_prefix_and_continuation_are_adjacent_original_paragraphs) ... ok
+test_real_preflight_and_training_only_pmf (test_emma.EmmaTests.test_real_preflight_and_training_only_pmf) ... ok
+test_report_does_not_claim_training_results (test_emma.EmmaTests.test_report_does_not_claim_training_results) ... ok
+test_screen_uses_equal_word_batches_and_is_reproducible (test_emma.EmmaTests.test_screen_uses_equal_word_batches_and_is_reproducible) ... ok
+test_splits_do_not_depend_on_input_order (test_emma.EmmaTests.test_splits_do_not_depend_on_input_order) ... ok
+test_actual_final_step_checkpoint_survives_evaluation_exception (test_evaluation_io.EvaluationIOTests.test_actual_final_step_checkpoint_survives_evaluation_exception) ... ok
+test_crlf_and_blank_lines_work_but_invalid_json_still_fails (test_evaluation_io.EvaluationIOTests.test_crlf_and_blank_lines_work_but_invalid_json_still_fails) ... ok
+test_generated_unicode_separators_remain_inside_records (test_evaluation_io.EvaluationIOTests.test_generated_unicode_separators_remain_inside_records) ... ok
+test_clipping_blocks_only_the_favored_direction_and_detaches_snapshot (test_grpo.GRPOTests.test_clipping_blocks_only_the_favored_direction_and_detaches_snapshot) ... ok
+test_exact_expected_coupled_distribution_gradient (test_grpo.GRPOTests.test_exact_expected_coupled_distribution_gradient) ... ok
+test_first_real_update_matches_reinforce_with_centered_reference_penalty (test_grpo.GRPOTests.test_first_real_update_matches_reinforce_with_centered_reference_penalty) ... [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+ok
+test_normalization_and_invalid_settings_are_rejected (test_grpo.GRPOTests.test_normalization_and_invalid_settings_are_rejected) ... ok
+test_resume_restores_two_pass_optimizer_scheduler_and_weights (test_grpo.GRPOTests.test_resume_restores_two_pass_optimizer_scheduler_and_weights) ... [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+ok
+test_tokens_include_eos_without_prompt_or_padding (test_grpo.GRPOTests.test_tokens_include_eos_without_prompt_or_padding) ... ok
+test_two_pass_two_rank_update_matches_single_rank_global_update (test_grpo.GRPOTests.test_two_pass_two_rank_update_matches_single_rank_global_update) ... [Gloo] Rank 0 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+ok
+test_cannot_change_reward_or_schedule_when_extending_wall_time (test_resume.ResumeTests.test_cannot_change_reward_or_schedule_when_extending_wall_time) ... ok
+test_restored_next_update_and_random_streams_match_uninterrupted_training (test_resume.ResumeTests.test_restored_next_update_and_random_streams_match_uninterrupted_training) ... [Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+ok
+test_actual_certificate_serializes_and_binds_data_scorer_and_transform (test_runtime.RuntimeTests.test_actual_certificate_serializes_and_binds_data_scorer_and_transform) ... ok
+test_actual_rating_decoding_normalization_and_format_rejection (test_runtime.RuntimeTests.test_actual_rating_decoding_normalization_and_format_rejection) ... ok
+test_complete_gpu_preflight (test_runtime.RuntimeTests.test_complete_gpu_preflight) ... ok
+test_constant_scorer_fails (test_runtime.RuntimeTests.test_constant_scorer_fails) ... ok
+test_no_silent_truncation_and_separate_penalty (test_runtime.RuntimeTests.test_no_silent_truncation_and_separate_penalty) ... ok
+test_two_rank_policy_update_uses_both_rewards (test_runtime.RuntimeTests.test_two_rank_policy_update_uses_both_rewards) ... [Gloo] Rank 1 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+[Gloo] Rank 0 is connected to 1 peer ranks. Expected number of connected peer ranks is : 1
+ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 10.636s
+
+OK

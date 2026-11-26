@@ -1,0 +1,101 @@
+{
+  "dataset": "nvidia/HelpSteer2",
+  "revision": "990b2711a36180dd19d9c94b8627844866f8982a",
+  "raw_sha256": {
+    "train.jsonl.gz": "c0d7e91d738d42e8a08070db26c4c09a9c7631308e1f0fd380ff43d130c9f713",
+    "validation.jsonl.gz": "610eeb5289494d613c4c0f70aade2df8df0b499f3a24e76d232f74e6909d010a",
+    "preference/preference.jsonl.gz": "a5cd48600fb7a330cf0ccc8f59051e24e8f236907c379f42eff1ba18da55204b"
+  },
+  "prepared_sha256": {
+    "reference.jsonl": "039948b968987f5eb36fe6655fef1f3579fca78d7179987769a15dbfd1ddb6ba",
+    "policy_test.jsonl": "d0f45e3f69d927b48a276e639c160b18ea1dfdfb215959b09ac03d3d8511d9a4",
+    "reward_validation.jsonl": "daf3b78bf0ce9026f5afe9ea19c30aad62c2431cac34bb8f64e9daffddad7db2",
+    "policy_validation.jsonl": "593b87514689f5a41d33785da2628e6ba8857c34d5b05fae89c64490693b7a5e",
+    "reward_train.jsonl": "ff7391df64344384b939da34b80a1dc0299258f0a5a8dcc648c6b0c0817455f7",
+    "policy_train.jsonl": "5d82937bc6864a4f61dbdcd1fef8f13049440a4aaa51cb21a4279ea24e35c08f"
+  },
+  "counts": {
+    "reward_train": 5095,
+    "reward_validation": 295,
+    "policy_train": 533,
+    "policy_validation": 16,
+    "policy_test": 32
+  },
+  "reference_responses": 533,
+  "excluded": {
+    "long_reward_response": 263,
+    "long_prompt": 1666,
+    "non_ascii_letter_language": 17
+  },
+  "selection": "ASCII-letter ratio >=0.9; prompt <=384 tokens; complete reward input <=1024. Policy/reference uses non-tied preferred response <=256 tokens with human coherence, helpfulness, correctness all >=3/4. No text is truncated.",
+  "splitting": "Canonical prompt hash; 75% of original train for reward training, 25% eligible prompts for policy/PMF; official validation divided into disjoint reward validation, 16 policy validation, 32 policy test prompts.",
+  "reference_word_count": 57251,
+  "reference_vocabulary_size": 7593,
+  "reward_label_counts": {
+    "reward_train": {
+      "response_2": 2042,
+      "tie": 1225,
+      "response_1": 1828
+    },
+    "reward_validation": {
+      "response_2": 125,
+      "response_1": 91,
+      "tie": 79
+    }
+  },
+  "performance_results_status": "pending; no reward or policy outcomes included",
+  "config": {
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "dataset": "nvidia/HelpSteer2",
+    "dataset_revision": "990b2711a36180dd19d9c94b8627844866f8982a",
+    "seed": 42,
+    "reward_epochs": 1,
+    "reward_learning_rate": 2e-05,
+    "reward_pair_batch_size": 32,
+    "reward_pair_microbatch_size": 4,
+    "reward_max_sequence_length": 1024,
+    "reward_train_budget_seconds": 3300,
+    "reward_validation_every": 50,
+    "steps": 600,
+    "global_group_size": 16,
+    "prompts_per_group": 2,
+    "rollout_batch_size": 8,
+    "gradient_microbatch_size": 2,
+    "max_prompt_tokens": 384,
+    "reference_response_max_tokens": 256,
+    "max_new_tokens": 384,
+    "learning_rate": 5e-06,
+    "warmup_steps": 40,
+    "weight_decay": 0.01,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "reference_kl_beta": 0.002,
+    "distribution_weight": 0.1,
+    "validation_every": 100,
+    "checkpoint_every": 100,
+    "validation_prompt_count": 16,
+    "test_prompt_count": 32,
+    "eval_samples_per_prompt": 2,
+    "train_budget_seconds": 6300,
+    "wandb_entity": "yash2007-university-of-washington",
+    "wandb_project": "stochastic-llm",
+    "wandb_base_url": "https://api.forge.coreweave.com"
+  },
+  "source_sha256": {
+    "experiments/helpsteer-rl/audit.py": "16a5b5bef2f8f212fb25bcda8e8c5c160278d519bbad44f8adb10c7d71d68d6d",
+    "experiments/helpsteer-rl/common.py": "e4850c2b0a5f1ae4ef165ffe14c8f8f28435dfa0b7bcd4a5613a0cd252834ea0",
+    "experiments/helpsteer-rl/config.json": "9ac5086ea28f8570cff2e6a83f843745032ee4d712aacdb4c6b1862d457ef1ba",
+    "experiments/helpsteer-rl/policy.sbatch": "d92c890d8bd3923df99875b0e93c606966081b349154ac260d5658c2cf28336d",
+    "experiments/helpsteer-rl/prepare.py": "46040550893df45f8a3cb4f5a988eb5ac1bb894342af028cc736b84347c12047",
+    "experiments/helpsteer-rl/reward.sbatch": "9a53295e0ec11acfeafa048b8acb1fa195e3c24a8595d339c91772e1e8010fb8",
+    "experiments/helpsteer-rl/test_helpsteer.py": "6aaf057584feff6fee718dfce0d701b0ab9b99dff1b8a6ed1e5343421b7c08fe",
+    "experiments/helpsteer-rl/train_policy.py": "1c3401c102eb25675dd5d51ae3089bf517cc409322110c49bc036c730a9f9507",
+    "experiments/helpsteer-rl/train_reward.py": "17b4cc0020c42c48766ff8caa6ea18fdda60aed5eb2e21139b3a7767befd5e3e"
+  },
+  "reused_support_sha256": {
+    "experiments/shakespeare-quality-pilot/passage_reward.py": "e75bfb5e65f30bd850f67ab5da257c0a7a63f27b4c229124c555f290f223f830",
+    "experiments/shakespeare-quality-pilot/ddp_passage_rl.py": "c784baa9c5a02f33aad9d88cdea62e19ddc93cca7b3ee7751860819e00f310cf",
+    "experiments/shakespeare-quality-pilot/pilot.py": "43b29e894bfa8911b49e5263c0ccab628a6bbeb01fd64e14b1899c0cd68f8bed"
+  }
+}

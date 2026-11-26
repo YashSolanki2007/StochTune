@@ -76,7 +76,11 @@ def write_json(path, value):
 
 
 def read_rows(path):
-    return [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+    # JSONL records end at physical newlines. str.splitlines() also splits valid
+    # unescaped Unicode characters inside JSON strings (e.g. U+2028/U+2029).
+    # Preserve those characters, and let genuinely malformed records fail.
+    with path.open(encoding="utf-8") as handle:
+        return [json.loads(line) for line in handle if line.strip()]
 
 
 def prepare():

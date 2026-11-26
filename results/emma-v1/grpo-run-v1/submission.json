@@ -1,0 +1,18 @@
+{
+  "job_id": "520789",
+  "experiment": "emma-optimizer-comparison-grpo-v1",
+  "submitted_at_utc": "2026-11-25T06:50:01.250632+00:00",
+  "phase": "submitted",
+  "policy_update": "grpo",
+  "rollout_batches": 80,
+  "optimizer_passes_per_batch": 2,
+  "maximum_training_passages": 1280,
+  "maximum_optimizer_steps": 160,
+  "gpus": 2,
+  "maximum_wall_seconds": 6600,
+  "maximum_gpu_hours": 3.6666666666666665,
+  "online_wandb_required": true,
+  "control_job_submitted": false,
+  "config_sha256": "0106a5b61d124fed5d26fcc3d2db9db9db1a530a4ccb8e0242699eaed8b90138",
+  "sbatch_stderr": "sbatch: GPUs: 2.0\nsbatch: CPUs: 16.0\nsbatch: MEM: 128.0 GB\nsbatch: TIME: 1.83 hrs\nsbatch: *COST: $3.30 (Est.)\nsbatch: *NOTE: This is only an estimate based upon GPU hours requested.\nsbatch: *NOTE: You can still cancel this job at no charge (i.e., scancel <JOB_ID>).\n"
+}

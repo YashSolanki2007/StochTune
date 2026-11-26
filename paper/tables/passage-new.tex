@@ -1,0 +1,13 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Shakespeare test: 16 held-out scenarios, four passages each. KL is pooled and smoothed; quality is the same frozen judge used in training.}\label{tab:passage-new}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Policy (updates) & Word KL & Pair KL & $r_Q$ & Words & EOS (\%)\\
+\midrule
+Instruction base & 3.0598 & 8.0710 & 0.7419 & 96.9 & 100.0\\
+Bigram RL (1,200) & 2.7766 & 7.9282 & 0.8029 & 115.5 & 100.0\\
+Unigram RL (1,097) & 2.5876 & 7.8699 & 0.7874 & 137.2 & 98.4\\
+\bottomrule
+\end{tabular}
+\end{table}

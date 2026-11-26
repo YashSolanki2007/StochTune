@@ -1,0 +1,41 @@
+{
+  "baseline": {
+    "quality_reward_mean": 0.7419146029278636,
+    "bigram_kl": 8.071027126275682,
+    "unknown_bigram_rate": 0.6351043024771839,
+    "passages": 64,
+    "terminated_rate": 1,
+    "mean_word_count": 96.875,
+    "corpus_12word_overlap": 0.0,
+    "coherence": 3.8498966321349144,
+    "fluency": 3.9618060514330864,
+    "prompt_fulfillment": 4.091272551566362,
+    "joint_reward": -0.06518810969970468
+  },
+  "final": {
+    "quality_reward_mean": 0.8029196032633384,
+    "bigram_kl": 7.928232451070379,
+    "unknown_bigram_rate": 0.5614681402647018,
+    "passages": 64,
+    "terminated_rate": 1,
+    "mean_word_count": 115.515625,
+    "corpus_12word_overlap": 0.0,
+    "coherence": 3.998495541512966,
+    "fluency": 4.0354190692305565,
+    "prompt_fulfillment": 4.601120628416538,
+    "joint_reward": 0.0100963581563005
+  },
+  "training_updates": 1200,
+  "training_passages": 19200,
+  "updates_this_allocation": 1200,
+  "stop_reason": "step_limit",
+  "elapsed_seconds": 6063.429049739963,
+  "world_size": 2,
+  "gpu_hours_upper_bound": 4.0,
+  "human_validated": false,
+  "limitations": [
+    "One seed; same reward/evaluation judge; no human validation.",
+    "Broader prompts differ from the earlier 100-update pilot.",
+    "Sparse empirical KL remains biased and batch-size dependent."
+  ]
+}

@@ -1,0 +1,15 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Shared held-out semantic evaluation: 19 exact questions, four answers each. All discrepancies are unscaled generated-U/fixed-reference-V estimates; lower is better. Quality and two-prototype coverage are higher-is-better. Updates are in parentheses; the 200-update row continues the 53-update energy run.}\label{tab:semantic-new}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Policy (updates) & Gaussian & Energy & $r_Q$ & Coverage\\
+\midrule
+Instruction base & 0.3922 & 0.4830 & 0.6696 & 0.6842\\
+Gaussian v1 (94) & 0.3833 & 0.4769 & 0.6631 & 0.6842\\
+Calibrated Gaussian (50) & 0.4077 & 0.5082 & 0.6615 & 0.7105\\
+Energy (53) & 0.3703 & 0.4564 & 0.6735 & 0.7105\\
+Energy continued (200) & 0.3904 & 0.4813 & 0.6940 & 0.7368\\
+\bottomrule
+\end{tabular}
+\end{table}

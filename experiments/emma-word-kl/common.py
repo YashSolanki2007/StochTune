@@ -40,6 +40,9 @@ class FrozenPreferenceReward:
         quality, penalties = globals()["quality_with_truncation"](
             normalized, [r["terminated"] for r in rows], self.cfg["truncation_penalty"]
         )
+        from length_reward import apply_penalty
+
+        quality, length_details = apply_penalty(rows, quality, self.cfg)
         return [
             dict(
                 raw_reward=float(1 + 4 * n),
@@ -48,8 +51,9 @@ class FrozenPreferenceReward:
                 truncation_penalty=float(p),
                 rubric_scores=r["scores"],
                 rating_token_mass=r["rating_token_mass"],
+                **length,
             )
-            for n, q, p, r in zip(normalized, quality, penalties, ratings)
+            for n, q, p, r, length in zip(normalized, quality, penalties, ratings, length_details)
         ], quality
 
 
@@ -65,3 +69,9 @@ def verify_reward_identity(ready, checks):
     calibration = Path(ready["audit_path"]) / "calibration.json"
     if checks.get("calibration_sha256") != hashlib.sha256(calibration.read_bytes()).hexdigest():
         raise RuntimeError("The scorer certificate changed")
+    from length_reward import settings, transform_identity
+
+    identity = checks.get("reward_transform_identity_sha256")
+    if identity is not None or settings(config())["weight"] > 0:
+        if identity != transform_identity(config()):
+            raise RuntimeError("The audited length/truncation reward transform changed")

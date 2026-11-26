@@ -1,0 +1,281 @@
+\section{Human-preference extension: HelpSteer2 methods}
+\label{sec:helpsteer}
+\noindent\textbf{Protocol scope.} This section preserves the initial
+HelpSteer2 reward-model and unigram-RL design. The later semantic-MMD
+profile in Section~\ref{sec:mmd} uses a different frozen scorer,
+reference subset, generation limit, and conditional batching. Its
+settings must not be inferred from this earlier design.
+
+\noindent\textbf{Status of evidence.} This section records the original
+prepared-data and reward-model design, including the larger configured
+policy profile. Section~\ref{sec:newresults} reports the completed subset
+trials and subsequent corrected profiles with their actual budgets and
+scorer-selection audit. Preparation counts below are not achieved
+policy-training counts; later configurations are stated separately.
+
+\subsection{Dataset and prompt-disjoint preparation}
+We replace a synthetic mathematical target with natural-language prompts
+and human feedback from \texttt{nvidia/HelpSteer2}
+\cite{wang2024helpsteer,wang2024preference}. We use both the attribute-rated
+responses and the separate \texttt{preference/preference.jsonl.gz} pairs,
+pinned to dataset revision \texttt{990b2711a361}. The full revision and
+source-file hashes appear in the supplementary protocol record. The
+dataset is distributed under CC-BY-4.0; its preference annotations are
+human feedback, not synthetic judgments generated for this experiment.
+
+Before splitting, the preparation code collapses whitespace in the prompt
+text and hashes the result. Whitespace-equivalent prompts therefore stay
+together. One pair is retained per canonical prompt, and an official
+validation occurrence takes priority over a duplicate training occurrence.
+This grouping does not establish semantic deduplication of differently
+worded prompts. Full multi-turn context is parsed from the source
+User/Assistant markers and preserved in the Qwen chat template.
+
+The original training partition is divided by a deterministic prompt-hash
+rule: hash modulo four equal to zero reserves a prompt for the policy/PMF
+pool, and the other residues reserve it for reward-model training.
+The nominal allocation is 25\%/75\% before further policy eligibility
+filters, not an exact fraction after filtering. The original validation
+partition supplies disjoint reward validation, policy validation, and
+policy test prompts. Eligible policy evaluation prompts are sorted,
+shuffled with seed 42, and assigned to validation and test; the remaining
+original validation prompts supply reward validation.
+
+Both candidate responses must have at least 90\% ASCII among alphabetic
+characters. This is a language-selection heuristic rather than an English
+classifier. Chat-formatted prompts must have at most 384 tokens, and
+each complete candidate reward-model input at most 1,024 tokens. Source
+answers exceeding a limit are excluded rather than silently truncated.
+Policy/reference eligibility additionally requires a non-tied preferred
+answer, at most 256 response tokens, with human coherence, correctness,
+and helpfulness ratings each at least 3 on the 0--4 scale. Reward-model
+training does not require this additional preferred-reference filter.
+These choices define a selected short-answer subset, not the complete
+HelpSteer2 benchmark.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Verified prepared HelpSteer2 subset. Splits are disjoint by canonical
+prompt hash. These counts do not indicate completed training or evaluation.}
+\label{tab:helpsteerdata}
+\begin{tabular}{@{}lrp{0.52\linewidth}@{}}
+\toprule
+Subset & Count & Use\\
+\midrule
+Reward training & 5,095 pairs & Fit the scalar preference reward model\\
+Reward validation & 295 pairs & Select reward checkpoint and normalize scores\\
+Policy training & 533 prompts & Sample actions for both policy arms\\
+Preferred-response reference & 533 responses & Build the training-only word PMF\\
+Policy validation & 16 prompts & Periodic policy diagnostics\\
+Policy test & 32 prompts & Final base/quality/KL comparison\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The reward-training and reward-validation sets include 1,225 and 79 ties,
+respectively; reward validation therefore has 216 non-tied pairs.
+The reference PMF uses only the 533 preferred policy-training responses.
+Reward-training and policy-training prompts are disjoint; evaluation
+responses and labels enter neither reward training nor PMF construction.
+Held-out human ratings do affect evaluation-subset eligibility, which must
+be considered when interpreting eventual results. Human-written preference
+rationales are not inputs to the trained reward scorer. Neither the prior
+Shakespeare corpus nor a Shakespeare-trained adapter supplies data or
+initialization for this extension.
+
+\subsection{Bradley--Terry preference reward model}
+Let a human-labeled pair be $(c,y_1,y_2,s)$, where positive source preference
+strength $s$ prefers \emph{response two}, negative $s$ prefers response one,
+and zero is a tie. A separate
+\texttt{Qwen2.5-3B-Instruct} sequence classifier produces a scalar score
+$r_\phi(c,y)$. With $\sigma(z)=(1+e^{-z})^{-1}$ and
+$\Delta_\phi=r_\phi(c,y_2)-r_\phi(c,y_1)$, the pairwise model is
+\begin{equation}
+ P_\phi(y_2\succ y_1\mid c)=\sigma(\Delta_\phi),
+ \qquad t(s)=\frac{1+\operatorname{sign}(s)}{2}.
+ \label{eq:btprob}
+\end{equation}
+We minimize binary cross-entropy with this soft target:
+\begin{align}
+ \mathcal L_{\mathrm{BT}}(\phi)
+ &=-\E_{\mathcal D_{\mathrm{RM}}}
+  [t\log\sigma(\Delta_\phi)+(1-t)\log(1-\sigma(\Delta_\phi))],
+ \label{eq:btloss}\\
+ \frac{\partial\mathcal L_{\mathrm{pair}}}{\partial\Delta_\phi}
+ &=\sigma(\Delta_\phi)-t.
+ \label{eq:btgradient}
+\end{align}
+The sign convention matters: a positive label should increase the second
+answer's score relative to the first. Preference-strength magnitude is
+not interpreted as a probability or a loss weight. Ties use $t=1/2$,
+whose pair loss is minimized at equal scores. This is soft-label treatment
+of ties, not a separate three-outcome tie-probability model. The pair
+likelihood depends on score differences and is invariant to a shared
+additive score shift.
+
+The reward model has attention LoRA rank 16, alpha 32, no dropout, and a
+trainable scalar score head. The planned fit is one shuffled epoch over
+5,095 pairs, effective batch 32 pairs, microbatch four pairs, AdamW learning
+rate $2\times10^{-5}$, cosine decay, approximately 5\% warmup, weight
+decay 0.01, and gradient-norm clipping at one. A full epoch would contain
+160 updates; the elapsed-time budget can stop it earlier. Model selection
+uses reward-validation pair loss. Before policy training, the selected
+model must have non-tied validation accuracy greater than 50\%, validation
+score standard deviation above $10^{-6}$, and at least one training
+update. This is a technical gate, not a significance test or certification
+of generated-answer quality. A subsequent stronger selection audit and
+its outcomes appear in Section~\ref{sec:newresults}.
+
+For the selected reward model, pool both candidates' raw scores on reward
+validation and fix their mean $m_\phi$ and population standard deviation
+$s_\phi$. The frozen quality reward for a policy action is
+\begin{equation}
+ r_Q(c,y)=\ind\{y\text{ terminates with EOS}\}\,
+ \sigma\!\left(\frac{r_\phi(c,y)-m_\phi}{\max(s_\phi,10^{-6})}\right).
+ \label{eq:qualitytransform}
+\end{equation}
+The implementation clips the standardized score to $[-30,30]$ before
+applying the sigmoid. This bounded utility is not a calibrated human
+win probability; centering and scaling do not supply that guarantee.
+The scorer sees the complete prompt and answer, without human rationales
+at inference. Its parameters and normalization remain fixed during RL.
+
+\subsection{Training-only word target and global histogram}
+Let $\mathcal R$ be the 533 preferred policy-training responses. Words
+are extracted using ASCII alphabetic runs with optional internal straight
+or curly apostrophes, lowercased, and curly apostrophes normalized to
+straight ones. No stemming or stopword removal is applied. The vocabulary
+$\mathcal V$ consists only of reference words. A single pooled unigram
+target is
+\begin{equation}
+ p_w=\frac{C_{\mathcal R}(w)}{\sum_{v\in\mathcal V}C_{\mathcal R}(v)},
+ \quad w\in\mathcal V,\qquad p_{\mathrm{UNK}}=0.
+ \label{eq:wordtarget}
+\end{equation}
+The prepared reference contains 57,251 extracted word occurrences and
+7,593 distinct word types. These are corpus statistics, not policy
+measurements. This is a marginal word-frequency target across responses, not a
+prompt-conditional law or a measure of semantic correctness.
+
+For a global batch $\mathcal B=(Y_1,\ldots,Y_M)$, collect each passage's
+word-count vector $\mathbf c_i$ on $\mathcal V\cup\{\mathrm{UNK}\}$.
+Unseen words enter UNK. An empty extracted passage contributes one UNK
+count; unfinished passages retain all their observed words. Let
+$V=|\mathcal V|$, $C_w=\sum_i c_{i,w}$, and $L=\sum_w C_w$. The
+total smoothing mass is fixed at $a=1$, unlike the numerical experiment's
+per-category pseudocount 0.1:
+\begin{equation}
+ \widehat q_w=\frac{C_w+a/(V+1)}{L+a},\qquad
+ D_{\mathrm{word}}(\mathcal B)=
+ \sum_{w:p_w>0}p_w\log\frac{p_w}{\widehat q_w}.
+ \label{eq:wordkl}
+\end{equation}
+The denominator includes UNK counts. Because counts pool words, long
+passages contribute more mass, and even a perfectly matched population
+PMF has sample-count-dependent estimated KL. Future comparisons must
+report lengths and use count-matched post-hoc diagnostics; a lower finite
+KL alone is not sufficient evidence of better lexical calibration.
+
+\subsection{Controlled policy arms and the combined objective}
+The two independent actor adapters start from the same pinned
+\texttt{Qwen2.5-3B-Instruct} checkpoint and seed 42. One arm uses quality
+reward only, $\lambda=0$; the other adds word-distribution control,
+$\lambda=0.1$. Both use the same frozen learned reward and training
+prompts. The unadapted instruction checkpoint, evaluated with actor
+adapters disabled, is the third comparison condition. Unlike numerical
+RL, this stage does not initialize from the numerical SFT adapter.
+
+Writing $\pi_0$ for the unadapted instruction policy, the objective is
+\begin{align}
+ J_\lambda(\theta)=
+ &\E_{\mathbf c,Y_{1:M}}
+ \left[\frac1M\sum_{i=1}^{M}r_Q(c_i,Y_i)
+                    -\lambda D_{\mathrm{word}}(Y_{1:M})\right]\nonumber\\
+ &-\beta\E_c\KL\!\left(\pi_\theta(\cdot\mid c)
+                         \Vert\pi_0(\cdot\mid c)\right),
+ \qquad \beta=0.002.
+ \label{eq:helpsteerobjective}
+\end{align}
+Here $\mathbf c$ is the batch of prompts. The Bradley--Terry likelihood
+fits the reward model offline; on-policy REINFORCE updates the actor
+later. These are different training stages. The numeric target KL,
+word-target KL, and reference-policy KL also remain distinct quantities.
+
+For $D=D_{\mathrm{word}}(\mathcal B)$ and
+$D_{-i}=D_{\mathrm{word}}(\mathcal B\setminus\{Y_i\})$, the global
+leave-one-passage-out credits are
+\begin{align}
+ A_i^Q&=r_Q(c_i,Y_i)-\frac{1}{M-1}\sum_{j\ne i}r_Q(c_j,Y_j),\\
+ A_i^D&=M(D_{-i}-D),\\
+ \widehat{\mathcal L}_{\mathrm{actor}}&=
+ -\frac1M\sum_i\sg\!\left[A_i^Q+\lambda A_i^D
+       -\beta\log\frac{\pi_\theta(Y_i\mid c_i)}{\pi_0(Y_i\mid c_i)}\right]
+       \log\pi_\theta(Y_i\mid c_i).
+ \label{eq:helpsteersurrogate}
+\end{align}
+Removing a passage removes its entire count vector and changes the
+histogram's word-count denominator. Advantages are computed on the
+global batch gathered from both GPU ranks, not on separate per-rank
+histograms. Equal local batches and DDP averaging yield the global mean
+gradient. Quality and weighted distribution-advantage RMS values are
+logged separately; no within-batch variance normalization rescales them.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Original larger HelpSteer2 configuration, not the achieved subset
+trial. Completed-run counts and overrides appear in Section~\ref{sec:newresults}.}
+\label{tab:helpsteersettings}
+\begin{tabular}{@{}lp{0.62\linewidth}@{}}
+\toprule
+Setting & Configuration\\
+\midrule
+Actor budget & Up to 600 updates, 16 global passages/update (9,600 if complete)\\
+Prompt grouping & Two prompts/update, eight completions per prompt across two GPUs\\
+Actor adaptation & Attention LoRA rank 16, alpha 32, dropout disabled\\
+Actor optimizer & AdamW, learning rate $5\times10^{-6}$, weight decay 0.01\\
+Schedule & Cosine decay, 40 warmup updates, gradient clipping at one\\
+Gradient microbatch & Two passages per GPU microbatch\\
+Sampling & Temperature 1, top-$p=1$, top-$k$ disabled, at most 384 new tokens\\
+Word-KL weight & $\lambda\in\{0,0.1\}$, not tuned for the new learned reward\\
+Policy validation / test & 16 / 32 prompts, two draws per prompt\\
+Reference penalty & Reverse sequence KL to instruction base, coefficient 0.002\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Original evaluation design and interpretation}
+The configured policy validation uses 32 passages per probe and final
+test uses 64 passages per condition. Initial and final policies use
+matched per-rank seeds and decoding settings. A separate pinned
+Qwen2.5-7B-Instruct auditor rates coherence, readability, and prompt
+fulfillment on final test generations. The auditor never supplies the
+training reward. It computes expected ratings conditional on tokens
+1--5, records their total original probability, and rejects a rating
+whose token mass is below 0.01. It is a separate same-family model,
+not human evaluation or an independently validated quality standard.
+
+The intended analysis compares the instruction baseline, quality-only
+actor, and quality-plus-KL actor on learned reward, external rubric
+scores, word KL, UNK rate, EOS termination, and length. Actual training
+counts and stop reasons must be included: an elapsed-time cutoff can
+leave either arm below 600 updates, weakening an equal-compute
+interpretation. The reward fit has a 55-minute elapsed cutoff within a
+one-H200 one-hour allocation; each sequential policy job has a
+105-minute training cutoff within a two-H200 two-hour allocation,
+reserving time for evaluation. These are configured limits, not measured
+runtimes. The recorded subset trials and later corrected runs in
+Section~\ref{sec:newresults} supersede this profile's pending status;
+the full 600-update design is not a completed result.
+
+Training a reward from human labels makes its supervision human-derived;
+it does not make generated policy outputs human-validated. A future
+positive result would require improvements that survive length/count
+controls and do not merely exploit the learned scorer or its word
+reference. Multi-seed comparisons and human evaluation would still be
+needed. The completed trials do not establish a reliable joint gain.
+
+The source archive's \texttt{supplementary/helpsteer-protocol.json} records
+the full dataset and model revisions, prepared-file checksums, split and
+tie counts, reference-vocabulary statistics, config, and implementation
+hashes. Completed performance records are supplied separately under
+\texttt{supplementary/new-results/}.

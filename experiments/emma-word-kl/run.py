@@ -1,4 +1,4 @@
-"""One 110-minute allocation: frozen-judge calibration followed by quality+word-KL RL."""
+"""One bounded allocation: frozen-judge checks, policy training and final evaluation."""
 
 import json
 import os
@@ -8,7 +8,7 @@ import sys
 import time
 from pathlib import Path
 
-from preflight_gpu import preflight_gpu
+from preflight_gpu import allocation_limits, preflight_gpu
 
 ROOT = Path(__file__).resolve().parent
 
@@ -29,8 +29,10 @@ def terminate(process):
 
 def run():
     preflight_gpu()
-    if len(os.environ["CUDA_VISIBLE_DEVICES"].split(",")) != 2:
-        raise RuntimeError("Need exactly two allocated H200s")
+    cfg = json.loads((ROOT / "run-config.json").read_text())
+    limits = allocation_limits(cfg)
+    if len(os.environ["CUDA_VISIBLE_DEVICES"].split(",")) != limits["gpus"]:
+        raise RuntimeError("Allocated H200 count differs from the configured GPU count")
     if (ROOT / "outputs/reward-ready.json").exists():
         raise FileExistsError("Refusing stale judge certificate")
     started = time.time()
@@ -41,11 +43,12 @@ def run():
     signal.signal(signal.SIGUSR1, lambda *_: stop.touch())
     summary = {
         "job_id": job,
-        "maximum_wall_seconds": 6600,
-        "maximum_gpus": 2,
-        "previous_job": "519547",
-        "previous_wall_seconds": 480,
-        "maximum_cumulative_gpu_hours": 2 * (480 + 6600) / 3600,
+        "maximum_wall_seconds": limits["allocation_seconds"],
+        "maximum_gpus": limits["gpus"],
+        "previous_job": cfg.get("previous_cancelled_job"),
+        "previous_wall_seconds": cfg.get("previous_allocation_elapsed_seconds", 0),
+        "maximum_cumulative_gpu_hours": cfg.get("cumulative_maximum_gpu_hours"),
+        "policy_update": cfg.get("policy_update", "reinforce"),
         "policy_started": False,
         "stages": {},
     }
@@ -65,7 +68,7 @@ def run():
             "torch.distributed.run",
             "--standalone",
             "--nnodes=1",
-            "--nproc-per-node=2",
+            f"--nproc-per-node={limits['gpus']}",
             "--max-restarts=0",
             *arguments,
         ]
@@ -93,7 +96,7 @@ def run():
         return process.returncode
 
     try:
-        rc = launch("calibration", ["calibrate.py"], started + 600)
+        rc = launch("calibration", ["calibrate.py"], started + limits["calibration_seconds"])
         ready = ROOT / "outputs/reward-ready.json"
         if rc:
             raise RuntimeError("Calibration process failed; no automatic retry or RL")
@@ -114,10 +117,17 @@ def run():
                 "--output",
                 f"outputs/quality-unigram-{job}",
             ],
-            started + 6540,
+            started + limits["allocation_seconds"] - limits["controller_reserve_seconds"],
             {
                 "POLICY_STOP_FILE": str(stop),
-                "POLICY_TRAINING_DEADLINE_UNIX": str(min(time.time() + 4800, started + 5400)),
+                "POLICY_TRAINING_DEADLINE_UNIX": str(
+                    min(
+                        time.time() + cfg["train_budget_seconds"],
+                        started
+                        + limits["allocation_seconds"]
+                        - limits["evaluation_reserve_seconds"],
+                    )
+                ),
             },
         )
         comparison = ROOT / f"outputs/quality-unigram-{job}/comparison.json"

@@ -1,0 +1,12 @@
+test_distribution_matching_detects_collapse_and_mean_only_failure (test_mmd.MMDTests.test_distribution_matching_detects_collapse_and_mean_only_failure) ... ok
+test_four_prompts_produce_sixteen_answers_across_two_ranks (test_mmd.MMDTests.test_four_prompts_produce_sixteen_answers_across_two_ranks) ... ok
+test_full_text_chunking_never_drops_or_duplicates_tokens (test_mmd.MMDTests.test_full_text_chunking_never_drops_or_duplicates_tokens) ... ok
+test_prepared_references_preserve_splits_and_human_quality (test_mmd.MMDTests.test_prepared_references_preserve_splits_and_human_quality) ... ok
+test_quality_and_mmd_are_conditioned_on_the_exact_question (test_mmd.MMDTests.test_quality_and_mmd_are_conditioned_on_the_exact_question) ... ok
+test_two_rank_credit_gathers_all_answers_before_comparison (test_mmd.MMDTests.test_two_rank_credit_gathers_all_answers_before_comparison) ... ok
+test_unbiased_cost_and_exact_expected_policy_gradient (test_mmd.MMDTests.test_unbiased_cost_and_exact_expected_policy_gradient) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.524s
+
+OK

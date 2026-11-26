@@ -1,0 +1,14 @@
+{
+  "experiment": "emma-reinforce-long-v1",
+  "cpu_tests_passed": 28,
+  "wandb_project_access_verified": true,
+  "gpu_submission_authorized": false,
+  "jobs_submitted": 0,
+  "rollout_batches": 500,
+  "training_answers": 8000,
+  "requested_gpus": 2,
+  "requested_wall_seconds": 14400,
+  "requested_maximum_gpu_hours": 8,
+  "runtime": "/gpfs/projects/mathai/permuformer2/yash_data/stoch/experiments/emma-reinforce-long-v1",
+  "config_sha256": "31153cdc09ddf77978d00900a2063ac6a27760ab3a60e1b32296ac22a33d2963"
+}

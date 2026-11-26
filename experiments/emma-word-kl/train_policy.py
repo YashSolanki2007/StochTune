@@ -70,7 +70,7 @@ def evaluate(
     import statistics
 
     import torch.distributed as dist
-    from common import read_rows, write_json
+    from common import read_rows, words, write_json
     from ddp_passage_rl import broadcast_object
     from pilot import duplicate_window_rate
 
@@ -91,6 +91,24 @@ def evaluate(
         rows = read_rows(output / f"{label}-samples.jsonl")
         metrics["corpus_12word_overlap"] = statistics.mean(
             duplicate_window_rate(r["passage"], corpus_windows()) or 0.0 for r in rows
+        )
+        metrics["judge_quality_mean"] = statistics.mean(r["normalized_reward"] for r in rows)
+        metrics["quality_before_length_penalty_mean"] = statistics.mean(
+            r.get("quality_reward_before_length_penalty", r["quality_reward"]) for r in rows
+        )
+        metrics["length_penalty_mean"] = statistics.mean(r.get("length_penalty", 0.0) for r in rows)
+        from length_reward import settings
+
+        spec = settings(cfg)
+        lengths = [len(words(r["passage"])) for r in rows]
+        metrics["length_in_range_rate"] = statistics.mean(
+            spec["min_words"] <= length <= spec["max_words"] for length in lengths
+        )
+        metrics["length_underflow_rate"] = statistics.mean(
+            length < spec["min_words"] for length in lengths
+        )
+        metrics["length_overflow_rate"] = statistics.mean(
+            length > spec["max_words"] for length in lengths
         )
         for key in ("coherence", "readability", "prompt_fulfillment"):
             metrics[f"training_judge_{key}"] = statistics.mean(

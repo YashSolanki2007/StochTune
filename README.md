@@ -2,7 +2,7 @@
 
 Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
-This repository records completed **numeric SFT, numeric batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments**. The latest experiment returns to **quality plus unigram-KL matching on Jane Austen's Emma**, after CPU screening found lower source-text discrepancy than Tiny Shakespeare under a matched protocol. **Emma job 519712 is submitted and pending as of November 24, 2026; there are no Emma trained-model results yet.** The preceding LitBench attempt was cancelled after a validation-logging failure, before RL. Earlier semantic-MMD/energy experiments showed modest, uncertain changes without reliable joint quality/distribution improvement. The optional direct soft-target KL trainer is implemented but has not been run.
+This repository records numeric SFT and batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments. The latest completed **Emma REINFORCE run (job 524624) finished 500 updates / 8,000 answers on four H200s**: training-judge quality increased from **0.7826 to 0.8806**, but mean length grew from **274 to 416 words**, and equal-word-budget KL worsened from **0.5112 to 0.5661**. This does **not** establish successful joint quality/distribution control. An earlier custom GRPO pilot showed small, uncertain changes. A **100-step length-penalty pilot (job 529095)** is submitted and **queued as of November 26, 2026**; no pilot policy results are available. The optional direct soft-target KL trainer remains implemented but unrun.
 
 See [References and acknowledgments](#references-and-acknowledgments) for the papers, original blog, datasets, models, and implementations informing this work.
 
@@ -25,10 +25,63 @@ See [References and acknowledgments](#references-and-acknowledgments) for the pa
 | Distribution-only fitting diagnostic | Fresh actor; four fixed training questions × 16 answers; energy + base-policy KL, quality weight zero | Job 510187: 17 updates, 1,088 answers; two H200s, 1h18m37s | Seen energy distance 3.8% lower; unseen 1.5% higher; weak fitting evidence |
 | LitBench fantasy attempt | New literary Bradley–Terry scorer, followed by quality + word KL if validated | Job 519547 cancelled after 8 minutes on two H200s | Validation JSON serialization failed; no RL updates or policy results; regression fixed |
 | Emma source screening | Pinned single novel; equal-word source batches; chapter/section holdouts | CPU only; 1,000 resampled batches per condition | Shared-vocabulary source KL 0.266 vs Tiny Shakespeare 0.479; not model results |
-| Emma quality + unigram RL | Fresh Qwen2.5-3B-Instruct; frozen 7B fiction judge; word KL λ = 0.1 | Job 519712 submitted/pending; two H200s, hard cap 110 minutes including evaluation | No trained-model results yet; judge checks must pass before RL |
+| Emma quality + unigram RL | Fresh Qwen2.5-3B-Instruct; frozen 7B fiction judge; word KL λ = 0.1 | Job 519712: 80 updates / 1,280 answers; two H200s, 34m09s | Validation matching improves modestly; postprocessing failure fixed on CPU; final test unavailable |
+| Emma custom GRPO | Fresh Qwen2.5-3B-Instruct; prompt-LOO quality and coupled word-KL credits; clipped two-pass updates | Job 520789: 80 batches / 1,280 answers / 160 optimizer steps; two H200s, 39m39s | Judge quality 0.8011 → 0.8137; raw KL 0.4882 → 0.4857, but count-matched KL and JSD worsen |
+| Emma longer REINFORCE | Fresh actor; prompt-LOO quality, word KL λ = 0.1, base-policy KL β = 0.002 | Job 524624: 500 updates / 8,000 answers; four H200s, 2h17m20s | Judge quality improves; answers become longer; equal-word-budget KL worsens |
+| Emma length-penalty pilot | Same REINFORCE objective plus fixed 250–350-word penalty | Job 529095: queued; 100-step target / 1,600 answers; four H200s, 90-minute cap | No results yet; online W&B required; no automatic continuation |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
 The passage runs use actual on-policy REINFORCE updates to LoRA weights. The Shakespeare quality scorer is a frozen instruction-model judge, without preference training in this project. The later HelpSteer stages use a trained Bradley–Terry scorer or an audited pretrained reward model. Generated-answer evaluations remain **model-judged, not human-validated outcomes**.
+
+## Latest Emma results and length-control pilot
+
+Job **524624** completed all 500 REINFORCE updates. Its own before/after
+comparison uses 16 held-out prompts × four answers (64 answers per policy):
+
+| Metric | Initial | Final |
+|---|---:|---:|
+| Raw training-judge quality ↑ | 0.7826 | 0.8806 |
+| Target word KL ↓, observed word budgets | 0.5112 | 0.5028 |
+| Target word KL ↓, matched 17,506-word budget | 0.5112 | 0.5661 |
+| Word JSD ↓ | 0.06643 | 0.06943 |
+| Mean generated words | 273.5 | 416.2 |
+| Answers exceeding 350 words | 10/64 | 49/64 |
+
+The raw KL reduction does not survive the word-count control. Quality is scored
+by the same frozen judge used in training; it is not independent human evaluation.
+The prompt-bootstrap quality-change interval is [0.0642, 0.1307], conditional on
+these saved generations and one training seed. Different budgets and sampling
+prevent a controlled optimizer comparison against the 80-batch GRPO experiment.
+See [completed metrics and analysis](results/emma-v1/reinforce-long-4gpu-v1/).
+
+The approved proof of concept, **job 529095**, adds
+
+```math
+r'_i=r_i-0.2\,\frac{\max(0,250-L_i)+\max(0,L_i-350)}{100}.
+```
+
+This adjusted quality reward enters the same-prompt leave-one-out baseline;
+word-distribution credit and base-policy regularization remain separate.
+The coefficient was selected by CPU replay of the preceding run's first 50
+training updates (800 answers), excluding test generations. This calibration
+is not evidence of a trained-policy improvement.
+
+The pilot requests **four H200s for at most 90 minutes / 6 GPU-hours** and stops
+at **100 updates / 1,600 training answers**, retaining the 500-step cosine schedule
+and 50-step warmup. Checkpoints preserve adapters, optimizer, scheduler and RNG
+state. Evaluation uses validation prompts at 0/50/100; final pilot probes also
+use validation, reserving the test split. **All 42 cluster CPU checks passed.**
+W&B access is verified and online logging is mandatory. As last checked on
+November 26, the job is **queued for priority**, with no new policy results.
+The earlier 500-step length-control draft remains unsubmitted; continuation
+requires a later decision.
+
+- [Pilot submission, exact config and CPU checks](results/emma-v1/length-penalty-pilot-4gpu-v1/)
+- [Coefficient calibration](experiments/emma-word-kl/length-penalty-calibration.json)
+- [Complete Emma experiment record](results/emma-v1/README.md)
+- [W&B project](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm)
+- [LaTeX report sources](paper/README.md) — report scope is through November 22;
+  the newer Emma results above are not yet incorporated into that manuscript.
 
 ## Emma: source stability and the submitted word-KL experiment
 
@@ -109,16 +162,21 @@ J(\theta)=\mathbb E\left[
 
 The word-PMF KL measures corpus fidelity; the separate sequence-policy KL
 regularizes departure from the initial model. Word statistics are pooled across
-complete responses, not rewarded after each individual word. On-policy
-REINFORCE uses whole-batch leave-one-out quality credit and coupled distribution
+complete responses, not rewarded after each individual word. The initial 80-step on-policy
+REINFORCE run uses whole-batch leave-one-out quality credit and coupled distribution
 credit \(N[D_{-i}-D_{\mathrm{full}}]\), with same-prompt leave-one-out centering
 for base-policy KL. Four prompts × four samples form each global DDP batch.
-GRPO has not been substituted in this dataset experiment. Lambda 0.1 remains a
+Later runs use same-prompt quality baselines, and the custom GRPO pilot is recorded above. Lambda 0.1 remains a
 heuristic starting value, not an optimized coefficient.
 
 ### Submitted run and reproducibility
 
-**Job 519712 is pending as of the November 24, 2026 status check.** One allocation
+**Job 519712 completed 80 updates and then failed during postprocessing.** The valid
+JSONL samples contained a Unicode line separator; physical-line parsing fixes
+the failure. Validation samples were recovered without new GPU work; the latest
+saved weights are step 70 and no final test comparison exists. See the
+[completed-run and CPU recovery record](results/emma-v1/README.md).
+The original allocation
 uses two H200s for at most **110 minutes**, including scorer checks, training,
 checkpointing and evaluation. Together with cancelled LitBench job 519547's
 eight minutes, maximum cumulative usage is **3.93 GPU-hours**, below the original
@@ -939,7 +997,7 @@ runs are recorded in their configurations and source manifests.
 These papers informed comparisons and discussion; their complete training procedures
 have not been implemented or evaluated as baselines in this repository.
 
-- Shao et al. (2024), [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300): GRPO and within-prompt group advantages, discussed as a potential updater comparison; the Emma implementation remains REINFORCE.
+- Shao et al. (2024), [DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models](https://arxiv.org/abs/2402.03300): GRPO and within-prompt group advantages, informing the custom coupled-credit Emma GRPO pilot; the longer Emma runs use REINFORCE.
 - Zhang et al. (2024), [Forcing Diffuse Distributions out of Language Models](https://arxiv.org/abs/2404.10859): fine-tuning for diffuse distributions over valid outputs.
 - Khalifa, Elsahar & Dymetman (2021), [A Distributional Approach to Controlled Text Generation](https://arxiv.org/abs/2012.11635): pointwise and distributional constraints with divergence control relative to an initial language model.
 - Anschel et al. (2025), [Group-Aware Reinforcement Learning for Output Diversity in Large Language Models](https://aclanthology.org/2025.emnlp-main.1649/): GAPO and frequency-aware group rewards for output diversity.

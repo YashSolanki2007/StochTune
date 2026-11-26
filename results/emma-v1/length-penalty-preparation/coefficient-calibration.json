@@ -1,0 +1,72 @@
+{
+  "source_job_id": "524624",
+  "source_steps": [
+    1,
+    50
+  ],
+  "training_answers": 800,
+  "training_questions_groups": 200,
+  "min_words": 250,
+  "max_words": 350,
+  "unit_words": 100,
+  "raw_quality_credit_rms": 0.12691587341707394,
+  "unit_length_credit_rms": 0.462952181355939,
+  "selected_weight": 0.2,
+  "candidates": [
+    {
+      "weight": 0.025,
+      "length_credit_rms": 0.011573804533898476,
+      "length_to_quality_credit_rms_ratio": 0.09119272650682839,
+      "combined_quality_credit_rms": 0.12864545175317457
+    },
+    {
+      "weight": 0.05,
+      "length_credit_rms": 0.02314760906779695,
+      "length_to_quality_credit_rms_ratio": 0.18238545301365677,
+      "combined_quality_credit_rms": 0.1313756883563918
+    },
+    {
+      "weight": 0.1,
+      "length_credit_rms": 0.0462952181355939,
+      "length_to_quality_credit_rms_ratio": 0.36477090602731355,
+      "combined_quality_credit_rms": 0.13958197472497633
+    },
+    {
+      "weight": 0.2,
+      "length_credit_rms": 0.0925904362711878,
+      "length_to_quality_credit_rms_ratio": 0.7295418120546271,
+      "combined_quality_credit_rms": 0.16475773382598333
+    },
+    {
+      "weight": 0.4,
+      "length_credit_rms": 0.1851808725423756,
+      "length_to_quality_credit_rms_ratio": 1.4590836241092542,
+      "combined_quality_credit_rms": 0.23522023842243292
+    }
+  ],
+  "selection_rule": "Largest candidate whose prompt-LOO length-credit RMS does not exceed the original prompt-LOO quality-credit RMS on training updates 1--50.",
+  "selection_uses_test_generations": false,
+  "fresh_generations": 0,
+  "gpu_hours_used": 0,
+  "source_rollout_sha256": {
+    "rollouts-rank-0.jsonl": "ca2cfaea52169e1b8578ef90ac8e63249f61a78c914cd8e1fec39934c7cb044f",
+    "rollouts-rank-1.jsonl": "c01237d22065fe3f1cc0c9c6c5373a0f840bb425ce4cedff069a16a9d02245f4",
+    "rollouts-rank-2.jsonl": "4cfab10dc0c1297c4c7facc88c62750f5df6b398906888179cbabb479d852472",
+    "rollouts-rank-3.jsonl": "2855a498d036d06dee490064020b1a6409c87d62751e882ce10726e0a5015b43"
+  },
+  "limitations": [
+    "Coefficient-scale heuristic, not evidence of policy improvement or an optimal weight.",
+    "Replay uses changing early policies of a prior run, not a fresh fixed-base sample.",
+    "Credit RMS is not gradient norm or estimator variance."
+  ],
+  "training_replay_sha256": "5e5c29c6109d4484ac1d0fd4be4c0f8c3c88057f3774ebd5b82a0b389cd15ccb",
+  "validation_replay_sanity_check": {
+    "answers": 32,
+    "quality_before_length_penalty": 0.8083380218595266,
+    "counterfactual_adjusted_reward": 0.7925255218595266,
+    "mean_length_penalty": 0.0158125,
+    "length_in_range_rate": 0.625,
+    "source_sha256": "6a813216cfb14b4cbfc8638ed59e3d1911a07a2629fbfc51a9e30b0bd63ba90d",
+    "used_to_select_weight": false
+  }
+}

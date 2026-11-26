@@ -1,0 +1,21 @@
+{
+  "experiments/helpsteer-programming-v1/topic_filter.py": "8ddbf928faee52bfab198c55cce30d7a27c2512a56d38a9e3ee6a832e0436f40",
+  "experiments/helpsteer-programming-v1/validation.py": "86706931f286ae6660ef17413b9b2c2e84b70751502106b5611ec7c17ff43127",
+  "experiments/helpsteer-programming-v1/train_policy.py": "a452af6b8423b30945194a4aff2f16f3ed793b6bcacd33d3ca5341e60cc372ec",
+  "experiments/helpsteer-programming-v1/word_distribution.py": "e31e0f4458c4cdf74332fbd156d9691300a01d4f642b825e56b3e820c36d3eb2",
+  "experiments/helpsteer-programming-v1/preflight.py": "bc4246db3be2a1acc8023394037233764f04cba63a581ec83266875732b9ee49",
+  "experiments/helpsteer-programming-v1/common.py": "374fd4efbe14f0d5a378a5c5a2d357eb7c4a095b7989202b05551dcf3cc9f51a",
+  "experiments/helpsteer-programming-v1/audit.py": "efb10f23f26aebbf8837fa2d55dda8788b8832b8fca254382ee9d69372ddd057",
+  "experiments/helpsteer-programming-v1/run_policy.py": "8024519df7d0e560f9fbefe3147b3f5149fbb49c90a6543e1f41a682c78a56ad",
+  "experiments/helpsteer-programming-v1/config.json": "a353a5a3ea768448dfcbd2b13289d0921647ea9ee5e94fa9cf14e29df0d2b435",
+  "experiments/helpsteer-programming-v1/topic-review.json": "c03ab0fa60e114c19575d2f5e142fde886063c99c19799d7adfd2cf740640274",
+  "experiments/helpsteer-programming-v1/deployment-manifest.json": "2c94d1f62bd349a617b5a4207404b8d3249c6886894bbfb961afb9f5485504e6",
+  "experiments/helpsteer-programming-v1/policy.sbatch": "f976a4977dc84f6867604cdcbaca7b945980a6474fbf034c7f041befa7b67b07",
+  "experiments/helpsteer-programming-v1/data/manifest.json": "dd3927d7c4c7586358de3644646d7804132e44f7b09d87cee672d567ceec1d4c",
+  "experiments/helpsteer-programming-v1/support/ddp_passage_rl.py": "c784baa9c5a02f33aad9d88cdea62e19ddc93cca7b3ee7751860819e00f310cf",
+  "experiments/helpsteer-programming-v1/support/passage_reward.py": "e75bfb5e65f30bd850f67ab5da257c0a7a63f27b4c229124c555f290f223f830",
+  "experiments/helpsteer-programming-v1/support/pilot.py": "43b29e894bfa8911b49e5263c0ccab628a6bbeb01fd64e14b1899c0cd68f8bed",
+  "experiments/helpsteer-programming-v1/support/judge.py": "1d467d09e4053dc3401854f8b8e1d3195b735e7cf7276552205f8f9ba0ad2873",
+  "experiments/helpsteer-programming-v1/support/passage_rl.py": "7f33e7c3e830a2b2e4325509c1ab23f8cb7b0d1093b9c7205a3c5d75f4b5b246",
+  "experiments/helpsteer-programming-v1/support/quality.py": "9cb06d73e6cbc30f954e98466731b4cdecbb10e90694cc6a7cc9fe1d8c87980a"
+}

@@ -1,0 +1,19 @@
+{
+  "experiment": "emma-reinforce-length-4gpu-v1",
+  "gpu_submission_authorized": false,
+  "jobs_submitted": 0,
+  "coefficient": 0.2,
+  "word_range": [
+    250,
+    350
+  ],
+  "target_steps": 500,
+  "gpus": 4,
+  "requested_wall_seconds": 10800,
+  "maximum_gpu_hours_if_approved": 12,
+  "wandb_access_verified": true,
+  "source_config_sha256": "d452836009b7260193bf1d19dc65f44752f226b76323e531824c648dcb27ddf9",
+  "source_calibration_sha256": "7f2c8ca775d4e07d4203150a5e54922a0256cfcfa9b417090798aa867d4abc9b",
+  "new_policy_results_available": false,
+  "cluster_cpu_tests_passed": 39
+}

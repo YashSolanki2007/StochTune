@@ -1,0 +1,62 @@
+{
+  "protocol_version": 2,
+  "baselines": {
+    "non_tie_pairs": 280,
+    "longer_answer_accuracy": 0.6392857142857142,
+    "training_majority_direction": 1,
+    "majority_direction_accuracy": 0.5678571428571428
+  },
+  "non_tie_accuracy": 0.6714285714285714,
+  "accuracy_95pct": [
+    0.6177678571428572,
+    0.725
+  ],
+  "model_minus_longer_95pct": [
+    -0.04285714285714286,
+    0.11428571428571428
+  ],
+  "model_minus_majority_95pct": [
+    0.03214285714285714,
+    0.17508928571428523
+  ],
+  "length_matched": {
+    "pairs": 73,
+    "accuracy": 0.6438356164383562,
+    "accuracy_95pct": [
+      0.5342465753424658,
+      0.7534246575342466
+    ]
+  },
+  "long_inputs": {
+    "pairs": 64,
+    "accuracy": 0.75,
+    "accuracy_95pct": [
+      0.640625,
+      0.859375
+    ]
+  },
+  "human_coherence": {
+    "pairs": 146,
+    "accuracy": 0.6541095890410958,
+    "accuracy_95pct": [
+      0.5821917808219178,
+      0.7328767123287672
+    ]
+  },
+  "checks": {
+    "at_least_100_non_tied_pairs": true,
+    "beats_longer_answer_baseline": false,
+    "beats_training_majority_baseline": true,
+    "length_matched_evidence": true,
+    "coherence_evidence": true,
+    "long_input_evidence": true
+  },
+  "passed": false,
+  "caveat": "Exploratory paired bootstrap over held-out prompts; selection on this validation set prevents treating intervals as independent test evidence.",
+  "validation_data_sha256": "995253936e8093af3050a3adaa613e117c86522eb4d15455453591bae369fdd0",
+  "reward_output": "/gpfs/projects/mathai/permuformer2/yash_data/stoch/experiments/helpsteer-rl-v1/outputs/reward-500682",
+  "policy_training_performed": false,
+  "candidate": "legacy",
+  "calibration_sha256": "c64a5a570cdef303fdbae7f0249c59f7ec3e522c0042cc81937162e1afdd81dc",
+  "adapter_sha256": "eb6211ac54a698a88db3fa3fd33e3c975456d9f6eed91c28e483976c4caa69bd"
+}

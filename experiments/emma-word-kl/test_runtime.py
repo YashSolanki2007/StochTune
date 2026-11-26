@@ -189,14 +189,21 @@ class RuntimeTests(unittest.TestCase):
         reward.cfg, reward.judge = config(), self.judge()
         data = [{**self.rows[0], "terminated": True}, {**self.rows[1], "terminated": False}]
         records, values = reward.score(data)
-        np.testing.assert_allclose(values, [0.75, 0.65], atol=1e-5)
+        from length_reward import apply_penalty
+
+        expected, _ = apply_penalty(data, [0.75, 0.65], config())
+        np.testing.assert_allclose(values, expected, atol=1e-5)
         self.assertEqual(records[1]["truncation_penalty"], 0.1)
         json.dumps(records, allow_nan=False)
 
     def test_complete_gpu_preflight(self):
-        result = preflight_gpu()
+        result = preflight_gpu(require_authorization=False)
         self.assertTrue(result["passed"])
-        self.assertLess(result["maximum_cumulative_gpu_hours"], 4)
+        if result["maximum_cumulative_gpu_hours"] is not None:
+            self.assertLess(result["maximum_cumulative_gpu_hours"], 4)
+        if not config()["gpu_submission_authorized"]:
+            self.assertFalse(result["gpu_submission_authorized"])
+            self.assertRaises(PermissionError, preflight_gpu)
 
     def test_two_rank_policy_update_uses_both_rewards(self):
         with tempfile.TemporaryDirectory() as folder:

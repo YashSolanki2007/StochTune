@@ -1,0 +1,46 @@
+{
+  "source_job_id": "524624",
+  "source_sha256": {
+    "comparison.json": "5c549c355cbf9ab1242919079ee72dbe567246e473433cba4d6390b7b119b78e",
+    "baseline-samples.jsonl": "3ddb5fcf05eb7bca1942b7c3ce07e848cdc701fe9b040d4be55c52cb20d1572b",
+    "final-samples.jsonl": "7b1c405bb21e5239e56d30e3c87f1c625b1c5e67246f2fe96fac9c3567aca929"
+  },
+  "heldout_prompts": 16,
+  "heldout_chapters": 7,
+  "answers_per_prompt": 4,
+  "seed": 20261126,
+  "count_matching_resamples": 2000,
+  "matched_word_count": 17506,
+  "count_matching": {
+    "baseline": {
+      "observed_words": 17506,
+      "matched_mean_kl": 0.5112199262058021
+    },
+    "final": {
+      "observed_words": 26638,
+      "matched_mean_kl": 0.566113273935508
+    }
+  },
+  "quality_mean_delta": 0.09801001350084944,
+  "quality_prompt_bootstrap_ci95": [
+    0.06419095616632457,
+    0.13067291028176747
+  ],
+  "quality_chapter_cluster_bootstrap_ci95": [
+    0.07702691203508628,
+    0.10936722336780459
+  ],
+  "quality_prompts_improved": 14,
+  "bootstrap_resamples": 10000,
+  "pooled_target_kl_delta_ci95": [
+    -0.14323192230195275,
+    -0.0043097999426253515
+  ],
+  "limitations": [
+    "One training seed; frozen training judge also evaluates generated answers.",
+    "Intervals condition on saved generations; no independent human evaluation.",
+    "Word-count matching is a sensitivity diagnostic, not a histogram-KL bias correction.",
+    "Different training budgets and rank-dependent sampling prevent a controlled optimizer comparison to the 80-batch GRPO run.",
+    "Percentile bootstrap for nonlinear pooled empirical KL can be biased; interpret alongside the separate count-matching diagnostic."
+  ]
+}

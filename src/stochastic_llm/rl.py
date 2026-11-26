@@ -27,8 +27,10 @@ from .modeling import device_and_dtype, environment_info, load_model_and_tokeniz
 from .tracking import tracked
 
 
-def completion_log_probs(model, rows, pad_token_id):
-    """Sum log pi over actual completion tokens, including EOS and excluding padding."""
+def completion_token_log_probs(model, rows, pad_token_id):
+    """Packed row-major completion log probabilities, including EOS, without padding."""
+    if not rows:
+        raise ValueError("Need at least one rollout")
     maximum = max(len(row["prompt_ids"]) + len(row["completion_ids"]) for row in rows)
     ids, masks, positions = [], [], []
     for row in rows:
@@ -50,9 +52,14 @@ def completion_log_probs(model, rows, pad_token_id):
     logits = outputs.logits[:, :-1][selected].float()
     targets = inputs[:, 1:][selected]
     token_log_probs = logits.gather(1, targets.unsqueeze(1)).squeeze(1) - torch.logsumexp(logits, 1)
-    batch_indices = torch.arange(len(rows), device=model.device)[:, None].expand_as(selected)[
-        selected
-    ]
+    return token_log_probs
+
+
+def completion_log_probs(model, rows, pad_token_id):
+    """Sum log pi over actual completion tokens, including EOS and excluding padding."""
+    token_log_probs = completion_token_log_probs(model, rows, pad_token_id)
+    lengths = torch.tensor([len(row["completion_ids"]) for row in rows], device=model.device)
+    batch_indices = torch.repeat_interleave(torch.arange(len(rows), device=model.device), lengths)
     return torch.zeros(len(rows), device=model.device).scatter_add(
         0, batch_indices, token_log_probs
     )

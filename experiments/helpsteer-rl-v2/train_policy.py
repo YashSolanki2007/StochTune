@@ -34,8 +34,10 @@ from common import (
 from ddp_passage_rl import (
     SequencePolicy,
     broadcast_object,
+    configured_world_size,
     distributed_update,
     gather_objects,
+    prompt_loo_baselines,
     save_checkpoint,
 )
 from judge import load_model
@@ -117,12 +119,15 @@ def rollouts(actor, tokenizer, cases, count, cfg):
     return result
 
 
-def global_credit(rows, quality, target, weight, device):
+def global_credit(rows, quality, target, weight, device, *, quality_baseline="global-loo"):
+    if quality_baseline not in ("global-loo", "prompt-loo"):
+        raise ValueError("Unknown quality baseline")
     parts = gather_objects(
         [
             {
                 "passage": row["passage"],
                 "quality": float(q),
+                **({"case_id": row["case_id"]} if "case_id" in row else {}),
                 **(
                     {"case_id": row["case_id"], "semantic_embedding": row["semantic_embedding"]}
                     if "semantic_embedding" in row
@@ -148,6 +153,8 @@ def global_credit(rows, quality, target, weight, device):
             da = weight * fidelity["advantages"]
             fidelity_metrics = target.metrics(fidelity)
             cost = fidelity["kl"]
+        if quality_baseline == "prompt-loo":
+            qa = quality - prompt_loo_baselines(quality, [r["case_id"] for r in flat])
         credit = torch.tensor(qa + da, dtype=torch.float32, device=device)
         metrics = {
             "quality_reward": float(quality.mean()),
@@ -216,16 +223,37 @@ def evaluate(
     return broadcast_object(metrics)
 
 
+def training_step_limit(cfg):
+    """Bound an allocation without shortening the optimizer's full LR schedule."""
+    limit = cfg.get("stop_after_steps", cfg["steps"])
+    if type(limit) is not int or not 0 < limit <= cfg["steps"]:
+        raise ValueError("stop_after_steps must be an integer within the training schedule")
+    return limit
+
+
 def train(arm, output):
     cfg = config()
+    step_limit = training_step_limit(cfg)
+    final_split = cfg.get("final_evaluation_split", "test")
+    if final_split not in ("validation", "test"):
+        raise ValueError("Final evaluation must use validation or test prompts")
+    update_method = cfg.get("policy_update", "reinforce")
+    if update_method not in ("reinforce", "grpo"):
+        raise ValueError("Unknown policy_update")
+    optimizer_passes = 1
+    if update_method == "grpo":
+        from grpo import distributed_grpo_update, validate_update_config
+
+        validate_update_config(cfg)
+        optimizer_passes = cfg.get("grpo_passes", 2)
     weight = 0.0 if arm == "quality-only" else cfg["distribution_weight"]
     local_rank = int(os.environ["LOCAL_RANK"])
     torch.cuda.set_device(local_rank)
     device = torch.device("cuda", local_rank)
     dist.init_process_group("nccl", timeout=datetime.timedelta(minutes=10))
     rank, world = dist.get_rank(), dist.get_world_size()
-    if world != 2:
-        raise ValueError("This experiment requires two GPUs")
+    if world != configured_world_size(cfg):
+        raise ValueError("Allocated GPU count differs from the configured world size")
     torch.set_num_threads(4)
     started = time.monotonic()
     ready = json.loads((ROOT / "outputs/reward-ready.json").read_text())
@@ -295,7 +323,9 @@ def train(arm, output):
             lr=cfg["learning_rate"],
             weight_decay=cfg["weight_decay"],
         )
-        scheduler = get_cosine_schedule_with_warmup(optimizer, cfg["warmup_steps"], cfg["steps"])
+        scheduler = get_cosine_schedule_with_warmup(
+            optimizer, cfg["warmup_steps"] * optimizer_passes, cfg["steps"] * optimizer_passes
+        )
         prompt_rng = random.Random(cfg["seed"])
         torch.manual_seed(cfg["seed"] + rank * 100003)
         random.seed(cfg["seed"] + rank * 100003)
@@ -330,7 +360,7 @@ def train(arm, output):
         if rank == 0:
             run.log({f"validation/{k}": v for k, v in initial.items()}, step=initial_step)
         reason = "step_limit"
-        while step < cfg["steps"]:
+        while step < step_limit:
             flag = torch.tensor(int(stop[0]), device=device)
             dist.all_reduce(flag, op=dist.ReduceOp.MAX)
             finished = broadcast_object(
@@ -358,8 +388,28 @@ def train(arm, output):
             scores, quality = reward.score(rows)
             if hasattr(target, "embed_records"):
                 rows = target.embed_records(rows)
-            credit, metrics = global_credit(rows, quality, target, weight, device)
-            update_metrics = distributed_update(
+            credit, metrics = global_credit(
+                rows,
+                quality,
+                target,
+                weight,
+                device,
+                quality_baseline=cfg.get("quality_baseline", "global-loo"),
+            )
+            update_kwargs = {
+                "reference_kl_centering": cfg.get("reference_kl_centering", "none"),
+                "loss_divisor": cfg.get("objective_loss_divisor", 1.0),
+                "record_log_probs": cfg.get("record_policy_log_probs", False),
+            }
+            updater = distributed_update
+            if update_method == "grpo":
+                updater = distributed_grpo_update
+                update_kwargs.update(
+                    passes=optimizer_passes,
+                    clip_epsilon=cfg.get("grpo_clip_epsilon", 0.2),
+                    scheduler=scheduler,
+                )
+            update_metrics = updater(
                 policy,
                 optimizer,
                 rows,
@@ -367,9 +417,7 @@ def train(arm, output):
                 tokenizer.pad_token_id,
                 cfg["gradient_microbatch_size"],
                 cfg["reference_kl_beta"],
-                reference_kl_centering=cfg.get("reference_kl_centering", "none"),
-                loss_divisor=cfg.get("objective_loss_divisor", 1.0),
-                record_log_probs=cfg.get("record_policy_log_probs", False),
+                **update_kwargs,
             )
             per_answer = update_metrics.pop("_row_metrics", None)
             if per_answer is not None:
@@ -384,12 +432,20 @@ def train(arm, output):
                 * update_metrics["reference_kl_credit_rms_centered"]
                 / divisor,
             )
-            scheduler.step()
+            if update_method == "reinforce":
+                scheduler.step()
             step += 1
             summary = gather_objects(
                 {
                     "words": sum(len(words(r["passage"])) for r in rows),
                     "terminated": sum(r["terminated"] for r in rows),
+                    "judge_quality": sum(r["normalized_reward"] for r in scores),
+                    "length_penalty": sum(r.get("length_penalty", 0.0) for r in scores),
+                    "quality_before_length": sum(
+                        r.get("quality_reward_before_length_penalty", r["quality_reward"])
+                        for r in scores
+                    ),
+                    "length_in_range": sum(r.get("length_in_range", False) for r in scores),
                 }
             )
             metrics.update(
@@ -400,7 +456,20 @@ def train(arm, output):
                 terminated_rate=sum(r["terminated"] for r in summary) / cfg["global_group_size"],
                 mean_word_count=sum(r["words"] for r in summary) / cfg["global_group_size"],
                 distinct_prompts=cfg["prompts_per_group"],
+                optimizer_steps=step * optimizer_passes,
+                learning_rate=scheduler.get_last_lr()[0],
             )
+            if any("length_penalty" in r for r in scores):
+                metrics.update(
+                    judge_quality_reward=sum(r["judge_quality"] for r in summary)
+                    / cfg["global_group_size"],
+                    length_penalty_mean=sum(r["length_penalty"] for r in summary)
+                    / cfg["global_group_size"],
+                    quality_before_length_penalty=sum(r["quality_before_length"] for r in summary)
+                    / cfg["global_group_size"],
+                    length_in_range_rate=sum(r["length_in_range"] for r in summary)
+                    / cfg["global_group_size"],
+                )
             if rank == 0:
                 with (output / "history.jsonl").open("a") as handle:
                     handle.write(json.dumps(metrics) + "\n")
@@ -411,6 +480,22 @@ def train(arm, output):
                     handle.write(
                         json.dumps({"step": step, **row, **score, "advantage": advantage}) + "\n"
                     )
+            # Save trained weights before optional diagnostics. An evaluation
+            # failure must not discard a completed checkpoint (including the
+            # final step when it does not land on checkpoint_every).
+            if step % cfg["checkpoint_every"] == 0 or step == step_limit:
+                save_checkpoint(
+                    policy,
+                    tokenizer,
+                    optimizer,
+                    scheduler,
+                    prompt_rng,
+                    step,
+                    output,
+                    hashlib.sha256(json.dumps(cfg, sort_keys=True).encode()).hexdigest(),
+                    {"arm": arm},
+                    device,
+                )
             if step % cfg["validation_every"] == 0:
                 result = evaluate(
                     policy,
@@ -425,19 +510,6 @@ def train(arm, output):
                 )
                 if rank == 0:
                     run.log({f"validation/{k}": v for k, v in result.items()}, step=step)
-            if step % cfg["checkpoint_every"] == 0:
-                save_checkpoint(
-                    policy,
-                    tokenizer,
-                    optimizer,
-                    scheduler,
-                    prompt_rng,
-                    step,
-                    output,
-                    hashlib.sha256(json.dumps(cfg, sort_keys=True).encode()).hexdigest(),
-                    {"arm": arm},
-                    device,
-                )
         save_checkpoint(
             policy,
             tokenizer,
@@ -457,7 +529,7 @@ def train(arm, output):
             tokenizer,
             reward,
             target,
-            cases["test"],
+            cases[final_split],
             cfg,
             output,
             "baseline",
@@ -470,7 +542,7 @@ def train(arm, output):
             tokenizer,
             reward,
             target,
-            cases["test"],
+            cases[final_split],
             cfg,
             output,
             "final",
@@ -482,11 +554,19 @@ def train(arm, output):
             tokenizer.save_pretrained(output / "adapter")
             report = {
                 "arm": arm,
+                "policy_update": update_method,
+                "quality_baseline": cfg.get("quality_baseline", "global-loo"),
+                "optimizer_steps": step * optimizer_passes,
+                "optimizer_passes_per_rollout": optimizer_passes,
+                "grpo_is_custom_coupled_surrogate": update_method == "grpo",
                 "distribution_weight": weight,
                 "distribution_objective": cfg.get("distribution_objective", "word-kl"),
                 "baseline": baseline,
                 "final": final,
                 "training_updates": step,
+                "schedule_steps": cfg["steps"],
+                "allocation_step_limit": step_limit,
+                "final_evaluation_split": final_split,
                 "training_passages": step * cfg["global_group_size"],
                 "resumed_from_step": initial_step,
                 "training_updates_this_run": step - initial_step,

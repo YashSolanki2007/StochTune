@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Corrected word-target experiments: 32 test questions, four answers each. Broad uses a full word vocabulary; programming uses frequent words plus OTHER. The targets and test questions differ, so absolute KL values are not comparable across rows from different tasks.}\label{tab:corrected-new}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Protocol / policy & Target KL & $r_Q$ & Words & EOS (\%)\\
+\midrule
+Broad base & 1.9163 & 0.5432 & 227.3 & 97.7\\
+Broad RL & 1.9923 & 0.5674 & 206.7 & 99.2\\
+Programming base & 0.5920 & 0.6641 & 434.4 & 85.9\\
+Programming RL & 0.5880 & 0.6585 & 432.6 & 84.4\\
+\bottomrule
+\end{tabular}
+\end{table}

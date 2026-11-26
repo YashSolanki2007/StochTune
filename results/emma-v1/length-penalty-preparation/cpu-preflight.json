@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "cpu_only": true,
+  "chapter_counts": {
+    "train": 39,
+    "validation": 8,
+    "test": 8
+  },
+  "continuation_counts": {
+    "train": 168,
+    "validation": 35,
+    "test": 29
+  },
+  "word_categories": 1054,
+  "gpu_submission_authorized": false,
+  "gpu_wall_seconds": 10800,
+  "gpus": 4,
+  "maximum_cumulative_gpu_hours": null,
+  "quality_source": "frozen-fiction-rubric",
+  "calibration_rows": 24
+}

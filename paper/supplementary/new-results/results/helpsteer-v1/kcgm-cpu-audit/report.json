@@ -1,0 +1,69 @@
+{
+  "status": "CPU replay and implementation validation only; no new trained policy",
+  "source_job_id": "504124",
+  "training_answers": 1504,
+  "source_updates": 94,
+  "training_question_groups": 376,
+  "observed_training_questions": 101,
+  "calibration_step_range": [
+    1,
+    10
+  ],
+  "diagnostic_step_range": [
+    11,
+    94
+  ],
+  "original_logged_advantage_max_abs_replay_error": 1.788809944613945e-08,
+  "later_kernel_credit_pearson_correlation": 0.9514570256034761,
+  "kernel_comparison": {
+    "rbf": {
+      "raw_calibration_mean_discrepancy": 0.4353158798418644,
+      "kernel_scale_frozen_from_calibration": 2.297182451426459,
+      "effective_base_kl_to_raw_discrepancy_weight": 0.0017412635193674577,
+      "raw_later_mean_discrepancy": 0.42762725102263727,
+      "scaled_later_mean_discrepancy": 0.9823378168009397,
+      "raw_later_between_group_discrepancy_std": 0.11332838897675625,
+      "raw_quality_credit_rms": 0.12268407844102328,
+      "original_weighted_distribution_credit_rms": 0.06175134914693392,
+      "calibrated_weighted_distribution_credit_rms": 0.14185411561224484,
+      "normalized_quality_credit_rms": 0.08168047832291829,
+      "normalized_distribution_credit_rms": 0.0944434857604826,
+      "normalized_distribution_to_quality_credit_rms_ratio": 1.156255297466631
+    },
+    "energy": {
+      "raw_calibration_mean_discrepancy": 0.5646499536410126,
+      "kernel_scale_frozen_from_calibration": 1.7710087347953098,
+      "effective_base_kl_to_raw_discrepancy_weight": 0.0022585998145640503,
+      "raw_later_mean_discrepancy": 0.5506364798490634,
+      "scaled_later_mean_discrepancy": 0.9751820155096329,
+      "raw_later_between_group_discrepancy_std": 0.19109365689104965,
+      "raw_quality_credit_rms": 0.12268407844102328,
+      "original_weighted_distribution_credit_rms": 0.08932045094329326,
+      "calibrated_weighted_distribution_credit_rms": 0.15818729881642835,
+      "normalized_quality_credit_rms": 0.08168047832291829,
+      "normalized_distribution_credit_rms": 0.10531777551027187,
+      "normalized_distribution_to_quality_credit_rms_ratio": 1.2893873502295752
+    }
+  },
+  "heldout_v1_policy_posthoc_scores_not_new_training_results": {
+    "baseline": {
+      "rbf": 0.39224292928054727,
+      "energy": 0.48299385367299297
+    },
+    "final": {
+      "rbf": 0.3833049581097927,
+      "energy": 0.47689774518971334
+    }
+  },
+  "kl_centering_empirical_variance_measured": false,
+  "kl_centering_missing_data": "Original run saved only aggregate log-ratio estimates, not individual log ratios",
+  "gpu_allocations": 0,
+  "new_generations": 0,
+  "limitations": [
+    "Early and later replay samples come from changing policies and different questions.",
+    "Credit RMS and between-group spread are not fixed-policy gradient-variance estimates.",
+    "Post hoc scores of the old final actor do not predict improvement from a new kernel.",
+    "Two fixed references per question and the original encoder limitations remain.",
+    "Scaling calibrates objective magnitudes; it does not prove optimal reward trade-offs."
+  ]
+}

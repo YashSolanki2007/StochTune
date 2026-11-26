@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Distribution-only diagnostic: four fixed training questions (seen), 32 evaluation answers each; four validation questions (unseen), 16 each. Quality is neither rewarded nor measured.}\label{tab:diagnostic-new}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Scope / policy & Gaussian & Energy & Words & EOS (\%)\\
+\midrule
+Seen base & 0.4447 & 0.5261 & 561.6 & 81.2\\
+Seen RL & 0.4282 & 0.5061 & 561.6 & 79.7\\
+Unseen base & 0.4478 & 0.5879 & 469.3 & 57.8\\
+Unseen RL & 0.4543 & 0.5969 & 458.8 & 59.4\\
+\bottomrule
+\end{tabular}
+\end{table}

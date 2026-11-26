@@ -260,6 +260,9 @@ def start_tracking(cfg, output, stage, **extra):
     artifact = wandb.Artifact(f"helpsteer-source-{run.id}", type="source")
     paths = list(ROOT.glob("*.py")) + list(ROOT.glob("*.json")) + list(ROOT.glob("*.sbatch"))
     paths += [ROOT / "data/manifest.json"]
+    likelihood_source = REPO / "src/stochastic_llm/rl.py"
+    if likelihood_source.exists():
+        paths.append(likelihood_source)
     paths += [
         SUPPORT / name
         for name in (

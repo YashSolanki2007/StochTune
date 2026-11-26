@@ -1,0 +1,18 @@
+{
+  "job_id": "520789",
+  "observed_at_utc": "2026-11-25T07:49:06+00:00",
+  "state": "COMPLETED",
+  "reason": null,
+  "training_results_available": true,
+  "wandb_project_access_verified": true,
+  "online_wandb_required": true,
+  "reinforce_control_submitted": false,
+  "validation_results_available": true,
+  "latest_rollout_batch": 80,
+  "optimizer_steps": 160,
+  "training_passages": 1280,
+  "latest_validation_batch": 80,
+  "final_test_available": true,
+  "elapsed_seconds": 2379,
+  "exit_code": "0:0"
+}

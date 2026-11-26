@@ -1,0 +1,336 @@
+\section{Distribution definitions and dataset construction}
+\label{app:distributions}
+All target laws use the following parameter conventions. Densities are zero
+outside the stated support; discrete formulas are probability masses.
+\begin{align}
+ \text{Normal: }\quad
+ p(x)&=\frac{1}{\sigma\sqrt{2\pi}}
+       \exp\!\left[-\frac{(x-\mu)^2}{2\sigma^2}\right],
+       &&x\in\R,\\
+ \text{Uniform: }\quad p(x)&=\frac{1}{b-a},&&a\leq x\leq b,\\
+ \text{Exponential: }\quad p(x)&=\lambda e^{-\lambda x},&&x\geq0,\\
+ \text{Beta: }\quad p(x)&=\frac{x^{a-1}(1-x)^{b-1}}{\mathrm B(a,b)},
+       &&0<x<1,\\
+ \text{Gamma: }\quad p(x)&=\frac{x^{k-1}e^{-x/s}}{\Gamma(k)s^k},&&x>0,\\
+ \text{Binomial: }\quad p(x)&=\binom{n}{x}\rho^x(1-\rho)^{n-x},
+       &&x\in\{0,\ldots,n\},\\
+ \text{Weibull: }\quad p(x)&=\frac{k}{s}\left(\frac{x}{s}\right)^{k-1}
+                e^{-(x/s)^k},&&x>0,\\
+ \text{Poisson: }\quad p(x)&=e^{-\lambda}\frac{\lambda^x}{x!},
+       &&x\in\{0,1,\ldots\}.
+\end{align}
+Here $\mathrm B(a,b)=\Gamma(a)\Gamma(b)/\Gamma(a+b)$. Gamma and Weibull
+use shape/scale conventions, while exponential and Poisson use rates.
+Support endpoints with zero continuous probability do not affect sampling.
+
+Parameters are drawn independently and uniformly from the ranges in
+Table~\ref{tab:ranges}, then rounded to five decimals. For binomial $n$,
+the integer ranges are inclusive. Training and validation use the same
+range rules but disjoint exact parameter combinations. The held-out
+family ranges are used only for their test prompts.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Parameter-generation ranges. $U[a,b]$ denotes a continuous uniform
+draw before parameter rounding. The uniform family's width is $w=b-a$.}
+\label{tab:ranges}
+\begin{tabular}{@{}lp{0.37\linewidth}p{0.37\linewidth}@{}}
+\toprule
+Family & Training / validation / new wording & Unseen parameters or families\\
+\midrule
+Normal & $\mu\sim U[-5,5]$, $\sigma\sim U[0.3,3]$ &
+ $\mu\sim U[6,9]$, $\sigma\sim U[3.5,5]$\\
+Uniform & $a\sim U[-5,2]$, $w\sim U[0.5,8]$ &
+ $a\sim U[4,7]$, $w\sim U[9,12]$\\
+Exponential & $\lambda\sim U[0.2,3]$ & $\lambda\sim U[3.5,5]$\\
+Beta & $a,b\sim U[0.5,5]$ & $a,b\sim U[6,9]$\\
+Gamma & $k\sim U[0.5,5]$, $s\sim U[0.3,3]$ &
+ $k\sim U[6,9]$, $s\sim U[3.5,5]$\\
+Binomial & $n\in\{5,\ldots,50\}$, $\rho\sim U[0.1,0.9]$ &
+ $n\in\{55,\ldots,80\}$, $\rho\sim U[0.1,0.9]$\\
+Weibull & Not used & $k\sim U[0.6,3]$, $s\sim U[0.5,4]$\\
+Poisson & Not used & $\lambda\sim U[0.5,20]$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The dataset seed is 20261117. The three prompt templates are:
+\par\noindent\begin{minipage}{\linewidth}
+\begin{quote}\small
+\textbf{Training template 0:} Sample exactly one number from [distribution
+description]. Output only the number.\newline Answer:\par
+\textbf{Training template 1:} Generate one random draw from [distribution
+description]. Return only its numeric value.\newline Answer:\par
+\textbf{Held-out template 2:} I need a single independent observation drawn
+according to [distribution description].\newline Number:
+\end{quote}
+\end{minipage}\par
+Each label is followed by a newline. Descriptions spell out the parameter
+names, for example ``a normal distribution with mean 7.83271 and standard
+deviation 3.98876.'' Exact prompts, rather than this illustrative parameter
+example, are stored in the committed test-case file. Training-family
+selection cycles through six families; test-category selection cycles
+through the three conditions while avoiding a coupling that would omit
+families. Validation contains 160 configurations (1,280 target answers for
+SFT); the RL probes use its first 12 configurations, two from each family.
+
+\section{Gradient and objective details}
+\subsection{Quantile bins and invalid responses}
+\label{app:bins}
+With a numeric-bin budget $K_{\max}=32$, begin with internal quantiles
+$F_c^{-1}(j/32)$, $j=1,\ldots,31$. For a continuous law, round each to
+the output grid and place the bin boundary a half-grid above it:
+\begin{equation}
+ e_j=\operatorname{round}_{\delta}\!\left(F_c^{-1}(j/32)\right)+\delta/2.
+\end{equation}
+Remove duplicate boundaries, CDF values at 0 or 1, and boundaries giving
+zero mass. Numeric-bin masses are successive differences of
+$[0,F_c(e_1),\ldots,F_c(e_{K-1}),1]$. These boundaries separate rounded
+grid outputs, so CDF differences account for the rounded target mass.
+
+For a discrete law with a finite support of at most 32 integers, all
+adjacent support values are separated by half-integer boundaries. For
+larger or infinite discrete supports, unique quantiles plus $1/2$ define
+boundaries, followed by the same CDF-difference construction. Bin
+assignment uses right-sided boundary search. A finite parsed number is
+invalid for the reward if it is outside support (with half-grid tolerance
+for continuous laws), or noninteger for a discrete law. Malformed text
+and unfinished completions are also invalid.
+
+The penalty for invalid mass can be seen at the population histogram
+level. If $q_\bot<1$ and $\overline q_j=q_j/(1-q_\bot)$ normalizes the
+numeric bins, then
+\begin{equation}
+ \KL(P\Vert Q)=\KL(P\Vert\overline Q)-\log(1-q_\bot).
+ \label{eq:invalidpenalty}
+\end{equation}
+Thus ignoring the zero-target-mass term does not mean ignoring invalid
+outputs; the loss still penalizes the probability diverted away from
+valid bins. In implementation, the same normalization effect operates on
+the smoothed empirical histogram.
+
+\subsection{Unbiasedness of the leave-one-out policy gradient}
+Fix a prompt $c$ and let the joint sampling law be
+$\prod_i\pi_\theta(Y_i\mid c)$. Differentiating the expected batch reward
+gives
+\begin{align}
+ \nabla_\theta\E R_N
+ &=\sum_{Y_{1:N}} R_N\,
+   \nabla_\theta\prod_i\pi_\theta(Y_i\mid c)\\
+ &=\E\!\left[R_N\sum_i\nabla_\theta\log\pi_\theta(Y_i\mid c)\right].
+\end{align}
+For $b_i=R_{N-1}(c,Y_{-i})$, independence conditional on the prompt implies
+\begin{align}
+ \E[b_i\nabla_\theta\log\pi_\theta(Y_i\mid c)]
+ &=\E_{Y_{-i}}\!\left[b_i\,
+       \E_{Y_i}\nabla_\theta\log\pi_\theta(Y_i\mid c)\right]\\
+ &=\E_{Y_{-i}}[b_i\nabla_\theta 1]=0.
+\end{align}
+Although the baseline's distribution changes with $\theta$, it is used as
+a stop-gradient control variate; no baseline derivative is included.
+This establishes Equation~\eqref{eq:groupgradient}. It relies on fresh
+on-policy samples, consistent actor likelihoods, and the stated
+conditional independence assumption. Reusing the same samples for multiple
+unadjusted actor steps would break this on-policy justification.
+
+\subsection{Closed-form leave-one-out advantage}
+Write $j_i$ for the bin of action $i$, $n_{j_i}\geq1$ for its group count,
+and $B$ for all categories, including invalid. Expanding the reward as
+\begin{equation}
+ R_N=-\sum_{j:p_j>0}p_j\log p_j
+       +\sum_{j:p_j>0}p_j\log(n_j+\alpha)-\log(N+\alpha B)
+\end{equation}
+shows that removing one action only changes its selected count and the
+normalizer. Therefore
+\begin{equation}
+ R_N-R_{N-1}=
+ \log\frac{N-1+\alpha B}{N+\alpha B}
+ +p_{j_i}\log\frac{n_{j_i}+\alpha}{n_{j_i}-1+\alpha}.
+ \label{eq:closedadvantage}
+\end{equation}
+The implementation computes all advantages by this expression rather
+than recomputing $N$ full histograms. If the action is invalid,
+$p_{j_i}=0$ and its advantage is negative. Multiplying by $N$ and
+averaging sequence losses recovers the group sum in
+Equation~\eqref{eq:groupgradient}. Unit tests compare this estimator
+against exact outcome enumeration on a small categorical group.
+
+\subsection{What finite-sample histogram optimization does and does not imply}
+\label{app:finite}
+Let $q_j$ be the true model probability of histogram category $j$ at a
+fixed prompt. Each marginal count $M_j$ has a binomial distribution
+$\operatorname{Binomial}(N,q_j)$, even though the complete count vector is
+multinomial. The expected reward is exactly
+\begin{equation}
+ \E R_N=-\sum_{j:p_j>0}p_j\log p_j-\log(N+\alpha B)
+       +\sum_{j:p_j>0}p_j\E_{M_j}\log(M_j+\alpha).
+ \label{eq:expectedreward}
+\end{equation}
+The expectation of a log count differs from the log of its expectation.
+Consequently, maximizing the finite-$N$ reward is not identical to
+minimizing $\KL(P\Vert Q)$, and its optimum need not be exactly $Q=P$.
+The estimator's unbiased policy gradient is for this finite-sample
+objective. As $N$ grows with fixed $B$ and $\alpha$, the empirical
+smoothed histogram converges to $Q$; if all positive-target bins have
+positive model probability, the realized KL converges to population bin
+KL. This remains a statement about bins, not within-bin densities.
+
+For a continuous target, an unsmoothed empirical measure places mass on a
+finite set whereas the target has density over an interval. Directly
+treating that empirical measure as a continuous density makes the
+forward KL ill-defined or infinite. Explicit binning supplies the common
+finite measurable partition needed by our implemented reward. A kernel
+density alternative would introduce bandwidth and tail assumptions; we
+do not use one here.
+
+\subsection{Reference-KL score-function derivative}
+\label{app:reference}
+For fixed reference policy $\pi_0$ on the same capped completion space,
+\begin{align}
+ K(\theta)&=\sum_y\pi_\theta(y\mid c)
+                  \log\frac{\pi_\theta(y\mid c)}{\pi_0(y\mid c)},\\
+ \nabla_\theta K
+ &=\E_{y\sim\pi_\theta}
+   \left[\left(\log\frac{\pi_\theta(y\mid c)}{\pi_0(y\mid c)}+1\right)
+            \nabla_\theta\log\pi_\theta(y\mid c)\right]\\
+ &=\E_{y\sim\pi_\theta}
+   \left[\log\frac{\pi_\theta(y\mid c)}{\pi_0(y\mid c)}
+            \nabla_\theta\log\pi_\theta(y\mid c)\right].
+\end{align}
+The last step uses zero expected policy score. This is why
+Equation~\eqref{eq:surrogate} subtracts the detached log-ratio from the
+reward coefficient. Simply backpropagating an on-policy sampled log
+ratio while treating sampled paths as fixed would omit the distribution's
+score contribution. Both adapters share frozen base weights, while the
+reference LoRA weights stay frozen. Disabling dropout for generation and
+likelihood recomputation is necessary to score the sampled policy
+consistently in this implementation.
+
+\subsection{Direct soft-target KL: implemented, not a completed experiment}
+For completeness, the code also supports supervision from a finite
+canonical target law $P^{\mathrm{fin}}$ with at most 1,001 output strings.
+For continuous laws, a rounded grid spans underlying quantiles 0.001 to
+0.999; CDF differences define masses and edge bins absorb outer tails.
+Discrete support is represented or coarsened under the same point budget.
+Each output's token sequence, including EOS, is inserted into a prefix
+trie. If $s$ is a target prefix, define
+\begin{equation}
+ P^{\mathrm{fin}}(v\mid s,c)=
+ \frac{\sum_{y:sv\preceq y}P^{\mathrm{fin}}(y\mid c)}
+      {\sum_{y:s\preceq y}P^{\mathrm{fin}}(y\mid c)}.
+\end{equation}
+Along target-sampled paths, the expected sum of next-token forward KLs
+satisfies the chain rule
+\begin{equation}
+ \E_{Y\sim P^{\mathrm{fin}}}\sum_{t=1}^{T(Y)}
+ \KL\!\left(P^{\mathrm{fin}}(\cdot\mid Y_{<t},c)
+          \Vert\pi_\theta(\cdot\mid Y_{<t},c)\right)
+ =\KL(P^{\mathrm{fin}}\Vert\pi_\theta).
+\end{equation}
+The model's softmax normalizer includes the full vocabulary; it is not
+renormalized to valid trie children. Invalid output mass is therefore
+penalized. The code sums losses over prefixes and averages over sampled
+paths. The default uses three paths per training configuration, giving
+6,000 paths, with a 64-trie cache. This is teacher-supervised distribution
+matching, not a reward from model-generated samples. Its finite target
+also differs from the full rounded law used by SFT and evaluation. No
+full-model soft-KL results are included in this paper.
+
+\section{Extended numerical results}
+\label{app:extended}
+\begin{table}[htbp]
+\centering\small
+\caption{Paired prompt-bootstrap differences, RL minus SFT. Negative
+differences favor RL. Intervals use 10,000 resamples of the 100 prompt
+indices and percentile endpoints. They do not incorporate training-seed
+variability or multiple-comparison correction.}
+\begin{tabular}{@{}llrr@{}}
+\toprule
+Metric & Aggregate & Difference & Exploratory 95\% interval\\
+\midrule
+\input{tables/bootstrap.tex}
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small\setlength{\tabcolsep}{5pt}
+\caption{Response quality over 100,000 requests per checkpoint.
+Violations are valid numeric answers outside support or noninteger for
+a discrete target. Truncation is measured over all requests.}
+\label{tab:quality}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Policy & Valid count & Validity & Violations & Violations / valid & Truncated\\
+\midrule
+\input{tables/quality.tex}
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{All recorded RL validation probes: 12 fixed configurations,
+256 draws each. The final tested adapter is update 250. The best mean KL
+occurs at update 225, whose adapter was retained but not test-evaluated.}
+\label{tab:validation}
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+Update & Mean histogram KL & Median KS & Median normalized $W_1$ & Validity\\
+\midrule
+\input{tables/validation.tex}
+\end{tabular}
+\end{table}
+
+All 100 prompt-level base/SFT/RL outcomes are included in the source
+package's supplementary CSV. The paper uses the already-recorded test
+metrics and the post-hoc histogram KL analysis; it does not select a
+different checkpoint or decoding configuration to improve the results.
+The repository additionally records canonical formatting, repeated-value
+rates, sample means and standard deviations, support violations, and
+metric overflow flags per prompt. These diagnostics are descriptive,
+not a comprehensive test of random-number quality.
+
+\FloatBarrier
+\section{Artifacts and reproduction}
+\label{app:records}
+The numeric code and records are available at
+\href{https://github.com/YashSolanki2007/llm-random-number-generator/tree/27fad3ec875afb2941f34ab873e8394ae24f25e8}{repository commit \texttt{27fad3e}}.
+It includes all 200,000 SFT/RL test responses, per-prompt metrics,
+training history, configs, and provenance hashes. The earlier SFT records
+include base metrics and two cases' raw responses. Training rollouts and
+adapters remain in W\&B artifacts and cluster storage. This manuscript's
+source archive includes generated tables, vector figures, the bibliography,
+and a supplementary per-prompt CSV.
+
+The production environment records PyTorch 2.8.0+cu126, Transformers
+4.57.1, PEFT 0.17.1, Accelerate 1.10.1, NumPy 2.2.6, SciPy 1.15.3,
+and W\&B 0.31.0, with CUDA 12.6 on an NVIDIA H200. Production training
+and evaluation require online W\&B logging. No credentials are present
+in this manuscript or its source archive.
+
+\paragraph{Run records.}
+\begin{itemize}
+\item SFT training:
+\href{https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/xcj01bg1}{\texttt{xcj01bg1}}.
+\item Base and SFT evaluation:
+\href{https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/rfddft7y}{\texttt{rfddft7y}} and
+\href{https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/ao4xvmp5}{\texttt{ao4xvmp5}}.
+\item RL training and evaluation:
+\href{https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/tx91cho0}{\texttt{tx91cho0}} and
+\href{https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/n9d9aegn}{\texttt{n9d9aegn}}.
+\item Final SFT/RL comparison:
+\href{https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/lyb3xv9l}{\texttt{lyb3xv9l}}.
+\end{itemize}
+The RL timing benchmark, training, and evaluation were Slurm jobs
+493753, 493754, and 493755, respectively; all completed successfully.
+These identifiers are provenance, not instructions to reuse outputs.
+
+\paragraph{Regenerate analysis from the repository.}
+The following commands require no GPU and create no online training run:
+\begin{quote}\small\ttfamily
+python -m pip install -e '.[dev,analysis]'\\
+python -m pytest -q\\
+python scripts/analyze\_rl\_results.py --recorded\\
+python paper/generate\_assets.py
+\end{quote}
+The manuscript compiles independently of the experiment data. Regenerating
+its tables and figures requires the repository records.

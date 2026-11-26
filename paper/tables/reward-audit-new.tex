@@ -1,0 +1,12 @@
+\begin{table}[htbp]
+\centering\footnotesize
+\caption{Stronger reward-model selection audit. Main accuracy: 280 non-tied human-preference pairs; length matched: 73; coherence comparisons: 146. All accuracies in percent. Intervals describe validation selection, not an independent benchmark.}\label{tab:reward-audit-new}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Scorer & Accuracy & 95\% interval & Length & Coherence & Gate\\
+\midrule
+Local BT 3B & 67.1 & [61.8, 72.5] & 64.4 & 65.4 & Fail\\
+Frozen Skywork 8B & 78.8 & [73.9, 83.6] & 71.9 & 78.8 & Pass\\
+\bottomrule
+\end{tabular}
+\end{table}

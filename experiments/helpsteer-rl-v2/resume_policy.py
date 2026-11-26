@@ -9,6 +9,10 @@ RESUME_METADATA_FIELDS = {
     "experiment_profile",
     "wandb_group",
     "train_budget_seconds",
+    "stop_after_steps",
+    "final_evaluation_split",
+    "requested_allocation_seconds",
+    "evaluation_reserve_seconds",
     "gpu_submission_authorized",
     "approved_allocation_seconds",
     "approved_maximum_gpus",
@@ -64,7 +68,8 @@ def validate_resume_checkpoint(cfg, arm, world=2):
     step = state["step"]
     if step != cfg["resume_step"] or step != complete["step"] or not 0 < step < cfg["steps"]:
         raise ValueError("Invalid continuation step or completed training schedule")
-    if len(state["rank_rng"]) != world or state["scheduler"]["last_epoch"] != step:
+    passes = cfg.get("grpo_passes", 2) if cfg.get("policy_update") == "grpo" else 1
+    if len(state["rank_rng"]) != world or state["scheduler"]["last_epoch"] != step * passes:
         raise ValueError("Checkpoint RNG/scheduler does not match its training step")
     return state
 

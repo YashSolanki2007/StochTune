@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption{CPU-only character-unigram audit of the same diagnostic samples. Each pair of columns is base $\to$ RL. Raw counts preserve case, spaces, newlines and punctuation; letters retain lowercase a--z only. Reference pooling is by character count; KL smoothing and OTHER follow the word audit.}\label{tab:character-audit-new}
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Scope & Features & KL base & KL RL & JS base & JS RL & TV base & TV RL\\
+\midrule
+Seen & Raw Unicode & 0.09141 & 0.09165 & 0.02760 & 0.02781 & 0.11746 & 0.11695\\
+Seen & Letters a--z & 0.01922 & 0.01877 & 0.00475 & 0.00463 & 0.07160 & 0.06916\\
+Unseen & Raw Unicode & 0.18580 & 0.18955 & 0.03999 & 0.04111 & 0.16946 & 0.17085\\
+Unseen & Letters a--z & 0.02560 & 0.02476 & 0.00635 & 0.00614 & 0.08031 & 0.07821\\
+\bottomrule
+\end{tabular}
+\end{table}

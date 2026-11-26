@@ -1,0 +1,42 @@
+{
+  "implementation": "custom clipped token-ratio surrogate with coupled leave-one-out histogram credit",
+  "gpu_training_performed": false,
+  "gpu_jobs_submitted": 0,
+  "gpu_hours_used": 0,
+  "local_core_tests_passed": 44,
+  "local_staged_tests_passed": 26,
+  "cluster_cpu_tests_passed": 26,
+  "grpo_passes_per_rollout": 2,
+  "grpo_clip_epsilon": 0.2,
+  "advantage_normalization": "none",
+  "loss_normalization": "sequence-sum",
+  "reference_penalty": "unclipped frozen sequence credit, prompt-LOO centered",
+  "pilot_rollout_batches": 80,
+  "training_answers_per_arm": 1280,
+  "grpo_optimizer_steps": 160,
+  "control_optimizer_steps": 80,
+  "both_quality_baselines": "prompt-loo",
+  "validation_answers_per_probe": 32,
+  "test_answers_per_policy": 64,
+  "gpu_launch_approval_required": true,
+  "remote_runtimes": {
+    "grpo": "/gpfs/projects/mathai/permuformer2/yash_data/stoch/experiments/emma-grpo-v1",
+    "reinforce_control": "/gpfs/projects/mathai/permuformer2/yash_data/stoch/experiments/emma-reinforce-control-v1"
+  },
+  "source_sha256": {
+    "src/stochastic_llm/rl.py": "6b1b6da090307afa865018adbb1b2c34b1e684d7b602ab0cb7e28ca9a59871f1",
+    "experiments/helpsteer-rl-v2/grpo.py": "f5b51ce50f6f0999a79dce2be5b0dba76be6c2e398b538b72f866dbe2bf778ed",
+    "experiments/helpsteer-rl-v2/train_policy.py": "8454beedf47b76ddb5ba89bb2ebb365c20eca2d636e941540fb20ccf574bdd1b",
+    "experiments/helpsteer-rl-v2/resume_policy.py": "933f9a37ab6a4d707cb93fab77df076d58e590fdcdf073df8b8261edd4aeebf7",
+    "experiments/shakespeare-quality-pilot/ddp_passage_rl.py": "2ea2fbc91cd39c2f5f05c0d15545ad7453889a517c2d7c81c7bf2e8d873fc9c4",
+    "experiments/emma-word-kl/grpo-config.json": "4ae05d0b6059c853e6cb245bd2bcc24486391be569a75ade39b751f10a287483",
+    "experiments/emma-word-kl/reinforce-control-config.json": "17c6459054d9046955ae1de5730a6f85e4f1b6dbf696f6378be63099d2ee3218",
+    "experiments/emma-word-kl/stage_runtime.py": "d0cba5bb6949438bc8cb9834483244f7b364038926bf38eeba2a30ed94bdcfbf"
+  },
+  "limitations": [
+    "No GPU training result for GRPO.",
+    "Later reused passes are approximate for the coupled batch reward and frozen sequence KL credit.",
+    "Equal new-generation counts do not imply equal GPU compute.",
+    "Pilot is 80 rollout batches, not a launched 500-step experiment."
+  ]
+}

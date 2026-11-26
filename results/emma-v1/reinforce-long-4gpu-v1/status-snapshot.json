@@ -1,0 +1,21 @@
+{
+  "job_id": "524624",
+  "observed_at_utc": "2026-11-26T18:43:25+00:00",
+  "state": "COMPLETED",
+  "reason": null,
+  "training_results_available": true,
+  "wandb_project_access_verified": true,
+  "online_wandb_required": true,
+  "gpus": 4,
+  "target_steps": 500,
+  "maximum_wall_seconds": 10800,
+  "two_gpu_draft_submitted": false,
+  "training_steps": 500,
+  "training_passages": 8000,
+  "final_test_available": true,
+  "elapsed_seconds": 8240,
+  "gpu_hours": 9.155555555555555,
+  "exit_code": "0:0",
+  "started_at_pacific": "2026-11-25T22:51:32-08:00",
+  "finished_at_pacific": "2026-11-26T01:08:52-08:00"
+}

@@ -1,0 +1,22 @@
+{
+  "estimate_source_job": "519712",
+  "source_history_sha256": "8cbe445e653a135ea688505d68f0fc9878480f7fa842c4c06e7ef92fb513bd81",
+  "measured_mean_seconds_per_batch": 22.94132997559791,
+  "target_batches": 500,
+  "update_work_minutes_at_measured_rate": 191.17774979664924,
+  "estimated_total_minutes": [
+    210,
+    240
+  ],
+  "hard_allocation_cap_minutes": 240,
+  "gpus": 2,
+  "maximum_gpu_hours": 8,
+  "queue_wait_included": false,
+  "launch_approval_pending": true,
+  "jobs_submitted": 0,
+  "notes": [
+    "Fresh 500-step schedule, not a continuation of the exhausted 80-step schedule.",
+    "Time cap may stop training before 500 batches; final evaluation is reserved.",
+    "Earlier pilots do not establish REINFORCE superiority or guaranteed benefit from more steps."
+  ]
+}

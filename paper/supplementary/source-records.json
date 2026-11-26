@@ -1,0 +1,16 @@
+{
+  "experiment_commit": "27fad3ec875afb2941f34ab873e8394ae24f25e8",
+  "manuscript_date": "2026-11-19",
+  "author": "Yash Solanki",
+  "affiliation": "University of Washington",
+  "records": {
+    "results/sft-v1/report.json": "f7e5ae6181c994ec3d3c41e876d630fa75572b95712400dd6428e79efbf68d4d",
+    "results/sft-v1/base/results.json": "7f50824a51ce6a0857a2c16c9fe9930b34a0daf87224da59a18e8fb821caa43f",
+    "results/rl-v1/analysis/per-prompt-results.json": "c8d6e4e76b88325b2e5b487d5cb09e3a40d75c324b0bf378b8120da051e05815",
+    "results/rl-v1/analysis/comparison-statistics.json": "6d003f9f55dbd62cbd5aed3e54896bbde7865269551b634d00bd3f8d67e92f40",
+    "results/rl-v1/analysis/evaluation-summaries.json": "fcb407ffffb6a0ebf7ac4b8935f8e093141e59aa4754aa76b978268a982f165c",
+    "results/rl-v1/training/history.jsonl": "9d3b11c671c6983632e2eaa16b1a2b0113db45b08f748b361a5770b669fedb89",
+    "results/rl-v1/training/run_config.json": "49ebb771b86ccc87ddc51598098f141df8b01c275321fc2120b5bf9efdc956f6",
+    "results/rl-v1/test-cases.jsonl": "adf278bf4dad1a470740a37d51304baede17b556f0932baf4fd77640f70bc47f"
+  }
+}

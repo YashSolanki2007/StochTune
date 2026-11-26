@@ -1,0 +1,22 @@
+{
+  "job_id": "524624",
+  "experiment": "emma-reinforce-long-4gpu-v1",
+  "phase": "submitted",
+  "submitted_at_utc": "2026-11-25T22:43:03.447971+00:00",
+  "policy_update": "reinforce",
+  "target_training_steps": 500,
+  "target_training_passages": 8000,
+  "global_batch_size": 16,
+  "prompts_per_batch": 4,
+  "answers_per_prompt": 4,
+  "gpus": 4,
+  "maximum_wall_seconds": 10800,
+  "maximum_gpu_hours": 12,
+  "evaluation_reserve_seconds": 1800,
+  "online_wandb_required": true,
+  "two_gpu_draft_submitted": false,
+  "automatic_retries": false,
+  "config_sha256": "0114b89713bdb6fa9af6aedbef7cc73122e1b97a7fd78898624364a36ee2c406",
+  "cluster_cpu_tests_passed": 31,
+  "sbatch_stderr": "sbatch: GPUs: 4.0\nsbatch: CPUs: 32.0\nsbatch: MEM: 256.0 GB\nsbatch: TIME: 3.00 hrs\nsbatch: *COST: $10.80 (Est.)\nsbatch: *NOTE: This is only an estimate based upon GPU hours requested.\nsbatch: *NOTE: You can still cancel this job at no charge (i.e., scancel <JOB_ID>).\n"
+}

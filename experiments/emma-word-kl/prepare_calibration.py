@@ -4,11 +4,11 @@ import hashlib
 import json
 import random
 
-from common import ROOT, words
+from common import ROOT, read_rows, words
 
 
 def prepare():
-    cases = [json.loads(s) for s in (ROOT / "data/policy_train.jsonl").read_text().splitlines()]
+    cases = read_rows(ROOT / "data/policy_train.jsonl")
     selected = {}
     for r in sorted(cases, key=lambda r: hashlib.sha256(r["id"].encode()).hexdigest()):
         selected.setdefault(r["group_id"], r)

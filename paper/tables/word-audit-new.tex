@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Post hoc exact-question word matching on saved diagnostic outputs. Both reference answers are pooled by word count; question metrics are averaged equally. KL uses total generated pseudocount mass one; JSD and TV are unsmoothed with OTHER.}\label{tab:word-audit-new}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Scope / policy & Word KL & Word JSD & Word TV\\
+\midrule
+Seen base & 1.3325 & 0.2726 & 0.5478\\
+Seen RL & 1.2785 & 0.2712 & 0.5483\\
+Unseen base & 1.6379 & 0.3003 & 0.5923\\
+Unseen RL & 1.6590 & 0.3005 & 0.5931\\
+\bottomrule
+\end{tabular}
+\end{table}

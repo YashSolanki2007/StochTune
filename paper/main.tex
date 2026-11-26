@@ -1,0 +1,687 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx,booktabs,array,multirow}
+\usepackage{enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{placeins}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!50!black,
+  pdftitle={Learning to Match Output Distributions with Batch-Level Rewards},
+  pdfauthor={Yash Solanki},pdfsubject={Completed numeric, preference, MMD and energy-distance experiments}}
+\urlstyle{same}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{1.2em}
+\setlength{\emergencystretch}{2em}
+\setlist{nosep,leftmargin=*}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Learning to Match Output Distributions}
+\fancyhead[R]{\small Solanki}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\KL}{D_{\mathrm{KL}}}
+\newcommand{\sg}{\operatorname{stopgrad}}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\nW}{\widetilde W_1}
+\newtheorem{proposition}{Proposition}
+\title{\vspace{-1.1em}\textbf{Learning to Match Output Distributions\\with Batch-Level Rewards}\\[0.4em]
+  \large Numerical Results, Human Preferences, and Conditional Semantic MMD}
+\author{Yash Solanki\\University of Washington}
+\date{November 22, 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Stochastic decoding does not ensure that a language model's outputs follow
+a requested target distribution. We study batch-level distribution rewards
+with leave-one-out REINFORCE and a separate reference-policy KL penalty.
+For Qwen2.5-3B numerical sampling, 64,000 supervised examples followed by
+250 RL updates and 128,000 generated training responses reduce mean test
+histogram KL from 0.227713 to 0.222606 (2.24\%). Evaluation uses 100
+held-out prompts with 1,000 draws each; median KL, KS and normalized
+Wasserstein improve by 11.29\%, 8.90\% and 9.76\%, with validity near
+98.6\% and heterogeneous unseen-family transfer. We then report completed
+instruction-model text experiments. Shakespeare unigram/bigram trials
+improve empirical matching and their shared training judge, while
+HelpSteer2 preference/word-target trials do not establish joint quality
+and distribution gains. A stronger scorer-selection audit favors a frozen
+8B reward model over the locally fitted 3B Bradley--Terry scorer.
+Prompt-conditional semantic MMD uses two acceptable reference answers per
+question and fixed full-answer embeddings. The first Gaussian run lowers
+held-out discrepancy from 0.39224 to 0.38330 while quality falls slightly.
+A calibrated energy-distance run improves matching at 53 updates, but
+most of that gain disappears by 200 cumulative updates as quality rises.
+All paired 19-question semantic/quality mean-change intervals include zero.
+A quality-free four-question fitting diagnostic lowers seen energy
+distance 3.8\% and raises unseen distance 1.5\%; post hoc word and character
+audits show mixed changes. These single-seed studies provide modest,
+protocol-dependent evidence, without exact sampling, reliable joint
+semantic/quality gains, or superiority to equal-compute supervised
+controls. We give objectives, gradient derivations, achieved budgets,
+uncertainty and source records. Larger teacher-reference sets and
+conditional-JSD training remain proposed comparisons.
+\end{abstract}
+\vspace{0.3em}
+\noindent\textbf{Code and recorded results:}
+\href{https://github.com/YashSolanki2007/llm-random-number-generator}{github.com/YashSolanki2007/llm-random-number-generator}
+
+\section{Introduction}
+When asked to sample from a normal distribution, a language model can produce
+a plausible number while allocating the wrong probabilities to possible
+answers. The relevant property is therefore distributional fidelity across
+repeated requests, rather than the plausibility of an individual response.
+Temperature-based sampling introduces randomness into token selection, but
+does not by itself calibrate the induced distribution over parsed numbers.
+
+This distinction motivates a direct training question: can a model improve its
+numerical sampling policy when rewarded for matching the distribution of its
+own generated outputs to a specified mathematical target? We study a small,
+auditable instance of this question with Qwen2.5-3B and one NVIDIA H200.
+The experiment has two completed stages: sampled-target SFT followed by
+batch-KL-reward reinforcement learning. A third, direct soft-target KL trainer
+has been implemented and tested for pipeline correctness, but has not been
+run as a full-model experiment. We report no empirical comparison for that
+third method.
+
+The manuscript also documents natural-language extensions using an
+instruction-tuned checkpoint: Shakespeare corpus matching, HelpSteer2
+human preferences (Section~\ref{sec:helpsteer}), and prompt-conditional
+semantic MMD (Section~\ref{sec:mmd}). Section~\ref{sec:newresults}
+reports their completed trials, calibrated Gaussian/energy comparisons,
+energy continuation, and distribution-only diagnostic. These are separate
+protocols, not interchangeable benchmarks. The larger frozen-teacher
+reference proposal and conditional-JSD training remain unrun.
+
+Our main empirical finding is incremental: RL lowers average test histogram KL
+by 2.24\% relative to SFT. Larger improvements in the median coexist with weak
+or negative changes on some distribution families and prompt categories. This
+is evidence about one training run, not a demonstration of a general internal
+random number generator. The initial hypothesis that preference fine-tuning
+causes sampling collapse is also outside the experiment's scope: we start
+from a base checkpoint and do not compare pre- and post-RLHF models.
+
+\paragraph{Related work.}
+Zhao et al.\ \cite{zhao2026dice} audit native numerical sampling in language
+models and distinguish generating many numbers within one response from
+independent requests. Baldelli et al.\ \cite{baldelli2026calibration} study
+calibration fine-tuning with sampled completions and trie-derived soft
+next-token targets. The accompanying controlled-stochasticity discussion by
+Kuriakose and Baldelli\ \cite{kuriakose2026blog} motivated the present comparison.
+Our pilot instead adds a reward computed from the model's own generated
+histogram after SFT; it does not claim priority for distribution-matching
+fine-tuning. The optimization follows the score-function REINFORCE framework
+\cite{williams1992} and the broader use of simple policy-gradient methods in
+language-model post-training \cite{ahmadian2024}. The numerical reward is mathematical,
+not human preference feedback as in RLHF \cite{ouyang2022}. We adapt the base
+Qwen2.5 model \cite{qwen2025} using LoRA \cite{hu2021lora}. The text
+extension uses HelpSteer2 ratings and its separate preference annotations
+\cite{wang2024helpsteer,wang2024preference}, with a Bradley--Terry-style
+pairwise likelihood \cite{bradley1952}.
+For conditional distribution comparison, MMD compares kernel mean
+embeddings \cite{gretton2012}; Jensen--Shannon divergence supplies a
+bounded alternative on categorical laws \cite{lin1991}. These choices
+change the discrepancy, but do not establish that a chosen reference
+distribution is correct for a prompt.
+The later calibrated-kernel experiments adapt kCGM's distribution-matching
+policy gradients and implementation ideas \cite{diamant2026kcgm,kcgmcode};
+we claim no novelty for those estimators. Energy-distance comparisons
+use the distance/kernel connection of Sejdinovic et al.\ \cite{sejdinovic2013}.
+
+\section{Problem formulation and numeric representation}
+Let $c$ be a prompt specifying a distribution family and parameters. An
+autoregressive language model defines a completion policy
+\begin{equation}
+ \pi_\theta(y\mid c)=\prod_{t=1}^{T(y)}
+ \pi_\theta(y_t\mid c,y_{<t}),
+ \label{eq:policy}
+\end{equation}
+where $T(y)$ ends at EOS or at the 32-token generation limit. For the capped
+generation process, unfinished paths at that limit are also possible outcomes.
+The parser $f(y)$ returns a finite number if the whole stripped response is
+numeric and terminated with EOS, and returns $\bot$ otherwise. Different text
+spellings may parse to the same number. The induced numeric law is
+\begin{equation}
+ q_\theta(x\mid c)=\sum_{y:f(y)=x}\pi_\theta(y\mid c),
+ \qquad x\in\mathcal X\cup\{\bot\}.
+ \label{eq:induced}
+\end{equation}
+Here $\mathcal X$ is the countable set of representable parsed numeric outputs.
+EOS and truncation are part of the sampling policy, rather than ignored
+formatting details.
+
+Continuous target draws are rounded to five decimal places, with grid spacing
+$\delta=10^{-5}$. For an underlying CDF $F_c$, the rounded target mass at a
+grid point $z$ is, up to zero-probability rounding ties,
+\begin{equation}
+ p_\delta(z\mid c)=F_c(z+\delta/2)-F_c(z-\delta/2).
+ \label{eq:rounded}
+\end{equation}
+Discrete targets use their integer-valued probability masses. Canonical
+continuous training answers have exactly five decimals, discrete answers are
+integers, and negative zero is canonicalized. Evaluation accepts other numeric
+spellings; canonical formatting is measured separately.
+
+Numeric validity and support validity are different. A finite numeric response
+with EOS is counted as numerically valid even if it lies outside the target
+support, or is noninteger for an integer-valued law. Such responses remain in
+KS and Wasserstein calculations and are separately flagged. The RL reward
+assigns them to its invalid category. For continuous support boundaries, a
+half-grid tolerance accounts for target rounding.
+
+At inference, unconstrained token sampling with logits $z_v$ and temperature
+$\tau$ uses $\pi_{\theta,\tau}(v)=\exp(z_v/\tau)/\sum_w\exp(z_w/\tau)$.
+Our experiments use $\tau=1$ without top-$p$ or top-$k$ truncation. Fine-tuning
+changes these probabilities; decoder pseudorandomness selects outcomes.
+For comparison, an ordinary numerical sampler can transform
+$U\sim\operatorname{Uniform}(0,1)$ into $X=F_c^{-1}(U)$. The present goal is
+to improve the language model's induced law, rather than replace that
+established sampling construction.
+
+\section{Training methods}
+\subsection{Sampled-target SFT baseline}
+For each training prompt $c$, we sample 32 independent answers from its target
+law using SciPy and append EOS. SFT minimizes completion-token cross-entropy;
+prompt and padding tokens are masked. For a minibatch $\mathcal B$,
+\begin{equation}
+ \mathcal L_{\mathrm{SFT}}(\theta;\mathcal B)=
+ -\frac{\sum_{(c,y)\in\mathcal B}\sum_{t=1}^{T(y)}
+   \log\pi_\theta(y_t\mid c,y_{<t})}
+ {\sum_{(c,y)\in\mathcal B}T(y)}.
+ \label{eq:sft}
+\end{equation}
+This is sampled-answer supervision, not an empirical-distribution RL reward.
+The trainable attention projections use LoRA updates
+\begin{equation}
+ W=W_0+\frac{\alpha_L}{r}BA,
+ \qquad r=16,\quad \alpha_L=32,
+ \label{eq:lora}
+\end{equation}
+with frozen base weights. The SFT adapter has 7,372,800 trainable parameters.
+LoRA dropout is 0.05 during SFT, and disabled during RL generation and scoring.
+
+\subsection{Target bins and empirical KL reward}
+For each prompt, we construct at most 32 numeric bins with approximately equal
+target mass. Continuous boundaries are based on rounded target quantiles;
+discrete boundaries lie between integer values. A finite discrete support
+with at most 32 points is represented exactly. Duplicate or zero-mass
+boundaries are removed. Appendix~\ref{app:bins} specifies the construction.
+
+Let $K$ be the number of numeric bins and $B=K+1$ include the invalid category.
+The target vector is $P_c=(p_1,\ldots,p_K,p_\bot)$ with
+\begin{equation}
+ p_j=\Pr_{X\sim p(\cdot\mid c)}(X\in B_j),\qquad p_\bot=0.
+\end{equation}
+For $N$ fresh independent completions $Y_{1:N}$, let $n_j$ be the count assigned
+to category $j$, including invalid completions in the total $N$. With
+$\alpha=0.1$, define
+\begin{align}
+ \widehat q_j&=\frac{n_j+\alpha}{N+\alpha B},\\
+ R_N(c,Y_{1:N})&=-\KL(P_c\Vert\widehat Q)
+ =-\sum_{j:p_j>0}p_j\log\frac{p_j}{\widehat q_j}.
+ \label{eq:reward}
+\end{align}
+All logarithms are natural. Smoothing prevents infinite costs for unobserved
+bins. Although the invalid category has zero target mass, invalid responses
+still reduce numeric-bin mass through the denominator. They are never
+discarded before computing the reward.
+
+This reward is a finite, smoothed histogram approximation. It is not the exact
+KL between a continuous target density and an empirical measure, nor an
+unbiased estimate of population histogram KL. The finite-$N$ objective and
+its limiting interpretation are given in Appendix~\ref{app:finite}.
+
+\subsection{Policy gradient and leave-one-out credit assignment}
+The target-reward objective is
+\begin{equation}
+ J_N(\theta)=\E_{c}\E_{Y_{1:N}\sim\pi_\theta(\cdot\mid c)}
+ [R_N(c,Y_{1:N})].
+ \label{eq:batchobjective}
+\end{equation}
+The score-function identity gives
+\begin{equation}
+ \nabla_\theta J_N=
+ \E\!\left[\sum_{i=1}^N(R_N-b_i)
+             \nabla_\theta\log\pi_\theta(Y_i\mid c)\right],
+ \quad b_i=R_{N-1}(c,Y_{-i}).
+ \label{eq:groupgradient}
+\end{equation}
+Conditional on $c$, the baseline depends on the other sampled completions
+but not on $Y_i$, so its score contribution has zero expectation. In
+$R_{N-1}$, both the removed count and the histogram normalization are
+recomputed. This estimator is unbiased for the gradient of
+Equation~\eqref{eq:batchobjective} under the ideal independent sampling model;
+that does not make its reward an unbiased population-KL estimator.
+
+We use scaled advantages $A_i=N(R_N-R_{N-1})$ to compensate for averaging the
+sequence losses. The reward is shared by a group, so assigning the same
+reward to every action and then subtracting that group's reward mean would
+produce zero advantages. No such within-group normalization is used.
+The implementation is on-policy REINFORCE, with no PPO clipping, value
+network, or GRPO reward normalization. Each rollout batch receives one
+optimizer update and is then discarded.
+
+\subsection{Separate reference-policy regularization}
+To limit drift, we keep a frozen copy $\pi_{\mathrm{ref}}$ of the initial SFT
+adapter, sharing the frozen base model. This reference is not the numeric
+target. The full objective is
+\begin{equation}
+ J_{\mathrm{total}}(\theta)=J_N(\theta)
+ -\beta\E_c\KL\!\left(\pi_\theta(\cdot\mid c)
+                  \Vert\pi_{\mathrm{ref}}(\cdot\mid c)\right),
+ \qquad \beta=0.02.
+ \label{eq:fullobjective}
+\end{equation}
+Define $\ell_i=\log\pi_\theta(Y_i\mid c)-\log\pi_{\mathrm{ref}}(Y_i\mid c)$.
+For $G$ prompt groups in an update, the implemented score-function surrogate is
+\begin{equation}
+ \widehat{\mathcal L}=
+ -\frac{1}{GN}\sum_{g=1}^{G}\sum_{i=1}^{N}
+ \sg\!\left[N(R_{g,N}-R_{g,-i})-\beta\ell_{g,i}\right]
+ \log\pi_\theta(Y_{g,i}\mid c_g).
+ \label{eq:surrogate}
+\end{equation}
+Completion log probabilities include EOS and exclude prompt tokens and
+padding. A capped unfinished completion includes every generated token and
+receives the invalid reward category. Appendix~\ref{app:reference} derives the
+reference-KL gradient. A sampled mean log-ratio can be negative even though
+its population expectation is a nonnegative KL.
+
+\subsection{One update in the implemented algorithm}
+\noindent\fbox{\begin{minipage}{0.955\linewidth}
+\small
+\textbf{Batch-KL REINFORCE update}\par\vspace{3pt}
+\begin{enumerate}
+\item Select $G=2$ prompts, cycling distribution families and sampling a
+training configuration within each selected family.
+\item For each prompt, generate $N=256$ independent capped completions with
+temperature 1, top-$p=1$, and top-$k$ disabled.
+\item Parse answers, assign numeric or invalid bins, and compute $R_N$ and
+the leave-one-out advantages $A_i$.
+\item With dropout disabled, recompute actor and frozen-reference completion
+log probabilities and differentiate Equation~\eqref{eq:surrogate} in
+microbatches of 16.
+\item Clip gradient norm at 1, take one AdamW update, and advance the learning
+rate schedule. Save all sampled actions, rewards, and advantages.
+\end{enumerate}
+\end{minipage}}
+
+\section{Experimental protocol}
+\subsection{Model, data, and held-out conditions}
+We use the \texttt{Qwen/Qwen2.5-3B} base checkpoint, pinned to revision
+\texttt{3aab1f1954e9} (the full identifier is recorded in the configs).
+All completed runs use BF16 on a single NVIDIA H200 without base-weight
+quantization. Training families are normal, uniform, exponential, beta,
+gamma, and binomial. There are 2,000 training configurations and 160
+validation configurations, with disjoint exact family/parameter tuples.
+The SFT dataset contains 64,000 answers; its validation set has eight answers
+per configuration. RL reuses training configurations but samples new model
+responses, rather than consuming the target-answer labels.
+
+The test set has 100 prompts: 34 with parameters outside training ranges,
+33 from held-out Weibull or Poisson families, and 33 using held-out prompt
+wording with familiar families. These conditions are mutually exclusive
+categories in this benchmark. Held-out families are absent from training and
+validation. The new-wording condition uses one unseen template, not a broad
+paraphrase benchmark. All exact family/parameter combinations are disjoint
+across splits. Appendix~\ref{app:distributions} lists the laws, parameter
+ranges, and prompt templates.
+
+\begin{table}[t]
+\centering\small
+\caption{Completed training settings. SFT and RL are sequential stages with
+different budgets, not equal-compute alternatives.}
+\label{tab:settings}
+\begin{tabular}{@{}p{0.39\linewidth}p{0.25\linewidth}p{0.25\linewidth}@{}}
+\toprule
+Setting & SFT & Batch-KL RL\\
+\midrule
+Updates & 2,000 & 250\\
+Training responses & 64,000 target answers & 128,000 model actions\\
+Learning rate & $2\times10^{-4}$ & $10^{-5}$\\
+AdamW weight decay & 0.01 & 0.01\\
+Schedule / warmup & Cosine / 3\% & Cosine / 3\%\\
+Update batch & 32 examples & 2 prompts $\times$ 256 draws\\
+Rollout batch / gradient microbatch & --- / 32 & 128 / 16\\
+LoRA rank / alpha & 16 / 32 & Existing 16 / 32 adapter\\
+Attention targets & $q,k,v,o$ projections & Same projections\\
+Adapter dropout & 0.05 & Disabled\\
+Training seed & 42 & 42\\
+Maximum sequence / new tokens & 128 / --- & 128 / 32\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Validation and checkpoint choice}
+RL uses the first 12 configurations in the disjoint validation split, with
+256 samples each at update 0 and every 25 updates. Their sampling seed
+(1731) is fixed and its RNG state isolated from training. The lowest
+validation mean KL occurs at update 225. The reported test evaluation uses
+the \emph{final} update-250 adapter, not that best validation checkpoint.
+The 20-update timing benchmark is discarded; production RL starts afresh
+from the original SFT adapter.
+
+\subsection{Independent-request evaluation}
+Each model is evaluated on the same 100 prompts with 1,000 generations per
+prompt: 100,000 responses per model, 300,000 across base, SFT, and RL. Each
+response starts from a fresh context containing only the prompt. Requests
+are batched in groups of up to 128 for throughput, with seed 12345,
+temperature 1, top-$p=1$, top-$k=0$ (disabled), one beam, repetition penalty
+1, and at most 32 new tokens. The models use the same base revision and
+evaluation cases. No grammar constraint, rejection sampling, resampling, or
+post-hoc correction repairs a response. Fixed seeds and matching settings
+do not imply identical response-by-response randomness after policies diverge,
+or bitwise reproducibility across hardware.
+
+\subsection{Evaluation metrics}
+Numeric validity is the fraction of all requests with a finite numeric-only
+answer terminated by EOS. Support violation rates are reported among those
+answers. For $m$ valid numeric outputs, let $\widehat F_m$ be their empirical
+CDF and $F_\delta$ the discrete or rounded target CDF. We report
+\begin{equation}
+ D_{\mathrm{KS}}=\sup_x|\widehat F_m(x)-F_\delta(x)|.
+ \label{eq:ks}
+\end{equation}
+The implementation checks both left and right CDF limits at sample values,
+which accommodates discrete atoms and repeated outputs. We do not attach
+continuous-null KS $p$-values to these discrete/rounded comparisons.
+
+For sorted samples $x_{(1)},\ldots,x_{(m)}$, let $u_i=(i-1/2)/m$.
+Wasserstein-1 distance is approximated by midpoint quantile matching and
+normalized by the target's 90\% interquantile width:
+\begin{equation}
+ \widehat W_1=\frac1m\sum_{i=1}^m
+ |x_{(i)}-Q_\delta(u_i)|,
+ \qquad
+ \nW=\frac{\widehat W_1}{Q_c(0.95)-Q_c(0.05)}.
+ \label{eq:wasserstein}
+\end{equation}
+$Q_\delta(u)$ is the rounded underlying quantile for continuous laws and the
+discrete quantile for integer laws. This is a numerical approximation, not
+the exact continuous Wasserstein integral. Both KS and Wasserstein are
+conditional on numeric validity and retain out-of-support numeric values.
+
+Test histogram KL uses Equation~\eqref{eq:reward}, recomputed post hoc from
+all 1,000 draws per prompt with the same target bins and pseudocount.
+Malformed, unfinished, noninteger discrete, and out-of-support answers remain
+in its invalid category. Its sample size differs from the 256-draw training
+and validation groups; their absolute KL values should not be compared
+directly. Means and medians aggregate prompts with equal prompt weight.
+
+\section{Results}
+\subsection{SFT establishes a strong formatting baseline}
+Table~\ref{tab:sft} summarizes the initial completed SFT experiment. Numeric
+validity rises from 6.838\% to 98.677\%, while conditional distribution
+distances decrease substantially. However, the base model reaches the token
+limit in 88.625\% of requests, and four base prompts produce no valid
+numeric answers. The base distance medians therefore use 96 cases, versus
+100 for SFT and RL. These differences preclude attributing the entire
+base-to-SFT gain to calibration rather than instruction following,
+formatting, and altered effective sample size.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Pretrained-to-SFT comparison. Distances condition on numeric validity.
+The numerical-sampler reference is matched to SFT valid sample counts and
+aggregates 20 repetitions per prompt; it is not a separate model.}
+\label{tab:sft}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Metric & Pretrained & SFT & SciPy reference\\
+\midrule
+Numeric validity & 6.838\% & 98.677\% & ---\\
+Median KS & 0.542819 & 0.139199 & 0.024720\\
+Median normalized Wasserstein & 1.685830 & 0.112249 & 0.011348\\
+Support violations among numeric & 19.874\% & 1.348\% & ---\\
+Prompts without valid samples & 4 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{RL yields a modest incremental test improvement}
+Table~\ref{tab:overall} compares SFT with the final RL adapter on the identical
+100-prompt test. Mean histogram KL, the direct aggregate counterpart of the
+training cost, decreases by 2.24\%. Median histogram KL decreases by
+11.29\%. These different reductions should not be conflated: the typical
+prompt's gain is larger than the gain in average KL. Median KS decreases
+8.90\% and median normalized Wasserstein decreases 9.76\%; their mean
+reductions are 2.83\% and 1.81\%, respectively.
+
+\begin{table}[htbp]
+\centering\small
+\caption{SFT-to-RL test comparison. All metrics are lower-is-better. Relative
+reduction is $100(1-\mathrm{RL}/\mathrm{SFT})$. There are 100 paired prompts
+and 1,000 draws per prompt per model.}
+\label{tab:overall}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Metric & Aggregate & SFT & SFT + RL & Reduction\\
+\midrule
+\input{tables/overall.tex}
+\end{tabular}
+\end{table}
+
+Histogram KL improves on 61 prompts and worsens on 39. Wasserstein improves
+on 65 and worsens on 35. KS improves on 59, worsens on 39, and is tied on
+two. Numeric validity changes from 98,677 to 98,591 valid responses out of
+100,000, a decrease of 0.086 percentage points. Support violations among
+numeric answers fall from 1,330 to 1,208 (1.348\% to 1.225\%). Thus the
+distributional changes coexist with almost unchanged response validity.
+
+\paragraph{Exploratory uncertainty.}
+We resample the 100 paired prompt indices with replacement 10,000 times
+(seed 90210), recomputing each aggregate difference. The percentile 95\%
+interval for the mean KL difference, RL minus SFT, is
+$[-0.008401,-0.001804]$. The median KL interval includes zero, as does the
+median Wasserstein interval. The median KS interval is barely negative.
+Full intervals appear in Appendix~\ref{app:extended}. These are exploratory
+prompt-bootstrap intervals for this fixed experiment, not across-seed
+uncertainty or a multiplicity-adjusted confirmation of general benefit.
+
+\subsection{Validation improves non-monotonically}
+Mean validation histogram KL changes from 0.070539 at update 0 to 0.065246
+at update 250, a 7.50\% decrease. The lowest recorded value is 0.064350 at
+update 225. Validation numeric validity is 100\% at all recorded probes.
+Figure~\ref{fig:training} shows noisy training groups and a non-monotonic
+validation trajectory. The training prompts vary, and validation and test
+have different prompt distributions, so these curves do not establish a
+smooth or universal calibration improvement. The sequence reference-KL
+estimate remains small but noisy; it is a separate quantity from the
+histogram target KL.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/training.pdf}
+\caption{Recorded RL trajectory. Each training point averages two 256-draw
+groups; validation uses 12 fixed held-out configurations. The reference
+curve estimates $\E\log(\pi_\theta/\pi_{\mathrm{ref}})$ from sampled
+completions; negative individual estimates are possible. Lines labeled
+20-update mean are trailing moving averages.}
+\label{fig:training}
+\end{figure}
+
+\subsection{Improvements vary across families and held-out conditions}
+Table~\ref{tab:families} shows all eight families. Normal and uniform median
+KS decrease by 10.7\% and 15.2\%; exponential and held-out Weibull median
+KS increase by 4.5\% and 6.3\%. Held-out Poisson improves 4.0\% on median
+KS. Family-level aggregates contain only 10--17 prompts, and combining
+them can hide different directions of change.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Per-family test medians. Stars denote families absent from training
+and validation. $n$ is the number of prompts, not the number of draws.}
+\label{tab:families}
+\begin{tabular}{@{}lr rrrr@{}}
+\toprule
+& & \multicolumn{2}{c}{KS} & \multicolumn{2}{c}{Normalized Wasserstein}\\
+\cmidrule(lr){3-4}\cmidrule(l){5-6}
+Family & $n$ & SFT & RL & SFT & RL\\
+\midrule
+\input{tables/families.tex}
+\end{tabular}
+\end{table}
+
+For unseen parameter ranges, both median KS and Wasserstein improve
+(Table~\ref{tab:categories}). The combined unseen-family category worsens
+on both medians, even though its mean histogram KL improves slightly.
+For new wording, mean histogram KL is nearly unchanged, median
+Wasserstein improves slightly, and median KS worsens. Different metrics
+therefore support different local conclusions. Numeric validity is 100\%
+for unseen-parameter and unseen-family prompts under both policies; for
+new wording, it falls from 95.991\% to 95.730\%.
+
+\begin{table}[htbp]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{Held-out category results. KL columns are means; KS and Wasserstein
+columns are medians. Test categories are disjoint.}
+\label{tab:categories}
+\begin{tabular}{@{}lr rrrrrr@{}}
+\toprule
+& & \multicolumn{2}{c}{Histogram KL} & \multicolumn{2}{c}{KS} &
+\multicolumn{2}{c}{Normalized $W_1$}\\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(l){7-8}
+Category & $n$ & SFT & RL & SFT & RL & SFT & RL\\
+\midrule
+\input{tables/categories.tex}
+\end{tabular}
+\end{table}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{figures/ecdf.pdf}
+\caption{Illustrative empirical CDFs, using the first test case of each of
+four displayed families, rather than selecting the largest gains.
+Normal and uniform are unseen-parameter cases; Weibull and Poisson are
+unseen-family cases. Each curve uses valid numeric responses from 1,000
+requests. Horizontal limits span target quantiles 0.001--0.999; complete
+metrics retain all numeric outputs. These examples do not summarize all
+prompts or certify independence.}
+\label{fig:ecdf}
+\end{figure}
+
+\subsection{Compute and implementation checks}
+The SFT Slurm job takes 4m50s, including a recorded training loop of
+253.73 seconds. The RL job takes 22m34s, with 1,329.90 seconds recorded
+inside the RL loop and its validation/checkpoint work. Final RL evaluation
+takes 5m43s, and the preceding 20-update benchmark takes 2m20s. These
+are observed single-H200 durations, excluding scheduler queue time.
+They are not throughput guarantees for other workloads.
+
+The local suite passes 44 tests, including numerical KL checks,
+enumeration of the toy group-policy gradient, categorical-target
+convergence, the reference-KL score gradient, EOS/padding masks, a frozen
+reference adapter, and tiny-model checkpoint/resume integration. These
+checks support implementation correctness; they are not substitutes for
+replicated scientific experiments.
+
+\FloatBarrier
+\input{helpsteer.tex}
+\FloatBarrier
+\input{mmd.tex}
+\FloatBarrier
+\input{new_results.tex}
+\FloatBarrier
+\section{Discussion and limitations}
+\paragraph{The result is a pilot, not a controlled comparison of algorithms.}
+RL receives additional compute after SFT. We have not run an equal-compute
+SFT continuation, a format-only control, a direct soft-KL full-model
+experiment, multiple training seeds, or an ablation of reference
+regularization and leave-one-out credit assignment. The experiment cannot
+establish that RL is uniquely responsible for the gains or is more
+efficient than supervised alternatives. Test prompts are not used for
+optimization or checkpoint choice, but repeated future use of this test
+set would weaken its value as an untouched benchmark.
+
+\paragraph{The reward sees coarse marginal structure.}
+Bin matching does not determine within-bin density, exact numerical precision,
+or the magnitude of values inside open-ended tail bins. Finite batches and
+pseudocount smoothing introduce bias and variance. Good histogram reward
+can therefore coexist with errors in KS, Wasserstein, tails, and support.
+We do not claim an exact KL between continuous laws. Generalization to
+unseen numerical families is mixed. The numerical results alone do not
+establish natural-language transfer; the completed text studies use
+different targets and instruction-model initializations.
+The MMD variant compares answer-feature distributions within the exact
+question. Its two-reference target and frozen representation impose
+different limitations. The completed semantic trials do not establish
+reliable simultaneous gains in distribution matching and answer quality.
+CPU sensitivity checks alone do not establish semantic correctness or
+diversity in generated text.
+
+\paragraph{The model remains substantially worse than a numerical sampler.}
+A SciPy reference, rounded identically and matched to SFT valid counts,
+has median KS 0.024720 and normalized Wasserstein 0.011348 over 20
+repetitions per prompt. The RL medians are approximately 5.1 and 8.9
+times these values. This reference is a finite-sample scale comparison,
+not an exact lower bound or an RL-specific sample-count-matched control.
+For explicit mathematical distributions, ordinary numerical samplers
+remain the appropriate operational baseline.
+
+\paragraph{Randomness, independence, and retention are separate claims.}
+Training reshapes how a policy uses decoder pseudorandomness; it does
+not create a new entropy source. A deterministic decoding procedure
+cannot sample a nondegenerate target merely because weights were
+fine-tuned. Fresh contexts remove conversational feedback between
+requests but do not constitute a comprehensive statistical test of
+independence, serial correlation, or cryptographic unpredictability.
+We also do not measure general language ability or reasoning retention.
+
+\section{Conclusion}
+In one Qwen2.5-3B experiment, sampled-target SFT establishes a usable
+numeric-output baseline, and a subsequent batch-KL-reward REINFORCE stage
+adds a small average improvement in held-out distribution fidelity.
+The average test KL reduction is 2.24\%, with larger median reductions
+and heterogeneous transfer. The most useful next experiments are
+replicated seeds, equal-compute supervised controls, and explicit tests
+of tail accuracy, dependence, and capability retention. The current
+evidence supports further investigation of distribution-level rewards,
+without establishing a reliable general-purpose internal sampler.
+The completed text sequence shows that improvements depend on the target
+and measurement protocol. Shakespeare trials improve their training judge
+and lexical matching, but the HelpSteer word-target and semantic trials do
+not establish robust joint quality/distribution gains. Conditional MMD
+addresses prompt relevance while matching only two equal-weight reference
+prototypes. The early energy-matching improvement largely disappears with
+longer training; removing quality yields only a modest fitting signal on
+four seen questions, without demonstrated generalization. Replicated,
+matched-budget comparisons against quality-only RL and SFT on the same
+references, plus task correctness and human evaluation, are needed.
+
+\begin{samepage}
+\section*{Reproducibility and research assistance}
+The public repository contains source, configs, recorded per-prompt metrics,
+all 200,000 SFT/RL test generations, text-policy evaluation samples, and
+W\&B links. The numerical-study snapshot is commit \texttt{27fad3e};
+completed text records are included through \texttt{deb5c8e}, with the
+local character-frequency audit separately hashed. Configs, compact
+dataset manifests, audit reports, comparison JSONs and implementation
+hashes are included in the source archive. Tables and vector figures
+are generated from recorded files; the new semantic question-bootstrap
+analysis is reproducible with its saved seed and per-question CSV.
+Appendix~\ref{app:records} provides numerical version and artifact
+details. Code development, analysis, and manuscript drafting were assisted
+by an AI coding assistant. No additional full-model experiment was run
+to prepare this manuscript.
+\end{samepage}
+
+\clearpage
+\begingroup
+\small
+\setlength{\bibsep}{3pt}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\endgroup
+\clearpage
+\appendix
+\input{appendix.tex}
+\end{document}

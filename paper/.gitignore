@@ -1,0 +1,11 @@
+/build/
+/output/
+/tmp/
+*.aux
+*.log
+*.out
+*.blg
+*.toc
+*.fdb_latexmk
+*.fls
+/controlled-stochasticity.pdf

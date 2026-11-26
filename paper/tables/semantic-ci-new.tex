@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption{Final minus base mean changes [95\% paired question-bootstrap intervals]. 10,000 resamples of 19 question-level estimates, seed 20261122. Negative discrepancy changes and positive quality changes are favorable. All intervals include zero; they exclude training-seed and reference-population uncertainty.}\label{tab:semantic-ci-new}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Policy & $\Delta$ Gaussian & $\Delta$ energy & $\Delta r_Q$\\
+\midrule
+Gaussian v1 (94) & -0.0089 [-0.0346, +0.0154] & -0.0061 [-0.0397, +0.0278] & -0.0065 [-0.0405, +0.0270]\\
+Calibrated Gaussian (50) & +0.0155 [-0.0073, +0.0369] & +0.0252 [-0.0067, +0.0580] & -0.0081 [-0.0472, +0.0302]\\
+Energy (53) & -0.0220 [-0.0480, +0.0056] & -0.0266 [-0.0623, +0.0089] & +0.0039 [-0.0307, +0.0385]\\
+Energy continued (200) & -0.0018 [-0.0246, +0.0216] & -0.0017 [-0.0321, +0.0289] & +0.0244 [-0.0142, +0.0632]\\
+\bottomrule
+\end{tabular}
+\end{table}

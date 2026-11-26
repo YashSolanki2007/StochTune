@@ -1,0 +1,23 @@
+{
+  "source_job_id": "504124",
+  "calibration_steps": [
+    1,
+    10
+  ],
+  "calibration_question_groups": 40,
+  "target_cost_level": 1.0,
+  "kernel_scales": {
+    "rbf": 2.297182451426459,
+    "energy": 1.7710087347953098
+  },
+  "objective_loss_divisor": 1.502,
+  "source_reference_vectors_sha256": "5b45d5c95292dac9a67b4e46b6b9f33ea1ebcbd0e04de44edfb6040567167033",
+  "source_semantic_metadata_sha256": "efbcea45a91b40604e71ee02d6e16853a69205acb13f6aa47fabc0c6845fa6bd",
+  "source_training_replay_sha256": "c4846a146fa60c162cf78dab2c6e0ca4ffd837dcbee1941dc4458af81b26b214",
+  "source_run_config_sha256": "0832b935d542e9565e6f8739673f68871d05f4a9bbd8d9553b21217153c8ad96",
+  "encoder_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "encoder_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "calibration_policy": "Early training policies from saved steps, not a newly sampled fixed base policy",
+  "fixed_after_calibration": true,
+  "selection_uses_final_test_answers": false
+}

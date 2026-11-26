@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Initial short-answer HelpSteer subset: each arm completed 200 updates and 3,200 training answers. Evaluation: 16 prompts, two answers each; cap 384 tokens.}\label{tab:subset-new}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Policy & $\lambda$ & Word KL & $r_Q$ & EOS (\%)\\
+\midrule
+Instruction base & --- & 2.7988 & 0.3663 & 59.4\\
+Quality only & 0.0 & 2.8067 & 0.3293 & 53.1\\
+Quality + word KL & 0.1 & 2.8444 & 0.3623 & 59.4\\
+Quality + word KL & 0.5 & 2.8801 & 0.3461 & 56.2\\
+\bottomrule
+\end{tabular}
+\end{table}

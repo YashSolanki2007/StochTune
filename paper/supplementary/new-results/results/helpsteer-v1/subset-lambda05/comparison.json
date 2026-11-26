@@ -1,0 +1,41 @@
+{
+  "arm": "quality-unigram",
+  "distribution_weight": 0.5,
+  "baseline": {
+    "quality_reward_mean": 0.36631303779469004,
+    "raw_preference_reward_mean": 1.998046875,
+    "distribution_kl": 2.7987760354972577,
+    "unigram_kl": 2.7987760354972577,
+    "unknown_unigram_rate": 0.2784956605593057,
+    "passages": 32,
+    "terminated_rate": 0.59375,
+    "mean_word_count": 162.03125,
+    "independent_coherence": 3.751818038523197,
+    "independent_readability": 3.839953824877739,
+    "independent_prompt_fulfillment": 3.8458190634846687
+  },
+  "final": {
+    "quality_reward_mean": 0.34611439615149153,
+    "raw_preference_reward_mean": 2.0329666137695312,
+    "distribution_kl": 2.8800916755499486,
+    "unigram_kl": 2.8800916755499486,
+    "unknown_unigram_rate": 0.2897825668654993,
+    "passages": 32,
+    "terminated_rate": 0.5625,
+    "mean_word_count": 162.40625,
+    "independent_coherence": 3.8223224505782127,
+    "independent_readability": 3.873652383685112,
+    "independent_prompt_fulfillment": 3.841338090598583
+  },
+  "training_updates": 200,
+  "training_passages": 3200,
+  "stop_reason": "step_limit",
+  "elapsed_seconds": 1688.2739479120355,
+  "human_validated": false,
+  "reward_trained_on_human_preferences": true,
+  "limitations": [
+    "One training seed; generated outputs lack human evaluation.",
+    "Auditor is a separate same-family 7B model, not human ground truth.",
+    "Finite-batch KL is biased and sample-count dependent."
+  ]
+}

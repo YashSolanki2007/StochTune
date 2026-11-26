@@ -5,12 +5,8 @@ import random
 from collections import Counter
 
 import numpy as np
-from common import REPO, ROOT, BucketedWordDistribution, words
+from common import REPO, ROOT, BucketedWordDistribution, read_rows, words
 from prepare import write_json
-
-
-def read_rows(path):
-    return [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
 
 
 def chunks(tokens, width):

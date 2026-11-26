@@ -24,7 +24,7 @@ from quality import FrozenQualityJudge
 from torch.nn.parallel import DistributedDataParallel as DDP
 from transformers import get_cosine_schedule_with_warmup
 
-from stochastic_llm.rl import completion_log_probs
+from stochastic_llm.rl import completion_log_probs, completion_token_log_probs
 
 
 class SequencePolicy(torch.nn.Module):
@@ -34,8 +34,18 @@ class SequencePolicy(torch.nn.Module):
         super().__init__()
         self.actor = actor
 
-    def forward(self, rows, pad_token_id):
+    def forward(self, rows, pad_token_id, token_level=False):
+        if token_level:
+            return completion_token_log_probs(self.actor, rows, pad_token_id)
         return completion_log_probs(self.actor, rows, pad_token_id)
+
+
+def configured_world_size(cfg):
+    """Keep historical two-rank profiles, with explicitly configured four-rank support."""
+    size = cfg.get("distributed_world_size", 2)
+    if isinstance(size, bool) or size not in (2, 4):
+        raise ValueError("distributed_world_size must be two or four")
+    return size
 
 
 def gather_objects(value):

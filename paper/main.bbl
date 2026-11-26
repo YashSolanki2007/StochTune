@@ -1,0 +1,134 @@
+\begin{thebibliography}{17}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ahmadian et~al.(2024)Ahmadian, Cremer, Gall{\'e}, Fadaee, Kreutzer,
+  Pietquin, {\"U}st{\"u}n, and Hooker]{ahmadian2024}
+Arash Ahmadian, Chris Cremer, Matthias Gall{\'e}, Marzieh Fadaee, Julia
+  Kreutzer, Olivier Pietquin, Ahmet {\"U}st{\"u}n, and Sara Hooker.
+\newblock Back to basics: Revisiting {REINFORCE} style optimization for
+  learning from human feedback in {LLMs}, 2024.
+\newblock URL \url{https://arxiv.org/abs/2402.14740}.
+
+\bibitem[Baldelli et~al.(2026)Baldelli, Kuriakose, Hashemzadeh, Zouaq, and
+  Chandar]{baldelli2026calibration}
+Davide Baldelli, Sruthi Kuriakose, Maryam Hashemzadeh, Amal Zouaq, and Sarath
+  Chandar.
+\newblock Probabilistic calibration is a trainable capability in language
+  models, 2026.
+\newblock URL \url{https://arxiv.org/abs/2605.11845}.
+
+\bibitem[Bradley and Terry(1952)]{bradley1952}
+Ralph~Allan Bradley and Milton~E. Terry.
+\newblock Rank analysis of incomplete block designs: {I}. the method of paired
+  comparisons.
+\newblock \emph{Biometrika}, 39\penalty0 (3/4):\penalty0 324--345, 1952.
+\newblock \doi{10.1093/biomet/39.3-4.324}.
+
+\bibitem[Diamant and Trippe(2026)]{diamant2026kcgm}
+Nathaniel~L. Diamant and Brian~L. Trippe.
+\newblock Calibrating generative models to feature distributions with {MMD}
+  finetuning, 2026.
+\newblock URL \url{https://arxiv.org/abs/2606.19496}.
+
+\bibitem[Gretton et~al.(2012)Gretton, Borgwardt, Rasch, Sch{\"o}lkopf, and
+  Smola]{gretton2012}
+Arthur Gretton, Karsten~M. Borgwardt, Malte~J. Rasch, Bernhard Sch{\"o}lkopf,
+  and Alexander Smola.
+\newblock A kernel two-sample test.
+\newblock \emph{Journal of Machine Learning Research}, 13\penalty0
+  (25):\penalty0 723--773, 2012.
+\newblock URL \url{https://jmlr.org/papers/v13/gretton12a.html}.
+
+\bibitem[Hu et~al.(2021)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and
+  Chen]{hu2021lora}
+Edward~J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean
+  Wang, Lu~Wang, and Weizhu Chen.
+\newblock {LoRA}: Low-rank adaptation of large language models, 2021.
+\newblock URL \url{https://arxiv.org/abs/2106.09685}.
+
+\bibitem[Kuriakose and Baldelli(2026)]{kuriakose2026blog}
+Sruthi Kuriakose and Davide Baldelli.
+\newblock Training language models for controlled stochasticity.
+\newblock LessWrong, May 26, May 2026.
+\newblock URL
+  \url{https://www.lesswrong.com/posts/upCrcE39aF63GoLJh/training-language-models-for-controlled-stochasticity-2}.
+
+\bibitem[Lin(1991)]{lin1991}
+Jianhua Lin.
+\newblock Divergence measures based on the shannon entropy.
+\newblock \emph{IEEE Transactions on Information Theory}, 37\penalty0
+  (1):\penalty0 145--151, 1991.
+\newblock \doi{10.1109/18.61115}.
+\newblock URL \url{https://www.cise.ufl.edu/~anand/sp06/jensen-shannon.pdf}.
+
+\bibitem[Ouyang et~al.(2022)Ouyang, Wu, Jiang, Almeida, Wainwright, Mishkin,
+  et~al.]{ouyang2022}
+Long Ouyang, Jeff Wu, Xu~Jiang, Diogo Almeida, Carroll~L. Wainwright, Pamela
+  Mishkin, et~al.
+\newblock Training language models to follow instructions with human feedback,
+  2022.
+\newblock URL \url{https://arxiv.org/abs/2203.02155}.
+
+\bibitem[{Qwen Team}(2025)]{qwen2025}
+{Qwen Team}.
+\newblock {Qwen2.5} technical report, 2025.
+\newblock URL \url{https://arxiv.org/abs/2412.15115}.
+
+\bibitem[Sejdinovic et~al.(2013)Sejdinovic, Sriperumbudur, Gretton, and
+  Fukumizu]{sejdinovic2013}
+Dino Sejdinovic, Bharath Sriperumbudur, Arthur Gretton, and Kenji Fukumizu.
+\newblock Equivalence of distance-based and {RKHS}-based statistics in
+  hypothesis testing.
+\newblock \emph{The Annals of Statistics}, 41\penalty0 (5):\penalty0
+  2263--2291, 2013.
+\newblock \doi{10.1214/13-AOS1140}.
+\newblock URL \url{https://arxiv.org/abs/1207.6076}.
+
+\bibitem[{Sentence Transformers}(2021)]{minilmcard}
+{Sentence Transformers}.
+\newblock {all-MiniLM-L6-v2}: Model card, 2021.
+\newblock URL
+  \url{https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2}.
+\newblock Pinned model revision recorded in the supplementary MMD protocol.
+
+\bibitem[Smith et~al.(2026)Smith, Diamant, and Trippe]{kcgmcode}
+Henry Smith, Nathaniel Diamant, and Brian Trippe.
+\newblock Calibrating generative models: Author implementation, 2026.
+\newblock URL \url{https://github.com/smithhenryd/cgm}.
+\newblock Implementation consulted for the kCGM-inspired adaptation; accessed
+  November 22, 2026.
+
+\bibitem[Wang et~al.(2024{\natexlab{a}})Wang, Bukharin, Delalleau, Egert, Shen,
+  Zeng, Kuchaiev, and Dong]{wang2024preference}
+Zhilin Wang, Alexander Bukharin, Olivier Delalleau, Daniel Egert, Gerald Shen,
+  Jiaqi Zeng, Oleksii Kuchaiev, and Yi~Dong.
+\newblock {HelpSteer2-Preference}: Complementing ratings with preferences,
+  2024{\natexlab{a}}.
+\newblock URL \url{https://arxiv.org/abs/2410.01257}.
+
+\bibitem[Wang et~al.(2024{\natexlab{b}})Wang, Dong, Delalleau, Zeng, Shen,
+  Egert, Zhang, Sreedhar, and Kuchaiev]{wang2024helpsteer}
+Zhilin Wang, Yi~Dong, Olivier Delalleau, Jiaqi Zeng, Gerald Shen, Daniel Egert,
+  Jimmy~J. Zhang, Makesh~Narsimhan Sreedhar, and Oleksii Kuchaiev.
+\newblock {HelpSteer2}: Open-source dataset for training top-performing reward
+  models, 2024{\natexlab{b}}.
+\newblock URL \url{https://arxiv.org/abs/2406.08673}.
+
+\bibitem[Williams(1992)]{williams1992}
+Ronald~J. Williams.
+\newblock Simple statistical gradient-following algorithms for connectionist
+  reinforcement learning.
+\newblock \emph{Machine Learning}, 8:\penalty0 229--256, 1992.
+\newblock \doi{10.1007/BF00992696}.
+
+\bibitem[Zhao et~al.(2026)Zhao, Du, and Wang]{zhao2026dice}
+Minda Zhao, Yilun Du, and Mengyu Wang.
+\newblock Large language models are bad dice players: {LLMs} struggle to
+  generate random numbers from statistical distributions, 2026.
+\newblock URL \url{https://arxiv.org/abs/2601.05414}.
+
+\end{thebibliography}

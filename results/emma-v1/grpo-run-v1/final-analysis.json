@@ -1,0 +1,41 @@
+{
+  "job_id": "520789",
+  "source_sha256": {
+    "comparison.json": "a58867dd80dd252c2cadeb6ffde135b1bee5502d234dc261789135be9ee565d2",
+    "baseline-samples.jsonl": "03d5359dba4ce17ddefa8bef5768a99202449819e263e4195b26dce507f0ebef",
+    "final-samples.jsonl": "1eb296e0710220aa2694e3278dacc28caa0352db5ddbfa71f9250431fc5f860b"
+  },
+  "heldout_prompts": 16,
+  "answers_per_prompt": 4,
+  "seed": 20261124,
+  "count_matching_resamples": 2000,
+  "matched_word_count": 17734,
+  "count_matching": {
+    "baseline": {
+      "words": 17734,
+      "matched_mean_kl": 0.4882204943910953
+    },
+    "final": {
+      "words": 18220,
+      "matched_mean_kl": 0.49095217062998897
+    }
+  },
+  "quality_delta": 0.012677163506547615,
+  "quality_delta_ci95": [
+    -0.026428106465997758,
+    0.049168308537142984
+  ],
+  "quality_prompts_improved": 10,
+  "prompt_bootstrap_resamples": 10000,
+  "pooled_target_kl_delta_ci95": [
+    -0.05501162929176701,
+    0.05829253047835225
+  ],
+  "mean_second_pass_clip_fraction": 0.0013795651643372007,
+  "limitations": [
+    "One seed, sixteen fixed prompts; quality evaluated by the training judge.",
+    "Prompt bootstrap conditions on saved generations and ignores within-chapter clustering.",
+    "Count matching does not remove histogram-KL bias or passage dependence.",
+    "No matched REINFORCE control has been run."
+  ]
+}

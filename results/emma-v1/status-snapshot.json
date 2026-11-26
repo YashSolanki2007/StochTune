@@ -1,9 +1,16 @@
 {
   "job_id": "519712",
-  "observed_at_utc": "2026-11-25T02:33:06.641333+00:00",
-  "state": "PENDING",
-  "reason": "Priority",
+  "observed_at_utc": "2026-11-25T05:01:13+00:00",
+  "state": "FAILED",
+  "reason": "Unicode U+2028 incorrectly split by str.splitlines in validation postprocessing",
   "policy_results_available": false,
-  "cpu_tests_passed_locally": 12,
-  "cpu_tests_passed_on_cluster": 12
+  "cpu_tests_passed_locally": 15,
+  "cpu_tests_passed_on_cluster": 15,
+  "training_steps_completed": 80,
+  "training_passages": 1280,
+  "validation_results_recovered": true,
+  "latest_saved_checkpoint": 70,
+  "final_test_available": false,
+  "fix_deployed": true,
+  "new_gpu_job_submitted": false
 }

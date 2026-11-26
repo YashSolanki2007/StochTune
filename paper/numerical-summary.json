@@ -1,0 +1,88 @@
+{
+  "statistics": {
+    "normalized_wasserstein": {
+      "sft_median": 0.11224881420891114,
+      "rl_median": 0.10128999065855111,
+      "relative_median_reduction_percent": 9.762974894295173,
+      "sft_mean": 0.2024515850396885,
+      "rl_mean": 0.19879159696857202,
+      "relative_mean_reduction_percent": 1.8078337447439474,
+      "prompts_improved": 65,
+      "prompts_worsened": 35,
+      "prompts_tied": 0,
+      "paired_bootstrap_median_difference_95pct": [
+        -0.01694579648707535,
+        0.002673700421013267
+      ],
+      "paired_bootstrap_mean_difference_95pct": [
+        -0.006756251395148801,
+        -0.0006839765027563537
+      ]
+    },
+    "ks_statistic": {
+      "sft_median": 0.13919862991061402,
+      "rl_median": 0.12681120185287417,
+      "relative_median_reduction_percent": 8.899101999563063,
+      "sft_mean": 0.18716159005909133,
+      "rl_mean": 0.1818654131399155,
+      "relative_mean_reduction_percent": 2.829734945884843,
+      "prompts_improved": 59,
+      "prompts_worsened": 39,
+      "prompts_tied": 2,
+      "paired_bootstrap_median_difference_95pct": [
+        -0.02216359733301651,
+        -1.1291718176931198e-05
+      ],
+      "paired_bootstrap_mean_difference_95pct": [
+        -0.008375201507190646,
+        -0.0021715110626027855
+      ]
+    },
+    "target_histogram_kl": {
+      "sft_median": 0.1191343217219549,
+      "rl_median": 0.1056877119395544,
+      "relative_median_reduction_percent": 11.286931916885601,
+      "sft_mean": 0.22771296626599236,
+      "rl_mean": 0.2226063513426038,
+      "relative_mean_reduction_percent": 2.2425665991384625,
+      "prompts_improved": 61,
+      "prompts_worsened": 39,
+      "prompts_tied": 0,
+      "paired_bootstrap_median_difference_95pct": [
+        -0.02197261395148908,
+        0.0007395016217211364
+      ],
+      "paired_bootstrap_mean_difference_95pct": [
+        -0.008400899744127928,
+        -0.0018036547157872112
+      ]
+    }
+  },
+  "category_mean_kl": {
+    "unseen_parameters": {
+      "sft_mean_kl": 0.08228593241832259,
+      "rl_mean_kl": 0.07169675737930958
+    },
+    "unseen_family": {
+      "sft_mean_kl": 0.20071774825219066,
+      "rl_mean_kl": 0.1960954318505659
+    },
+    "paraphrase": {
+      "sft_mean_kl": 0.40454209794102947,
+      "rl_mean_kl": 0.40459988279682346
+    }
+  },
+  "scipy_reference": {
+    "repeats_per_case": 20,
+    "seed": 7391,
+    "sample_sizes": "Matched to each SFT case's valid response count",
+    "median_ks": 0.02472043555128714,
+    "median_normalized_wasserstein": 0.011347915436193725
+  },
+  "illustrative_case_ids": [
+    "test-00000",
+    "test-00003",
+    "test-00001",
+    "test-00004"
+  ]
+}

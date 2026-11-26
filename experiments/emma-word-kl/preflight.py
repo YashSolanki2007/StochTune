@@ -4,11 +4,11 @@ import hashlib
 import json
 
 import numpy as np
-from common import ROOT, BucketedWordDistribution
+from common import ROOT, BucketedWordDistribution, read_rows
 
 
 def rows(path):
-    return [json.loads(s) for s in path.read_text().splitlines() if s.strip()]
+    return read_rows(path)
 
 
 def preflight():
