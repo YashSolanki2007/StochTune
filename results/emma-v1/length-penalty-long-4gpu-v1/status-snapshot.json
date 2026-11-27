@@ -1,16 +1,16 @@
 {
   "job_id": "530088",
-  "observed_at_utc": "2026-11-27T00:43:22.507955+00:00",
-  "state": "PENDING",
-  "elapsed": "0:00",
-  "estimated_start_cluster_pacific": "2026-11-26T22:57:40",
-  "reason": "(Priority)",
+  "observed_at_utc": "2026-11-27T19:40:09.720574+00:00",
+  "state": "RUNNING",
+  "training_steps": 279,
+  "training_passages": 4464,
   "target_steps": 500,
-  "target_training_passages": 8000,
   "gpus": 4,
-  "maximum_wall_seconds": 10800,
-  "maximum_gpu_hours": 12,
-  "online_wandb_required": true,
-  "training_results_available": false,
-  "initialization": "fresh pinned actor"
+  "latest_validation_step": 250,
+  "interim_validation_available": true,
+  "final_test_results_available": false,
+  "wandb_run": {
+    "id": "n2y0l8ok",
+    "url": "https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm/runs/n2y0l8ok"
+  }
 }

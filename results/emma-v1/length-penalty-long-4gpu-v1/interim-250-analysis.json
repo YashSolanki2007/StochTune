@@ -1,0 +1,37 @@
+{
+  "source_job_id": "530088",
+  "evaluation_step": 250,
+  "evaluation_split": "validation",
+  "prompts": 8,
+  "answers_per_prompt": 4,
+  "seed": 20261127,
+  "count_matching_resamples": 2000,
+  "matched_words": 9488,
+  "count_matching": {
+    "baseline": {
+      "observed_words": 9488,
+      "matched_mean_kl": 0.736906745745906
+    },
+    "step_250": {
+      "observed_words": 10832,
+      "matched_mean_kl": 0.7079002107917165
+    }
+  },
+  "raw_quality_delta": 0.0613132019837697,
+  "raw_quality_delta_ci95": [
+    0.03746522062768536,
+    0.08500454698999718
+  ],
+  "source_sha256": {
+    "validation-0-samples.jsonl": "857bf46cded6ebc18dacfd372cdb8aa813b55f000a1b7b7060afb271110360e7",
+    "validation-250-samples.jsonl": "05394036ee0d656ca4a3303f7ecff0535f5ee509d5155ce5b09437d732173e47",
+    "validation-0-metrics.json": "7f5070d962024735e8871d69ce03f4cc984ac1a9325d4a93295ffe53169b6209",
+    "validation-250-metrics.json": "c95d4d8bd8ca2c2837871c0081e20367acebd54f145b4ef827fe0d061fe6b4ad"
+  },
+  "limitations": [
+    "Interim validation at step 250, not final test results.",
+    "One seed and eight validation prompts; bootstrap conditions on saved answers.",
+    "Quality uses the training judge, not independent human ratings.",
+    "Count matching is a sensitivity diagnostic, not a histogram bias correction."
+  ]
+}

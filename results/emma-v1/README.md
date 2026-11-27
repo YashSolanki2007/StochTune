@@ -2,9 +2,10 @@
 
 ## Latest status (November 26, 2026)
 
-- **Submitted:** longer length-control job 530088, fresh actor, target 500 updates /
+- **Running:** longer length-control job 530088, fresh actor, target 500 updates /
   8,000 answers on four H200s; three-hour / 12 GPU-hour maximum. All 43 cluster
-  CPU checks passed. Results pending; online W&B required.
+  CPU checks passed. Step-250 validation: raw quality 0.8083 → 0.8697,
+  equal-word KL 3.94% lower; length control mixed. Final test results pending.
   See [submission and comparison plan](length-penalty-long-4gpu-v1/).
 
 - **Completed:** job 524624, 500 REINFORCE updates / 8,000 answers on four H200s,
