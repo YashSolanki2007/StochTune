@@ -402,3 +402,16 @@ protocol are unchanged. Rank-dependent generation seeds differ, so the two
 world sizes are not guaranteed to generate identical passages. Training may
 reach its time deadline before 100 steps; final checkpoint/evaluation reserves
 remain enforced.
+
+## Longer length-control run submitted
+
+After the completed two-GPU pilot, the user approved the longer four-H200
+experiment. Job **530088**, isolated at `emma-reinforce-length-500-4gpu-v1`,
+targets 500 updates / 8,000 training answers with a three-hour cap. It uses
+`length_profile()` with no pilot stop override and a fresh pinned actor,
+matching the prior unpenalized four-rank 500-step schedule. The penalty,
+target PMF and KL coefficients stay fixed. All 43 CPU checks passed on Tillicum;
+online W&B is required. This run does not resume or overwrite the pilot.
+The archived unsubmitted draft is retained; only the new isolated runtime
+was submitted. Results remain pending. See
+[submission and comparison plan](../../results/emma-v1/length-penalty-long-4gpu-v1/).

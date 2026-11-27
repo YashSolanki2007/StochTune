@@ -1,0 +1,16 @@
+{
+  "job_id": "530088",
+  "observed_at_utc": "2026-11-27T00:43:22.507955+00:00",
+  "state": "PENDING",
+  "elapsed": "0:00",
+  "estimated_start_cluster_pacific": "2026-11-26T22:57:40",
+  "reason": "(Priority)",
+  "target_steps": 500,
+  "target_training_passages": 8000,
+  "gpus": 4,
+  "maximum_wall_seconds": 10800,
+  "maximum_gpu_hours": 12,
+  "online_wandb_required": true,
+  "training_results_available": false,
+  "initialization": "fresh pinned actor"
+}

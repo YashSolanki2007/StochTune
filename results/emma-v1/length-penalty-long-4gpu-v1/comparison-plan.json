@@ -1,0 +1,45 @@
+{
+  "comparison_job": "524624",
+  "matching_parameters": {
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "judge_model": "Qwen/Qwen2.5-7B-Instruct",
+    "judge_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "seed": 42,
+    "steps": 500,
+    "warmup_steps": 50,
+    "learning_rate": 5e-06,
+    "weight_decay": 0.01,
+    "global_group_size": 16,
+    "prompts_per_group": 4,
+    "distributed_world_size": 4,
+    "requested_gpus": 4,
+    "policy_update": "reinforce",
+    "quality_baseline": "prompt-loo",
+    "distribution_weight": 0.1,
+    "reference_kl_beta": 0.002,
+    "lora_rank": 16,
+    "lora_alpha": 32,
+    "max_new_tokens": 1024,
+    "temperature": null,
+    "validation_every": 50,
+    "checkpoint_every": 25,
+    "eval_samples_per_prompt": 4,
+    "validation_prompt_count": 8,
+    "test_prompt_count": 16
+  },
+  "all_listed_parameters_match": true,
+  "changed_reward": {
+    "length_penalty_weight": 0.2,
+    "length_min_words": 250,
+    "length_max_words": 350,
+    "length_penalty_unit_words": 100
+  },
+  "initialization": "fresh pinned instruction actor, not resumed from two-GPU pilot",
+  "selection": "preselected final step 500, or last completed step if time limit reached",
+  "limitations": [
+    "One seed; reuse of previously inspected test prompts makes final comparisons exploratory.",
+    "Quality uses the training judge, not independent human ratings.",
+    "Equal-word-budget KL is a sensitivity diagnostic, not a bias correction."
+  ]
+}

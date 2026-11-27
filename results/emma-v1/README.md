@@ -2,6 +2,11 @@
 
 ## Latest status (November 26, 2026)
 
+- **Submitted:** longer length-control job 530088, fresh actor, target 500 updates /
+  8,000 answers on four H200s; three-hour / 12 GPU-hour maximum. All 43 cluster
+  CPU checks passed. Results pending; online W&B required.
+  See [submission and comparison plan](length-penalty-long-4gpu-v1/).
+
 - **Completed:** job 524624, 500 REINFORCE updates / 8,000 answers on four H200s,
   2h17m20s elapsed. Raw judge quality 0.7826 → 0.8806; mean words 273.5 → 416.2;
   count-matched word KL 0.5112 → 0.5661 and JSD 0.06643 → 0.06943 both worsen.
