@@ -1,12 +1,13 @@
 # Emma experiment record
 
-## Latest status (November 26, 2026)
+## Latest status (November 27, 2026)
 
-- **Running:** longer length-control job 530088, fresh actor, target 500 updates /
-  8,000 answers on four H200s; three-hour / 12 GPU-hour maximum. All 43 cluster
-  CPU checks passed. Step-250 validation: raw quality 0.8083 → 0.8697,
-  equal-word KL 3.94% lower; length control mixed. Final test results pending.
-  See [submission and comparison plan](length-penalty-long-4gpu-v1/).
+- **Completed:** longer length-control job 530088, 500 updates / 8,000 answers
+  on four H200s, 1h59m14s elapsed, exit 0:0. Final test compliance is 60.9%,
+  versus 23.4% unpenalized; raw judge quality 0.83388 versus 0.88062 unpenalized
+  and 0.78261 base. Equal-word KL 0.55886 remains above base's 0.51122;
+  JSD also worsens. No joint quality/distribution success is established.
+  See [final results and comparison analysis](length-penalty-long-4gpu-v1/).
 
 - **Completed:** job 524624, 500 REINFORCE updates / 8,000 answers on four H200s,
   2h17m20s elapsed. Raw judge quality 0.7826 → 0.8806; mean words 273.5 → 416.2;

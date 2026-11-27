@@ -1,0 +1,78 @@
+{
+  "source_job_id": "530088",
+  "control_job_id": "524624",
+  "evaluation_split": "test",
+  "training_steps": 500,
+  "training_answers": 8000,
+  "prompts": 16,
+  "answers_per_prompt": 4,
+  "matched_word_count": 17506,
+  "count_matching_resamples": 2000,
+  "bootstrap_resamples": 10000,
+  "seed": 20261126,
+  "identical_base_generations_verified": true,
+  "results": {
+    "baseline": {
+      "raw_quality": 0.7826051075632373,
+      "mean_words": 273.53125,
+      "in_range": 25,
+      "under_250": 29,
+      "over_350": 10,
+      "same_length_penalty_mean": 0.06525,
+      "raw_word_kl": 0.5112199262058019,
+      "observed_words": 17506,
+      "count_matched_kl": 0.5112199262058021
+    },
+    "with_length": {
+      "raw_quality": 0.833881595171988,
+      "mean_words": 320.171875,
+      "in_range": 39,
+      "under_250": 7,
+      "over_350": 18,
+      "same_length_penalty_mean": 0.03453125,
+      "raw_word_kl": 0.5282838968543656,
+      "observed_words": 20491,
+      "count_matched_kl": 0.5588592044020345
+    },
+    "without_length": {
+      "raw_quality": 0.8806151210640868,
+      "mean_words": 416.21875,
+      "in_range": 15,
+      "under_250": 0,
+      "over_350": 49,
+      "same_length_penalty_mean": 0.15175,
+      "raw_word_kl": 0.5027828157346053,
+      "observed_words": 26638,
+      "count_matched_kl": 0.566113273935508
+    }
+  },
+  "comparisons": {
+    "with_length_minus_baseline": {
+      "raw_quality_delta": 0.051276487608750664,
+      "raw_quality_prompt_bootstrap_ci95": [
+        0.007210448671442772,
+        0.09419810199954856
+      ],
+      "prompts_improved": 10
+    },
+    "with_length_minus_without_length": {
+      "raw_quality_delta": -0.046733525892098754,
+      "raw_quality_prompt_bootstrap_ci95": [
+        -0.0711079820369681,
+        -0.02203493451233954
+      ],
+      "prompts_improved": 4
+    }
+  },
+  "source_sha256": {
+    "baseline": "149671d1920d47afdc816863a8422d4f6cbd49ab6e398295a0a6ef8bba209fd2",
+    "with_length": "d53dbd569f0d32aeb29c5cbea7decac394eea1e46a0e12eaddcf78f53aa3bf87",
+    "without_length": "7b1c405bb21e5239e56d30e3c87f1c625b1c5e67246f2fe96fac9c3567aca929"
+  },
+  "limitations": [
+    "One training seed; quality is assessed by the training judge, not independent humans.",
+    "Bootstrap intervals condition on saved outputs and prompts, not training-run variation.",
+    "Count matching is a sensitivity diagnostic, not a KL bias correction.",
+    "Test prompts have been inspected in earlier experiments; this is an exploratory comparison."
+  ]
+}

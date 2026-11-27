@@ -1,5 +1,41 @@
 # Longer length-penalty run: job 530088
 
+## Final result: November 27, 2026
+
+Completed 500 updates / 8,000 training answers in 1h59m14s on four H200s
+(7.949 GPU-hours), exit 0:0. Checkpoint 500 and W&B artifacts were saved.
+The final evaluation uses 16 test prompts × four answers (64 per policy).
+The base generations are identical between the two 500-step experiments.
+
+| Metric | Base | Without length penalty, job 524624 | With length penalty, job 530088 |
+|---|---:|---:|---:|
+| Raw training-judge quality | 0.782605 | 0.880615 | 0.833882 |
+| In 250–350-word band | 25/64 | 15/64 | 39/64 |
+| Under 250 words | 29/64 | 0/64 | 7/64 |
+| Over 350 words | 10/64 | 49/64 | 18/64 |
+| Mean words | 273.531 | 416.219 | 320.172 |
+| Same-formula length penalty | 0.065250 | 0.151750 | 0.034531 |
+| Raw target word KL | 0.511220 | 0.502783 | 0.528284 |
+| Equal-17,506-word-budget KL | 0.511220 | 0.566113 | 0.558859 |
+| Word JSD | 0.066426 | 0.069427 | 0.072532 |
+
+Length compliance improves strongly over the unpenalized run. Raw judge quality
+is above base but below the unpenalized policy. Its prompt-bootstrap change
+interval is [0.007210, 0.094198] versus base and [-0.071108, -0.022035] versus
+the unpenalized run (10,000 resamples, seed 20261126). These intervals condition
+on saved generations, not training-run variation.
+
+Equal-word-budget KL is 9.32% worse than base, and only 1.28% better than the
+unpenalized run; JSD is worse than both. The encouraging step-250 validation
+matching result did not establish final test improvement. This is evidence of
+a length/quality tradeoff, not successful joint quality/distribution control.
+
+`final-analysis.json` contains the 2,000 count-matching resamples' aggregate,
+settings, source hashes and limitations. One training seed, a training-model
+judge, and previously inspected test prompts make this exploratory evidence.
+Count matching is a sensitivity diagnostic, not KL bias correction. The
+following submission and interim records are preserved for provenance.
+
 Submitted November 26, 2026 after the user requested the longer four-GPU run.
 Target: 500 REINFORCE updates / 8,000 training answers on four H200s, capped
 at three hours / 12 GPU-hours. No automatic retries or continuation. See

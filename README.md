@@ -2,7 +2,7 @@
 
 Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
-This repository records numeric SFT and batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments. The latest completed **Emma REINFORCE run (job 524624) finished 500 updates / 8,000 answers on four H200s**: training-judge quality increased from **0.7826 to 0.8806**, but mean length grew from **274 to 416 words**, and equal-word-budget KL worsened from **0.5112 to 0.5661**. This does **not** establish successful joint quality/distribution control. An earlier custom GRPO pilot showed small, uncertain changes. The **100-step length-penalty pilot (job 529144) completed**: validation length compliance rose from **43.8% to 59.4%**, raw judge quality was essentially unchanged, and equal-word-budget KL fell **2.55%**. This is a small, eight-prompt validation result, not a confirmed test-set gain. A fresh **500-step, four-H200 length-control run (job 530088)** is running. At its step-250 validation probe, raw judge quality rose from 0.8083 to 0.8697 and equal-word-budget KL fell 3.94%; length control remains mixed. Final test results are pending. The optional direct soft-target KL trainer remains implemented but unrun.
+This repository records numeric SFT and batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments. The latest **Emma length-control run (job 530088) completed 500 updates / 8,000 answers on four H200s in 1h59m14s**. Compared with the unpenalized 500-step run, length compliance improved from **23.4% to 60.9%**, but raw training-judge quality declined from **0.8806 to 0.8339** (still above the base model's **0.7826**). Equal-word-budget KL is **0.5589**, versus **0.5661** without the penalty and **0.5112** for base; final JSD also worsens. The penalty controls length, but these results **do not establish successful joint quality/distribution matching**. Earlier pilot and interim validation gains did not establish final test gains. The optional direct soft-target KL trainer remains implemented but unrun.
 
 See [References and acknowledgments](#references-and-acknowledgments) for the papers, original blog, datasets, models, and implementations informing this work.
 
@@ -29,7 +29,7 @@ See [References and acknowledgments](#references-and-acknowledgments) for the pa
 | Emma custom GRPO | Fresh Qwen2.5-3B-Instruct; prompt-LOO quality and coupled word-KL credits; clipped two-pass updates | Job 520789: 80 batches / 1,280 answers / 160 optimizer steps; two H200s, 39m39s | Judge quality 0.8011 → 0.8137; raw KL 0.4882 → 0.4857, but count-matched KL and JSD worsen |
 | Emma longer REINFORCE | Fresh actor; prompt-LOO quality, word KL λ = 0.1, base-policy KL β = 0.002 | Job 524624: 500 updates / 8,000 answers; four H200s, 2h17m20s | Judge quality improves; answers become longer; equal-word-budget KL worsens |
 | Emma length-penalty pilot | Same REINFORCE objective plus fixed 250–350-word penalty | Job 529144: completed 100 steps / 1,600 answers; two H200s, 42m34s | Validation compliance 43.8% → 59.4%; raw judge quality unchanged; equal-word KL 2.55% lower |
-| Emma longer length-control RL | Fresh actor; same 500-step four-GPU setup as job 524624, plus the fixed length penalty | Job 530088: running; 500-step / 8,000-answer target; four H200s, three-hour cap | Interim step-250 validation: quality higher, equal-word KL 3.94% lower; mixed length control; final results pending |
+| Emma longer length-control RL | Fresh actor; same 500-step four-GPU setup as job 524624, plus the fixed length penalty | Job 530088: completed 500 updates / 8,000 answers; four H200s, 1h59m14s | Better length compliance than the unpenalized run, lower judge quality; equal-word KL remains worse than base |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
 The passage runs use actual on-policy REINFORCE updates to LoRA weights. The Shakespeare quality scorer is a frozen instruction-model judge, without preference training in this project. The later HelpSteer stages use a trained Bradley–Terry scorer or an audited pretrained reward model. Generated-answer evaluations remain **model-judged, not human-validated outcomes**.
@@ -81,15 +81,26 @@ halved, but 13/32 answers still fall outside the requested band. The quality-cha
 95% prompt-bootstrap interval is [-0.0532, 0.0510]. These are exploratory
 validation results using the training judge; a matched unpenalized control is
 needed to isolate the penalty effect.
-The user subsequently approved a fresh 500-step four-H200 run. **Job 530088**
-is submitted with a three-hour / 12 GPU-hour maximum. It starts from the
-original actor, matching job 524624's model, seed, batch and optimizer schedule;
-the two-GPU checkpoint remains saved. [Submission and comparison plan](results/emma-v1/length-penalty-long-4gpu-v1/)
-record the exact configuration. The run is active on November 27. At step 250, raw validation judge quality
-is 0.80834 → 0.86965, equal-word-budget KL is 0.73691 → 0.70790, and JSD
-is 0.08463 → 0.08365. Length compliance is 20/32 → 21/32, but overlength
-answers increase 5/32 → 9/32. These are interim eight-prompt validation
-measurements, not final test results.
+The longer four-H200 run, **job 530088**, completed 500 updates / 8,000 answers
+in **1h59m14s**, using 7.949 GPU-hours of the 12-GPU-hour cap. It starts from
+the original actor, matching job 524624's model, seed, batch and optimizer
+schedule. See the [final results and comparison plan](results/emma-v1/length-penalty-long-4gpu-v1/).
+
+On the same 16 test prompts × four answers, the new run achieves **39/64 in
+range**, versus **15/64 without the penalty** and **25/64 for base**. Overlength
+answers fall from 49/64 without the penalty to 18/64; mean length falls from
+416.2 to 320.2 words. Raw judge quality is 0.83388, above base's 0.78261 but
+below the unpenalized run's 0.88062. Equal-17,506-word-budget KL is 0.55886,
+versus 0.56611 unpenalized and 0.51122 base. JSD is 0.07253, versus 0.06943
+unpenalized and 0.06643 base. The earlier step-250 validation matching gain
+did not establish final test improvement. The length penalty produces a clear
+length/quality tradeoff; distribution matching remains unresolved.
+
+The raw-quality change's prompt-bootstrap 95% interval is [0.0072, 0.0942]
+versus base and [-0.0711, -0.0220] versus the unpenalized run. These condition
+on saved answers from one seed. Test prompts have been previously inspected,
+and quality uses the training judge; this is exploratory, not independent
+human validation.
 
 - [Pilot submission, exact config and CPU checks](results/emma-v1/length-penalty-pilot-2gpu-v1/)
 - [Coefficient calibration](experiments/emma-word-kl/length-penalty-calibration.json)
