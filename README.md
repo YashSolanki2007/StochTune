@@ -2,7 +2,7 @@
 
 Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
-This repository records numeric SFT and batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments. The latest completed **Emma REINFORCE run (job 524624) finished 500 updates / 8,000 answers on four H200s**: training-judge quality increased from **0.7826 to 0.8806**, but mean length grew from **274 to 416 words**, and equal-word-budget KL worsened from **0.5112 to 0.5661**. This does **not** establish successful joint quality/distribution control. An earlier custom GRPO pilot showed small, uncertain changes. A **100-step length-penalty pilot (job 529144)** is submitted and **queued as of November 26, 2026**; no pilot policy results are available. The optional direct soft-target KL trainer remains implemented but unrun.
+This repository records numeric SFT and batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments. The latest completed **Emma REINFORCE run (job 524624) finished 500 updates / 8,000 answers on four H200s**: training-judge quality increased from **0.7826 to 0.8806**, but mean length grew from **274 to 416 words**, and equal-word-budget KL worsened from **0.5112 to 0.5661**. This does **not** establish successful joint quality/distribution control. An earlier custom GRPO pilot showed small, uncertain changes. The **100-step length-penalty pilot (job 529144) completed**: validation length compliance rose from **43.8% to 59.4%**, raw judge quality was essentially unchanged, and equal-word-budget KL fell **2.55%**. This is a small, eight-prompt validation result, not a confirmed test-set gain. The optional direct soft-target KL trainer remains implemented but unrun.
 
 See [References and acknowledgments](#references-and-acknowledgments) for the papers, original blog, datasets, models, and implementations informing this work.
 
@@ -28,7 +28,7 @@ See [References and acknowledgments](#references-and-acknowledgments) for the pa
 | Emma quality + unigram RL | Fresh Qwen2.5-3B-Instruct; frozen 7B fiction judge; word KL λ = 0.1 | Job 519712: 80 updates / 1,280 answers; two H200s, 34m09s | Validation matching improves modestly; postprocessing failure fixed on CPU; final test unavailable |
 | Emma custom GRPO | Fresh Qwen2.5-3B-Instruct; prompt-LOO quality and coupled word-KL credits; clipped two-pass updates | Job 520789: 80 batches / 1,280 answers / 160 optimizer steps; two H200s, 39m39s | Judge quality 0.8011 → 0.8137; raw KL 0.4882 → 0.4857, but count-matched KL and JSD worsen |
 | Emma longer REINFORCE | Fresh actor; prompt-LOO quality, word KL λ = 0.1, base-policy KL β = 0.002 | Job 524624: 500 updates / 8,000 answers; four H200s, 2h17m20s | Judge quality improves; answers become longer; equal-word-budget KL worsens |
-| Emma length-penalty pilot | Same REINFORCE objective plus fixed 250–350-word penalty | Job 529144: queued; 100-step target / 1,600 answers; two H200s, 90-minute cap | No results yet; online W&B required; no automatic continuation |
+| Emma length-penalty pilot | Same REINFORCE objective plus fixed 250–350-word penalty | Job 529144: completed 100 steps / 1,600 answers; two H200s, 42m34s | Validation compliance 43.8% → 59.4%; raw judge quality unchanged; equal-word KL 2.55% lower |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
 The passage runs use actual on-policy REINFORCE updates to LoRA weights. The Shakespeare quality scorer is a frozen instruction-model judge, without preference training in this project. The later HelpSteer stages use a trained Bradley–Terry scorer or an audited pretrained reward model. Generated-answer evaluations remain **model-judged, not human-validated outcomes**.
@@ -72,8 +72,14 @@ at **100 updates / 1,600 training answers**, retaining the 500-step cosine sched
 and 50-step warmup. Checkpoints preserve adapters, optimizer, scheduler and RNG
 state. Evaluation uses validation prompts at 0/50/100; final pilot probes also
 use validation, reserving the test split. **All 43 cluster CPU checks passed.**
-W&B access is verified and online logging is mandatory. As last checked on
-November 26, the job is **queued for priority**, with no new policy results.
+The pilot **completed on November 26 in 42m34s (1.419 GPU-hours)**, with W&B synced.
+On eight validation prompts × four answers, compliance increased from 14/32 to
+19/32, raw quality was 0.80725 → 0.80704, and equal-9,449-word-budget KL was
+0.74742 → 0.72833. JSD fell from 0.08560 to 0.08270. The mean length penalty
+halved, but 13/32 answers still fall outside the requested band. The quality-change
+95% prompt-bootstrap interval is [-0.0532, 0.0510]. These are exploratory
+validation results using the training judge; a matched unpenalized control is
+needed to isolate the penalty effect.
 The earlier 500-step length-control draft remains unsubmitted; continuation
 requires a later decision.
 

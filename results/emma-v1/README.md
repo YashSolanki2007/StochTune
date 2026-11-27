@@ -8,11 +8,12 @@
   See [saved generations, metrics and analysis](reinforce-long-4gpu-v1/).
 - **Completed:** custom GRPO job 520789, 80 rollout batches / 160 optimizer steps;
   small, uncertain changes. See [results](grpo-run-v1/).
-- **Queued:** length-penalty pilot job 529144; target 100 updates / 1,600 answers,
+- **Completed:** length-penalty pilot job 529144; 100 updates / 1,600 answers,
   two H200s, 90-minute / 3 GPU-hour maximum. All 43 cluster CPU checks passed.
   The 500-step LR schedule is preserved; no automatic continuation or retry.
   Replaces job 529095, cancelled while pending. W&B is mandatory.
-  No pilot training results are available at this snapshot.
+  Completed in 42m34s; validation compliance 43.8% → 59.4%, raw judge quality
+  0.80725 → 0.80704, equal-word KL 0.74742 → 0.72833. W&B synced.
   See [submission and pilot protocol](length-penalty-pilot-2gpu-v1/).
 
 Quality uses the frozen training judge, not independent human ratings. Equal-word

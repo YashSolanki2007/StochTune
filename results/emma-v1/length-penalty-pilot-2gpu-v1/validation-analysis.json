@@ -1,0 +1,89 @@
+{
+  "source_job_id": "529144",
+  "evaluation_split": "validation",
+  "prompts": 8,
+  "answers_per_prompt": 4,
+  "seed": 20261126,
+  "count_matching_resamples": 2000,
+  "quality_bootstrap_resamples": 10000,
+  "steps": {
+    "0": {
+      "raw_judge_quality": 0.8072499396900336,
+      "adjusted_quality": 0.7421249396900336,
+      "distribution_kl": 0.743017271746121,
+      "jsd": 0.08560133603453052,
+      "mean_words": 300.78125,
+      "in_range": 14,
+      "under_250": 10,
+      "over_350": 8,
+      "length_penalty_mean": 0.065125,
+      "matched_words": 9625,
+      "count_matched_kl": {
+        "baseline": 0.7430172717461209,
+        "checkpoint": 0.7430172717461209
+      },
+      "raw_quality_delta": 0.0,
+      "raw_quality_delta_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "50": {
+      "raw_judge_quality": 0.80325296583275,
+      "adjusted_quality": 0.75044046583275,
+      "distribution_kl": 0.6798987150993772,
+      "jsd": 0.08066031325811965,
+      "mean_words": 301.4375,
+      "in_range": 15,
+      "under_250": 7,
+      "over_350": 10,
+      "length_penalty_mean": 0.052812500000000005,
+      "matched_words": 9625,
+      "count_matched_kl": {
+        "baseline": 0.7430172717461209,
+        "checkpoint": 0.6804138099578304
+      },
+      "raw_quality_delta": -0.003996973857283592,
+      "raw_quality_delta_ci95": [
+        -0.06609957354764144,
+        0.06080164636174838
+      ]
+    },
+    "100": {
+      "raw_judge_quality": 0.8070352791498104,
+      "adjusted_quality": 0.7748477791498105,
+      "distribution_kl": 0.7283337703123491,
+      "jsd": 0.08269636700355906,
+      "mean_words": 295.28125,
+      "in_range": 19,
+      "under_250": 6,
+      "over_350": 7,
+      "length_penalty_mean": 0.0321875,
+      "matched_words": 9449,
+      "count_matched_kl": {
+        "baseline": 0.7474174871172099,
+        "checkpoint": 0.7283337703123494
+      },
+      "raw_quality_delta": -0.00021466054022314593,
+      "raw_quality_delta_ci95": [
+        -0.05320432471732303,
+        0.051013677691419915
+      ]
+    }
+  },
+  "source_sha256": {
+    "validation-0-metrics.json": "239269a1a5a3f8fa7d1165312fb06b34ca48ed2c5f6ee0796610f9c4aec772a1",
+    "validation-0-samples.jsonl": "5f20fa8243d2c40bbbe727ccff1c6a980f6e04f9efdadb9f336399a22068cfa8",
+    "validation-50-metrics.json": "5c9b9a66d34cf2a2ad3a1aba7ee7c18fafac8a7b427d868352df0a5c5efa1b3a",
+    "validation-50-samples.jsonl": "c5f1e163ccf5e090baaafa4f8003596e0ec0418d9ef4819545aba4495cef3a6c",
+    "validation-100-metrics.json": "21391beaaf5633c344bfacaa132a8b4fddbdb803a32d04a846848036e29611c1",
+    "validation-100-samples.jsonl": "4b4bf35d87c6b608d6a15f817ba875da9ca799180247226c566940de187e675e"
+  },
+  "limitations": [
+    "One seed; eight validation prompts with four answers each.",
+    "Quality uses the training judge, not independent human evaluation.",
+    "Question bootstrap conditions on saved generations; no multiple-comparison correction.",
+    "Word-count matching is a sensitivity diagnostic, not a KL bias correction.",
+    "These comparisons do not isolate the length penalty from other training effects without a matched unpenalized control."
+  ]
+}
