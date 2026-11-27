@@ -2,6 +2,11 @@
 
 ## Latest status (November 27, 2026)
 
+- **Prepared, not run:** nine-configuration reward-weight grid, with validation-only
+  ranking and 150/400/1,000-step checkpoint promotions. No GPU approval or jobs.
+  See [reviewable preparation](grid-search-preparation-v1/) and
+  [workflow/resource ceilings](../../experiments/emma-word-kl/GRID_SEARCH.md).
+
 - **Completed:** longer length-control job 530088, 500 updates / 8,000 answers
   on four H200s, 1h59m14s elapsed, exit 0:0. Final test compliance is 60.9%,
   versus 23.4% unpenalized; raw judge quality 0.83388 versus 0.88062 unpenalized

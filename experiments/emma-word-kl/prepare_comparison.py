@@ -10,13 +10,19 @@ from stage_runtime import stage
 
 def profiles():
     shared = config()
+    for key in list(shared):
+        if key.startswith(("search_", "resume_")):
+            shared.pop(key)
     # Historical allocation authorization does not transfer to a new experiment.
     for key in (
         "previous_cancelled_job",
         "previous_allocation_elapsed_seconds",
         "cumulative_maximum_gpu_hours",
-        "length_penalty_weight", "length_min_words", "length_max_words",
-        "length_penalty_unit_words", "length_penalty_calibration_file",
+        "length_penalty_weight",
+        "length_min_words",
+        "length_max_words",
+        "length_penalty_unit_words",
+        "length_penalty_calibration_file",
         "length_penalty_calibration_sha256",
         "stop_after_steps",
         "final_evaluation_split",
@@ -31,6 +37,10 @@ def profiles():
         checkpoint_every=10,
         quality_baseline="prompt-loo",
         advantage_normalization="none",
+        distribution_weight=0.1,
+        reference_kl_beta=0.002,
+        validation_prompt_count=8,
+        test_prompt_count=16,
         grpo_loss_normalization="sequence-sum",
         grpo_reference_penalty="frozen-sequence-credit",
         grpo_passes=2,

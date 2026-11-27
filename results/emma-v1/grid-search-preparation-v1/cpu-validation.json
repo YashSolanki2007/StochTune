@@ -1,0 +1,39 @@
+{
+  "prepared_at_utc": "2026-11-27T22:40:04.735363+00:00",
+  "status": "implementation_complete_waiting_for_user_gpu_approval",
+  "jobs_submitted": 0,
+  "gpu_submission_authorized": false,
+  "execution_environment": "local CPU only; no cluster/GPU allocation",
+  "cpu_tests_passed": 49,
+  "cpu_test_elapsed_seconds": 15.317,
+  "initial_trial_preflights_passed": 9,
+  "plan_sha256": "0c422cc778df463fed95c8b0e323de692d13272ce514651af935671eff95b4c9",
+  "source_sha256": {
+    "experiments/emma-word-kl/grid_search.py": "36a84422800f19aadf95fb8c73c863c26a59ea74c7b6304ea5cd7f69d8ca329a",
+    "experiments/emma-word-kl/test_grid_search.py": "71bda2e9218cc9902f04c629afd0c75cfae75dc584e1f834bbd23a4ccc8af1f2",
+    "experiments/emma-word-kl/preflight_gpu.py": "efd9cfaf9ffccc7fdc22dd3cecee72e10b3c1e99083f6f1761f09fa15e45e7ce",
+    "experiments/emma-word-kl/stage_runtime.py": "b733bd762fc76955df22e67afd957b3aa4aef274e003e40fb080f7a2cf9c9a02",
+    "experiments/emma-word-kl/prepare_comparison.py": "a2e905ad1b596690a00e93567be2ee1ded6664eeb161e25bf29f9000ac334cd0",
+    "experiments/helpsteer-rl-v2/resume_policy.py": "440dfcf4661b1f0b64c2b3de77232412fa4b90c9a26017f0d0e609831f1c43b1",
+    "experiments/emma-word-kl/policy.sbatch": "af2eb59844e46f9e94eb036387cfe23515179cbb76a0d3eb5887ab7c67d46385",
+    "experiments/helpsteer-rl-v2/common.py": "1f502b5c2e7aa6270202cc4bcf1c3c33dcc9b21aaf979c843f6b6226819848d8"
+  },
+  "coverage": [
+    "Actual grid runtime refuses GPU launch without approval",
+    "All nine fixed profiles pass CPU preflight",
+    "16-prompt/64-answer validation identity and sample-derived metrics checked",
+    "All 150/400/1000 selection and promotion stages exercised with synthetic CPU fixtures",
+    "Full tiny AdamW/scheduler and four-rank RNG checkpoint metadata bound to promotions",
+    "Incomplete trials, test-split results, changed plans/data/code/metrics and altered decisions rejected",
+    "Existing distributed policy updates, resume, length reward and evaluation regression tests pass",
+    "Actual Slurm launch body tested with a mock interpreter for old and nested layouts; no allocation requested",
+    "Installed sequence-likelihood implementation digest checked before trial use"
+  ],
+  "proposed_stage_caps_gpu_hours": {
+    "rung_150": 54,
+    "rung_400": 24,
+    "rung_1000": 40,
+    "full_search": 118
+  },
+  "confirmation_seeds_included": false
+}

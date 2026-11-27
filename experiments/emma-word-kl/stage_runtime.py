@@ -39,6 +39,16 @@ def stage(output, config_path=None):
         shutil.copy2(source, output / dest)
     if cfg is not None:
         (output / "run-config.json").write_text(json.dumps(cfg, indent=2) + "\n")
+        if cfg.get("search_plan_file"):
+            from grid_search import digest, read
+
+            name = cfg["search_plan_file"]
+            if name != "grid-search-plan.json":
+                raise ValueError("Unexpected search plan filename")
+            source_plan = config_path.parent / name
+            if digest(read(source_plan)) != cfg["search_plan_sha256"]:
+                raise ValueError("Search plan hash mismatch")
+            shutil.copy2(source_plan, output / name)
         from preflight_gpu import allocation_limits
 
         limits = allocation_limits(cfg)

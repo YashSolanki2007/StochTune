@@ -13,6 +13,7 @@ RESUME_METADATA_FIELDS = {
     "final_evaluation_split",
     "requested_allocation_seconds",
     "evaluation_reserve_seconds",
+    "search_rung",
     "gpu_submission_authorized",
     "approved_allocation_seconds",
     "approved_maximum_gpus",

@@ -30,6 +30,7 @@ See [References and acknowledgments](#references-and-acknowledgments) for the pa
 | Emma longer REINFORCE | Fresh actor; prompt-LOO quality, word KL λ = 0.1, base-policy KL β = 0.002 | Job 524624: 500 updates / 8,000 answers; four H200s, 2h17m20s | Judge quality improves; answers become longer; equal-word-budget KL worsens |
 | Emma length-penalty pilot | Same REINFORCE objective plus fixed 250–350-word penalty | Job 529144: completed 100 steps / 1,600 answers; two H200s, 42m34s | Validation compliance 43.8% → 59.4%; raw judge quality unchanged; equal-word KL 2.55% lower |
 | Emma longer length-control RL | Fresh actor; same 500-step four-GPU setup as job 524624, plus the fixed length penalty | Job 530088: completed 500 updates / 8,000 answers; four H200s, 1h59m14s | Better length compliance than the unpenalized run, lower judge quality; equal-word KL remains worse than base |
+| Reward-weight grid search | Nine combinations of word-KL and length weights; quality weight fixed at 1 | Implemented and CPU-tested; no GPU jobs submitted | Awaiting explicit approval; staged validation-only selection and checkpoint-bound promotion |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
 The passage runs use actual on-policy REINFORCE updates to LoRA weights. The Shakespeare quality scorer is a frozen instruction-model judge, without preference training in this project. The later HelpSteer stages use a trained Bradley–Terry scorer or an audited pretrained reward model. Generated-answer evaluations remain **model-judged, not human-validated outcomes**.
@@ -108,6 +109,26 @@ human validation.
 - [W&B project](https://forge.coreweave.com/wandb/yash2007-university-of-washington/stochastic-llm)
 - [LaTeX report sources](paper/README.md) — report scope is through November 22;
   the newer Emma results above are not yet incorporated into that manuscript.
+
+## Reward-weight search prepared, awaiting approval
+
+A CPU-only [grid-search workflow](experiments/emma-word-kl/GRID_SEARCH.md) now
+prepares nine combinations: word-KL weights **0.1 / 0.3 / 1.0** and length
+weights **0 / 0.2 / 0.4**, with quality weight 1 and reference-policy KL 0.002.
+It retains the current setting as a control and progresses **nine trials at
+150 steps → three at 400 → two at 1,000**, preserving a 1,000-step schedule,
+optimizer and RNG state. Selection uses raw validation KL subject to frozen
+quality/compliance criteria, not differently weighted training rewards.
+The validation panel expands to sixteen prompts × four answers; test outputs
+are excluded. Plans, training-code/data hashes and promotion inputs are checked.
+
+**No search job is submitted or authorized.** The proposed initial-stage ceiling
+is **54 GPU-hours** (nine four-H200 allocations capped at 90 minutes each).
+Conditional intermediate/final-stage ceilings are 24 and 40 GPU-hours, for
+**118 GPU-hours total maximum** before any separate seed-confirmation runs.
+These are allocation ceilings; estimated training-only usage is substantially
+lower, with setup/evaluation overhead and generation speed uncertain.
+See the [reviewable preparation record](results/emma-v1/grid-search-preparation-v1/).
 
 ## Emma: source stability and the submitted word-KL experiment
 

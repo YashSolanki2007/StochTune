@@ -10,7 +10,12 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parent
-REPO = ROOT.parents[1]
+# Grid trials may be nested below an experiment group. Keep source artifacts
+# rooted at the actual checkout when it is available, with the historical
+# fallback for standalone exported runtimes.
+REPO = next(
+    (p for p in ROOT.parents if (p / "src/stochastic_llm/rl.py").is_file()), ROOT.parents[1]
+)
 SUPPORT = ROOT / "support"
 if not SUPPORT.exists():
     SUPPORT = REPO / "experiments/shakespeare-quality-pilot"

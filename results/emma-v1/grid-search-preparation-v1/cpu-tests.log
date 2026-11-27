@@ -1,0 +1,9 @@
+{"staged": "/var/folders/t9/rlnr3dw171ncpld24t8ltrgh0000gn/T/tmpaabeig14/runtime", "files": 70, "gpu_submission": false}
+{"staged": "/var/folders/t9/rlnr3dw171ncpld24t8ltrgh0000gn/T/tmpg31ml_85/runtime", "files": 70, "gpu_submission": false}
+{"staged": "/var/folders/t9/rlnr3dw171ncpld24t8ltrgh0000gn/T/tmpru0o1mwg/runtime", "files": 70, "gpu_submission": false}
+{"staged": "/var/folders/t9/rlnr3dw171ncpld24t8ltrgh0000gn/T/tmpoe_tx158/runtime", "files": 70, "gpu_submission": false}
+{"staged": "/var/folders/t9/rlnr3dw171ncpld24t8ltrgh0000gn/T/tmpdi4ds2bu/runtime", "files": 70, "gpu_submission": false}
+----------------------------------------------------------------------
+Ran 49 tests in 15.317s
+
+OK

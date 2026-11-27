@@ -12,6 +12,10 @@ ROOT = Path(__file__).resolve().parent
 def allocation_limits(cfg):
     """Fixed ceilings for the original pilot and the separately proposed long run."""
     profile = cfg.get("experiment_profile")
+    if profile == "emma-grid-search-v1":
+        from grid_search import resource_limits
+
+        return resource_limits(cfg["search_rung"])
     pilot = profile in (
         "emma-reinforce-length-pilot-2gpu-v1",
         "emma-reinforce-length-pilot-4gpu-v1",
@@ -36,22 +40,32 @@ def preflight_gpu(require_authorization=True):
     cfg = json.loads((ROOT / "run-config.json").read_text())
     if require_authorization and not cfg["gpu_submission_authorized"]:
         raise PermissionError("This GPU run requires fresh user approval")
+    search = cfg.get("experiment_profile") == "emma-grid-search-v1"
+    if search:
+        from grid_search import validate_search_config
+
+        validate_search_config(cfg, ROOT)
     comparison = cfg.get("experiment_profile", "").startswith("emma-optimizer-comparison-")
     pilot = cfg.get("experiment_profile") in (
         "emma-reinforce-length-pilot-2gpu-v1",
         "emma-reinforce-length-pilot-4gpu-v1",
     )
     length_profile = pilot or cfg.get("experiment_profile") == "emma-reinforce-length-4gpu-v1"
-    longer = length_profile or cfg.get("experiment_profile") in (
-        "emma-reinforce-long-v1",
-        "emma-reinforce-long-4gpu-v1",
+    longer = (
+        search
+        or length_profile
+        or cfg.get("experiment_profile")
+        in (
+            "emma-reinforce-long-v1",
+            "emma-reinforce-long-4gpu-v1",
+        )
     )
     limits = allocation_limits(cfg)
     if comparison or longer:
         from grpo import validate_update_config
 
         validate_update_config(cfg)
-        assert cfg["steps"] == (500 if longer else 80)
+        assert cfg["steps"] == (1000 if search else 500 if longer else 80)
         assert cfg["requested_allocation_seconds"] == limits["allocation_seconds"]
         from ddp_passage_rl import configured_world_size
 
@@ -68,7 +82,7 @@ def preflight_gpu(require_authorization=True):
         if pilot:
             assert cfg["stop_after_steps"] == 100
             assert cfg["final_evaluation_split"] == "validation"
-        else:
+        elif not search:
             assert cfg.get("stop_after_steps", cfg["steps"]) == cfg["steps"]
         if cfg["gpu_submission_authorized"]:
             assert cfg["approved_allocation_seconds"] == limits["allocation_seconds"]
@@ -83,18 +97,22 @@ def preflight_gpu(require_authorization=True):
         assert cfg["approved_allocation_seconds"] == 6600 and cfg["approved_maximum_gpus"] == 2
         assert 2 * (cfg["previous_allocation_elapsed_seconds"] + 6600) / 3600 <= 4
     assert cfg["distribution_objective"] == "word-kl"
-    assert cfg["distribution_weight"] == 0.1 and cfg["reference_kl_beta"] == 0.002
+    assert (search or cfg["distribution_weight"] == 0.1) and cfg["reference_kl_beta"] == 0.002
     assert cfg["reward_validation_protocol"] == 4 and cfg["policy_training_requires_reward_audit"]
     assert not cfg["human_preference_labels"] and not cfg["independent_quality_evaluation"]
     assert cfg["judge_model"] == "Qwen/Qwen2.5-7B-Instruct"
     assert cfg["judge_revision"] == "a09a35458c702b33eeacc393d103063234e8bc28"
-    assert cfg["train_budget_seconds"] <= (12600 if longer else 4800)
+    assert cfg["train_budget_seconds"] <= (16200 if search else 12600 if longer else 4800)
     assert cfg["max_new_tokens"] == 1024
-    assert not cfg.get("resume_checkpoint")
+    if not search:
+        assert not cfg.get("resume_checkpoint")
     from length_reward import settings
 
     length = settings(cfg)
-    if length_profile:
+    if search:
+        assert length["min_words"] == 250 and length["max_words"] == 350
+        assert length["unit_words"] == 100
+    elif length_profile:
         assert length["min_words"] == 250 and length["max_words"] == 350
         assert length["unit_words"] == 100 and length["weight"] > 0
         assert cfg["length_penalty_calibration_file"] == "length-penalty-calibration.json"

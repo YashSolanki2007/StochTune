@@ -1,0 +1,56 @@
+[
+  {
+    "trial": "kl010-len000-rung150",
+    "gpus": 4,
+    "maximum_wall_seconds": 5400,
+    "cpu_preflight_passed": true
+  },
+  {
+    "trial": "kl010-len020-rung150",
+    "gpus": 4,
+    "maximum_wall_seconds": 5400,
+    "cpu_preflight_passed": true
+  },
+  {
+    "trial": "kl010-len040-rung150",
+    "gpus": 4,
+    "maximum_wall_seconds": 5400,
+    "cpu_preflight_passed": true
+  },
+  {
+    "trial": "kl030-len000-rung150",
+    "gpus": 4,
+    "maximum_wall_seconds": 5400,
+    "cpu_preflight_passed": true
+  },
+  {
+    "trial": "kl030-len020-rung150",
+    "gpus": 4,
+    "maximum_wall_seconds": 5400,
+    "cpu_preflight_passed": true
+  },
+  {
+    "trial": "kl030-len040-rung150",
+    "gpus": 4,
+    "maximum_wall_seconds": 5400,
+    "cpu_preflight_passed": true
+  },
+  {
+    "trial": "kl100-len000-rung150",
+    "gpus": 4,
+    "maximum_wall_seconds": 5400,
+    "cpu_preflight_passed": true
+  },
+  {
+    "trial": "kl100-len020-rung150",
+    "gpus": 4,
+    "maximum_wall_seconds": 5400,
+    "cpu_preflight_passed": true
+  },
+  {
+    "trial": "kl100-len040-rung150",
+    "gpus": 4,
+    "maximum_wall_seconds": 5400,
+    "cpu_preflight_passed": true
+  }
+]

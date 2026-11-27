@@ -1,0 +1,18 @@
+{
+  "plan_sha256": "0c422cc778df463fed95c8b0e323de692d13272ce514651af935671eff95b4c9",
+  "rung": 150,
+  "configurations": [
+    "kl010-len000",
+    "kl010-len020",
+    "kl010-len040",
+    "kl030-len000",
+    "kl030-len020",
+    "kl030-len040",
+    "kl100-len000",
+    "kl100-len020",
+    "kl100-len040"
+  ],
+  "jobs_submitted": 0,
+  "gpu_submission_authorized": false,
+  "maximum_stage_gpu_hours_if_separately_approved": 54.0
+}

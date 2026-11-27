@@ -415,3 +415,11 @@ online W&B is required. This run does not resume or overwrite the pilot.
 The archived unsubmitted draft is retained; only the new isolated runtime
 was submitted. Results remain pending. See
 [submission and comparison plan](../../results/emma-v1/length-penalty-long-4gpu-v1/).
+
+## Reward-weight grid implementation (not submitted)
+
+See [GRID_SEARCH.md](GRID_SEARCH.md) for the nine-trial grid, fixed selection
+criteria, CPU-only prepare/rank/promote commands, full-state continuation and
+resource ceilings. All newly prepared configurations have GPU spending approval
+disabled. No grid jobs have been submitted; execution waits for user approval.
+The existing completed Emma results are unchanged.
