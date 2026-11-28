@@ -14,7 +14,7 @@ def stronger_kl_profile():
         experiment_profile="emma-stronger-word-kl-4gpu-v1",
         wandb_group="emma-stronger-word-kl-4gpu-v1",
         steps=1000,
-        distribution_weight=0.3,
+        distribution_weight=0.5,
         requested_allocation_seconds=18000,
         train_budget_seconds=16200,
         evaluation_reserve_seconds=1800,
@@ -24,7 +24,7 @@ def stronger_kl_profile():
         policy_initialization="Fresh pinned instruction actor; new 1000-step cosine schedule "
         "with 50 warmup steps, not a continuation of the completed 500-step schedule",
         experiment_purpose="Single stronger-word-KL experiment: quality weight 1, word-KL "
-        "weight 0.3, length weight 0.2, base-policy KL 0.002, EOS penalty 0.1. "
+        "weight 0.5, length weight 0.2, base-policy KL 0.002, EOS penalty 0.1. "
         "No grid, promotions, automatic retries or seed-confirmation runs.",
     )
     return cfg
@@ -49,7 +49,7 @@ if __name__ == "__main__":
             {
                 "prepared": str(output),
                 "steps": 1000,
-                "word_kl_weight": 0.3,
+                "word_kl_weight": 0.5,
                 "length_weight": 0.2,
                 "gpu_submission_authorized": False,
                 "maximum_gpu_hours_if_approved": 20,

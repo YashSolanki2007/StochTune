@@ -108,7 +108,7 @@ def preflight_gpu(require_authorization=True):
         assert cfg["approved_allocation_seconds"] == 6600 and cfg["approved_maximum_gpus"] == 2
         assert 2 * (cfg["previous_allocation_elapsed_seconds"] + 6600) / 3600 <= 4
     assert cfg["distribution_objective"] == "word-kl"
-    assert search or cfg["distribution_weight"] == (0.3 if stronger else 0.1)
+    assert search or cfg["distribution_weight"] == (0.5 if stronger else 0.1)
     assert cfg["reference_kl_beta"] == 0.002
     if stronger:
         assert cfg["length_penalty_weight"] == 0.2

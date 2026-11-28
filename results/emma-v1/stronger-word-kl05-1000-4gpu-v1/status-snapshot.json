@@ -1,0 +1,17 @@
+{
+  "job_id": "535088",
+  "observed_at_utc": "2026-11-28T01:44:12.196149+00:00",
+  "state": "PENDING",
+  "elapsed": "0:00",
+  "estimated_start_cluster_pacific": "2026-11-27T23:06:21",
+  "reason": "(Priority)",
+  "target_steps": 1000,
+  "target_training_passages": 16000,
+  "gpus": 4,
+  "word_kl_weight": 0.5,
+  "maximum_wall_seconds": 18000,
+  "maximum_gpu_hours": 20,
+  "online_wandb_required": true,
+  "training_results_available": false,
+  "grid_jobs_submitted": 0
+}

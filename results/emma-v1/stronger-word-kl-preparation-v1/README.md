@@ -18,3 +18,8 @@ and GPU submission remains blocked pending final approval. The code, exact
 proposed run configuration, resource cap, tests and provenance are recorded here.
 No model results are available for this unrun experiment. Changing both KL
 weight and training horizon prevents attributing any improvement to one change.
+
+The user subsequently chose word-KL weight **0.5** and explicitly authorized
+submission. This 0.3 draft is preserved as historical preparation and was never
+submitted. The separate `stronger-word-kl05-1000-4gpu-v1` record tracks the
+approved 0.5 run; no grid is authorized.

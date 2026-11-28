@@ -110,18 +110,19 @@ human validation.
 - [LaTeX report sources](paper/README.md) — report scope is through November 22;
   the newer Emma results above are not yet incorporated into that manuscript.
 
-## Single stronger-word-KL run prepared first
+## Single stronger-word-KL run submitted first
 
-Before the grid, one fresh **1,000-step / 16,000-answer** run is prepared with
-quality weight **1**, word-KL weight **0.3**, length weight **0.2 per 100 words
-outside 250–350**, reference-policy KL **0.002**, and nontermination penalty
-**0.1**. It uses four H200s, a five-hour / **20 GPU-hour** maximum, a fresh
+**Job 535088** is submitted for one fresh **1,000-step / 16,000-answer** run
+before any grid. Final approved weights: quality **1**, word KL **0.5**,
+length **0.2 per 100 words outside 250–350**, reference-policy KL **0.002**,
+and nontermination penalty **0.1**. This supersedes the unsubmitted 0.3 draft.
+It requests four H200s for at most **five hours / 20 GPU-hours**, with a fresh
 1,000-step cosine schedule and 50 warmup steps. Online W&B is required.
-**No single-run or grid GPU job is submitted or authorized.** The weights and
-allocation await the user's final approval. See the
-[proposed configuration and CPU preparation](results/emma-v1/stronger-word-kl-preparation-v1/).
-The larger grid remains deferred. Changing both weight and training horizon
-makes this a combined experiment, not an isolated test of either change.
+All **50 cluster CPU tests passed** and W&B project access is verified.
+See [actual submission and configuration](results/emma-v1/stronger-word-kl05-1000-4gpu-v1/).
+At submission the job is queued for priority; no model results are available.
+The grid remains deferred with zero jobs submitted. Changing both weight and
+training horizon makes this a combined experiment, not an isolated test of either.
 
 ## Reward-weight search prepared, awaiting approval
 

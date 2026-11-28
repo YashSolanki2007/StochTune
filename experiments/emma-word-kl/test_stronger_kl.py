@@ -19,7 +19,7 @@ class StrongerKLTests(unittest.TestCase):
         self.assertEqual(training_step_limit(cfg), 1000)
         self.assertEqual(cfg["steps"] * cfg["global_group_size"], 16000)
         self.assertEqual(cfg["warmup_steps"], 50)
-        self.assertEqual(cfg["distribution_weight"], 0.3)
+        self.assertEqual(cfg["distribution_weight"], 0.5)
         self.assertEqual(cfg["length_penalty_weight"], 0.2)
         self.assertEqual(cfg["reference_kl_beta"], 0.002)
         self.assertEqual(cfg["truncation_penalty"], 0.1)
@@ -46,6 +46,7 @@ class StrongerKLTests(unittest.TestCase):
                 for change in [
                     {"steps": 500},
                     {"distribution_weight": 0.1},
+                    {"distribution_weight": 0.3},
                     {"length_penalty_weight": 0.4},
                     {"reference_kl_beta": 0.02},
                     {"requested_allocation_seconds": 21600},
