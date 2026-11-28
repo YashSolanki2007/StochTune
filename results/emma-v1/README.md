@@ -2,6 +2,12 @@
 
 ## Latest status (November 27, 2026)
 
+- **Prepared first, not run:** one fresh 1,000-step four-H200 trial with word-KL
+  weight 0.3, quality 1, length 0.2, policy KL 0.002 and EOS penalty 0.1.
+  Five-hour / 20 GPU-hour ceiling proposed; final weight/allocation approval
+  pending. No GPU job submitted. The grid remains deferred. See
+  [single-run preparation](stronger-word-kl-preparation-v1/).
+
 - **Prepared, not run:** nine-configuration reward-weight grid, with validation-only
   ranking and 150/400/1,000-step checkpoint promotions. No GPU approval or jobs.
   See [reviewable preparation](grid-search-preparation-v1/) and

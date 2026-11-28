@@ -12,6 +12,14 @@ ROOT = Path(__file__).resolve().parent
 def allocation_limits(cfg):
     """Fixed ceilings for the original pilot and the separately proposed long run."""
     profile = cfg.get("experiment_profile")
+    if profile == "emma-stronger-word-kl-4gpu-v1":
+        return {
+            "allocation_seconds": 18000,
+            "gpus": 4,
+            "calibration_seconds": 600,
+            "evaluation_reserve_seconds": 1800,
+            "controller_reserve_seconds": 60,
+        }
     if profile == "emma-grid-search-v1":
         from grid_search import resource_limits
 
@@ -41,6 +49,7 @@ def preflight_gpu(require_authorization=True):
     if require_authorization and not cfg["gpu_submission_authorized"]:
         raise PermissionError("This GPU run requires fresh user approval")
     search = cfg.get("experiment_profile") == "emma-grid-search-v1"
+    stronger = cfg.get("experiment_profile") == "emma-stronger-word-kl-4gpu-v1"
     if search:
         from grid_search import validate_search_config
 
@@ -50,7 +59,9 @@ def preflight_gpu(require_authorization=True):
         "emma-reinforce-length-pilot-2gpu-v1",
         "emma-reinforce-length-pilot-4gpu-v1",
     )
-    length_profile = pilot or cfg.get("experiment_profile") == "emma-reinforce-length-4gpu-v1"
+    length_profile = (
+        stronger or pilot or cfg.get("experiment_profile") == "emma-reinforce-length-4gpu-v1"
+    )
     longer = (
         search
         or length_profile
@@ -65,7 +76,7 @@ def preflight_gpu(require_authorization=True):
         from grpo import validate_update_config
 
         validate_update_config(cfg)
-        assert cfg["steps"] == (1000 if search else 500 if longer else 80)
+        assert cfg["steps"] == (1000 if search or stronger else 500 if longer else 80)
         assert cfg["requested_allocation_seconds"] == limits["allocation_seconds"]
         from ddp_passage_rl import configured_world_size
 
@@ -97,12 +108,20 @@ def preflight_gpu(require_authorization=True):
         assert cfg["approved_allocation_seconds"] == 6600 and cfg["approved_maximum_gpus"] == 2
         assert 2 * (cfg["previous_allocation_elapsed_seconds"] + 6600) / 3600 <= 4
     assert cfg["distribution_objective"] == "word-kl"
-    assert (search or cfg["distribution_weight"] == 0.1) and cfg["reference_kl_beta"] == 0.002
+    assert search or cfg["distribution_weight"] == (0.3 if stronger else 0.1)
+    assert cfg["reference_kl_beta"] == 0.002
+    if stronger:
+        assert cfg["length_penalty_weight"] == 0.2
+        assert cfg["truncation_penalty"] == 0.1
+        assert cfg["final_evaluation_split"] == "test"
+        assert not any(k.startswith("search_") for k in cfg)
     assert cfg["reward_validation_protocol"] == 4 and cfg["policy_training_requires_reward_audit"]
     assert not cfg["human_preference_labels"] and not cfg["independent_quality_evaluation"]
     assert cfg["judge_model"] == "Qwen/Qwen2.5-7B-Instruct"
     assert cfg["judge_revision"] == "a09a35458c702b33eeacc393d103063234e8bc28"
-    assert cfg["train_budget_seconds"] <= (16200 if search else 12600 if longer else 4800)
+    assert cfg["train_budget_seconds"] <= (
+        16200 if search or stronger else 12600 if longer else 4800
+    )
     assert cfg["max_new_tokens"] == 1024
     if not search:
         assert not cfg.get("resume_checkpoint")

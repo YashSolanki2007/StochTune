@@ -423,3 +423,25 @@ criteria, CPU-only prepare/rank/promote commands, full-state continuation and
 resource ceilings. All newly prepared configurations have GPU spending approval
 disabled. No grid jobs have been submitted; execution waits for user approval.
 The existing completed Emma results are unchanged.
+
+## Single stronger-word-KL experiment (prepared, not submitted)
+
+Before launching a grid, the user requested one 1,000-step run and asked to see
+the weights before starting. `prepare_stronger_kl.py` stages one fresh actor with
+quality weight 1, word-KL weight 0.3, length coefficient 0.2, reference-policy
+KL 0.002 and nontermination penalty 0.1. All other data/model/reward settings
+match the previous length-controlled run, with a fresh 1,000-step cosine horizon
+and 50 warmup steps. Four H200s are proposed for at most five hours (20 GPU-hours),
+including a 30-minute final-evaluation reserve. Validation stays at eight prompts
+× four answers for comparability; final evaluation uses sixteen test prompts ×
+four answers. Test reuse and the training judge make the comparison exploratory.
+No grid/promotions/retries/extra seeds are submitted. GPU authorization remains
+false pending the user's final approval of the weights and allocation.
+
+```bash
+python experiments/emma-word-kl/prepare_stronger_kl.py \
+  --output outputs/emma-stronger-word-kl-1000-4gpu-v1 --stage
+```
+
+The command performs CPU staging only. See the
+[reviewable preparation](../../results/emma-v1/stronger-word-kl-preparation-v1/).

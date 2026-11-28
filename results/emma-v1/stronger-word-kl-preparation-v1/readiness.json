@@ -1,0 +1,27 @@
+{
+  "prepared_at_utc": "2026-11-28T01:36:10.020895+00:00",
+  "status": "waiting_for_final_weight_and_allocation_approval",
+  "jobs_submitted": 0,
+  "gpu_submission_authorized": false,
+  "cpu_tests_passed": 50,
+  "cpu_test_elapsed_seconds": 15.142,
+  "weights": {
+    "quality": 1,
+    "word_kl": 0.3,
+    "length_per_100_words_outside_250_350": 0.2,
+    "reference_policy_kl": 0.002,
+    "nontermination": 0.1
+  },
+  "training_steps": 1000,
+  "training_answers": 16000,
+  "gpus": 4,
+  "requested_wall_seconds": 18000,
+  "maximum_gpu_hours_if_approved": 20,
+  "initialization": "fresh pinned actor, not resumed",
+  "sweep_jobs_submitted": 0,
+  "source_sha256": {
+    "experiments/emma-word-kl/prepare_stronger_kl.py": "70cd606ea7cf0eb5f20bfb2b4f24e54c300d6a39677d16ef70efa93f62c35213",
+    "experiments/emma-word-kl/test_stronger_kl.py": "5de4f8c5494110e11e7edd8fcb53c7570038821446b163d01795613d9f73162c",
+    "experiments/emma-word-kl/preflight_gpu.py": "22fa0a321bcae88c1e8eea3fb1b97fb1cc0b9234e7de37b1520ed81bd8a1bf57"
+  }
+}
