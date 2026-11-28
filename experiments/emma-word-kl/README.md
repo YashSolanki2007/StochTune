@@ -449,3 +449,14 @@ python experiments/emma-word-kl/prepare_stronger_kl.py \
 Preparation always clears GPU approval; the actual authorized deployed config
 and submission are archived in the
 [run record](../../results/emma-v1/stronger-word-kl05-1000-4gpu-v1/).
+
+### Stronger-word-KL run completed (November 28)
+
+Job 535088 completed all 1,000 updates / 16,000 answers in 4h10m50s. Final
+raw KL 0.51122 → 0.45678 and JSD 0.06643 → 0.06159 improve over base;
+training-judge quality is 0.78261 → 0.84438. Compliance is 51.6%, lower than
+the earlier 500-step length-controlled policy's 60.9%. A secondary matched-word
+KL check also improves by 4.20%. Weight, horizon and LR schedule effects are
+not isolated; one seed, reused test prompts and the training judge limit the
+interpretation. Checkpoint 1,000 and W&B artifacts are saved. The grid remains
+unrun. See [final outputs](../../results/emma-v1/stronger-word-kl05-1000-4gpu-v1/).

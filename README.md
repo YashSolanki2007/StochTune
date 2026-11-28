@@ -2,7 +2,7 @@
 
 Investigating distributional fidelity in language-model generation: numeric draws from requested probability laws, and coherent passages whose aggregate word or word-bigram statistics follow a reference corpus.
 
-This repository records numeric SFT and batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments. The latest **Emma length-control run (job 530088) completed 500 updates / 8,000 answers on four H200s in 1h59m14s**. Compared with the unpenalized 500-step run, length compliance improved from **23.4% to 60.9%**, but raw training-judge quality declined from **0.8806 to 0.8339** (still above the base model's **0.7826**). Equal-word-budget KL is **0.5589**, versus **0.5661** without the penalty and **0.5112** for base; final JSD also worsens. The penalty controls length, but these results **do not establish successful joint quality/distribution matching**. Earlier pilot and interim validation gains did not establish final test gains. The optional direct soft-target KL trainer remains implemented but unrun.
+This repository records numeric SFT and batch-KL RL, Shakespeare passage RL, and HelpSteer word/semantic-distribution experiments. The latest **1,000-step Emma run (job 535088, word-KL weight 0.5) completed 16,000 training answers in 4h10m50s on four H200s**. On 64 final test answers, raw word KL improves **0.5112 → 0.4568 (10.65%)**, JSD **0.06643 → 0.06159**, and training-judge quality **0.7826 → 0.8444**. Length compliance improves over base (39.1% → 51.6%) but is below the preceding 500-step length-controlled run (60.9%). A secondary count-matched KL diagnostic also improves (4.20%). These are exploratory single-seed results with a training-model judge and reused test prompts; changing both KL weight and training horizon prevents isolating either effect. No grid jobs have been submitted. The optional direct soft-target KL trainer remains implemented but unrun.
 
 See [References and acknowledgments](#references-and-acknowledgments) for the papers, original blog, datasets, models, and implementations informing this work.
 
@@ -30,12 +30,13 @@ See [References and acknowledgments](#references-and-acknowledgments) for the pa
 | Emma longer REINFORCE | Fresh actor; prompt-LOO quality, word KL λ = 0.1, base-policy KL β = 0.002 | Job 524624: 500 updates / 8,000 answers; four H200s, 2h17m20s | Judge quality improves; answers become longer; equal-word-budget KL worsens |
 | Emma length-penalty pilot | Same REINFORCE objective plus fixed 250–350-word penalty | Job 529144: completed 100 steps / 1,600 answers; two H200s, 42m34s | Validation compliance 43.8% → 59.4%; raw judge quality unchanged; equal-word KL 2.55% lower |
 | Emma longer length-control RL | Fresh actor; same 500-step four-GPU setup as job 524624, plus the fixed length penalty | Job 530088: completed 500 updates / 8,000 answers; four H200s, 1h59m14s | Better length compliance than the unpenalized run, lower judge quality; equal-word KL remains worse than base |
+| Emma stronger word-KL RL | Fresh actor; word-KL weight 0.5, length weight 0.2, 1,000-step schedule | Job 535088: completed 1,000 updates / 16,000 answers; four H200s, 4h10m50s | Raw KL 10.65% lower, JSD lower and judge quality higher than base; length compliance below the preceding length-controlled run |
 | Reward-weight grid search | Nine combinations of word-KL and length weights; quality weight fixed at 1 | Implemented and CPU-tested; no GPU jobs submitted | Awaiting explicit approval; staged validation-only selection and checkpoint-bound promotion |
 | Direct soft-target KL | Trie-derived next-token targets | Implemented, not run | No measured results |
 
 The passage runs use actual on-policy REINFORCE updates to LoRA weights. The Shakespeare quality scorer is a frozen instruction-model judge, without preference training in this project. The later HelpSteer stages use a trained Bradley–Terry scorer or an audited pretrained reward model. Generated-answer evaluations remain **model-judged, not human-validated outcomes**.
 
-## Latest Emma results and length-control pilot
+## Emma 500-step baseline and length-control pilot
 
 Job **524624** completed all 500 REINFORCE updates. Its own before/after
 comparison uses 16 held-out prompts × four answers (64 answers per policy):
@@ -110,19 +111,33 @@ human validation.
 - [LaTeX report sources](paper/README.md) — report scope is through November 22;
   the newer Emma results above are not yet incorporated into that manuscript.
 
-## Single stronger-word-KL run submitted first
+## Completed stronger-word-KL run
 
-**Job 535088** is submitted for one fresh **1,000-step / 16,000-answer** run
-before any grid. Final approved weights: quality **1**, word KL **0.5**,
-length **0.2 per 100 words outside 250–350**, reference-policy KL **0.002**,
-and nontermination penalty **0.1**. This supersedes the unsubmitted 0.3 draft.
-It requests four H200s for at most **five hours / 20 GPU-hours**, with a fresh
-1,000-step cosine schedule and 50 warmup steps. Online W&B is required.
-All **50 cluster CPU tests passed** and W&B project access is verified.
-See [actual submission and configuration](results/emma-v1/stronger-word-kl05-1000-4gpu-v1/).
-At submission the job is queued for priority; no model results are available.
-The grid remains deferred with zero jobs submitted. Changing both weight and
-training horizon makes this a combined experiment, not an isolated test of either.
+**Job 535088** completed 1,000 updates / 16,000 training answers in
+**4h10m50s** on four H200s (16.722 GPU-hours, below the 20-hour ceiling).
+It uses quality weight 1, word-KL weight **0.5**, length coefficient 0.2,
+reference-policy KL 0.002 and EOS penalty 0.1. The actor and 1,000-step cosine
+schedule start fresh, with 50 warmup steps. W&B synced; checkpoint 1,000 is saved.
+
+| Final test metric | Base | 500 steps, word KL 0.1 | 1,000 steps, word KL 0.5 |
+|---|---:|---:|---:|
+| Raw word KL ↓ | 0.51122 | 0.52828 | **0.45678** |
+| Word JSD ↓ | 0.06643 | 0.07253 | **0.06159** |
+| Training-judge quality ↑ | 0.78261 | 0.83388 | **0.84438** |
+| In 250–350 words ↑ | 39.1% | 60.9% | 51.6% |
+| Mean words | 273.5 | 320.2 | 335.0 |
+
+Raw KL improves **10.65% over base / 13.54% over the 500-step control**;
+JSD improves 7.28% over base. A secondary equal-word-budget KL check is
+0.51122 → 0.48975 (4.20% lower). Raw quality's change interval is
+[0.0230, 0.1001] versus base, but [-0.0203, 0.0417] versus the 500-step
+control: the latter quality difference is uncertain. Length compliance loses
+9.4 points versus that control, and 37.5% of answers remain over 350 words.
+These are sixteen prompts × four answers, one seed, evaluated by the training
+judge; the test prompts have been previously inspected. The stronger weight,
+longer horizon and changed LR schedule cannot be separated by this comparison.
+See [saved final outputs and analysis](results/emma-v1/stronger-word-kl05-1000-4gpu-v1/).
+The grid remains deferred with zero jobs submitted.
 
 ## Reward-weight search prepared, awaiting approval
 

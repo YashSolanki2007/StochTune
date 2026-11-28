@@ -1,13 +1,13 @@
 # Emma experiment record
 
-## Latest status (November 27, 2026)
+## Latest status (November 28, 2026)
 
-- **Submitted:** job 535088, one fresh 1,000-step / 16,000-answer run on four
-  H200s, five-hour / 20 GPU-hour maximum. Final word-KL weight **0.5**, quality
-  1, length 0.2, policy KL 0.002, EOS 0.1. All 50 cluster CPU tests passed;
-  W&B access verified and online logging required. Results pending. The 0.3
-  draft was never submitted; the grid remains deferred. See
-  [actual submission](stronger-word-kl05-1000-4gpu-v1/).
+- **Completed:** job 535088, 1,000 updates / 16,000 training answers on four
+  H200s in 4h10m50s, exit 0:0. Word-KL weight 0.5. Final raw KL improves
+  0.51122 → 0.45678, JSD 0.06643 → 0.06159, judge quality 0.78261 → 0.84438.
+  Compliance is 51.6%, above base but below the preceding 500-step run's 60.9%.
+  W&B synced and checkpoint 1,000 saved; no grid jobs submitted. See
+  [final results and analysis](stronger-word-kl05-1000-4gpu-v1/).
 
 - **Prepared, not run:** nine-configuration reward-weight grid, with validation-only
   ranking and 150/400/1,000-step checkpoint promotions. No GPU approval or jobs.
